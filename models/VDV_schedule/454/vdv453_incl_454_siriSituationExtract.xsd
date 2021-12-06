@@ -1,0 +1,4720 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.siri.org.uk/siri">
+  	
+  <!-- ===SIRI Situation Identity================================================== -->
+  	
+  <!-- ======================================================================= -->
+  	
+  <xsd:group name="SituationBaseIdentityGroup">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Type for reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
+      		
+    </xsd:annotation>
+    		
+    <xsd:sequence>
+      			
+      <xsd:element minOccurs="0" name="CountryRef" type="CountryRefStructure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Unique identifier of a Country of a Participant who created SITUATION. Provides namespace for Participant If absent proided from context.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:element>
+      			
+      <xsd:element minOccurs="0" name="ParticipantRef" type="ParticipantRefStructure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Unique identifier of a Participant. Provides namespace for SITUATION. If absent provdied from context.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:element>
+      			
+      <xsd:element ref="SituationNumber">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Unique identifier of SITUATION within a Participant. Excludes any version number.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:element>
+      		
+    </xsd:sequence>
+    	
+  </xsd:group>
+  	
+  <!-- ======================================================================= -->
+  	
+  <xsd:element name="SituationNumber" type="EntryQualifierStructure">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Identifier of SITUATION within a Participant. Excldue versionr.</xsd:documentation>
+      		
+    </xsd:annotation>
+    	
+  </xsd:element>
+  	
+  <xsd:complexType name="EntryQualifierStructure">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Type for a referenceUnique identifier of a SITUATION within participant.</xsd:documentation>
+      		
+    </xsd:annotation>
+    		
+    <xsd:simpleContent>
+      			
+      <xsd:extension base="xsd:anyURI"/>
+      		
+    </xsd:simpleContent>
+    	
+  </xsd:complexType>
+  	
+  <!-- =====Country================================================================== -->
+  	
+  <xsd:simpleType name="CountryCodeType">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Type for Country identifier.</xsd:documentation>
+      		
+    </xsd:annotation>
+    		
+    <xsd:restriction base="IanaCountryTldEnumeration"/>
+    	
+  </xsd:simpleType>
+  	
+  <xsd:complexType name="CountryRefStructure">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Type for reference to a Country identifier.</xsd:documentation>
+      		
+    </xsd:annotation>
+    		
+    <xsd:simpleContent>
+      			
+      <xsd:extension base="CountryCodeType"/>
+      		
+    </xsd:simpleContent>
+    	
+  </xsd:complexType>
+  	
+  <!-- =====Iana Tld Classifiers================================================================== -->
+  	
+  <xsd:simpleType name="IanaCountryTldEnumeration">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Allowed values for classifying NPTG Localities.</xsd:documentation>
+      		
+    </xsd:annotation>
+    		
+    <xsd:restriction base="xsd:NMTOKEN">
+      			
+      <xsd:enumeration value="ac">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Ascension Island.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ad">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Andorra.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ae">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>United Arab Emirates.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="af">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Afghanistan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ag">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Antigua and Barbuda.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ai">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Anguilla.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="al">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Albania.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="am">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Armenia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="an">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Netherlands Antilles.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ao">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Angola.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="aq">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Antarctica.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ar">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Argentina.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="as">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>American Samoa.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="at">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Austria.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="au">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Australia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="aw">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Aruba.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="az">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Azerbaijan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ax">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Aland Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ba">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Bosnia and Herzegovina.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bb">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Barbados.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bd">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Bangladesh.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="be">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Belgium.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bf">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Burkina Faso.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bg">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Bulgaria.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bh">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Bahrain.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bi">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Burundi.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bj">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Benin.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bm">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Bermuda.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bn">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Brunei Darussalam.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bo">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Bolivia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="br">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Brazil.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bs">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Bahamas.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bt">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Bhutan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bv">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Bouvet Island.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bw">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Botswana.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="by">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Belarus.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="bz">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Belize.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ca">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Canada.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cc">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Cocos (Keeling) Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cd">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Congo, The Democratic Republic of the.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cf">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Central African Republic.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cg">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Congo, Republic of.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ch">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Switzerland.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ci">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Cote d'Ivoire.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ck">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Cook Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cl">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Chile.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cm">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Cameroon.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cn">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>China.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="co">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Colombia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cr">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Costa Rica.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cs">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Serbia and Montenegro.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cu">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Cuba.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cv">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Cape Verde.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cx">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Christmas Island.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cy">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Cyprus.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="cz">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Czech Republic.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="de">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Germany.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="dj">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Djibouti.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="dk">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Denmark.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="dm">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Dominica.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="do">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Dominican Republic.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="dz">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Algeria.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ec">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Ecuador.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ee">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Estonia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="eg">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Egypt.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="eh">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Western Sahara.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="er">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Eritrea.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="es">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Spain.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="et">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Ethiopia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="eu">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>European Union.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="fi">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Finland.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="fj">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Fiji.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="fk">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Falkland Islands (Malvinas)</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="fm">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Micronesia, Federal State of.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="fo">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Faroe Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="fr">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>France.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ga">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Gabon.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gb">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>United Kingdom.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gd">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Grenada.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ge">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Georgia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gf">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>French Guiana.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gg">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Guernsey.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gh">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Ghana.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gi">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Gibraltar.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gl">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Greenland.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gm">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Gambia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gn">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Guinea.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gp">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Guadeloupe.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gq">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Equatorial Guinea.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gr">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Greece.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gs">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>South Georgia and the South Sandwich Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gt">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Guatemala.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gu">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Guam.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gw">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Guinea-Bissau.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="gy">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Guyana.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="hk">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Hong Kong.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="hm">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Heard and McDonald Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="hn">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Honduras.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="hr">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Croatia/Hrvatska.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ht">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Haiti.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="hu">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Hungary.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="id">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Indonesia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ie">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Ireland.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="il">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Israel.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="im">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Isle of Man.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="in">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>India.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="io">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>British Indian Ocean Territory.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="iq">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Iraq</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ir">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Iran, Islamic Republic of.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="is">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Iceland.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="it">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Italy.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="je">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Jersey.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="jm">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Jamaica.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="jo">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Jordan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="jp">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Japan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ke">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Kenya.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="kg">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Kyrgyzstan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="kh">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Cambodia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ki">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Kiribati.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="km">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Comoros.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="kn">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Saint Kitts and Nevis.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="kp">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Korea, Democratic People's Republic.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="kr">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Korea, Republic of.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="kw">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Kuwait.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ky">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Cayman Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="kz">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Kazakhstan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="la">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Lao People's Democratic Republic.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="lb">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Lebanon.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="lc">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Saint Lucia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="li">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Liechtenstein.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="lk">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Sri Lanka.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="lr">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Liberia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ls">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Lesotho.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="lt">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Lithuania.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="lu">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Luxembourg.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="lv">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Latvia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ly">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Libyan Arab Jamahiriya.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ma">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Morocco.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mc">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Monaco.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="md">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Moldova, Republic of.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mg">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Madagascar.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mh">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Marshall Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mk">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Macedonia, The Former Yugoslav Republic of.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ml">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Mali.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mm">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Myanmar.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mn">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Mongolia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mo">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Macau.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mp">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Northern Mariana Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mq">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Martinique.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mr">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Mauritania.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ms">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Montserrat.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mt">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Malta.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mu">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Mauritius.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mv">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Maldives.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mw">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Malawi.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mx">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Mexico.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="my">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Malaysia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="mz">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Mozambique.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="na">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Namibia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="nc">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>New Caledonia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ne">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Niger.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="nf">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Norfolk Island.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ng">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Nigeria.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ni">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Nicaragua.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="nl">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Netherlands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="no">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Norway.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="np">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Nepal.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="nr">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Nauru.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="nu">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Niue.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="nz">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>New Zealand.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="om">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Oman.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pa">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Panama.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pe">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Peru.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pf">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>French Polynesia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pg">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Papua New Guinea.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ph">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Philippines.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pk">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Pakistan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pl">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Poland.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pm">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Saint Pierre and Miquelon.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pn">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Pitcairn Island.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pr">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Puerto Rico.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ps">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Palestinian Territories.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pt">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Portugal.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pw">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Palau.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="py">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Paraguay.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="qa">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Qatar.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="re">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Reunion Island.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ro">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Romania.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ru">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Russian Federation.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="rw">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Rwanda.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sa">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Saudi Arabia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sb">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Solomon Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sc">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Seychelles.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sd">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Sudan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="se">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Sweden.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sg">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Singapore.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sh">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Saint Helena.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="si">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Slovenia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sj">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Svalbard and Jan Mayen Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sk">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Slovak Republic.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sl">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Sierra Leone.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sm">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>San Marino.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sn">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Senegal.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="so">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Somalia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sr">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Suriname.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="st">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Sao Tome and Principe.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sv">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>El Salvador.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sy">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Syrian Arab Republic.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="sz">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Swaziland.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tc">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Turks and Caicos Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="td">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Chad.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tf">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>French Southern Territories.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tg">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Togo.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="th">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Thailand.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tj">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Tajikistan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tk">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Tokelau.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tl">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Timor-Leste.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tm">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Turkmenistan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tn">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Tunisia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="to">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Tonga.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tp">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>East Timor.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tr">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Turkey.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tt">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Trinidad and Tobago.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tv">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Tuvalu.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tw">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Taiwan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="tz">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Tanzania.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ua">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Ukraine.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ug">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Uganda.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="uk">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>United Kingdom.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="um">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>United States Minor Outlying Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="us">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>United States.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="uy">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Uruguay.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="uz">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Uzbekistan.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="va">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Holy See (Vatican City State)</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="vc">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Saint Vincent and the Grenadines.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ve">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Venezuela.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="vg">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Virgin Islands, British.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="vi">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Virgin Islands, Us.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="vn">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Vietnam.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="vu">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Vanuatu.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="wf">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Wallis and Futuna Islands.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ws">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Samoa.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="ye">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Yemen.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="yt">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Mayotte.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="yu">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Yugoslavia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="za">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>South Africa.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="zm">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Zambia.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="zw">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Zimbabwe.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      		
+    </xsd:restriction>
+    	
+  </xsd:simpleType>
+  	
+  <xsd:simpleType name="ParticipantCodeType">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Type for Unique identifier of participant.</xsd:documentation>
+      		
+    </xsd:annotation>
+    		
+    <xsd:restriction base="xsd:NMTOKEN"/>
+    	
+  </xsd:simpleType>
+  	
+  <xsd:complexType name="ParticipantRefStructure">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Reference to Unique identifier of participant.</xsd:documentation>
+      		
+    </xsd:annotation>
+    		
+    <xsd:simpleContent>
+      			
+      <xsd:extension base="ParticipantCodeType"/>
+      		
+    </xsd:simpleContent>
+    	
+  </xsd:complexType>
+  	
+  <!-- == Reasons == -->
+  	
+  <!-- ======================================================================= -->
+  	
+  <xsd:group name="TpegReasonGroup">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Structured Classification Elements. Corresponds to TPEG 18 Event Reason.</xsd:documentation>
+      		
+    </xsd:annotation>
+    		
+    <xsd:choice>
+      			
+      <xsd:element ref="UnknownReason"/>
+      			
+      <xsd:element ref="MiscellaneousReason"/>
+      			
+      <xsd:element ref="PersonnelReason">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Personnel reason.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:element>
+      			
+      <xsd:element ref="EquipmentReason"/>
+      			
+      <xsd:element ref="EnvironmentReason">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Environment reason.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:element>
+      			
+      <xsd:element ref="UndefinedReason"/>
+      		
+    </xsd:choice>
+    	
+  </xsd:group>
+  	
+  <!-- ===INCIDENT REASON TYPES====================================== -->
+  	
+  <xsd:element name="UnknownReason" type="xsd:string">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>TPEG Pti18_0/TPEG unknown event reason.</xsd:documentation>
+      		
+    </xsd:annotation>
+    	
+  </xsd:element>
+  	
+  <!-- ===================================================== -->
+  	
+  <xsd:element name="MiscellaneousReason" type="MiscellaneousReasonEnumeration">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>TPEG Pti18_1/TPEG Pti_19 miscellaneous event reason.</xsd:documentation>
+      		
+    </xsd:annotation>
+    	
+  </xsd:element>
+  	
+  <xsd:simpleType name="MiscellaneousReasonEnumeration">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Values for Miscellaneous incident reason types TPEG Pti18_1/TPEG Pti_19.</xsd:documentation>
+      		
+    </xsd:annotation>
+    		
+    <xsd:restriction base="xsd:NMTOKEN">
+      			
+      <xsd:enumeration value="pti19_0"/>
+      			
+      <xsd:enumeration value="unknown">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_0 unknown.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_0_1"/>
+      			
+      <xsd:enumeration value="previousDisturbances">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>19:0_1 Previous disturbances - alias to TPEG Pti_19_0 unknown</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_1"/>
+      			
+      <xsd:enumeration value="incident">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_1 incident.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_1_Alias_1"/>
+      			
+      <xsd:enumeration value="nearMiss">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Near Miss - alias to TPEG Pti_19_1 incident.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_1_Alias_2"/>
+      			
+      <xsd:enumeration value="safetyViolation">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Near Miss - alias to TPEG Pti_19_1 incident.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_1_Alias_3"/>
+      			
+      <xsd:enumeration value="signalPassedAtDanger">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Signal passed at danger - alias to TPEG Pti_19_1 incident.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_1_Alias_4"/>
+      			
+      <xsd:enumeration value="stationOverrun">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Station overrun - alias to TPEG Pti_19_1 incident.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_1_Alias_5"/>
+      			
+      <xsd:enumeration value="trainDoor">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>trainDoor- alias to TPEG Pti_19_1 incident.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_1_Alias_6"/>
+      			
+      <xsd:enumeration value="emergencyServicesCall">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Unspecified emergency service visit. Alias to pti19</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_2"/>
+      			
+      <xsd:enumeration value="bombExplosion">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_2 bomb explosion.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_3"/>
+      			
+      <xsd:enumeration value="securityAlert">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_3 security alert.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_3_Alias_1"/>
+      			
+      <xsd:enumeration value="policeRequest">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>pti19_3_1 request of the police Alias to TPEG Pti_19_3 security alert.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_3_Alias_2"/>
+      			
+      <xsd:enumeration value="fireBrigadeSafetyChecks">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>pti19_3_2 fire brigade safety checksAlias to TPEG Pti_19_3 security alert.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_3_Alias_3"/>
+      			
+      <xsd:enumeration value="unattendedBag">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>pti19_3_3 an unattended bag Talias to PEG Pti_19_3 security alert.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_3_Alias_4"/>
+      			
+      <xsd:enumeration value="telephonedThreat">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>telephoned threat TPEG Pti_19_3 security alert.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_3_Alias_5"/>
+      			
+      <xsd:enumeration value="suspectVehicle">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>telephoned threat TPEG Pti_19_3 security alert.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_3_Alias_6"/>
+      			
+      <xsd:enumeration value="civilEmergency">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>civilEmergency alias to  TPEG Pti_19_3 security alert.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_3_Alias_7"/>
+      			
+      <xsd:enumeration value="airRaid">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>civilEmergency alias to  TPEG Pti_19_3 security alert.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_3_Alias_8"/>
+      			
+      <xsd:enumeration value="sabotage">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>sabotage alias to TPEG Pti_19_3 security alert.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_3_Alias_9"/>
+      			
+      <xsd:enumeration value="bombAlert"/>
+      			
+      <xsd:enumeration value="pti19_3_Alias_10"/>
+      			
+      <xsd:enumeration value="attack"/>
+      			
+      <xsd:enumeration value="pti19_3_Alias_11"/>
+      			
+      <xsd:enumeration value="evacuation"/>
+      			
+      <xsd:enumeration value="pti19_3_Alias_12"/>
+      			
+      <xsd:enumeration value="terroristIncident"/>
+      			
+      <xsd:enumeration value="pti19_3_Alias_13"/>
+      			
+      <xsd:enumeration value="gunfireOnRoadway"/>
+      			
+      <xsd:enumeration value="pti19_3_Alias_14"/>
+      			
+      <xsd:enumeration value="explosion"/>
+      			
+      <xsd:enumeration value="pti19_3_Alias_15"/>
+      			
+      <xsd:enumeration value="explosionHazard"/>
+      			
+      <xsd:enumeration value="pti19_3_Alias_16"/>
+      			
+      <xsd:enumeration value="securityIncident"/>
+      			
+      <xsd:enumeration value="pti19_3_Alias_17"/>
+      			
+      <xsd:enumeration value="fireBrigadeOrder"/>
+      			
+      <xsd:enumeration value="pti19_3_Alias_18"/>
+      			
+      <xsd:enumeration value="policeActivity"/>
+      			
+      <xsd:enumeration value="pti19_4"/>
+      			
+      <xsd:enumeration value="fire">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_4 fire.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_4_Alias_1"/>
+      			
+      <xsd:enumeration value="linesideFire">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>linesideFire alias to TPEG Pti_19_4 fire.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_5"/>
+      			
+      <xsd:enumeration value="vandalism">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_5 vandalism.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_5_Alias_1"/>
+      			
+      <xsd:enumeration value="passengerAction">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>passengerActionAlias to pti19</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_5_Alias_2"/>
+      			
+      <xsd:enumeration value="staffAssault">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Assault on stafft.Alias to pti19</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_5_Alias_3"/>
+      			
+      <xsd:enumeration value="railwayCrime">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Railway Crime Alias to pti19</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_5_Alias_4"/>
+      			
+      <xsd:enumeration value="assault">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Assault Alias to pti19</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_5_Alias_5"/>
+      			
+      <xsd:enumeration value="theft">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Theft Alias to pti19</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_1_Alias_6"/>
+      			
+      <xsd:enumeration value="altercation ">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>altercation . Alias to pti19</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_1_Alias_7"/>
+      			
+      <xsd:enumeration value="illVehicleOccupants ">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>illVehicleOccupants . Alias to pti19</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_6"/>
+      			
+      <xsd:enumeration value="accident">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_6 accident.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_6_Alias_1"/>
+      			
+      <xsd:enumeration value="fatality">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>fatality alias to TPEG Pti_19_6 accident.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_6_Alias_2"/>
+      			
+      <xsd:enumeration value="personUnderTrain">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>a person under a train - alias to TPEG Pti_19_6 accident.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_6_Alias_3"/>
+      			
+      <xsd:enumeration value="personHitByTrain">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>a person hit by a train - alias to TPEG Pti_19_6 accident.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_6_Alias_4"/>
+      			
+      <xsd:enumeration value="personIllOnVehicle">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>person ill On Vehicle -Alias to pti19_6</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_6_Alias_5"/>
+      			
+      <xsd:enumeration value="emergencyServices">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>emergencyServices - alias to TPEG Pti_19_6 accident.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_6_Alias_6"/>
+      			
+      <xsd:enumeration value="collision">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Collision - Alias to pti19_6</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_7"/>
+      			
+      <xsd:enumeration value="overcrowded">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_7 overcrowded.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_8"/>
+      			
+      <xsd:enumeration value="insufficientDemand">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_8 insufficient demand.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_9"/>
+      			
+      <xsd:enumeration value="lightingFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_9 lighting failure.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_10"/>
+      			
+      <xsd:enumeration value="leaderBoardFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_10 leader board failure.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_11"/>
+      			
+      <xsd:enumeration value="serviceIndicatorFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_11 service indicator failure.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_12"/>
+      			
+      <xsd:enumeration value="serviceFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_12 service failure.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_13"/>
+      			
+      <xsd:enumeration value="operatorCeasedTrading">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_13 OPERATOR ceased trading.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_14"/>
+      			
+      <xsd:enumeration value="operatorSuspended">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_14 OPERATOR suspended.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_15"/>
+      			
+      <xsd:enumeration value="congestion">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_15 congestion.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_16"/>
+      			
+      <xsd:enumeration value="routeBlockage">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_16 route blockage.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_17"/>
+      			
+      <xsd:enumeration value="personOnTheLine">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_17 person on the line.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_18"/>
+      			
+      <xsd:enumeration value="vehicleOnTheLine">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_18 VEHICLE on the line.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_18_Alias_1"/>
+      			
+      <xsd:enumeration value="levelCrossingIncident">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Level Crossing Incident - alias to TPEG Pti_19_18 VEHICLE on the line.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_19"/>
+      			
+      <xsd:enumeration value="objectOnTheLine">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_19 object on the line.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_19_Alias_1"/>
+      			
+      <xsd:enumeration value="fallenTreeOnTheLine">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>fallen tree on line- alias to TPEG Pti_19_19 object on the line.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_19_Alias_2"/>
+      			
+      <xsd:enumeration value="vegetation">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>vegetation - alias to TPEG Pti_19_19 object on the line.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_19_Alias_3"/>
+      			
+      <xsd:enumeration value="trainStruckAnimal">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Train struck animal alias to TPEG Pti_19_19 object on the line.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_19_Alias_4"/>
+      			
+      <xsd:enumeration value="trainStruckObject">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Train struck object alias to TPEG Pti_19_19 object on the line.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_20"/>
+      			
+      <xsd:enumeration value="animalOnTheLine">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_20 animal on the line.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_21"/>
+      			
+      <xsd:enumeration value="routeDiversion">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_21 route diversion.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_22"/>
+      			
+      <xsd:enumeration value="roadClosed">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_22 road closed.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_23"/>
+      			
+      <xsd:enumeration value="roadworks">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_23 roadworks.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_23_Alias_1"/>
+      			
+      <xsd:enumeration value="sewerageMaintenance">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>19:23_1 sewerageMaintenance - alias to TPEG Pti_19_23 roadworks..</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_23_Alias_2"/>
+      			
+      <xsd:enumeration value="roadMaintenance">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>19:23_2 roadMaintenance - alias to TPEG Pti_19_23 roadworks..</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_23_Alias_3"/>
+      			
+      <xsd:enumeration value="asphalting">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>19:23_3 asphalting - alias to TPEG Pti_19_23 roadworks..</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_23_Alias_4"/>
+      			
+      <xsd:enumeration value="paving">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>19:23_4 paving - alias to TPEG Pti_19_23 roadworks..</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_24"/>
+      			
+      <xsd:enumeration value="specialEvent">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_24 special event.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_24_Alias_1"/>
+      			
+      <xsd:enumeration value="march"/>
+      			
+      <xsd:enumeration value="pti19_24_Alias_2"/>
+      			
+      <xsd:enumeration value="procession"/>
+      			
+      <xsd:enumeration value="pti19_24_Alias_3"/>
+      			
+      <xsd:enumeration value="demonstration"/>
+      			
+      <xsd:enumeration value="pti19_24_Alias_4"/>
+      			
+      <xsd:enumeration value="publicDisturbance"/>
+      			
+      <xsd:enumeration value="pti19_24_Alias_5"/>
+      			
+      <xsd:enumeration value="filterBlockade"/>
+      			
+      <xsd:enumeration value="pti19_24_Alias_6"/>
+      			
+      <xsd:enumeration value="sightseersObstructingAccess"/>
+      			
+      <xsd:enumeration value="pti19_24_Alias_7"/>
+      			
+      <xsd:enumeration value="holiday"/>
+      			
+      <xsd:enumeration value="pti19_25"/>
+      			
+      <xsd:enumeration value="bridgeStrike">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_25 bridge strike.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_25_Alias_1"/>
+      			
+      <xsd:enumeration value="viaductFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>19:25_1 viaductFailure - alias to TPEG Pti_19_24 bridgeStrike</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_26"/>
+      			
+      <xsd:enumeration value="overheadObstruction">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_26 overhead obstruction.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_27"/>
+      			
+      <xsd:enumeration value="undefinedProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti_19_255 undefined problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_15_Alias_1"/>
+      			
+      <xsd:enumeration value="problemsAtBorderPost"/>
+      			
+      <xsd:enumeration value="pti19_15_Alias_2"/>
+      			
+      <xsd:enumeration value="problemsAtCustomsPost"/>
+      			
+      <xsd:enumeration value="pti19_15_Alias_3"/>
+      			
+      <xsd:enumeration value="speedRestrictions">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>19:255_1 speedRestrictions alias to TPEG Pti_19_15 unknown</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_255_Alias_1"/>
+      			
+      <xsd:enumeration value="logisticProblems">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>19:255_2 logisticProblems alias to TPEG Pti_19_15 unknown</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti19_255_Alias_2"/>
+      			
+      <xsd:enumeration value="problemsOnLocalRoad"/>
+      		
+    </xsd:restriction>
+    	
+  </xsd:simpleType>
+  	
+  <!-- ===================================================== -->
+  	
+  <xsd:element name="PersonnelReason" type="PersonnelReasonEnumeration">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>TPEG Pti18_2/TPEG Pti_20 personnel event reason.</xsd:documentation>
+      		
+    </xsd:annotation>
+    	
+  </xsd:element>
+  	
+  <xsd:simpleType name="PersonnelReasonEnumeration">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Values for Personnel incident reason types TPEG Pti18_2/TPEG Pti_20.</xsd:documentation>
+      		
+    </xsd:annotation>
+    		
+    <xsd:restriction base="xsd:NMTOKEN">
+      			
+      <xsd:enumeration value="pti20_0"/>
+      			
+      <xsd:enumeration value="unknown">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti20_0 unknown.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti20_1"/>
+      			
+      <xsd:enumeration value="staffSickness">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti20_1 staff sickness.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti20_1_Alias_1"/>
+      			
+      <xsd:enumeration value="staffInjury">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation> staff injury alias to TPEG Pti20_1 staff sickness.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti20_1_Alias_2"/>
+      			
+      <xsd:enumeration value="contractorStaffInjury">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>contractor staff injury alias to TPEG Pti20_1 staff sickness.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti20_2"/>
+      			
+      <xsd:enumeration value="staffAbsence">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti20_2 staff absence.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti20_3"/>
+      			
+      <xsd:enumeration value="staffInWrongPlace">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti20_3 staff in wrong place.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti20_4"/>
+      			
+      <xsd:enumeration value="staffShortage">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti20_4 staff shortage.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti20_5"/>
+      			
+      <xsd:enumeration value="industrialAction">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti20_5 industrial action.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti20_5_Alias_1"/>
+      			
+      <xsd:enumeration value="unofficialIndustrialAction">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Unofffical action - alias to TPEG Pti20_5 industrial action.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti20_6"/>
+      			
+      <xsd:enumeration value="workToRule">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti20_6 work to rule.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti20_255"/>
+      			
+      <xsd:enumeration value="undefinedPersonnelProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti20_255 undefined personnel problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      		
+    </xsd:restriction>
+    	
+  </xsd:simpleType>
+  	
+  <!-- ===================================================== -->
+  	
+  <xsd:element name="EquipmentReason" type="EquipmentReasonEnumeration">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>TPEG Pti18_3/TPEG Pti_21 equipment event reason.</xsd:documentation>
+      		
+    </xsd:annotation>
+    	
+  </xsd:element>
+  	
+  <xsd:simpleType name="EquipmentReasonEnumeration">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Values for Equipment incident reason types TPEG Pti18_3/TPEG Pti_21.</xsd:documentation>
+      		
+    </xsd:annotation>
+    		
+    <xsd:restriction base="xsd:NMTOKEN">
+      			
+      <xsd:enumeration value="pti21_0"/>
+      			
+      <xsd:enumeration value="unknown">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_0 unknown.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_1"/>
+      			
+      <xsd:enumeration value="pointsProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_1 points problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_2"/>
+      			
+      <xsd:enumeration value="pointsFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_2 points failure.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_3"/>
+      			
+      <xsd:enumeration value="signalProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_3 signal problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_3_Alias_1"/>
+      			
+      <xsd:enumeration value="trainWarningSystemProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Train warning system eg TPWSAlias to TPEG Pti21_3 signal problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_3_Alias_2"/>
+      			
+      <xsd:enumeration value="trackCircuitProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Track circuit alias to TPEG Pti21_3 signal problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_4"/>
+      			
+      <xsd:enumeration value="signalFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_4 signal failure.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_4_Alias_1"/>
+      			
+      <xsd:enumeration value="signalAndSwitchFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_4 signal failure.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_5"/>
+      			
+      <xsd:enumeration value="derailment">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_5 derailment.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_6"/>
+      			
+      <xsd:enumeration value="engineFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_6 engine failure.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_6_Alias_1"/>
+      			
+      <xsd:enumeration value="tractionFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>traction failure alais to TPEG Pti21_6 engine failure.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_7"/>
+      			
+      <xsd:enumeration value="breakDown">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_7 break down.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_8"/>
+      			
+      <xsd:enumeration value="technicalProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_8 technical problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_8_Alias_1"/>
+      			
+      <xsd:enumeration value="brokenRail">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Broken rail - alias to TPEG Pti21_8 technical problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_8_Alias_2"/>
+      			
+      <xsd:enumeration value="poorRailConditions">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>poor rail conditions - alias to TPEG Pti21_8 technical problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_8_Alias_3"/>
+      			
+      <xsd:enumeration value="wheelImpactLoad">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Wheel Impact Load detectedi by trackside equipment alias to TPEG Pti21_8 technical problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_8_Alias_4"/>
+      			
+      <xsd:enumeration value="lackOfOperationalStock">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>late lack of operational stock - alias to TPEG Pti21_8 technical problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_8_Alias_5"/>
+      			
+      <xsd:enumeration value="defectiveFireAlarmEquipment">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>defective fire alarm equipment - alias to TPEG Pti21_8 technical problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_8_Alias_6"/>
+      			
+      <xsd:enumeration value="defectivePlatformEdgeDoors">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>defective PEDs (platform edge doors) - alias to TPEG Pti21_8 technical problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_8_Alias_7"/>
+      			
+      <xsd:enumeration value="defectiveCctv">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>defective CCTV - alias to TPEG Pti21_8 technical problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_8_Alias_8"/>
+      			
+      <xsd:enumeration value="defectivePublicAnnouncementSystem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>defective PA - alias to TPEG Pti21_8 technical problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_8_Alias_9"/>
+      			
+      <xsd:enumeration value="ticketingSystemNotAvailable">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>ticketing facility unavailable - alias to TPEG Pti21_8 technical problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_8_Alias_10"/>
+      			
+      <xsd:enumeration value="leveCrossingFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>ticketing facility unavailable - alias to TPEG Pti21_8 technical problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_9"/>
+      			
+      <xsd:enumeration value="repairWork">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_9 repair work.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_10"/>
+      			
+      <xsd:enumeration value="constructionWork">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_10 construction work.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_11"/>
+      			
+      <xsd:enumeration value="maintenanceWork">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_11 maintenance work.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_11_Alias_1"/>
+      			
+      <xsd:enumeration value="emergencyEngineeringWork">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>emergency engineering work - alias to TPEG Pti21_11 maintenance work.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_11_Alias_2"/>
+      			
+      <xsd:enumeration value="lateFinishToEngineeringWork">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>late finish to engineering work - alias to TPEG Pti21_11 maintenance work.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_12"/>
+      			
+      <xsd:enumeration value="powerProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_12 power problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_12_Alias_1"/>
+      			
+      <xsd:enumeration value="oveheadWireFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_12 power problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_13"/>
+      			
+      <xsd:enumeration value="fuelProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_13 fuel problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_14"/>
+      			
+      <xsd:enumeration value="swingBridgeFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_14 swing bridge failure.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_15"/>
+      			
+      <xsd:enumeration value="escalatorFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_15 escalator failure.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_16"/>
+      			
+      <xsd:enumeration value="liftFailure">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_16 lift failure.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_17"/>
+      			
+      <xsd:enumeration value="gangwayProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_17 gangway problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_18"/>
+      			
+      <xsd:enumeration value="closedForMaintenance">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_18 closed for maintenance.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_19"/>
+      			
+      <xsd:enumeration value="fuelShortage">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_19 fuel shortage.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_20"/>
+      			
+      <xsd:enumeration value="deicingWork">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_20 de-icing work.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_21"/>
+      			
+      <xsd:enumeration value="wheelProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_21 wheel problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_21_Alias_1"/>
+      			
+      <xsd:enumeration value="slipperyTrack">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_21 wheel problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_22"/>
+      			
+      <xsd:enumeration value="luggageCarouselProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_22 luggage carousel problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti21_255"/>
+      			
+      <xsd:enumeration value="undefinedEquipmentProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti21_255 undefined equipment problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      		
+    </xsd:restriction>
+    	
+  </xsd:simpleType>
+  	
+  <!-- ===================================================== -->
+  	
+  <xsd:element name="EnvironmentReason" type="EnvironmentReasonEnumeration">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>TPEG Pti18_4/TPEG Pti_22 environment event reason.</xsd:documentation>
+      		
+    </xsd:annotation>
+    	
+  </xsd:element>
+  	
+  <xsd:simpleType name="EnvironmentReasonEnumeration">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>Values for Environment incident reason types TPEG Pti18_4/TPEG Pti_22.</xsd:documentation>
+      		
+    </xsd:annotation>
+    		
+    <xsd:restriction base="xsd:NMTOKEN">
+      			
+      <xsd:enumeration value="pti22_0"/>
+      			
+      <xsd:enumeration value="unknown">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_0 unknown.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_1"/>
+      			
+      <xsd:enumeration value="fog">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_1 fog.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_2"/>
+      			
+      <xsd:enumeration value="roughSea">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_2 rough sea.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_3"/>
+      			
+      <xsd:enumeration value="heavySnowFall">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_3 heavy snow fall.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_3_Alias_1"/>
+      			
+      <xsd:enumeration value="driftingSnow">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>drifting snow - Alias to TPEG Pti22_3 heavySnowFall.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_3_Alias_2"/>
+      			
+      <xsd:enumeration value="blizzardConditions">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Blizzard Conditions - Alias to TPEG Pti22_3 heavySnowFall.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_4"/>
+      			
+      <xsd:enumeration value="heavyRain">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_4 heavy rain.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_5"/>
+      			
+      <xsd:enumeration value="strongWinds">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_5 strong winds.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_5_Alias_1"/>
+      			
+      <xsd:enumeration value="stormConditions">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>stormConditions alias to TPEG Pti22_5 strong winds.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_5_Alias_2"/>
+      			
+      <xsd:enumeration value="stormDamage">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>storm damage alias to TPEG Pti22_5 strong winds.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_6"/>
+      			
+      <xsd:enumeration value="tidalRestrictions">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_6 tidal restrictions.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_7"/>
+      			
+      <xsd:enumeration value="highTide">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_7 high tide.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_8"/>
+      			
+      <xsd:enumeration value="lowTide">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_8 low tide.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_9"/>
+      			
+      <xsd:enumeration value="ice">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_9 ice.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_9_Alias_1"/>
+      			
+      <xsd:enumeration value="slipperiness">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_9 ice.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_9_Alias_2"/>
+      			
+      <xsd:enumeration value="iceDrift">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_9 ice.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_9_Alias_3"/>
+      			
+      <xsd:enumeration value="glazedFrost">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_9 ice.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_10"/>
+      			
+      <xsd:enumeration value="frozen">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_10 frozen.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_11"/>
+      			
+      <xsd:enumeration value="hail">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_11 hail.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_11_Alias_1"/>
+      			
+      <xsd:enumeration value="sleet">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>Sleet Alias to TPEG Pti22_11 hail.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_12"/>
+      			
+      <xsd:enumeration value="highTemperatures">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_12 high temperatures.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_13"/>
+      			
+      <xsd:enumeration value="flooding">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_13 flooding.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_14"/>
+      			
+      <xsd:enumeration value="waterlogged">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_14 waterlogged.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_15"/>
+      			
+      <xsd:enumeration value="lowWaterLevel">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_15 low water level.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_16"/>
+      			
+      <xsd:enumeration value="highWaterLevel">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_16 high water level.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_17"/>
+      			
+      <xsd:enumeration value="fallenLeaves">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_17 fallen leaves.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_18"/>
+      			
+      <xsd:enumeration value="fallenTree">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_18 fallen tree.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_19"/>
+      			
+      <xsd:enumeration value="landslide">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_19 landslide.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_255"/>
+      			
+      <xsd:enumeration value="undefinedEnvironmentalProblem">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>TPEG Pti22_255 undefined environmental problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_255_Alias_1"/>
+      			
+      <xsd:enumeration value="lightningStrike">
+        				
+        <xsd:annotation>
+          					
+          <xsd:documentation>lightningStrike alias to TPEG Pti22_255 undefined environmental problem.</xsd:documentation>
+          				
+        </xsd:annotation>
+        			
+      </xsd:enumeration>
+      			
+      <xsd:enumeration value="pti22_255_Alias_2"/>
+      			
+      <xsd:enumeration value="sewerOverflow"/>
+      			
+      <xsd:enumeration value="pti22_255_Alias_3"/>
+      			
+      <xsd:enumeration value="grassFire"/>
+      		
+    </xsd:restriction>
+    	
+  </xsd:simpleType>
+  	
+  <!-- ===================================================== -->
+  	
+  <xsd:element name="UndefinedReason" type="xsd:string">
+    		
+    <xsd:annotation>
+      			
+      <xsd:documentation>TPEG Pti18_255/TPEG Pti_22 undefined event reason.</xsd:documentation>
+      		
+    </xsd:annotation>
+    	
+  </xsd:element>
+  
+</xsd:schema>

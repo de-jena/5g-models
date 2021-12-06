@@ -1,0 +1,2450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="siri" nsURI="http://www.siri.org.uk/siri" nsPrefix="siri">
+  <eClassifiers xsi:type="ecore:EDataType" name="CountryCodeType" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Type for Country identifier."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="CountryCodeType"/>
+      <details key="baseType" value="IanaCountryTldEnumeration"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CountryRefStructure">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Type for reference to a Country identifier."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="CountryRefStructure"/>
+      <details key="kind" value="simple"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//CountryCodeType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value=":0"/>
+        <details key="kind" value="simple"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntryQualifierStructure">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Type for a referenceUnique identifier of a SITUATION within participant."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="EntryQualifierStructure"/>
+      <details key="kind" value="simple"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnyURI">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value=":0"/>
+        <details key="kind" value="simple"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EnvironmentReasonEnumeration">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Values for Environment incident reason types TPEG Pti18_4/TPEG Pti_22."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="EnvironmentReasonEnumeration"/>
+    </eAnnotations>
+    <eLiterals name="pti220" literal="pti22_0"/>
+    <eLiterals name="unknown" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_0 unknown."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti221" value="2" literal="pti22_1"/>
+    <eLiterals name="fog" value="3">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_1 fog."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti222" value="4" literal="pti22_2"/>
+    <eLiterals name="roughSea" value="5">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_2 rough sea."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti223" value="6" literal="pti22_3"/>
+    <eLiterals name="heavySnowFall" value="7">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_3 heavy snow fall."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti223Alias1" value="8" literal="pti22_3_Alias_1"/>
+    <eLiterals name="driftingSnow" value="9">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="drifting snow - Alias to TPEG Pti22_3 heavySnowFall."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti223Alias2" value="10" literal="pti22_3_Alias_2"/>
+    <eLiterals name="blizzardConditions" value="11">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Blizzard Conditions - Alias to TPEG Pti22_3 heavySnowFall."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti224" value="12" literal="pti22_4"/>
+    <eLiterals name="heavyRain" value="13">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_4 heavy rain."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti225" value="14" literal="pti22_5"/>
+    <eLiterals name="strongWinds" value="15">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_5 strong winds."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti225Alias1" value="16" literal="pti22_5_Alias_1"/>
+    <eLiterals name="stormConditions" value="17">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="stormConditions alias to TPEG Pti22_5 strong winds."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti225Alias2" value="18" literal="pti22_5_Alias_2"/>
+    <eLiterals name="stormDamage" value="19">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="storm damage alias to TPEG Pti22_5 strong winds."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti226" value="20" literal="pti22_6"/>
+    <eLiterals name="tidalRestrictions" value="21">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_6 tidal restrictions."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti227" value="22" literal="pti22_7"/>
+    <eLiterals name="highTide" value="23">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_7 high tide."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti228" value="24" literal="pti22_8"/>
+    <eLiterals name="lowTide" value="25">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_8 low tide."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti229" value="26" literal="pti22_9"/>
+    <eLiterals name="ice" value="27">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_9 ice."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti229Alias1" value="28" literal="pti22_9_Alias_1"/>
+    <eLiterals name="slipperiness" value="29">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_9 ice."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti229Alias2" value="30" literal="pti22_9_Alias_2"/>
+    <eLiterals name="iceDrift" value="31">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_9 ice."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti229Alias3" value="32" literal="pti22_9_Alias_3"/>
+    <eLiterals name="glazedFrost" value="33">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_9 ice."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2210" value="34" literal="pti22_10"/>
+    <eLiterals name="frozen" value="35">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_10 frozen."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2211" value="36" literal="pti22_11"/>
+    <eLiterals name="hail" value="37">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_11 hail."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2211Alias1" value="38" literal="pti22_11_Alias_1"/>
+    <eLiterals name="sleet" value="39">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Sleet Alias to TPEG Pti22_11 hail."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2212" value="40" literal="pti22_12"/>
+    <eLiterals name="highTemperatures" value="41">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_12 high temperatures."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2213" value="42" literal="pti22_13"/>
+    <eLiterals name="flooding" value="43">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_13 flooding."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2214" value="44" literal="pti22_14"/>
+    <eLiterals name="waterlogged" value="45">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_14 waterlogged."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2215" value="46" literal="pti22_15"/>
+    <eLiterals name="lowWaterLevel" value="47">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_15 low water level."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2216" value="48" literal="pti22_16"/>
+    <eLiterals name="highWaterLevel" value="49">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_16 high water level."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2217" value="50" literal="pti22_17"/>
+    <eLiterals name="fallenLeaves" value="51">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_17 fallen leaves."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2218" value="52" literal="pti22_18"/>
+    <eLiterals name="fallenTree" value="53">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_18 fallen tree."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2219" value="54" literal="pti22_19"/>
+    <eLiterals name="landslide" value="55">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_19 landslide."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti22255" value="56" literal="pti22_255"/>
+    <eLiterals name="undefinedEnvironmentalProblem" value="57">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti22_255 undefined environmental problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti22255Alias1" value="58" literal="pti22_255_Alias_1"/>
+    <eLiterals name="lightningStrike" value="59">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="lightningStrike alias to TPEG Pti22_255 undefined environmental problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti22255Alias2" value="60" literal="pti22_255_Alias_2"/>
+    <eLiterals name="sewerOverflow" value="61"/>
+    <eLiterals name="pti22255Alias3" value="62" literal="pti22_255_Alias_3"/>
+    <eLiterals name="grassFire" value="63"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="EnvironmentReasonEnumerationObject"
+      instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="EnvironmentReasonEnumeration:Object"/>
+      <details key="baseType" value="EnvironmentReasonEnumeration"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EquipmentReasonEnumeration">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Values for Equipment incident reason types TPEG Pti18_3/TPEG Pti_21."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="EquipmentReasonEnumeration"/>
+    </eAnnotations>
+    <eLiterals name="pti210" literal="pti21_0"/>
+    <eLiterals name="unknown" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_0 unknown."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti211" value="2" literal="pti21_1"/>
+    <eLiterals name="pointsProblem" value="3">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_1 points problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti212" value="4" literal="pti21_2"/>
+    <eLiterals name="pointsFailure" value="5">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_2 points failure."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti213" value="6" literal="pti21_3"/>
+    <eLiterals name="signalProblem" value="7">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_3 signal problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti213Alias1" value="8" literal="pti21_3_Alias_1"/>
+    <eLiterals name="trainWarningSystemProblem" value="9">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Train warning system eg TPWSAlias to TPEG Pti21_3 signal problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti213Alias2" value="10" literal="pti21_3_Alias_2"/>
+    <eLiterals name="trackCircuitProblem" value="11">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Track circuit alias to TPEG Pti21_3 signal problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti214" value="12" literal="pti21_4"/>
+    <eLiterals name="signalFailure" value="13">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_4 signal failure."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti214Alias1" value="14" literal="pti21_4_Alias_1"/>
+    <eLiterals name="signalAndSwitchFailure" value="15">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_4 signal failure."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti215" value="16" literal="pti21_5"/>
+    <eLiterals name="derailment" value="17">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_5 derailment."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti216" value="18" literal="pti21_6"/>
+    <eLiterals name="engineFailure" value="19">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_6 engine failure."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti216Alias1" value="20" literal="pti21_6_Alias_1"/>
+    <eLiterals name="tractionFailure" value="21">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="traction failure alais to TPEG Pti21_6 engine failure."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti217" value="22" literal="pti21_7"/>
+    <eLiterals name="breakDown" value="23">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_7 break down."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti218" value="24" literal="pti21_8"/>
+    <eLiterals name="technicalProblem" value="25">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_8 technical problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti218Alias1" value="26" literal="pti21_8_Alias_1"/>
+    <eLiterals name="brokenRail" value="27">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Broken rail - alias to TPEG Pti21_8 technical problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti218Alias2" value="28" literal="pti21_8_Alias_2"/>
+    <eLiterals name="poorRailConditions" value="29">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="poor rail conditions - alias to TPEG Pti21_8 technical problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti218Alias3" value="30" literal="pti21_8_Alias_3"/>
+    <eLiterals name="wheelImpactLoad" value="31">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wheel Impact Load detectedi by trackside equipment alias to TPEG Pti21_8 technical problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti218Alias4" value="32" literal="pti21_8_Alias_4"/>
+    <eLiterals name="lackOfOperationalStock" value="33">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="late lack of operational stock - alias to TPEG Pti21_8 technical problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti218Alias5" value="34" literal="pti21_8_Alias_5"/>
+    <eLiterals name="defectiveFireAlarmEquipment" value="35">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="defective fire alarm equipment - alias to TPEG Pti21_8 technical problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti218Alias6" value="36" literal="pti21_8_Alias_6"/>
+    <eLiterals name="defectivePlatformEdgeDoors" value="37">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="defective PEDs (platform edge doors) - alias to TPEG Pti21_8 technical problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti218Alias7" value="38" literal="pti21_8_Alias_7"/>
+    <eLiterals name="defectiveCctv" value="39">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="defective CCTV - alias to TPEG Pti21_8 technical problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti218Alias8" value="40" literal="pti21_8_Alias_8"/>
+    <eLiterals name="defectivePublicAnnouncementSystem" value="41">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="defective PA - alias to TPEG Pti21_8 technical problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti218Alias9" value="42" literal="pti21_8_Alias_9"/>
+    <eLiterals name="ticketingSystemNotAvailable" value="43">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="ticketing facility unavailable - alias to TPEG Pti21_8 technical problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti218Alias10" value="44" literal="pti21_8_Alias_10"/>
+    <eLiterals name="leveCrossingFailure" value="45">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="ticketing facility unavailable - alias to TPEG Pti21_8 technical problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti219" value="46" literal="pti21_9"/>
+    <eLiterals name="repairWork" value="47">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_9 repair work."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2110" value="48" literal="pti21_10"/>
+    <eLiterals name="constructionWork" value="49">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_10 construction work."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2111" value="50" literal="pti21_11"/>
+    <eLiterals name="maintenanceWork" value="51">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_11 maintenance work."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2111Alias1" value="52" literal="pti21_11_Alias_1"/>
+    <eLiterals name="emergencyEngineeringWork" value="53">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="emergency engineering work - alias to TPEG Pti21_11 maintenance work."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2111Alias2" value="54" literal="pti21_11_Alias_2"/>
+    <eLiterals name="lateFinishToEngineeringWork" value="55">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="late finish to engineering work - alias to TPEG Pti21_11 maintenance work."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2112" value="56" literal="pti21_12"/>
+    <eLiterals name="powerProblem" value="57">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_12 power problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2112Alias1" value="58" literal="pti21_12_Alias_1"/>
+    <eLiterals name="oveheadWireFailure" value="59">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_12 power problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2113" value="60" literal="pti21_13"/>
+    <eLiterals name="fuelProblem" value="61">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_13 fuel problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2114" value="62" literal="pti21_14"/>
+    <eLiterals name="swingBridgeFailure" value="63">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_14 swing bridge failure."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2115" value="64" literal="pti21_15"/>
+    <eLiterals name="escalatorFailure" value="65">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_15 escalator failure."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2116" value="66" literal="pti21_16"/>
+    <eLiterals name="liftFailure" value="67">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_16 lift failure."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2117" value="68" literal="pti21_17"/>
+    <eLiterals name="gangwayProblem" value="69">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_17 gangway problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2118" value="70" literal="pti21_18"/>
+    <eLiterals name="closedForMaintenance" value="71">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_18 closed for maintenance."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2119" value="72" literal="pti21_19"/>
+    <eLiterals name="fuelShortage" value="73">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_19 fuel shortage."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2120" value="74" literal="pti21_20"/>
+    <eLiterals name="deicingWork" value="75">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_20 de-icing work."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2121" value="76" literal="pti21_21"/>
+    <eLiterals name="wheelProblem" value="77">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_21 wheel problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2121Alias1" value="78" literal="pti21_21_Alias_1"/>
+    <eLiterals name="slipperyTrack" value="79">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_21 wheel problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti2122" value="80" literal="pti21_22"/>
+    <eLiterals name="luggageCarouselProblem" value="81">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_22 luggage carousel problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti21255" value="82" literal="pti21_255"/>
+    <eLiterals name="undefinedEquipmentProblem" value="83">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti21_255 undefined equipment problem."/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="EquipmentReasonEnumerationObject"
+      instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="EquipmentReasonEnumeration:Object"/>
+      <details key="baseType" value="EquipmentReasonEnumeration"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="IanaCountryTldEnumeration">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Allowed values for classifying NPTG Localities."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="IanaCountryTldEnumeration"/>
+    </eAnnotations>
+    <eLiterals name="ac">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Ascension Island."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ad" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Andorra."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ae" value="2">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="United Arab Emirates."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="af" value="3">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Afghanistan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ag" value="4">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Antigua and Barbuda."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ai" value="5">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Anguilla."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="al" value="6">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Albania."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="am" value="7">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Armenia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="an" value="8">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Netherlands Antilles."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ao" value="9">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angola."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="aq" value="10">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Antarctica."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ar" value="11">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Argentina."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="as" value="12">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="American Samoa."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="at" value="13">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Austria."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="au" value="14">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Australia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="aw" value="15">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Aruba."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="az" value="16">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Azerbaijan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ax" value="17">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Aland Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ba" value="18">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bosnia and Herzegovina."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bb" value="19">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Barbados."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bd" value="20">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bangladesh."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="be" value="21">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Belgium."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bf" value="22">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Burkina Faso."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bg" value="23">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bulgaria."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bh" value="24">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bahrain."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bi" value="25">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Burundi."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bj" value="26">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Benin."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bm" value="27">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bermuda."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bn" value="28">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Brunei Darussalam."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bo" value="29">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bolivia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="br" value="30">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Brazil."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bs" value="31">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bahamas."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bt" value="32">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bhutan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bv" value="33">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bouvet Island."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bw" value="34">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Botswana."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="by" value="35">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Belarus."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="bz" value="36">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Belize."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ca" value="37">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Canada."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cc" value="38">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Cocos (Keeling) Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cd" value="39">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Congo, The Democratic Republic of the."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cf" value="40">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Central African Republic."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cg" value="41">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Congo, Republic of."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ch" value="42">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Switzerland."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ci" value="43">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Cote d'Ivoire."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ck" value="44">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Cook Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cl" value="45">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Chile."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cm" value="46">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Cameroon."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cn" value="47">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="China."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="co" value="48">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Colombia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cr" value="49">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Costa Rica."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cs" value="50">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Serbia and Montenegro."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cu" value="51">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Cuba."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cv" value="52">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Cape Verde."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cx" value="53">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Christmas Island."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cy" value="54">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Cyprus."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="cz" value="55">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Czech Republic."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="de" value="56">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Germany."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="dj" value="57">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Djibouti."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="dk" value="58">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Denmark."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="dm" value="59">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Dominica."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="do" value="60">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Dominican Republic."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="dz" value="61">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Algeria."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ec" value="62">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Ecuador."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ee" value="63">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Estonia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="eg" value="64">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Egypt."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="eh" value="65">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Western Sahara."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="er" value="66">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Eritrea."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="es" value="67">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Spain."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="et" value="68">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Ethiopia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="eu" value="69">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="European Union."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="fi" value="70">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Finland."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="fj" value="71">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Fiji."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="fk" value="72">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Falkland Islands (Malvinas)"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="fm" value="73">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Micronesia, Federal State of."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="fo" value="74">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Faroe Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="fr" value="75">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="France."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ga" value="76">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Gabon."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gb" value="77">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="United Kingdom."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gd" value="78">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Grenada."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ge" value="79">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Georgia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gf" value="80">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="French Guiana."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gg" value="81">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Guernsey."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gh" value="82">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Ghana."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gi" value="83">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Gibraltar."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gl" value="84">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Greenland."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gm" value="85">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Gambia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gn" value="86">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Guinea."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gp" value="87">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Guadeloupe."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gq" value="88">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Equatorial Guinea."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gr" value="89">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Greece."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gs" value="90">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="South Georgia and the South Sandwich Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gt" value="91">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Guatemala."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gu" value="92">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Guam."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gw" value="93">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Guinea-Bissau."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="gy" value="94">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Guyana."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="hk" value="95">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hong Kong."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="hm" value="96">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Heard and McDonald Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="hn" value="97">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Honduras."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="hr" value="98">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Croatia/Hrvatska."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ht" value="99">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Haiti."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="hu" value="100">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hungary."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="id" value="101">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Indonesia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ie" value="102">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Ireland."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="il" value="103">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Israel."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="im" value="104">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Isle of Man."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="in" value="105">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="India."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="io" value="106">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="British Indian Ocean Territory."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="iq" value="107">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Iraq"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ir" value="108">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Iran, Islamic Republic of."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="is" value="109">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Iceland."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="it" value="110">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Italy."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="je" value="111">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Jersey."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="jm" value="112">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Jamaica."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="jo" value="113">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Jordan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="jp" value="114">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Japan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ke" value="115">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Kenya."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="kg" value="116">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Kyrgyzstan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="kh" value="117">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Cambodia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ki" value="118">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Kiribati."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="km" value="119">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Comoros."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="kn" value="120">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Saint Kitts and Nevis."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="kp" value="121">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Korea, Democratic People's Republic."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="kr" value="122">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Korea, Republic of."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="kw" value="123">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Kuwait."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ky" value="124">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Cayman Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="kz" value="125">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Kazakhstan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="la" value="126">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Lao People's Democratic Republic."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="lb" value="127">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Lebanon."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="lc" value="128">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Saint Lucia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="li" value="129">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Liechtenstein."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="lk" value="130">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Sri Lanka."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="lr" value="131">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Liberia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ls" value="132">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Lesotho."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="lt" value="133">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Lithuania."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="lu" value="134">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Luxembourg."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="lv" value="135">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Latvia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ly" value="136">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Libyan Arab Jamahiriya."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ma" value="137">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Morocco."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mc" value="138">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Monaco."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="md" value="139">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Moldova, Republic of."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mg" value="140">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Madagascar."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mh" value="141">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Marshall Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mk" value="142">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Macedonia, The Former Yugoslav Republic of."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ml" value="143">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mali."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mm" value="144">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Myanmar."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mn" value="145">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mongolia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mo" value="146">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Macau."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mp" value="147">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Northern Mariana Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mq" value="148">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Martinique."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mr" value="149">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mauritania."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ms" value="150">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Montserrat."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mt" value="151">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Malta."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mu" value="152">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mauritius."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mv" value="153">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Maldives."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mw" value="154">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Malawi."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mx" value="155">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mexico."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="my" value="156">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Malaysia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mz" value="157">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mozambique."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="na" value="158">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Namibia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="nc" value="159">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="New Caledonia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ne" value="160">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Niger."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="nf" value="161">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Norfolk Island."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ng" value="162">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Nigeria."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ni" value="163">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Nicaragua."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="nl" value="164">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Netherlands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="no" value="165">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Norway."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="np" value="166">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Nepal."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="nr" value="167">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Nauru."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="nu" value="168">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Niue."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="nz" value="169">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="New Zealand."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="om" value="170">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Oman."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pa" value="171">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Panama."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pe" value="172">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Peru."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pf" value="173">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="French Polynesia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pg" value="174">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Papua New Guinea."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ph" value="175">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Philippines."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pk" value="176">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Pakistan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pl" value="177">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Poland."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pm" value="178">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Saint Pierre and Miquelon."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pn" value="179">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Pitcairn Island."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pr" value="180">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Puerto Rico."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ps" value="181">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Palestinian Territories."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pt" value="182">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Portugal."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pw" value="183">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Palau."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="py" value="184">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Paraguay."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="qa" value="185">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Qatar."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="re" value="186">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Reunion Island."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ro" value="187">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Romania."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ru" value="188">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Russian Federation."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="rw" value="189">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Rwanda."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sa" value="190">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Saudi Arabia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sb" value="191">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Solomon Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sc" value="192">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Seychelles."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sd" value="193">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Sudan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="se" value="194">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Sweden."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sg" value="195">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Singapore."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sh" value="196">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Saint Helena."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="si" value="197">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Slovenia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sj" value="198">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Svalbard and Jan Mayen Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sk" value="199">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Slovak Republic."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sl" value="200">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Sierra Leone."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sm" value="201">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="San Marino."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sn" value="202">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Senegal."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="so" value="203">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Somalia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sr" value="204">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Suriname."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="st" value="205">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Sao Tome and Principe."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sv" value="206">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="El Salvador."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sy" value="207">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Syrian Arab Republic."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="sz" value="208">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Swaziland."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tc" value="209">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Turks and Caicos Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="td" value="210">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Chad."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tf" value="211">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="French Southern Territories."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tg" value="212">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Togo."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="th" value="213">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Thailand."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tj" value="214">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Tajikistan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tk" value="215">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Tokelau."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tl" value="216">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Timor-Leste."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tm" value="217">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Turkmenistan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tn" value="218">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Tunisia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="to" value="219">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Tonga."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tp" value="220">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="East Timor."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tr" value="221">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Turkey."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tt" value="222">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Trinidad and Tobago."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tv" value="223">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Tuvalu."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tw" value="224">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Taiwan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="tz" value="225">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Tanzania."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ua" value="226">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Ukraine."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ug" value="227">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Uganda."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="uk" value="228">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="United Kingdom."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="um" value="229">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="United States Minor Outlying Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="us" value="230">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="United States."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="uy" value="231">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Uruguay."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="uz" value="232">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Uzbekistan."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="va" value="233">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Holy See (Vatican City State)"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="vc" value="234">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Saint Vincent and the Grenadines."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ve" value="235">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Venezuela."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="vg" value="236">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Virgin Islands, British."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="vi" value="237">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Virgin Islands, Us."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="vn" value="238">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Vietnam."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="vu" value="239">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Vanuatu."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="wf" value="240">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wallis and Futuna Islands."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ws" value="241">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Samoa."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="ye" value="242">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Yemen."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="yt" value="243">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mayotte."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="yu" value="244">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Yugoslavia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="za" value="245">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="South Africa."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="zm" value="246">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zambia."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="zw" value="247">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zimbabwe."/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="IanaCountryTldEnumerationObject"
+      instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="IanaCountryTldEnumeration:Object"/>
+      <details key="baseType" value="IanaCountryTldEnumeration"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MiscellaneousReasonEnumeration">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Values for Miscellaneous incident reason types TPEG Pti18_1/TPEG Pti_19."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="MiscellaneousReasonEnumeration"/>
+    </eAnnotations>
+    <eLiterals name="pti190" literal="pti19_0"/>
+    <eLiterals name="unknown" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_0 unknown."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1901" value="2" literal="pti19_0_1"/>
+    <eLiterals name="previousDisturbances" value="3">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="19:0_1 Previous disturbances - alias to TPEG Pti_19_0 unknown"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti191" value="4" literal="pti19_1"/>
+    <eLiterals name="incident" value="5">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_1 incident."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti191Alias1" value="6" literal="pti19_1_Alias_1"/>
+    <eLiterals name="nearMiss" value="7">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Near Miss - alias to TPEG Pti_19_1 incident."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti191Alias2" value="8" literal="pti19_1_Alias_2"/>
+    <eLiterals name="safetyViolation" value="9">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Near Miss - alias to TPEG Pti_19_1 incident."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti191Alias3" value="10" literal="pti19_1_Alias_3"/>
+    <eLiterals name="signalPassedAtDanger" value="11">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Signal passed at danger - alias to TPEG Pti_19_1 incident."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti191Alias4" value="12" literal="pti19_1_Alias_4"/>
+    <eLiterals name="stationOverrun" value="13">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Station overrun - alias to TPEG Pti_19_1 incident."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti191Alias5" value="14" literal="pti19_1_Alias_5"/>
+    <eLiterals name="trainDoor" value="15">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="trainDoor- alias to TPEG Pti_19_1 incident."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti191Alias6" value="16" literal="pti19_1_Alias_6"/>
+    <eLiterals name="emergencyServicesCall" value="17">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Unspecified emergency service visit. Alias to pti19"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti192" value="18" literal="pti19_2"/>
+    <eLiterals name="bombExplosion" value="19">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_2 bomb explosion."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti193" value="20" literal="pti19_3"/>
+    <eLiterals name="securityAlert" value="21">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_3 security alert."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti193Alias1" value="22" literal="pti19_3_Alias_1"/>
+    <eLiterals name="policeRequest" value="23">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="pti19_3_1 request of the police Alias to TPEG Pti_19_3 security alert."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti193Alias2" value="24" literal="pti19_3_Alias_2"/>
+    <eLiterals name="fireBrigadeSafetyChecks" value="25">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="pti19_3_2 fire brigade safety checksAlias to TPEG Pti_19_3 security alert."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti193Alias3" value="26" literal="pti19_3_Alias_3"/>
+    <eLiterals name="unattendedBag" value="27">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="pti19_3_3 an unattended bag Talias to PEG Pti_19_3 security alert."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti193Alias4" value="28" literal="pti19_3_Alias_4"/>
+    <eLiterals name="telephonedThreat" value="29">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="telephoned threat TPEG Pti_19_3 security alert."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti193Alias5" value="30" literal="pti19_3_Alias_5"/>
+    <eLiterals name="suspectVehicle" value="31">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="telephoned threat TPEG Pti_19_3 security alert."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti193Alias6" value="32" literal="pti19_3_Alias_6"/>
+    <eLiterals name="civilEmergency" value="33">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="civilEmergency alias to  TPEG Pti_19_3 security alert."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti193Alias7" value="34" literal="pti19_3_Alias_7"/>
+    <eLiterals name="airRaid" value="35">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="civilEmergency alias to  TPEG Pti_19_3 security alert."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti193Alias8" value="36" literal="pti19_3_Alias_8"/>
+    <eLiterals name="sabotage" value="37">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="sabotage alias to TPEG Pti_19_3 security alert."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti193Alias9" value="38" literal="pti19_3_Alias_9"/>
+    <eLiterals name="bombAlert" value="39"/>
+    <eLiterals name="pti193Alias10" value="40" literal="pti19_3_Alias_10"/>
+    <eLiterals name="attack" value="41"/>
+    <eLiterals name="pti193Alias11" value="42" literal="pti19_3_Alias_11"/>
+    <eLiterals name="evacuation" value="43"/>
+    <eLiterals name="pti193Alias12" value="44" literal="pti19_3_Alias_12"/>
+    <eLiterals name="terroristIncident" value="45"/>
+    <eLiterals name="pti193Alias13" value="46" literal="pti19_3_Alias_13"/>
+    <eLiterals name="gunfireOnRoadway" value="47"/>
+    <eLiterals name="pti193Alias14" value="48" literal="pti19_3_Alias_14"/>
+    <eLiterals name="explosion" value="49"/>
+    <eLiterals name="pti193Alias15" value="50" literal="pti19_3_Alias_15"/>
+    <eLiterals name="explosionHazard" value="51"/>
+    <eLiterals name="pti193Alias16" value="52" literal="pti19_3_Alias_16"/>
+    <eLiterals name="securityIncident" value="53"/>
+    <eLiterals name="pti193Alias17" value="54" literal="pti19_3_Alias_17"/>
+    <eLiterals name="fireBrigadeOrder" value="55"/>
+    <eLiterals name="pti193Alias18" value="56" literal="pti19_3_Alias_18"/>
+    <eLiterals name="policeActivity" value="57"/>
+    <eLiterals name="pti194" value="58" literal="pti19_4"/>
+    <eLiterals name="fire" value="59">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_4 fire."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti194Alias1" value="60" literal="pti19_4_Alias_1"/>
+    <eLiterals name="linesideFire" value="61">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="linesideFire alias to TPEG Pti_19_4 fire."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti195" value="62" literal="pti19_5"/>
+    <eLiterals name="vandalism" value="63">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_5 vandalism."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti195Alias1" value="64" literal="pti19_5_Alias_1"/>
+    <eLiterals name="passengerAction" value="65">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="passengerActionAlias to pti19"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti195Alias2" value="66" literal="pti19_5_Alias_2"/>
+    <eLiterals name="staffAssault" value="67">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Assault on stafft.Alias to pti19"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti195Alias3" value="68" literal="pti19_5_Alias_3"/>
+    <eLiterals name="railwayCrime" value="69">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Railway Crime Alias to pti19"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti195Alias4" value="70" literal="pti19_5_Alias_4"/>
+    <eLiterals name="assault" value="71">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Assault Alias to pti19"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti195Alias5" value="72" literal="pti19_5_Alias_5"/>
+    <eLiterals name="theft" value="73">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Theft Alias to pti19"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="altercation" value="75">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="altercation . Alias to pti19"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti191Alias7" value="76" literal="pti19_1_Alias_7"/>
+    <eLiterals name="illVehicleOccupants" value="77">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="illVehicleOccupants . Alias to pti19"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti196" value="78" literal="pti19_6"/>
+    <eLiterals name="accident" value="79">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_6 accident."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti196Alias1" value="80" literal="pti19_6_Alias_1"/>
+    <eLiterals name="fatality" value="81">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="fatality alias to TPEG Pti_19_6 accident."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti196Alias2" value="82" literal="pti19_6_Alias_2"/>
+    <eLiterals name="personUnderTrain" value="83">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="a person under a train - alias to TPEG Pti_19_6 accident."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti196Alias3" value="84" literal="pti19_6_Alias_3"/>
+    <eLiterals name="personHitByTrain" value="85">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="a person hit by a train - alias to TPEG Pti_19_6 accident."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti196Alias4" value="86" literal="pti19_6_Alias_4"/>
+    <eLiterals name="personIllOnVehicle" value="87">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="person ill On Vehicle -Alias to pti19_6"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti196Alias5" value="88" literal="pti19_6_Alias_5"/>
+    <eLiterals name="emergencyServices" value="89">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="emergencyServices - alias to TPEG Pti_19_6 accident."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti196Alias6" value="90" literal="pti19_6_Alias_6"/>
+    <eLiterals name="collision" value="91">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Collision - Alias to pti19_6"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti197" value="92" literal="pti19_7"/>
+    <eLiterals name="overcrowded" value="93">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_7 overcrowded."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti198" value="94" literal="pti19_8"/>
+    <eLiterals name="insufficientDemand" value="95">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_8 insufficient demand."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti199" value="96" literal="pti19_9"/>
+    <eLiterals name="lightingFailure" value="97">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_9 lighting failure."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1910" value="98" literal="pti19_10"/>
+    <eLiterals name="leaderBoardFailure" value="99">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_10 leader board failure."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1911" value="100" literal="pti19_11"/>
+    <eLiterals name="serviceIndicatorFailure" value="101">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_11 service indicator failure."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1912" value="102" literal="pti19_12"/>
+    <eLiterals name="serviceFailure" value="103">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_12 service failure."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1913" value="104" literal="pti19_13"/>
+    <eLiterals name="operatorCeasedTrading" value="105">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_13 OPERATOR ceased trading."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1914" value="106" literal="pti19_14"/>
+    <eLiterals name="operatorSuspended" value="107">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_14 OPERATOR suspended."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1915" value="108" literal="pti19_15"/>
+    <eLiterals name="congestion" value="109">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_15 congestion."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1916" value="110" literal="pti19_16"/>
+    <eLiterals name="routeBlockage" value="111">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_16 route blockage."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1917" value="112" literal="pti19_17"/>
+    <eLiterals name="personOnTheLine" value="113">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_17 person on the line."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1918" value="114" literal="pti19_18"/>
+    <eLiterals name="vehicleOnTheLine" value="115">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_18 VEHICLE on the line."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1918Alias1" value="116" literal="pti19_18_Alias_1"/>
+    <eLiterals name="levelCrossingIncident" value="117">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Level Crossing Incident - alias to TPEG Pti_19_18 VEHICLE on the line."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1919" value="118" literal="pti19_19"/>
+    <eLiterals name="objectOnTheLine" value="119">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_19 object on the line."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1919Alias1" value="120" literal="pti19_19_Alias_1"/>
+    <eLiterals name="fallenTreeOnTheLine" value="121">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="fallen tree on line- alias to TPEG Pti_19_19 object on the line."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1919Alias2" value="122" literal="pti19_19_Alias_2"/>
+    <eLiterals name="vegetation" value="123">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="vegetation - alias to TPEG Pti_19_19 object on the line."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1919Alias3" value="124" literal="pti19_19_Alias_3"/>
+    <eLiterals name="trainStruckAnimal" value="125">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Train struck animal alias to TPEG Pti_19_19 object on the line."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1919Alias4" value="126" literal="pti19_19_Alias_4"/>
+    <eLiterals name="trainStruckObject" value="127">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Train struck object alias to TPEG Pti_19_19 object on the line."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1920" value="128" literal="pti19_20"/>
+    <eLiterals name="animalOnTheLine" value="129">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_20 animal on the line."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1921" value="130" literal="pti19_21"/>
+    <eLiterals name="routeDiversion" value="131">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_21 route diversion."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1922" value="132" literal="pti19_22"/>
+    <eLiterals name="roadClosed" value="133">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_22 road closed."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1923" value="134" literal="pti19_23"/>
+    <eLiterals name="roadworks" value="135">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_23 roadworks."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1923Alias1" value="136" literal="pti19_23_Alias_1"/>
+    <eLiterals name="sewerageMaintenance" value="137">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="19:23_1 sewerageMaintenance - alias to TPEG Pti_19_23 roadworks.."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1923Alias2" value="138" literal="pti19_23_Alias_2"/>
+    <eLiterals name="roadMaintenance" value="139">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="19:23_2 roadMaintenance - alias to TPEG Pti_19_23 roadworks.."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1923Alias3" value="140" literal="pti19_23_Alias_3"/>
+    <eLiterals name="asphalting" value="141">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="19:23_3 asphalting - alias to TPEG Pti_19_23 roadworks.."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1923Alias4" value="142" literal="pti19_23_Alias_4"/>
+    <eLiterals name="paving" value="143">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="19:23_4 paving - alias to TPEG Pti_19_23 roadworks.."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1924" value="144" literal="pti19_24"/>
+    <eLiterals name="specialEvent" value="145">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_24 special event."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1924Alias1" value="146" literal="pti19_24_Alias_1"/>
+    <eLiterals name="march" value="147"/>
+    <eLiterals name="pti1924Alias2" value="148" literal="pti19_24_Alias_2"/>
+    <eLiterals name="procession" value="149"/>
+    <eLiterals name="pti1924Alias3" value="150" literal="pti19_24_Alias_3"/>
+    <eLiterals name="demonstration" value="151"/>
+    <eLiterals name="pti1924Alias4" value="152" literal="pti19_24_Alias_4"/>
+    <eLiterals name="publicDisturbance" value="153"/>
+    <eLiterals name="pti1924Alias5" value="154" literal="pti19_24_Alias_5"/>
+    <eLiterals name="filterBlockade" value="155"/>
+    <eLiterals name="pti1924Alias6" value="156" literal="pti19_24_Alias_6"/>
+    <eLiterals name="sightseersObstructingAccess" value="157"/>
+    <eLiterals name="pti1924Alias7" value="158" literal="pti19_24_Alias_7"/>
+    <eLiterals name="holiday" value="159"/>
+    <eLiterals name="pti1925" value="160" literal="pti19_25"/>
+    <eLiterals name="bridgeStrike" value="161">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_25 bridge strike."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1925Alias1" value="162" literal="pti19_25_Alias_1"/>
+    <eLiterals name="viaductFailure" value="163">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="19:25_1 viaductFailure - alias to TPEG Pti_19_24 bridgeStrike"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1926" value="164" literal="pti19_26"/>
+    <eLiterals name="overheadObstruction" value="165">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_26 overhead obstruction."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1927" value="166" literal="pti19_27"/>
+    <eLiterals name="undefinedProblem" value="167">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti_19_255 undefined problem."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti1915Alias1" value="168" literal="pti19_15_Alias_1"/>
+    <eLiterals name="problemsAtBorderPost" value="169"/>
+    <eLiterals name="pti1915Alias2" value="170" literal="pti19_15_Alias_2"/>
+    <eLiterals name="problemsAtCustomsPost" value="171"/>
+    <eLiterals name="pti1915Alias3" value="172" literal="pti19_15_Alias_3"/>
+    <eLiterals name="speedRestrictions" value="173">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="19:255_1 speedRestrictions alias to TPEG Pti_19_15 unknown"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti19255Alias1" value="174" literal="pti19_255_Alias_1"/>
+    <eLiterals name="logisticProblems" value="175">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="19:255_2 logisticProblems alias to TPEG Pti_19_15 unknown"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti19255Alias2" value="176" literal="pti19_255_Alias_2"/>
+    <eLiterals name="problemsOnLocalRoad" value="177"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="MiscellaneousReasonEnumerationObject"
+      instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="MiscellaneousReasonEnumeration:Object"/>
+      <details key="baseType" value="MiscellaneousReasonEnumeration"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ParticipantCodeType" instanceClassName="java.lang.String">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Type for Unique identifier of participant."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="ParticipantCodeType"/>
+      <details key="baseType" value="http://www.eclipse.org/emf/2003/XMLType#NMTOKEN"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParticipantRefStructure">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Reference to Unique identifier of participant."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="ParticipantRefStructure"/>
+      <details key="kind" value="simple"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//ParticipantCodeType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value=":0"/>
+        <details key="kind" value="simple"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PersonnelReasonEnumeration">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Values for Personnel incident reason types TPEG Pti18_2/TPEG Pti_20."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="PersonnelReasonEnumeration"/>
+    </eAnnotations>
+    <eLiterals name="pti200" literal="pti20_0"/>
+    <eLiterals name="unknown" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti20_0 unknown."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti201" value="2" literal="pti20_1"/>
+    <eLiterals name="staffSickness" value="3">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti20_1 staff sickness."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti201Alias1" value="4" literal="pti20_1_Alias_1"/>
+    <eLiterals name="staffInjury" value="5">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=" staff injury alias to TPEG Pti20_1 staff sickness."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti201Alias2" value="6" literal="pti20_1_Alias_2"/>
+    <eLiterals name="contractorStaffInjury" value="7">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="contractor staff injury alias to TPEG Pti20_1 staff sickness."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti202" value="8" literal="pti20_2"/>
+    <eLiterals name="staffAbsence" value="9">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti20_2 staff absence."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti203" value="10" literal="pti20_3"/>
+    <eLiterals name="staffInWrongPlace" value="11">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti20_3 staff in wrong place."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti204" value="12" literal="pti20_4"/>
+    <eLiterals name="staffShortage" value="13">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti20_4 staff shortage."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti205" value="14" literal="pti20_5"/>
+    <eLiterals name="industrialAction" value="15">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti20_5 industrial action."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti205Alias1" value="16" literal="pti20_5_Alias_1"/>
+    <eLiterals name="unofficialIndustrialAction" value="17">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Unofffical action - alias to TPEG Pti20_5 industrial action."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti206" value="18" literal="pti20_6"/>
+    <eLiterals name="workToRule" value="19">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti20_6 work to rule."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pti20255" value="20" literal="pti20_255"/>
+    <eLiterals name="undefinedPersonnelProblem" value="21">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti20_255 undefined personnel problem."/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="PersonnelReasonEnumerationObject"
+      instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="PersonnelReasonEnumeration:Object"/>
+      <details key="baseType" value="PersonnelReasonEnumeration"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value=""/>
+      <details key="kind" value="mixed"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixed" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="elementWildcard"/>
+        <details key="name" value=":mixed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xMLNSPrefixMap" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xmlns:prefix"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xSISchemaLocation" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xsi:schemaLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="environmentReason" unique="false"
+        upperBound="-2" eType="#//EnvironmentReasonEnumeration" volatile="true" transient="true"
+        derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti18_4/TPEG Pti_22 environment event reason."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="EnvironmentReason"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="equipmentReason" unique="false"
+        upperBound="-2" eType="#//EquipmentReasonEnumeration" volatile="true" transient="true"
+        derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti18_3/TPEG Pti_21 equipment event reason."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="EquipmentReason"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="miscellaneousReason" unique="false"
+        upperBound="-2" eType="#//MiscellaneousReasonEnumeration" volatile="true"
+        transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti18_1/TPEG Pti_19 miscellaneous event reason."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="MiscellaneousReason"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="personnelReason" unique="false"
+        upperBound="-2" eType="#//PersonnelReasonEnumeration" volatile="true" transient="true"
+        derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti18_2/TPEG Pti_20 personnel event reason."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="PersonnelReason"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="situationNumber" upperBound="-2"
+        eType="#//EntryQualifierStructure" volatile="true" transient="true" derived="true"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Identifier of SITUATION within a Participant. Excldue versionr."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="SituationNumber"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="undefinedReason" unique="false"
+        upperBound="-2" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+        volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti18_255/TPEG Pti_22 undefined event reason."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="UndefinedReason"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unknownReason" unique="false"
+        upperBound="-2" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+        volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TPEG Pti18_0/TPEG unknown event reason."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="UnknownReason"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>
