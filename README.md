@@ -16,9 +16,10 @@
 
 # Model
 
-| model                 | external docs                                               | responsible    | date       |
-|-----------------------|-------------------------------------------------------------|----------------|------------|
-| ETSI ITS CAM          | [repo](https://forge.etsi.org/rep/ITS/asn1/cam_en302637_2)  | Stefan Bischof | 30.11.2021 |
+| model            | external docs                                              | responsible    | date       |
+| ---------------- | ---------------------------------------------------------- | -------------- | ---------- |
+| ETSI ITS CAM     | [repo](https://forge.etsi.org/rep/ITS/asn1/cam_en302637_2) | Stefan Bischof | 30.10.2021 |
+| DIM Device Model |                                                            | Jürgen Albert  | 29.11.2021 |
 
 
 # Protocol
