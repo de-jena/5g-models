@@ -8,4 +8,27 @@
     <eLiterals name="GPGGA" value="2"/>
     <eLiterals name="GPRMC" value="1"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GNSSSTATUS">
+    <eLiterals name="ACTIVELOCALISATION"/>
+    <eLiterals name="NOLOCALISATION" value="1"/>
+    <eLiterals name="COMPUTEDLOCATION" value="2"/>
+    <eLiterals name="TEMPORARYNOLOCALISATION" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FASSTATUS">
+    <eLiterals name="NOCONNECTIONTOCENTRAL"/>
+    <eLiterals name="NOINITIALDATA" value="1"/>
+    <eLiterals name="ACTIVERECOMMENDATION" value="2"/>
+    <eLiterals name="ACTIVEDENM" value="3"/>
+    <eLiterals name="ACTIVEVAM" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RecommendationTypes">
+    <eLiterals name="DISPATCH"/>
+    <eLiterals name="DEPARTURE" value="1"/>
+    <eLiterals name="LSACOUNTDOWN" value="2"/>
+    <eLiterals name="CRUISE" value="3"/>
+    <eLiterals name="BREAK" value="4"/>
+    <eLiterals name="WAIT" value="5"/>
+    <eLiterals name="ACCELERATE" value="6"/>
+    <eLiterals name="NOINFORMATION" value="7"/>
+  </eClassifiers>
 </ecore:EPackage>
