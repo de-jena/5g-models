@@ -11,4 +11,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialisation" eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="vehicle" eType="ecore:EClass ../vehicle/vehicle.ecore#//Vehicle"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JourneyResponseFromDatabroker">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="journey" lowerBound="1"
+        eType="#//Journey"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="JourneySuccesfulInitiated"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
 </ecore:EPackage>
