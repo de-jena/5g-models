@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="lm" nsURI="" nsPrefix="lm">
+  <eClassifiers xsi:type="ecore:EClass" name="ChargingProfile">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="chargingProfileId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transactionId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stackLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="chargingProfilePurpose"
+        eType="#//ChargingProfilePurposeType" defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="chargingProfileKind" eType="#//ChargingProfileKindType"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recurrencyKind" eType="#//RecurrencyKindType"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validFrom" eType="#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validTo" eType="#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="chargingSchedule" eType="#//ChargingSchedule"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChargingSchedule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="chargingSchedulePeriod"
+        lowerBound="1" upperBound="-1" eType="#//ChargingSchedulePeriod"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startSchedule" eType="#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="chargingRateUnit" eType="#//ChargingRateUnitType"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minChargingRate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"
+        defaultValueLiteral="0.0" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChargingSchedulePeriod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startPeriod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="limit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberPhases" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ChargingProfilePurposeType">
+    <eLiterals name="ChargePointMaxProfile"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ChargingProfileKindType">
+    <eLiterals name="Absolute"/>
+    <eLiterals name="Recurring" value="1"/>
+    <eLiterals name="Relative" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RecurrencyKindType">
+    <eLiterals name="Daily"/>
+    <eLiterals name="Weekly" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ChargingProfilePurposeType">
+    <eLiterals name="ChargePointMaxProfile"/>
+    <eLiterals name="TxDefaultProfile" value="1"/>
+    <eLiterals name="TxProfile" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ZonedDateTime" instanceClassName="java.time.ZonedDateTime"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ChargingRateUnitType">
+    <eLiterals name="W"/>
+    <eLiterals name="A" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>
