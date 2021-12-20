@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Jena2" nsURI="http:///Jena2.ecore" nsPrefix="Jena2">
+  <eClassifiers xsi:type="ecore:EEnum" name="HealthStatus">
+    <eLiterals name="GREEN"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType"/>
+  <eSubpackages name="Grid" nsURI="http:///Jena2/Grid.ecore" nsPrefix="Jena2.Grid">
+    <eClassifiers xsi:type="ecore:EClass" name="Section">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="sectionId" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="wires" ordered="false"
+          lowerBound="1" eType="#//Grid/Wire"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="divider" ordered="false"
+          lowerBound="1" eType="#//Grid/Divider"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="intersections" ordered="false"
+          lowerBound="1" eType="#//Grid/Intersection"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="health" ordered="false"
+          lowerBound="1" eType="#//Grid/HealthState"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tramsInSection" ordered="false"
+          lowerBound="1" eType="#//Grid/Tram"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxConsumtion" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Wire">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="material" ordered="false"
+          lowerBound="1" eType="#//Grid/unknown" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="geometry" ordered="false"
+          lowerBound="1" eType="#//Grid/unknown" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="restistance" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="unknown"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Divider" eSuperTypes="#//Grid/Intersection">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Intersection">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="wires" ordered="false"
+          lowerBound="1" eType="#//Grid/Wire"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="did" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="position" ordered="false"
+          lowerBound="1" eType="#//Grid/position" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="position"/>
+    <eClassifiers xsi:type="ecore:EEnum" name="HealthState">
+      <eLiterals name="GREEN"/>
+      <eLiterals name="AMBER" value="1"/>
+      <eLiterals name="RED" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Tram">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="Wire" ordered="false"
+          lowerBound="1" eType="#//Grid/Wire"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="mileage" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="power_consumption" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TransformerSubstation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="power" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="position" ordered="false"
+          lowerBound="1" eType="#//Grid/position" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="wires" ordered="false"
+          lowerBound="1" eType="#//Grid/Wire"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="Bus" nsURI="http:///Jena2/Bus.ecore" nsPrefix="Jena2.Bus">
+    <eClassifiers xsi:type="ecore:EClass" name="Bus" eSuperTypes="#//Bus/TimeTable">
+      <eOperations name="onAnnouncementChanged" ordered="false" unique="false" lowerBound="1"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="soc" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceToPointOfCharge"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="timeOfArrivalAtChargingPoint"
+          ordered="false" lowerBound="1" eType="#//Bus/DateTime" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endOfShift" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="timetable" ordered="false"
+          lowerBound="1" eType="#//Bus/TimeTableObjectStation">
+        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details key="originalName" value="timetable[]"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="position" ordered="false"
+          lowerBound="1" eType="#//Bus/Position" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="nextChargingStation"
+          ordered="false" lowerBound="1" eType="#//Bus/TimeTableObjectChargingStation"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="energyToChargingPoint"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="avgPowerConsumptionPerKm"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="temp" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleLoad" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numbersOfPassengers"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="range" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="announcement" ordered="false"
+          lowerBound="1" eType="#//Bus/ChargingPreAnnouncement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TimeTable">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="TimeTable" ordered="false"
+          lowerBound="1" eType="#//Bus/SimpleStation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SimpleStation" eSuperTypes="#//Bus/Charging"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Charging" eSuperTypes="#//Bus/Bus">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="time" ordered="false"
+          lowerBound="1" eType="#//Bus/DateTime" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="station" ordered="false"
+          lowerBound="1" eType="#//Bus/Station"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="estimatedTimeOfCharge"
+          ordered="false" lowerBound="1" eType="#//Bus/DateTime" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="nextStation" ordered="false"
+          lowerBound="1" eType="#//Bus/Station"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nextStationDistance"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DateTime"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Station">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="position" ordered="false"
+          lowerBound="1" eType="#//Bus/Position" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Position"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TimeTableObjectChargingStation" eSuperTypes="#//Bus/Charging"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TimeTableObjectStation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="time" ordered="false"
+          lowerBound="1" eType="#//Bus/DateTime" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="station" ordered="false"
+          lowerBound="1" eType="#//Bus/Station"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="nextStation" ordered="false"
+          lowerBound="1" eType="#//Bus/Station"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nexStationDistance" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ChargingPoint" eSuperTypes="#//Bus/Station">
+      <eOperations name="reclineAnnocment" ordered="false" unique="false" lowerBound="1"
+          eType="#//Bus/ChargingPreAnnouncement"/>
+      <eOperations name="acceptAnnoncment" ordered="false" unique="false" lowerBound="1"
+          eType="#//Bus/ChargingPreAnnouncement"/>
+      <eOperations name="reserveannoucementChargingPreAnnouncement" ordered="false"
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject">
+        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details key="originalName" value="reserve(annoucement:ChargingPreAnnouncement)"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="listOfCPA" ordered="false"
+          lowerBound="1" eType="#//Bus/ChargingPreAnnouncement">
+        <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details key="originalName" value="listOfCPA[]"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transformer" ordered="false"
+          lowerBound="1" eType="#//Bus/Transformer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSlots" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ChargingPreAnnouncement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="busId" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="estimatedStartTime" ordered="false"
+          lowerBound="1" eType="#//Bus/DateTime" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="estimatedEndTime" ordered="false"
+          lowerBound="1" eType="#//Bus/DateTime" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredEnergy" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" ordered="false"
+          lowerBound="1" eType="#//Bus/prioity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="chargingPoint" ordered="false"
+          lowerBound="1" eType="#//Bus/ChargingPoint"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="approved" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="canceled" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="prioity">
+      <eLiterals name="LOW"/>
+      <eLiterals name="MEDIUM" value="1"/>
+      <eLiterals name="HIGH" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Transformer">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximumConsumptionPower"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="flexConsumerAllowness"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="flexConsumerPowerGap"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TimeTableChargingSt">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="time" ordered="false"
+          lowerBound="1" eType="#//Bus/DateTime" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="station" ordered="false"
+          lowerBound="1" eType="#//Bus/Station"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="estimatedTimeOfCharge"
+          ordered="false" lowerBound="1" eType="#//Bus/DateTime" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="nextStation" ordered="false"
+          lowerBound="1" eType="#//Bus/Station"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nextStationDistance"
+          ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>
