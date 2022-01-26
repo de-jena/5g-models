@@ -2,11 +2,11 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="utils">
   <eClassifiers xsi:type="ecore:EDataType" name="ZonedDateTime" instanceClassName="java.time.ZonedDateTime"/>
-  <eClassifiers xsi:type="ecore:EEnum" name="NMEA">
+  <eClassifiers xsi:type="ecore:EEnum" name="NMEAType">
     <eLiterals name="GNRMC"/>
-    <eLiterals name="GNGGA" value="3"/>
-    <eLiterals name="GPGGA" value="2"/>
     <eLiterals name="GPRMC" value="1"/>
+    <eLiterals name="GPGGA" value="2"/>
+    <eLiterals name="GNGGA" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GNSSSTATUS">
     <eLiterals name="ACTIVELOCALISATION"/>
@@ -20,6 +20,7 @@
     <eLiterals name="ACTIVERECOMMENDATION" value="2"/>
     <eLiterals name="ACTIVEDENM" value="3"/>
     <eLiterals name="ACTIVEVAM" value="4"/>
+    <eLiterals name="ERROR" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RecommendationTypes">
     <eLiterals name="DISPATCH"/>
@@ -30,5 +31,6 @@
     <eLiterals name="WAIT" value="5"/>
     <eLiterals name="ACCELERATE" value="6"/>
     <eLiterals name="NOINFORMATION" value="7"/>
+    <eLiterals name="COASTING" value="8"/>
   </eClassifiers>
 </ecore:EPackage>

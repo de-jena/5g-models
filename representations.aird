@@ -18,7 +18,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="models/journey/journey.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-04ioFzpEeyrYZsfljmuuw" name="utils class diagram" repPath="#_-02tcFzpEeyrYZsfljmuuw" changeId="30f1f508-6270-4ca1-b3df-39eb77781b72">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-04ioFzpEeyrYZsfljmuuw" name="utils class diagram" repPath="#_-02tcFzpEeyrYZsfljmuuw" changeId="84ac439d-17d0-4dd8-ba30-bfd4b09c881b">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="models/utils/utils.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -501,7 +501,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_Lrzf01zsEeyrYZsfljmuuw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Lry4wVzsEeyrYZsfljmuuw" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Lry4wlzsEeyrYZsfljmuuw" x="800" y="10" width="148" height="188"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Lry4wlzsEeyrYZsfljmuuw" x="870" y="-15" width="148" height="188"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_-05wwlzpEeyrYZsfljmuuw"/>
       </data>

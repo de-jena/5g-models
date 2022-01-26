@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fasExchange">
-  <eClassifiers xsi:type="ecore:EClass" name="FASExChange">
+  <eClassifiers xsi:type="ecore:EClass" name="FASExchange">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="relevantTimeSlotsOnJourney"
         transient="true">
       <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
@@ -12,7 +15,28 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="trajectory" eType="#//Trajectory"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="recommendation" eType="#//Recommendation"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Recommendation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetSpeed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="countdownForDeparture"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recommendationType" lowerBound="1"
+        eType="ecore:EEnum ../utils/utils.ecore#//RecommendationTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTimeForInformationOrRecommendation"
+        lowerBound="1" eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RecommendationResponseFromMobile">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="received" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recommendation" lowerBound="1"
+        eType="#//Recommendation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Trajectory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="speedOverJourney" lowerBound="1"
         transient="true">
       <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
@@ -28,13 +52,10 @@
       </eGenericType>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Recommendation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recommendation" lowerBound="1"
-        eType="ecore:EEnum ../utils/utils.ecore#//RecommendationTypes"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTimeForInformationOrRecommendation"
+  <eClassifiers xsi:type="ecore:EClass" name="TrajectoryLeftFromMobile">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trajectory" lowerBound="1"
+        eType="#//Trajectory"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeStamp" lowerBound="1"
         eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="countdownForDeparture"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>
