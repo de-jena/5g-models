@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="utils" nsURI="http://inavet.de/datamodels" nsPrefix="utils">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="enthält Hilfsklassen + Enums"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EDataType" name="ZonedDateTime" instanceClassName="java.time.ZonedDateTime">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Zeitklasse"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="NMEAType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="NMEA-Filter"/>
+    </eAnnotations>
+    <eLiterals name="GNRMC"/>
+    <eLiterals name="GPRMC" value="1"/>
+    <eLiterals name="GPGGA" value="2"/>
+    <eLiterals name="GNGGA" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GNSSStatus">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Ortungsstatus der mobilen Anwendung"/>
+    </eAnnotations>
+    <eLiterals name="ACTIVE_LOCALISATION"/>
+    <eLiterals name="NO_LOCALISATION" value="1"/>
+    <eLiterals name="COMPUTED_LOCATION" value="2"/>
+    <eLiterals name="TEMPORARY_NO_LOCALISATION" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FASStatus">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Status des FAS-System zur Information beim Fahrer"/>
+    </eAnnotations>
+    <eLiterals name="NO_CONNECTION_TO_CENTRAL"/>
+    <eLiterals name="NO_INITIAL_DATA" value="1"/>
+    <eLiterals name="INITIALISED" value="2"/>
+    <eLiterals name="ACTIVE_RECOMMENDATION" value="3"/>
+    <eLiterals name="ACTIVE_DENM" value="4"/>
+    <eLiterals name="ACTIVE_VAM" value="5"/>
+    <eLiterals name="ERROR" value="6"/>
+    <eLiterals name="DEACTIVATED" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RecommendationTypes">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="derzeit angedachte Empfehlungen"/>
+    </eAnnotations>
+    <eLiterals name="DISPATCH"/>
+    <eLiterals name="DEPARTURE" value="1"/>
+    <eLiterals name="LSA_COUNTDOWN" value="2"/>
+    <eLiterals name="CRUISE" value="3"/>
+    <eLiterals name="BREAK" value="4"/>
+    <eLiterals name="WAIT" value="5"/>
+    <eLiterals name="ACCELERATE" value="6"/>
+    <eLiterals name="NO_INFORMATION" value="7"/>
+    <eLiterals name="COASTING" value="8"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Position">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Geo-Lokalisation mit Relativ-Position&#xA;Hilfsklasse"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positionOnTrack" lowerBound="1"
+        eType="#//PositionOnTrack"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lat" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lon" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PositionOnTrack">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="relative Position auf der Modell-Infrastruktur&#xA;Hilfsklasse"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trackId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="relativePositionOnTrack"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValueItem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Grundobjekt für Value-Objekte&#xA;Hilfsklasse"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueUnit" lowerBound="1"
+        eType="#//Units"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Units">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="relevante Einheiten für Value-Objekte&#xA;Hilfsklasse"/>
+    </eAnnotations>
+    <eLiterals name="Meter_Pro_Sekunde" literal="m/s"/>
+    <eLiterals name="Watt" literal="W"/>
+    <eLiterals name="Sekunde" literal="s"/>
+    <eLiterals name="Meter" literal="m"/>
+    <eLiterals name="Watt_Stunden" literal="Wh"/>
+    <eLiterals name="Prozent"/>
+  </eClassifiers>
+</ecore:EPackage>
