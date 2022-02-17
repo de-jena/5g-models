@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fasExchange" nsURI="http://inavet.de/datamodels" nsPrefix="fasExchange">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+    <details key="fasExchange" value="#/"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="FASExchange">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="FAS-Austausch zwischen zentraler und mobiler Instanz&#xA;wird vermutlich noch angepasst bzw. erweitert&#xA;Root-Objekt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Datenbrokr-id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="journeyId" lowerBound="1"
+        eType="ecore:EClass ../journey/journey.ecore#//Journey" eKeys="../journey/journey.ecore#//Journey/id">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="journey-id zur Zuordnung der Informationen für die Fahrt"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zeitstempel der Datenübermittlung"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trajectory" eType="#//Trajectory">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Trajektorie für die Journey"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recommendation" upperBound="-1"
+        eType="#//Recommendation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="aktuelle Empfehlung für die Journey"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gnssStatus" eType="ecore:EEnum ../utils/utils.ecore#//GNSSStatus">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="aktueller GNSS-Status zur Übermittlung an die Mobilseite"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fasStatus" eType="ecore:EEnum ../utils/utils.ecore#//FASStatus">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="aktueller FAS-Status zur Übermittlung an die Mobilseite"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeSlotsOnJourney" lowerBound="1"
+        upperBound="-1" eType="#//TimeSlotOnJourney">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zeitpunkte und Orte des aktuellen Prognosezustandes"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FASExchangeResponse">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Quittierung / Antwort der mobilen Seite auf FASExchange&#xA;Rootobjekt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Datenbroker-Id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zeitstempel der Antwortübermittlung"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fasExchangeIdToResponse"
+        lowerBound="1" eType="#//FASExchange" eKeys="#//FASExchange/id">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Antwort-Id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="journeyId" lowerBound="1"
+        eType="ecore:EClass ../journey/journey.ecore#//Journey" eKeys="../journey/journey.ecore#//Journey/journeyId">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="betreffende Journeyid"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Recommendation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Empfehlungsübermittlungsklasse&#xA;Root-Objekt, aber auch in der FASExchange vorgesehen"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Datenbroker-id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="journeyId" lowerBound="1"
+        eType="ecore:EClass ../journey/journey.ecore#//Journey" eKeys="../journey/journey.ecore#//Journey/id">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="betreffende Journey-Id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetSpeed" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zielgeschwindigkeit für Fahrzeug und zur Empfehlungsanzeige"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="countdownForDeparture"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Abfertigungscountdown"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recommendationType" lowerBound="1"
+        eType="ecore:EEnum ../utils/utils.ecore#//RecommendationTypes">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Empfehlungstyp"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTimeForInformationOrRecommendation"
+        lowerBound="1" eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Beginn der Empfehlung"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zeitstempel der Datenübermittlung"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RecommendationResponseFromMobile">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Antwort / Quittierung der mobilen Seite auf die Empfehlung&#xA;Root-Objekt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="receivedRecommendation"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Attribut zum Empfehlungserhalt auf der mobilen Seite"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recommendationId" lowerBound="1"
+        eType="#//Recommendation" eKeys="#//Recommendation/id">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bezogene Empfehlungs-Id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zeitstempel der Antwortsübermittlung"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeSlotOnJourney">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hilfsklasse"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeSlot" eType="#//TimeSlot">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zeitfenster auf einer Position"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="ecore:EClass ../utils/utils.ecore#//Position">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Position auf der Strecke (geografisch, auch als relativ)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeSlot">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Zeitfensterdefinition&#xA;Hilfsklasse"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beginOfTimeSlot" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Begin des Zeitfenster"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Dauer oder Größe des Zeitfenster"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrognosisTimeSlotFromkLSA">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Prognose-Freigabefenster der kLSA; Zuordnung bzw. Ordnung muss noch geklärt werden&#xA;Root-Objekt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Datenbroker-Id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="keyCosts" upperBound="-1"
+        eType="ecore:EClass ../utils/utils.ecore#//ValueItem">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Kostenbewertung, tbd"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeSlots" upperBound="-1"
+        eType="#//TimeSlot">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zeitfensterangaben"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicles" upperBound="-1"
+        eType="ecore:EClass ../vehicle/vehicle.ecore#//Vehicle">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Welches Fahrzeug oder welche Fahrzeuge betrifft es"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrognosisForVehiclePowerDemand">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Fahrzeugleistungsbedarf für Lastmanagement&#xA;Root-Objekt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Datenbroker-Id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="keyVehicles" upperBound="-1"
+        eType="ecore:EClass ../vehicle/vehicle.ecore#//Vehicle">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Welche Fahrzeuge"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="powerDemandOverPositions"
+        upperBound="-1" eType="#//PowerDemandOverPosition">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Welcher Leistungsbedarf besteht an welcher Position für das Fahrzeug"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="powerDemandOverTimes" upperBound="-1"
+        eType="#//PowerDemandOverTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Welcher Leistungsbedarf besteht zu welchen Zeitpunkt für das Fahrzeug"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PowerDemandOverPosition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hilfsklasse&#xA;Leistungsbedarf auf einer Position"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="powerPrognosis" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass ../utils/utils.ecore#//ValueItem">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Leistungsbedarfsprognosen"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass ../utils/utils.ecore#//Position">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Positionen für Leistungsbedarf"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PowerDemandOverTime">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hilfsklasse&#xA;Leistungsbedarf über Zeit"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="powerPrognosis" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass ../utils/utils.ecore#//ValueItem">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Leistungsbedarfsprognose"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        upperBound="-1" eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zeitstempel für Leistungsbedarf"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpeedOverPosition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hilfsklasse, Geschwindigkeit über Position"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="speed" eType="ecore:EClass ../utils/utils.ecore#//ValueItem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" eType="ecore:EClass ../utils/utils.ecore#//Position"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpeedOverTime">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hilfsklasse, Geschwindigkeit über Zeit"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="speed" eType="ecore:EClass ../utils/utils.ecore#//ValueItem"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrognosisTimeSlotForJourney">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Prognoseankunftszeiten für eine Fahrt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="journeyId" lowerBound="1"
+        eType="ecore:EClass ../journey/journey.ecore#//Journey" eKeys="../journey/journey.ecore#//Journey/journeyId">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="bezogene Journey-Id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeSlotsOnJourney" lowerBound="1"
+        upperBound="-1" eType="#//TimeSlotOnJourney">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Prognose-Ankunftszeiten für eine Fahrt"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trajectory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Trajektorienklasse&#xA;noch ist es unklar, ob diese wirklich Anwendung findet."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicle" eType="ecore:EClass ../vehicle/vehicle.ecore#//Vehicle"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="speedOverPosition" lowerBound="1"
+        upperBound="-1" eType="#//SpeedOverPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="speedOverTime" lowerBound="1"
+        upperBound="-1" eType="#//SpeedOverTime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrajectoryLeftFromMobile">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Trajektorie verlassen Meldung vom Mobile&#xA;Auch hier ist die Verwendung noch nicht klar"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trajectory" lowerBound="1"
+        eType="#//Trajectory" eKeys="#//Trajectory/id"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeStamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+  </eClassifiers>
+</ecore:EPackage>
