@@ -1,3 +1,10 @@
+# HINWEIS
+Initial-Commit des public repos von: https://github.com/de-jena/5g-models.
+Unser repository wird hier intern weiter verwendet. Ob und welche Teile ggf. später in das öffentliche repo gehen, steht nicht fest.
+
+# Inhalt
+Datenmodelle für Schnittstellen und progamminterne Funktionen mit Ecore.
+
 # 5g-models
 
 
