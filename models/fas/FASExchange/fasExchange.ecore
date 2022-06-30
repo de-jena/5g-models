@@ -178,8 +178,8 @@
         <details key="documentation" value="Begin des Zeitfenster"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endOfTimeSlot" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Dauer oder Größe des Zeitfenster"/>
       </eAnnotations>
@@ -187,7 +187,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrognosisTimeSlotFromkLSA">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Prognose-Freigabefenster der kLSA; Zuordnung bzw. Ordnung muss noch geklärt werden&#xA;Root-Objekt"/>
+      <details key="documentation" value="Prognose-Freigabefenster der kLSA; Zuordnung bzw. Ordnung muss noch geklärt werden&#xA;Root-Objekt&#xA;deprecated"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true">
