@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="kLSA_Interface" nsURI="http://inavet.de/datamodels" nsPrefix="kLSA_Interface">
+  <eClassifiers xsi:type="ecore:EClass" name="PrognosisForkLSA" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hauptklasse für Interface FAS -> kLSA&#xA;UNIXTimestamp der Erzeugung&#xA;Fahrzeugkennung&#xA;aktuelle Position&#xA;Prognose-Ankünfte"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicle" lowerBound="1"
+        eType="ecore:EClass ../vehicle/vehicle.ecore#//Vehicle"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
+        eType="ecore:EClass ../utils/utils.ecore#//Position"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prognosisArrivalAndPositions"
+        lowerBound="1" upperBound="0" eType="#//PrognosisArrivalAndPosition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrognosisArrivalAndPosition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hilfsklasse für PrognosisForkLSA&#xA;Prognose-Ankunft an der Positionsmarke mit Priorisierung"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="markedPosition" lowerBound="1"
+        eType="#//MarkedPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eta" lowerBound="1" eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="priority" lowerBound="1"
+        eType="#//Priority"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkedPosition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hilfsklasse für PrognosisForkLSA + ReleaseTimeWindowForLSA&#xA;Positionsmarke auf der Infrastruktur (Haltelinie LSA, Haltestelle, Weiche)&#xA;ob name benötigt wird, müssen wir noch sehen. ggf. reicht die id, wenn diese auf die Infrastruktur passt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Priority">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hilfsklasse für PrognosisForkLSA&#xA;Prioritätseinschätzung aus Sicht vom FAS bezüglich Fahrplanlage und Lastmanagement&#xA;Werte zwischen 0 (keine Priorität) und 1 (absolute Priorität)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeTablePriority" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="loadManagementPriority"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReleaseTimeWindowForLSA">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hauptklasse für Interface kLSA -> FAS&#xA;Zeitstempel der Datenerzeugung&#xA;Fahrzeug&#xA;mögliche Zeitfenster für Fahrzeug"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicle" eType="ecore:EClass ../vehicle/vehicle.ecore#//Vehicle"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeWindows" lowerBound="1"
+        upperBound="0" eType="#//TimeWindow"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeWindow">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hilfsklasse für ReleaseTimeWindowForLSA&#xA;releaseTime -> öffnen des Zeitfenster&#xA;closingTime -> schließen des Zeitfenster&#xA;markedPosition -> Positionsmarke (LSA)&#xA;releaseProbability -> Wahrscheinlichkeit der Freigabeerteilung, 0 (Unmöglich) bis 1 (Garantiert)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="releaseTime" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="closingTime" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="markedPosition" lowerBound="1"
+        eType="#//MarkedPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="releaseProbability" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+</ecore:EPackage>
