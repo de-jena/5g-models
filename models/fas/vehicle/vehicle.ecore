@@ -17,5 +17,7 @@
         <details key="documentation" value="reale Fahrzeugnummer bei der JNV (Id-Nr.)"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleType" lowerBound="1"
+        eType="ecore:EEnum ../utils/utils.ecore#//VehicleType"/>
   </eClassifiers>
 </ecore:EPackage>
