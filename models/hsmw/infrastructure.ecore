@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="powerinfrastructure" nsURI="https://jena.de/models/powerinfrastructure/1.0"
+    nsPrefix="powerinfrastructure">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Base">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geometry" eType="#//GeoJSON"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Point" eSuperTypes="#//Base">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" ordered="false"
+        upperBound="-1" eType="#//Connection">
+      <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+        <details key="nullFree" value="false"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connection" eSuperTypes="#//Base">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reverted" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="start" eType="#//Point"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="end" eType="#//Point"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resitencePerKilometer"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="in Millimeters"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeoJSON"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OverheadWire" eSuperTypes="#//Connection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Rail" eSuperTypes="#//Connection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Train" eSuperTypes="#//Connection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="voltage" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="power" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="in Watt"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Isolator" eSuperTypes="#//Connection">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Der Trenner"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//IsolatorState"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Substation" eSuperTypes="#//Connection"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="IsolatorState">
+    <eLiterals name="OPEN"/>
+    <eLiterals name="CLOSED" value="1"/>
+    <eLiterals name="UNKOWN" value="2"/>
+  </eClassifiers>
+</ecore:EPackage>
