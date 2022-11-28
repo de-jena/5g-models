@@ -66,13 +66,4 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resistancePerKm" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="State">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Electrical 'health state' of a mesh."/>
-    </eAnnotations>
-    <eLiterals name="unknown"/>
-    <eLiterals name="ok" value="1"/>
-    <eLiterals name="overloaded" value="2"/>
-    <eLiterals name="critical" value="3"/>
-  </eClassifiers>
 </ecore:EPackage>

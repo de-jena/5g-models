@@ -2,8 +2,8 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bus" nsURI="urn://hsmw/bus" nsPrefix="bus">
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
-    <details key="bus_static" value="bus_static.ecore#/"/>
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+    <details key="enum_static" value="enum_static.ecore#/"/>
     <details key="ocpp_charge_point" value="ChargePoint.ecore#/"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="BusStation">
@@ -43,7 +43,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Timetable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Timetables should be provided by Inavet/DiM"/>
+      <details key="documentation" value="Bus Timetables"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineNr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entries" upperBound="-1"
@@ -54,11 +54,17 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TimetableEntry">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Single entry in a Timetable"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrivalTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="departureTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="busStationId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TransformerStation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" lowerBound="1" eType="ecore:EEnum enum_static.ecore#//State"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="U1" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="U2" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="U3" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
