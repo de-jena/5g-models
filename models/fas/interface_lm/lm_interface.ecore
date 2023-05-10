@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="lm_interface" nsURI="http://inavet.de/datamodels" nsPrefix="lm_interface">
-  <eClassifiers xsi:type="ecore:EClass" name="PrognosisForLM" abstract="true" interface="true">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="lm_interface" nsURI="http://inavet.de/datamodels/lm_interface"
+    nsPrefix="lm_interface">
+  <eClassifiers xsi:type="ecore:EClass" name="PrognosisForLM">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Hauptklasse für Interface FAS -> LM&#xA;presentPosition -> aktuelle Position&#xA;timestamp -> Zeitpunkt der Datenerstellung&#xA;presentElectricalLoad -> laut FAS-Berechnung notwendige Leistung für Antrieb und Nebenverbraucher&#xA;prognosisForPositionAndElectricalLoad ->Liste der Prognose-Positionen und Lastbedarfe"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="presentPosition" lowerBound="1"
         eType="ecore:EClass ../utils/utils.ecore#//Position"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="presentElectricalLoad"
         lowerBound="1" eType="#//ElectricalLoad"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prognosisForPositionAndElectricalLoad"
-        lowerBound="1" upperBound="0" eType="#//PrognosisPositionAndElectricalLoad"/>
+        lowerBound="1" upperBound="-1" eType="#//PrognosisPositionAndElectricalLoad"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrognosisPositionAndElectricalLoad">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

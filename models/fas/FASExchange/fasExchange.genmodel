@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/datamodels-ecore/src" modelPluginID="datamodels-ecore"
+    modelName="FasExchange" rootExtendsInterface="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    suppressEMFTypes="true" suppressEMFMetaData="true" suppressEMFModelTags="true"
+    suppressInterfaces="true" importerID="org.eclipse.emf.importer.ecore" suppressContainment="true"
+    suppressNotification="true" suppressUnsettable="true" complianceLevel="5.0" copyrightFields="false"
+    publicConstructors="true" usedGenPackages="../journey/journey.genmodel#//journey ../utils/utils.genmodel#//utils ../vehicle/vehicle.genmodel#//vehicle"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>fasExchange.ecore</foreignModel>
+  <genPackages prefix="FasExchange" disposableProviderFactory="true" ecorePackage="fasExchange.ecore#/">
+    <genClasses ecoreClass="fasExchange.ecore#//FASExchange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//FASExchange/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute fasExchange.ecore#//FASExchange/journeyId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//FASExchange/timestamp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//FASExchange/trajectory"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//FASExchange/recommendation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//FASExchange/gnssStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//FASExchange/fasStatus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//FASExchange/timeSlotsOnJourney"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//FASExchangeResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//FASExchangeResponse/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//FASExchangeResponse/timestamp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute fasExchange.ecore#//FASExchangeResponse/fasExchangeIdToResponse"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute fasExchange.ecore#//FASExchangeResponse/journeyId"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//Recommendation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//Recommendation/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute fasExchange.ecore#//Recommendation/journeyId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//Recommendation/targetSpeed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//Recommendation/countdownForDeparture"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//Recommendation/recommendationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//Recommendation/startTimeForInformationOrRecommendation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//Recommendation/timestamp"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//RecommendationResponseFromMobile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//RecommendationResponseFromMobile/receivedRecommendation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute fasExchange.ecore#//RecommendationResponseFromMobile/recommendationId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//RecommendationResponseFromMobile/timestamp"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//TimeSlotOnJourney">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//TimeSlotOnJourney/timeSlot"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//TimeSlotOnJourney/position"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//TimeSlot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//TimeSlot/beginOfTimeSlot"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//TimeSlot/endOfTimeSlot"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//PrognosisTimeSlotFromkLSA">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//PrognosisTimeSlotFromkLSA/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//PrognosisTimeSlotFromkLSA/keyCosts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//PrognosisTimeSlotFromkLSA/timeSlots"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//PrognosisTimeSlotFromkLSA/vehicles"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//PrognosisForVehiclePowerDemand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//PrognosisForVehiclePowerDemand/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//PrognosisForVehiclePowerDemand/keyVehicles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//PrognosisForVehiclePowerDemand/powerDemandOverPositions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//PrognosisForVehiclePowerDemand/powerDemandOverTimes"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//PowerDemandOverPosition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//PowerDemandOverPosition/powerPrognosis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//PowerDemandOverPosition/position"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//PowerDemandOverTime">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//PowerDemandOverTime/powerPrognosis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//PowerDemandOverTime/timestamp"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//SpeedOverPosition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//SpeedOverPosition/speed"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//SpeedOverPosition/position"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//SpeedOverTime">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//SpeedOverTime/speed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//SpeedOverTime/timestamp"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//PrognosisTimeSlotForJourney">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EAttribute fasExchange.ecore#//PrognosisTimeSlotForJourney/journeyId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//PrognosisTimeSlotForJourney/timeSlotsOnJourney"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//Trajectory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//Trajectory/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//Trajectory/vehicle"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//Trajectory/speedOverPosition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//Trajectory/speedOverTime"/>
+    </genClasses>
+    <genClasses ecoreClass="fasExchange.ecore#//TrajectoryLeftFromMobile">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fasExchange.ecore#//TrajectoryLeftFromMobile/trajectory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fasExchange.ecore#//TrajectoryLeftFromMobile/timeStamp"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

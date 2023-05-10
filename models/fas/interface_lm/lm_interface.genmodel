@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/datamodels-ecore/src" modelPluginID="datamodels-ecore"
+    modelName="Lm_interface" rootExtendsInterface="" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    suppressEMFMetaData="true" suppressEMFModelTags="true" suppressInterfaces="true"
+    importerID="org.eclipse.emf.importer.ecore" suppressContainment="true" suppressNotification="true"
+    complianceLevel="5.0" copyrightFields="false" publicConstructors="true" usedGenPackages="../utils/utils.genmodel#//utils"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>lm_interface.ecore</foreignModel>
+  <genPackages prefix="Lm_interface" disposableProviderFactory="true" ecorePackage="lm_interface.ecore#/">
+    <genClasses image="false" ecoreClass="lm_interface.ecore#//PrognosisForLM">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lm_interface.ecore#//PrognosisForLM/presentPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lm_interface.ecore#//PrognosisForLM/timestamp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lm_interface.ecore#//PrognosisForLM/presentElectricalLoad"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lm_interface.ecore#//PrognosisForLM/prognosisForPositionAndElectricalLoad"/>
+    </genClasses>
+    <genClasses ecoreClass="lm_interface.ecore#//PrognosisPositionAndElectricalLoad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lm_interface.ecore#//PrognosisPositionAndElectricalLoad/timestampForPrognosis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lm_interface.ecore#//PrognosisPositionAndElectricalLoad/prognosisPosition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lm_interface.ecore#//PrognosisPositionAndElectricalLoad/electricalLoadPrognosis"/>
+    </genClasses>
+    <genClasses ecoreClass="lm_interface.ecore#//ElectricalLoad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lm_interface.ecore#//ElectricalLoad/drivePower"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lm_interface.ecore#//ElectricalLoad/auxiliaryPower"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

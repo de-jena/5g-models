@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fasExchange" nsURI="http://inavet.de/datamodels" nsPrefix="fasExchange">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fasExchange" nsURI="http://inavet.de/datamodels/fasExchange"
+    nsPrefix="fasExchange">
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
     <details key="fasExchange" value="#/"/>
@@ -15,8 +16,7 @@
         <details key="documentation" value="Datenbrokr-id"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="journeyId" lowerBound="1"
-        eType="ecore:EClass ../journey/journey.ecore#//Journey" eKeys="../journey/journey.ecore#//Journey/id">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="journeyId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="journey-id zur Zuordnung der Informationen für die Fahrt"/>
       </eAnnotations>
@@ -71,14 +71,13 @@
         <details key="documentation" value="Zeitstempel der Antwortübermittlung"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fasExchangeIdToResponse"
-        lowerBound="1" eType="#//FASExchange" eKeys="#//FASExchange/id">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fasExchangeIdToResponse"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Antwort-Id"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="journeyId" lowerBound="1"
-        eType="ecore:EClass ../journey/journey.ecore#//Journey" eKeys="../journey/journey.ecore#//Journey/journeyId">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="journeyId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="betreffende Journeyid"/>
       </eAnnotations>
@@ -93,8 +92,8 @@
         <details key="documentation" value="Datenbroker-id"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="journeyId" lowerBound="1"
-        eType="ecore:EClass ../journey/journey.ecore#//Journey" eKeys="../journey/journey.ecore#//Journey/id">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="journeyId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="betreffende Journey-Id"/>
       </eAnnotations>
@@ -140,8 +139,7 @@
         <details key="documentation" value="Attribut zum Empfehlungserhalt auf der mobilen Seite"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="recommendationId" lowerBound="1"
-        eType="#//Recommendation" eKeys="#//Recommendation/id">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recommendationId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Bezogene Empfehlungs-Id"/>
       </eAnnotations>
@@ -295,8 +293,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Prognoseankunftszeiten für eine Fahrt"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="journeyId" lowerBound="1"
-        eType="ecore:EClass ../journey/journey.ecore#//Journey" eKeys="../journey/journey.ecore#//Journey/journeyId">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="journeyId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="bezogene Journey-Id"/>
       </eAnnotations>
@@ -322,7 +319,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TrajectoryLeftFromMobile">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Trajektorie verlassen Meldung vom Mobile&#xA;Auch hier ist die Verwendung noch nicht klar"/>
+      <details key="documentation" value="Trajektorie verlassen Meldung vom Mobile&#xA;Auch hier ist die Verwendung noch nicht klar&#xA;Upadate 26.04.2023: Klassse wird nicht gebraucht, da die Zentrale immer die position des Mobilgeräts kennt und somit das Verlassen der Trajektorie selbst feststellen kann."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="trajectory" lowerBound="1"
         eType="#//Trajectory" eKeys="#//Trajectory/id"/>
