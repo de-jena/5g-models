@@ -778,6 +778,52 @@ public class FasExchangePackage extends EPackageImpl {
 	public static final int SPEED_OVER_TIME_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link fasExchange.PositionOverTime <em>Position Over Time</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fasExchange.PositionOverTime
+	 * @see fasExchange.FasExchangePackage#getPositionOverTime()
+	 * @generated
+	 */
+	public static final int POSITION_OVER_TIME = 12;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int POSITION_OVER_TIME__POSITION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int POSITION_OVER_TIME__TIMESTAMP = 1;
+
+	/**
+	 * The number of structural features of the '<em>Position Over Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int POSITION_OVER_TIME_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Position Over Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int POSITION_OVER_TIME_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link fasExchange.PrognosisTimeSlotForJourney <em>Prognosis Time Slot For Journey</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -785,7 +831,7 @@ public class FasExchangePackage extends EPackageImpl {
 	 * @see fasExchange.FasExchangePackage#getPrognosisTimeSlotForJourney()
 	 * @generated
 	 */
-	public static final int PROGNOSIS_TIME_SLOT_FOR_JOURNEY = 12;
+	public static final int PROGNOSIS_TIME_SLOT_FOR_JOURNEY = 13;
 
 	/**
 	 * The feature id for the '<em><b>Journey Id</b></em>' attribute.
@@ -831,7 +877,7 @@ public class FasExchangePackage extends EPackageImpl {
 	 * @see fasExchange.FasExchangePackage#getTrajectory()
 	 * @generated
 	 */
-	public static final int TRAJECTORY = 13;
+	public static final int TRAJECTORY = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -870,13 +916,22 @@ public class FasExchangePackage extends EPackageImpl {
 	public static final int TRAJECTORY__SPEED_OVER_TIME = 3;
 
 	/**
+	 * The feature id for the '<em><b>Position Over Time</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TRAJECTORY__POSITION_OVER_TIME = 4;
+
+	/**
 	 * The number of structural features of the '<em>Trajectory</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TRAJECTORY_FEATURE_COUNT = 4;
+	public static final int TRAJECTORY_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Trajectory</em>' class.
@@ -895,7 +950,7 @@ public class FasExchangePackage extends EPackageImpl {
 	 * @see fasExchange.FasExchangePackage#getTrajectoryLeftFromMobile()
 	 * @generated
 	 */
-	public static final int TRAJECTORY_LEFT_FROM_MOBILE = 14;
+	public static final int TRAJECTORY_LEFT_FROM_MOBILE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Trajectory</b></em>' reference.
@@ -1016,6 +1071,13 @@ public class FasExchangePackage extends EPackageImpl {
 	 * @generated
 	 */
 	private EClass speedOverTimeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass positionOverTimeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1795,6 +1857,44 @@ public class FasExchangePackage extends EPackageImpl {
 	}
 
 	/**
+	 * Returns the meta object for class '{@link fasExchange.PositionOverTime <em>Position Over Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Position Over Time</em>'.
+	 * @see fasExchange.PositionOverTime
+	 * @generated
+	 */
+	public EClass getPositionOverTime() {
+		return positionOverTimeEClass;
+	}
+
+	/**
+	 * Returns the meta object for the reference '{@link fasExchange.PositionOverTime#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Position</em>'.
+	 * @see fasExchange.PositionOverTime#getPosition()
+	 * @see #getPositionOverTime()
+	 * @generated
+	 */
+	public EReference getPositionOverTime_Position() {
+		return (EReference)positionOverTimeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * Returns the meta object for the attribute '{@link fasExchange.PositionOverTime#getTimestamp <em>Timestamp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Timestamp</em>'.
+	 * @see fasExchange.PositionOverTime#getTimestamp()
+	 * @see #getPositionOverTime()
+	 * @generated
+	 */
+	public EAttribute getPositionOverTime_Timestamp() {
+		return (EAttribute)positionOverTimeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
 	 * Returns the meta object for class '{@link fasExchange.PrognosisTimeSlotForJourney <em>Prognosis Time Slot For Journey</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1894,6 +1994,19 @@ public class FasExchangePackage extends EPackageImpl {
 	 */
 	public EReference getTrajectory_SpeedOverTime() {
 		return (EReference)trajectoryEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * Returns the meta object for the reference list '{@link fasExchange.Trajectory#getPositionOverTime <em>Position Over Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Position Over Time</em>'.
+	 * @see fasExchange.Trajectory#getPositionOverTime()
+	 * @see #getTrajectory()
+	 * @generated
+	 */
+	public EReference getTrajectory_PositionOverTime() {
+		return (EReference)trajectoryEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2030,6 +2143,10 @@ public class FasExchangePackage extends EPackageImpl {
 		createEReference(speedOverTimeEClass, SPEED_OVER_TIME__SPEED);
 		createEAttribute(speedOverTimeEClass, SPEED_OVER_TIME__TIMESTAMP);
 
+		positionOverTimeEClass = createEClass(POSITION_OVER_TIME);
+		createEReference(positionOverTimeEClass, POSITION_OVER_TIME__POSITION);
+		createEAttribute(positionOverTimeEClass, POSITION_OVER_TIME__TIMESTAMP);
+
 		prognosisTimeSlotForJourneyEClass = createEClass(PROGNOSIS_TIME_SLOT_FOR_JOURNEY);
 		createEAttribute(prognosisTimeSlotForJourneyEClass, PROGNOSIS_TIME_SLOT_FOR_JOURNEY__JOURNEY_ID);
 		createEReference(prognosisTimeSlotForJourneyEClass, PROGNOSIS_TIME_SLOT_FOR_JOURNEY__TIME_SLOTS_ON_JOURNEY);
@@ -2039,6 +2156,7 @@ public class FasExchangePackage extends EPackageImpl {
 		createEReference(trajectoryEClass, TRAJECTORY__VEHICLE);
 		createEReference(trajectoryEClass, TRAJECTORY__SPEED_OVER_POSITION);
 		createEReference(trajectoryEClass, TRAJECTORY__SPEED_OVER_TIME);
+		createEReference(trajectoryEClass, TRAJECTORY__POSITION_OVER_TIME);
 
 		trajectoryLeftFromMobileEClass = createEClass(TRAJECTORY_LEFT_FROM_MOBILE);
 		createEReference(trajectoryLeftFromMobileEClass, TRAJECTORY_LEFT_FROM_MOBILE__TRAJECTORY);
@@ -2145,6 +2263,10 @@ public class FasExchangePackage extends EPackageImpl {
 		initEReference(getSpeedOverTime_Speed(), theUtilsPackage.getValueItem(), null, "speed", null, 0, 1, SpeedOverTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSpeedOverTime_Timestamp(), theUtilsPackage.getZonedDateTime(), "timestamp", null, 0, 1, SpeedOverTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(positionOverTimeEClass, PositionOverTime.class, "PositionOverTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPositionOverTime_Position(), theUtilsPackage.getPosition(), null, "position", null, 0, 1, PositionOverTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPositionOverTime_Timestamp(), theUtilsPackage.getZonedDateTime(), "timestamp", null, 0, 1, PositionOverTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(prognosisTimeSlotForJourneyEClass, PrognosisTimeSlotForJourney.class, "PrognosisTimeSlotForJourney", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrognosisTimeSlotForJourney_JourneyId(), ecorePackage.getEString(), "journeyId", null, 0, 1, PrognosisTimeSlotForJourney.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPrognosisTimeSlotForJourney_TimeSlotsOnJourney(), this.getTimeSlotOnJourney(), null, "timeSlotsOnJourney", null, 1, -1, PrognosisTimeSlotForJourney.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2154,6 +2276,7 @@ public class FasExchangePackage extends EPackageImpl {
 		initEReference(getTrajectory_Vehicle(), theVehiclePackage.getVehicle(), null, "vehicle", null, 0, 1, Trajectory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrajectory_SpeedOverPosition(), this.getSpeedOverPosition(), null, "speedOverPosition", null, 1, -1, Trajectory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrajectory_SpeedOverTime(), this.getSpeedOverTime(), null, "speedOverTime", null, 1, -1, Trajectory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrajectory_PositionOverTime(), this.getPositionOverTime(), null, "positionOverTime", null, 1, -1, Trajectory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trajectoryLeftFromMobileEClass, TrajectoryLeftFromMobile.class, "TrajectoryLeftFromMobile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTrajectoryLeftFromMobile_Trajectory(), this.getTrajectory(), null, "trajectory", null, 1, 1, TrajectoryLeftFromMobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2656,6 +2779,32 @@ public class FasExchangePackage extends EPackageImpl {
 		public static final EAttribute SPEED_OVER_TIME__TIMESTAMP = eINSTANCE.getSpeedOverTime_Timestamp();
 
 		/**
+		 * The meta object literal for the '{@link fasExchange.PositionOverTime <em>Position Over Time</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fasExchange.PositionOverTime
+		 * @see fasExchange.FasExchangePackage#getPositionOverTime()
+		 * @generated
+		 */
+		public static final EClass POSITION_OVER_TIME = eINSTANCE.getPositionOverTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EReference POSITION_OVER_TIME__POSITION = eINSTANCE.getPositionOverTime_Position();
+
+		/**
+		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute POSITION_OVER_TIME__TIMESTAMP = eINSTANCE.getPositionOverTime_Timestamp();
+
+		/**
 		 * The meta object literal for the '{@link fasExchange.PrognosisTimeSlotForJourney <em>Prognosis Time Slot For Journey</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2722,6 +2871,14 @@ public class FasExchangePackage extends EPackageImpl {
 		 * @generated
 		 */
 		public static final EReference TRAJECTORY__SPEED_OVER_TIME = eINSTANCE.getTrajectory_SpeedOverTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Position Over Time</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EReference TRAJECTORY__POSITION_OVER_TIME = eINSTANCE.getTrajectory_PositionOverTime();
 
 		/**
 		 * The meta object literal for the '{@link fasExchange.TrajectoryLeftFromMobile <em>Trajectory Left From Mobile</em>}' class.

@@ -138,6 +138,12 @@ public class FasExchangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case FasExchangePackage.POSITION_OVER_TIME: {
+				PositionOverTime positionOverTime = (PositionOverTime)theEObject;
+				T result = casePositionOverTime(positionOverTime);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case FasExchangePackage.PROGNOSIS_TIME_SLOT_FOR_JOURNEY: {
 				PrognosisTimeSlotForJourney prognosisTimeSlotForJourney = (PrognosisTimeSlotForJourney)theEObject;
 				T result = casePrognosisTimeSlotForJourney(prognosisTimeSlotForJourney);
@@ -337,6 +343,21 @@ public class FasExchangeSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSpeedOverTime(SpeedOverTime object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Position Over Time</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Position Over Time</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePositionOverTime(PositionOverTime object) {
 		return null;
 	}
 

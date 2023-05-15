@@ -83,6 +83,7 @@ public class FasExchangeFactory extends EFactoryImpl {
 			case FasExchangePackage.POWER_DEMAND_OVER_TIME: return (EObject)createPowerDemandOverTime();
 			case FasExchangePackage.SPEED_OVER_POSITION: return (EObject)createSpeedOverPosition();
 			case FasExchangePackage.SPEED_OVER_TIME: return (EObject)createSpeedOverTime();
+			case FasExchangePackage.POSITION_OVER_TIME: return (EObject)createPositionOverTime();
 			case FasExchangePackage.PROGNOSIS_TIME_SLOT_FOR_JOURNEY: return (EObject)createPrognosisTimeSlotForJourney();
 			case FasExchangePackage.TRAJECTORY: return (EObject)createTrajectory();
 			case FasExchangePackage.TRAJECTORY_LEFT_FROM_MOBILE: return (EObject)createTrajectoryLeftFromMobile();
@@ -209,6 +210,16 @@ public class FasExchangeFactory extends EFactoryImpl {
 	public SpeedOverTime createSpeedOverTime() {
 		SpeedOverTime speedOverTime = new SpeedOverTime();
 		return speedOverTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PositionOverTime createPositionOverTime() {
+		PositionOverTime positionOverTime = new PositionOverTime();
+		return positionOverTime;
 	}
 
 	/**

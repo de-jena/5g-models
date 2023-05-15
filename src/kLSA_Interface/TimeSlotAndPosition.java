@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link kLSA_Interface.TimeSlotAndPosition#getId <em>Id</em>}</li>
  *   <li>{@link kLSA_Interface.TimeSlotAndPosition#getMarkedPosition <em>Marked Position</em>}</li>
  *   <li>{@link kLSA_Interface.TimeSlotAndPosition#getReleaseProbability <em>Release Probability</em>}</li>
  *   <li>{@link kLSA_Interface.TimeSlotAndPosition#getTimeSlot <em>Time Slot</em>}</li>
@@ -35,6 +36,26 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class TimeSlotAndPosition extends MinimalEObjectImpl.Container {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getMarkedPosition() <em>Marked Position</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -92,6 +113,30 @@ public class TimeSlotAndPosition extends MinimalEObjectImpl.Container {
 	@Override
 	protected EClass eStaticClass() {
 		return KLSA_InterfacePackage.Literals.TIME_SLOT_AND_POSITION;
+	}
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * Sets the value of the '{@link kLSA_Interface.TimeSlotAndPosition#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param newId the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	public void setId(String newId) {
+		id = newId;
 	}
 
 	/**
@@ -204,6 +249,8 @@ public class TimeSlotAndPosition extends MinimalEObjectImpl.Container {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case KLSA_InterfacePackage.TIME_SLOT_AND_POSITION__ID:
+				return getId();
 			case KLSA_InterfacePackage.TIME_SLOT_AND_POSITION__MARKED_POSITION:
 				if (resolve) return getMarkedPosition();
 				return basicGetMarkedPosition();
@@ -224,6 +271,9 @@ public class TimeSlotAndPosition extends MinimalEObjectImpl.Container {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case KLSA_InterfacePackage.TIME_SLOT_AND_POSITION__ID:
+				setId((String)newValue);
+				return;
 			case KLSA_InterfacePackage.TIME_SLOT_AND_POSITION__MARKED_POSITION:
 				setMarkedPosition((MarkedPosition)newValue);
 				return;
@@ -245,6 +295,9 @@ public class TimeSlotAndPosition extends MinimalEObjectImpl.Container {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case KLSA_InterfacePackage.TIME_SLOT_AND_POSITION__ID:
+				setId(ID_EDEFAULT);
+				return;
 			case KLSA_InterfacePackage.TIME_SLOT_AND_POSITION__MARKED_POSITION:
 				setMarkedPosition((MarkedPosition)null);
 				return;
@@ -266,6 +319,8 @@ public class TimeSlotAndPosition extends MinimalEObjectImpl.Container {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case KLSA_InterfacePackage.TIME_SLOT_AND_POSITION__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case KLSA_InterfacePackage.TIME_SLOT_AND_POSITION__MARKED_POSITION:
 				return markedPosition != null;
 			case KLSA_InterfacePackage.TIME_SLOT_AND_POSITION__RELEASE_PROBABILITY:
@@ -286,7 +341,9 @@ public class TimeSlotAndPosition extends MinimalEObjectImpl.Container {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (releaseProbability: ");
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", releaseProbability: ");
 		result.append(releaseProbability);
 		result.append(')');
 		return result.toString();

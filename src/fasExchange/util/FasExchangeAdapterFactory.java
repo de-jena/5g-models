@@ -116,6 +116,10 @@ public class FasExchangeAdapterFactory extends AdapterFactoryImpl {
 				return createSpeedOverTimeAdapter();
 			}
 			@Override
+			public Adapter casePositionOverTime(PositionOverTime object) {
+				return createPositionOverTimeAdapter();
+			}
+			@Override
 			public Adapter casePrognosisTimeSlotForJourney(PrognosisTimeSlotForJourney object) {
 				return createPrognosisTimeSlotForJourneyAdapter();
 			}
@@ -312,6 +316,20 @@ public class FasExchangeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSpeedOverTimeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fasExchange.PositionOverTime <em>Position Over Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fasExchange.PositionOverTime
+	 * @generated
+	 */
+	public Adapter createPositionOverTimeAdapter() {
 		return null;
 	}
 

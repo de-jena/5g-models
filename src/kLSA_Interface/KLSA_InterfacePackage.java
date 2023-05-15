@@ -121,13 +121,22 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	public static final int PROGNOSIS_FORK_LSA__TRAJECTORY = 4;
 
 	/**
+	 * The feature id for the '<em><b>Selected Time Window</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int PROGNOSIS_FORK_LSA__SELECTED_TIME_WINDOW = 5;
+
+	/**
 	 * The number of structural features of the '<em>Prognosis Fork LSA</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PROGNOSIS_FORK_LSA_FEATURE_COUNT = 5;
+	public static final int PROGNOSIS_FORK_LSA_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Prognosis Fork LSA</em>' class.
@@ -360,13 +369,22 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	public static final int TIME_SLOT_AND_POSITION = 5;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TIME_SLOT_AND_POSITION__ID = 0;
+
+	/**
 	 * The feature id for the '<em><b>Marked Position</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TIME_SLOT_AND_POSITION__MARKED_POSITION = 0;
+	public static final int TIME_SLOT_AND_POSITION__MARKED_POSITION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Release Probability</b></em>' attribute.
@@ -375,7 +393,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TIME_SLOT_AND_POSITION__RELEASE_PROBABILITY = 1;
+	public static final int TIME_SLOT_AND_POSITION__RELEASE_PROBABILITY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Time Slot</b></em>' reference.
@@ -384,7 +402,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TIME_SLOT_AND_POSITION__TIME_SLOT = 2;
+	public static final int TIME_SLOT_AND_POSITION__TIME_SLOT = 3;
 
 	/**
 	 * The number of structural features of the '<em>Time Slot And Position</em>' class.
@@ -393,7 +411,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TIME_SLOT_AND_POSITION_FEATURE_COUNT = 3;
+	public static final int TIME_SLOT_AND_POSITION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Time Slot And Position</em>' class.
@@ -588,6 +606,19 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 */
 	public EReference getPrognosisForkLSA_Trajectory() {
 		return (EReference)prognosisForkLSAEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * Returns the meta object for the attribute '{@link kLSA_Interface.PrognosisForkLSA#getSelectedTimeWindow <em>Selected Time Window</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selected Time Window</em>'.
+	 * @see kLSA_Interface.PrognosisForkLSA#getSelectedTimeWindow()
+	 * @see #getPrognosisForkLSA()
+	 * @generated
+	 */
+	public EAttribute getPrognosisForkLSA_SelectedTimeWindow() {
+		return (EAttribute)prognosisForkLSAEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -794,6 +825,19 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	}
 
 	/**
+	 * Returns the meta object for the attribute '{@link kLSA_Interface.TimeSlotAndPosition#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see kLSA_Interface.TimeSlotAndPosition#getId()
+	 * @see #getTimeSlotAndPosition()
+	 * @generated
+	 */
+	public EAttribute getTimeSlotAndPosition_Id() {
+		return (EAttribute)timeSlotAndPositionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
 	 * Returns the meta object for the reference '{@link kLSA_Interface.TimeSlotAndPosition#getMarkedPosition <em>Marked Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -803,7 +847,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 */
 	public EReference getTimeSlotAndPosition_MarkedPosition() {
-		return (EReference)timeSlotAndPositionEClass.getEStructuralFeatures().get(0);
+		return (EReference)timeSlotAndPositionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -816,7 +860,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 */
 	public EAttribute getTimeSlotAndPosition_ReleaseProbability() {
-		return (EAttribute)timeSlotAndPositionEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)timeSlotAndPositionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -829,7 +873,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 */
 	public EReference getTimeSlotAndPosition_TimeSlot() {
-		return (EReference)timeSlotAndPositionEClass.getEStructuralFeatures().get(2);
+		return (EReference)timeSlotAndPositionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -868,6 +912,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 		createEReference(prognosisForkLSAEClass, PROGNOSIS_FORK_LSA__POSITION);
 		createEReference(prognosisForkLSAEClass, PROGNOSIS_FORK_LSA__PROGNOSIS_ARRIVAL_AND_POSITIONS);
 		createEReference(prognosisForkLSAEClass, PROGNOSIS_FORK_LSA__TRAJECTORY);
+		createEAttribute(prognosisForkLSAEClass, PROGNOSIS_FORK_LSA__SELECTED_TIME_WINDOW);
 
 		prognosisArrivalAndPositionEClass = createEClass(PROGNOSIS_ARRIVAL_AND_POSITION);
 		createEReference(prognosisArrivalAndPositionEClass, PROGNOSIS_ARRIVAL_AND_POSITION__MARKED_POSITION);
@@ -889,6 +934,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 		createEReference(releaseTimeWindowForLSAEClass, RELEASE_TIME_WINDOW_FOR_LSA__TIME_WINDOWS);
 
 		timeSlotAndPositionEClass = createEClass(TIME_SLOT_AND_POSITION);
+		createEAttribute(timeSlotAndPositionEClass, TIME_SLOT_AND_POSITION__ID);
 		createEReference(timeSlotAndPositionEClass, TIME_SLOT_AND_POSITION__MARKED_POSITION);
 		createEAttribute(timeSlotAndPositionEClass, TIME_SLOT_AND_POSITION__RELEASE_PROBABILITY);
 		createEReference(timeSlotAndPositionEClass, TIME_SLOT_AND_POSITION__TIME_SLOT);
@@ -935,6 +981,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 		initEReference(getPrognosisForkLSA_Position(), theUtilsPackage.getPosition(), null, "position", null, 1, 1, PrognosisForkLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPrognosisForkLSA_PrognosisArrivalAndPositions(), this.getPrognosisArrivalAndPosition(), null, "prognosisArrivalAndPositions", null, 1, -1, PrognosisForkLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPrognosisForkLSA_Trajectory(), theFasExchangePackage.getTrajectory(), null, "trajectory", null, 0, 1, PrognosisForkLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPrognosisForkLSA_SelectedTimeWindow(), ecorePackage.getEString(), "selectedTimeWindow", null, 0, 1, PrognosisForkLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(prognosisArrivalAndPositionEClass, PrognosisArrivalAndPosition.class, "PrognosisArrivalAndPosition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPrognosisArrivalAndPosition_MarkedPosition(), this.getMarkedPosition(), null, "markedPosition", null, 1, 1, PrognosisArrivalAndPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -956,6 +1003,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 		initEReference(getReleaseTimeWindowForLSA_TimeWindows(), this.getTimeSlotAndPosition(), null, "timeWindows", null, 1, -1, ReleaseTimeWindowForLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(timeSlotAndPositionEClass, TimeSlotAndPosition.class, "TimeSlotAndPosition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTimeSlotAndPosition_Id(), ecorePackage.getEString(), "id", null, 0, 1, TimeSlotAndPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTimeSlotAndPosition_MarkedPosition(), this.getMarkedPosition(), null, "markedPosition", null, 1, 1, TimeSlotAndPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTimeSlotAndPosition_ReleaseProbability(), ecorePackage.getEDouble(), "releaseProbability", null, 1, 1, TimeSlotAndPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTimeSlotAndPosition_TimeSlot(), theFasExchangePackage.getTimeSlot(), null, "timeSlot", null, 1, 1, TimeSlotAndPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1027,6 +1075,14 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 		 * @generated
 		 */
 		public static final EReference PROGNOSIS_FORK_LSA__TRAJECTORY = eINSTANCE.getPrognosisForkLSA_Trajectory();
+
+		/**
+		 * The meta object literal for the '<em><b>Selected Time Window</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute PROGNOSIS_FORK_LSA__SELECTED_TIME_WINDOW = eINSTANCE.getPrognosisForkLSA_SelectedTimeWindow();
 
 		/**
 		 * The meta object literal for the '{@link kLSA_Interface.PrognosisArrivalAndPosition <em>Prognosis Arrival And Position</em>}' class.
@@ -1165,6 +1221,14 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 		 * @generated
 		 */
 		public static final EClass TIME_SLOT_AND_POSITION = eINSTANCE.getTimeSlotAndPosition();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute TIME_SLOT_AND_POSITION__ID = eINSTANCE.getTimeSlotAndPosition_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Marked Position</b></em>' reference feature.

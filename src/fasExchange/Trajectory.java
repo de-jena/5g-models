@@ -35,6 +35,7 @@ import vehicle.Vehicle;
  *   <li>{@link fasExchange.Trajectory#getVehicle <em>Vehicle</em>}</li>
  *   <li>{@link fasExchange.Trajectory#getSpeedOverPosition <em>Speed Over Position</em>}</li>
  *   <li>{@link fasExchange.Trajectory#getSpeedOverTime <em>Speed Over Time</em>}</li>
+ *   <li>{@link fasExchange.Trajectory#getPositionOverTime <em>Position Over Time</em>}</li>
  * </ul>
  *
  * @generated
@@ -89,6 +90,16 @@ public class Trajectory extends MinimalEObjectImpl.Container {
 	 * @ordered
 	 */
 	protected EList<SpeedOverTime> speedOverTime;
+
+	/**
+	 * The cached value of the '{@link #getPositionOverTime() <em>Position Over Time</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPositionOverTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PositionOverTime> positionOverTime;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -203,6 +214,21 @@ public class Trajectory extends MinimalEObjectImpl.Container {
 	}
 
 	/**
+	 * Returns the value of the '<em><b>Position Over Time</b></em>' reference list.
+	 * The list contents are of type {@link fasExchange.PositionOverTime}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Position Over Time</em>' reference list.
+	 * @generated
+	 */
+	public List<PositionOverTime> getPositionOverTime() {
+		if (positionOverTime == null) {
+			positionOverTime = new BasicInternalEList<PositionOverTime>(PositionOverTime.class);
+		}
+		return positionOverTime;
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -219,6 +245,8 @@ public class Trajectory extends MinimalEObjectImpl.Container {
 				return getSpeedOverPosition();
 			case FasExchangePackage.TRAJECTORY__SPEED_OVER_TIME:
 				return getSpeedOverTime();
+			case FasExchangePackage.TRAJECTORY__POSITION_OVER_TIME:
+				return getPositionOverTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -246,6 +274,10 @@ public class Trajectory extends MinimalEObjectImpl.Container {
 				getSpeedOverTime().clear();
 				getSpeedOverTime().addAll((Collection<? extends SpeedOverTime>)newValue);
 				return;
+			case FasExchangePackage.TRAJECTORY__POSITION_OVER_TIME:
+				getPositionOverTime().clear();
+				getPositionOverTime().addAll((Collection<? extends PositionOverTime>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -270,6 +302,9 @@ public class Trajectory extends MinimalEObjectImpl.Container {
 			case FasExchangePackage.TRAJECTORY__SPEED_OVER_TIME:
 				getSpeedOverTime().clear();
 				return;
+			case FasExchangePackage.TRAJECTORY__POSITION_OVER_TIME:
+				getPositionOverTime().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -290,6 +325,8 @@ public class Trajectory extends MinimalEObjectImpl.Container {
 				return speedOverPosition != null && !speedOverPosition.isEmpty();
 			case FasExchangePackage.TRAJECTORY__SPEED_OVER_TIME:
 				return speedOverTime != null && !speedOverTime.isEmpty();
+			case FasExchangePackage.TRAJECTORY__POSITION_OVER_TIME:
+				return positionOverTime != null && !positionOverTime.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

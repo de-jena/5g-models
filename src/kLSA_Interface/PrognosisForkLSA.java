@@ -45,6 +45,7 @@ import vehicle.Vehicle;
  *   <li>{@link kLSA_Interface.PrognosisForkLSA#getPosition <em>Position</em>}</li>
  *   <li>{@link kLSA_Interface.PrognosisForkLSA#getPrognosisArrivalAndPositions <em>Prognosis Arrival And Positions</em>}</li>
  *   <li>{@link kLSA_Interface.PrognosisForkLSA#getTrajectory <em>Trajectory</em>}</li>
+ *   <li>{@link kLSA_Interface.PrognosisForkLSA#getSelectedTimeWindow <em>Selected Time Window</em>}</li>
  * </ul>
  *
  * @generated
@@ -109,6 +110,26 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 	 * @ordered
 	 */
 	protected Trajectory trajectory;
+
+	/**
+	 * The default value of the '{@link #getSelectedTimeWindow() <em>Selected Time Window</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSelectedTimeWindow()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SELECTED_TIME_WINDOW_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSelectedTimeWindow() <em>Selected Time Window</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSelectedTimeWindow()
+	 * @generated
+	 * @ordered
+	 */
+	protected String selectedTimeWindow = SELECTED_TIME_WINDOW_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -286,6 +307,33 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 	}
 
 	/**
+	 * Returns the value of the '<em><b>Selected Time Window</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * ID des gewählten ReleaseTimeWindow, welches zuvor mittels ReleaseTimeWindowforLSA erhalten wurde. Leerstring (""), wenn neue ReleaseTimeWindows angefordert werden sollen.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Selected Time Window</em>' attribute.
+	 * @see #setSelectedTimeWindow(String)
+	 * @generated
+	 */
+	public String getSelectedTimeWindow() {
+		return selectedTimeWindow;
+	}
+
+	/**
+	 * Sets the value of the '{@link kLSA_Interface.PrognosisForkLSA#getSelectedTimeWindow <em>Selected Time Window</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param newSelectedTimeWindow the new value of the '<em>Selected Time Window</em>' attribute.
+	 * @see #getSelectedTimeWindow()
+	 * @generated
+	 */
+	public void setSelectedTimeWindow(String newSelectedTimeWindow) {
+		selectedTimeWindow = newSelectedTimeWindow;
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -306,6 +354,8 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__TRAJECTORY:
 				if (resolve) return getTrajectory();
 				return basicGetTrajectory();
+			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__SELECTED_TIME_WINDOW:
+				return getSelectedTimeWindow();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -335,6 +385,9 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__TRAJECTORY:
 				setTrajectory((Trajectory)newValue);
 				return;
+			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__SELECTED_TIME_WINDOW:
+				setSelectedTimeWindow((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -362,6 +415,9 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__TRAJECTORY:
 				setTrajectory((Trajectory)null);
 				return;
+			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__SELECTED_TIME_WINDOW:
+				setSelectedTimeWindow(SELECTED_TIME_WINDOW_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -384,6 +440,8 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 				return prognosisArrivalAndPositions != null && !prognosisArrivalAndPositions.isEmpty();
 			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__TRAJECTORY:
 				return trajectory != null;
+			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__SELECTED_TIME_WINDOW:
+				return SELECTED_TIME_WINDOW_EDEFAULT == null ? selectedTimeWindow != null : !SELECTED_TIME_WINDOW_EDEFAULT.equals(selectedTimeWindow);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -400,6 +458,8 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (timestamp: ");
 		result.append(timestamp);
+		result.append(", selectedTimeWindow: ");
+		result.append(selectedTimeWindow);
 		result.append(')');
 		return result.toString();
 	}
