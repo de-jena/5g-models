@@ -40,6 +40,7 @@ import vehicle.Vehicle;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link kLSA_Interface.PrognosisForkLSA#getId <em>Id</em>}</li>
  *   <li>{@link kLSA_Interface.PrognosisForkLSA#getTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link kLSA_Interface.PrognosisForkLSA#getVehicle <em>Vehicle</em>}</li>
  *   <li>{@link kLSA_Interface.PrognosisForkLSA#getPosition <em>Position</em>}</li>
@@ -51,6 +52,26 @@ import vehicle.Vehicle;
  * @generated
  */
 public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -148,6 +169,30 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 	@Override
 	protected EClass eStaticClass() {
 		return KLSA_InterfacePackage.Literals.PROGNOSIS_FORK_LSA;
+	}
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * Sets the value of the '{@link kLSA_Interface.PrognosisForkLSA#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param newId the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	public void setId(String newId) {
+		id = newId;
 	}
 
 	/**
@@ -341,6 +386,8 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__ID:
+				return getId();
 			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__TIMESTAMP:
 				return getTimestamp();
 			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__VEHICLE:
@@ -369,6 +416,9 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__ID:
+				setId((String)newValue);
+				return;
 			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__TIMESTAMP:
 				setTimestamp((ZonedDateTime)newValue);
 				return;
@@ -400,6 +450,9 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__ID:
+				setId(ID_EDEFAULT);
+				return;
 			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__TIMESTAMP:
 				setTimestamp(TIMESTAMP_EDEFAULT);
 				return;
@@ -430,6 +483,8 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__TIMESTAMP:
 				return TIMESTAMP_EDEFAULT == null ? timestamp != null : !TIMESTAMP_EDEFAULT.equals(timestamp);
 			case KLSA_InterfacePackage.PROGNOSIS_FORK_LSA__VEHICLE:
@@ -456,7 +511,9 @@ public class PrognosisForkLSA extends MinimalEObjectImpl.Container {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (timestamp: ");
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", timestamp: ");
 		result.append(timestamp);
 		result.append(", selectedTimeWindow: ");
 		result.append(selectedTimeWindow);

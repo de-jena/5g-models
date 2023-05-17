@@ -37,6 +37,7 @@ import vehicle.Vehicle;
  *   <li>{@link kLSA_Interface.ReleaseTimeWindowForLSA#getTimestamp <em>Timestamp</em>}</li>
  *   <li>{@link kLSA_Interface.ReleaseTimeWindowForLSA#getVehicle <em>Vehicle</em>}</li>
  *   <li>{@link kLSA_Interface.ReleaseTimeWindowForLSA#getTimeWindows <em>Time Windows</em>}</li>
+ *   <li>{@link kLSA_Interface.ReleaseTimeWindowForLSA#getPrognosisId <em>Prognosis Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -81,6 +82,26 @@ public class ReleaseTimeWindowForLSA extends MinimalEObjectImpl.Container {
 	 * @ordered
 	 */
 	protected EList<TimeSlotAndPosition> timeWindows;
+
+	/**
+	 * The default value of the '{@link #getPrognosisId() <em>Prognosis Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrognosisId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PROGNOSIS_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPrognosisId() <em>Prognosis Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrognosisId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String prognosisId = PROGNOSIS_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -180,6 +201,30 @@ public class ReleaseTimeWindowForLSA extends MinimalEObjectImpl.Container {
 	}
 
 	/**
+	 * Returns the value of the '<em><b>Prognosis Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prognosis Id</em>' attribute.
+	 * @see #setPrognosisId(String)
+	 * @generated
+	 */
+	public String getPrognosisId() {
+		return prognosisId;
+	}
+
+	/**
+	 * Sets the value of the '{@link kLSA_Interface.ReleaseTimeWindowForLSA#getPrognosisId <em>Prognosis Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param newPrognosisId the new value of the '<em>Prognosis Id</em>' attribute.
+	 * @see #getPrognosisId()
+	 * @generated
+	 */
+	public void setPrognosisId(String newPrognosisId) {
+		prognosisId = newPrognosisId;
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -194,6 +239,8 @@ public class ReleaseTimeWindowForLSA extends MinimalEObjectImpl.Container {
 				return basicGetVehicle();
 			case KLSA_InterfacePackage.RELEASE_TIME_WINDOW_FOR_LSA__TIME_WINDOWS:
 				return getTimeWindows();
+			case KLSA_InterfacePackage.RELEASE_TIME_WINDOW_FOR_LSA__PROGNOSIS_ID:
+				return getPrognosisId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -217,6 +264,9 @@ public class ReleaseTimeWindowForLSA extends MinimalEObjectImpl.Container {
 				getTimeWindows().clear();
 				getTimeWindows().addAll((Collection<? extends TimeSlotAndPosition>)newValue);
 				return;
+			case KLSA_InterfacePackage.RELEASE_TIME_WINDOW_FOR_LSA__PROGNOSIS_ID:
+				setPrognosisId((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -238,6 +288,9 @@ public class ReleaseTimeWindowForLSA extends MinimalEObjectImpl.Container {
 			case KLSA_InterfacePackage.RELEASE_TIME_WINDOW_FOR_LSA__TIME_WINDOWS:
 				getTimeWindows().clear();
 				return;
+			case KLSA_InterfacePackage.RELEASE_TIME_WINDOW_FOR_LSA__PROGNOSIS_ID:
+				setPrognosisId(PROGNOSIS_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -256,6 +309,8 @@ public class ReleaseTimeWindowForLSA extends MinimalEObjectImpl.Container {
 				return vehicle != null;
 			case KLSA_InterfacePackage.RELEASE_TIME_WINDOW_FOR_LSA__TIME_WINDOWS:
 				return timeWindows != null && !timeWindows.isEmpty();
+			case KLSA_InterfacePackage.RELEASE_TIME_WINDOW_FOR_LSA__PROGNOSIS_ID:
+				return PROGNOSIS_ID_EDEFAULT == null ? prognosisId != null : !PROGNOSIS_ID_EDEFAULT.equals(prognosisId);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -272,6 +327,8 @@ public class ReleaseTimeWindowForLSA extends MinimalEObjectImpl.Container {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (timestamp: ");
 		result.append(timestamp);
+		result.append(", prognosisId: ");
+		result.append(prognosisId);
 		result.append(')');
 		return result.toString();
 	}

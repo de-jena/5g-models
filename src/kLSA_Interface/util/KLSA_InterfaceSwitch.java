@@ -102,6 +102,18 @@ public class KLSA_InterfaceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case KLSA_InterfacePackage.SELECT_RELEASE_TIME_WINDOW: {
+				SelectReleaseTimeWindow selectReleaseTimeWindow = (SelectReleaseTimeWindow)theEObject;
+				T result = caseSelectReleaseTimeWindow(selectReleaseTimeWindow);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case KLSA_InterfacePackage.RELEASE_TIME_WINDOW_ACKNOWLEDGMENT: {
+				ReleaseTimeWindowAcknowledgment releaseTimeWindowAcknowledgment = (ReleaseTimeWindowAcknowledgment)theEObject;
+				T result = caseReleaseTimeWindowAcknowledgment(releaseTimeWindowAcknowledgment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -193,6 +205,36 @@ public class KLSA_InterfaceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTimeSlotAndPosition(TimeSlotAndPosition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Select Release Time Window</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Select Release Time Window</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSelectReleaseTimeWindow(SelectReleaseTimeWindow object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Release Time Window Acknowledgment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Release Time Window Acknowledgment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReleaseTimeWindowAcknowledgment(ReleaseTimeWindowAcknowledgment object) {
 		return null;
 	}
 

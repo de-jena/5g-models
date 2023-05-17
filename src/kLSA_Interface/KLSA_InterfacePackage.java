@@ -76,13 +76,22 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	public static final int PROGNOSIS_FORK_LSA = 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int PROGNOSIS_FORK_LSA__ID = 0;
+
+	/**
 	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PROGNOSIS_FORK_LSA__TIMESTAMP = 0;
+	public static final int PROGNOSIS_FORK_LSA__TIMESTAMP = 1;
 
 	/**
 	 * The feature id for the '<em><b>Vehicle</b></em>' reference.
@@ -91,7 +100,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PROGNOSIS_FORK_LSA__VEHICLE = 1;
+	public static final int PROGNOSIS_FORK_LSA__VEHICLE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Position</b></em>' reference.
@@ -100,7 +109,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PROGNOSIS_FORK_LSA__POSITION = 2;
+	public static final int PROGNOSIS_FORK_LSA__POSITION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Prognosis Arrival And Positions</b></em>' reference list.
@@ -109,7 +118,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PROGNOSIS_FORK_LSA__PROGNOSIS_ARRIVAL_AND_POSITIONS = 3;
+	public static final int PROGNOSIS_FORK_LSA__PROGNOSIS_ARRIVAL_AND_POSITIONS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Trajectory</b></em>' reference.
@@ -118,7 +127,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PROGNOSIS_FORK_LSA__TRAJECTORY = 4;
+	public static final int PROGNOSIS_FORK_LSA__TRAJECTORY = 5;
 
 	/**
 	 * The feature id for the '<em><b>Selected Time Window</b></em>' attribute.
@@ -127,7 +136,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PROGNOSIS_FORK_LSA__SELECTED_TIME_WINDOW = 5;
+	public static final int PROGNOSIS_FORK_LSA__SELECTED_TIME_WINDOW = 6;
 
 	/**
 	 * The number of structural features of the '<em>Prognosis Fork LSA</em>' class.
@@ -136,7 +145,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PROGNOSIS_FORK_LSA_FEATURE_COUNT = 6;
+	public static final int PROGNOSIS_FORK_LSA_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Prognosis Fork LSA</em>' class.
@@ -341,13 +350,22 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	public static final int RELEASE_TIME_WINDOW_FOR_LSA__TIME_WINDOWS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Prognosis Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RELEASE_TIME_WINDOW_FOR_LSA__PROGNOSIS_ID = 3;
+
+	/**
 	 * The number of structural features of the '<em>Release Time Window For LSA</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	public static final int RELEASE_TIME_WINDOW_FOR_LSA_FEATURE_COUNT = 3;
+	public static final int RELEASE_TIME_WINDOW_FOR_LSA_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Release Time Window For LSA</em>' class.
@@ -423,6 +441,125 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	public static final int TIME_SLOT_AND_POSITION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link kLSA_Interface.SelectReleaseTimeWindow <em>Select Release Time Window</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see kLSA_Interface.SelectReleaseTimeWindow
+	 * @see kLSA_Interface.KLSA_InterfacePackage#getSelectReleaseTimeWindow()
+	 * @generated
+	 */
+	public static final int SELECT_RELEASE_TIME_WINDOW = 6;
+
+	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SELECT_RELEASE_TIME_WINDOW__TIMESTAMP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Prognosis Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SELECT_RELEASE_TIME_WINDOW__PROGNOSIS_ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Time Window Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SELECT_RELEASE_TIME_WINDOW__TIME_WINDOW_ID = 2;
+
+	/**
+	 * The number of structural features of the '<em>Select Release Time Window</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SELECT_RELEASE_TIME_WINDOW_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Select Release Time Window</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SELECT_RELEASE_TIME_WINDOW_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link kLSA_Interface.ReleaseTimeWindowAcknowledgment <em>Release Time Window Acknowledgment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see kLSA_Interface.ReleaseTimeWindowAcknowledgment
+	 * @see kLSA_Interface.KLSA_InterfacePackage#getReleaseTimeWindowAcknowledgment()
+	 * @generated
+	 */
+	public static final int RELEASE_TIME_WINDOW_ACKNOWLEDGMENT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Timestamp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RELEASE_TIME_WINDOW_ACKNOWLEDGMENT__TIMESTAMP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Prognosis Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RELEASE_TIME_WINDOW_ACKNOWLEDGMENT__PROGNOSIS_ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Time Window Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RELEASE_TIME_WINDOW_ACKNOWLEDGMENT__TIME_WINDOW_ID = 2;
+
+	/**
+	 * The feature id for the '<em><b>Current Release Probability</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RELEASE_TIME_WINDOW_ACKNOWLEDGMENT__CURRENT_RELEASE_PROBABILITY = 3;
+
+	/**
+	 * The number of structural features of the '<em>Release Time Window Acknowledgment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RELEASE_TIME_WINDOW_ACKNOWLEDGMENT_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Release Time Window Acknowledgment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RELEASE_TIME_WINDOW_ACKNOWLEDGMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -463,6 +600,20 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 */
 	private EClass timeSlotAndPositionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass selectReleaseTimeWindowEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass releaseTimeWindowAcknowledgmentEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -544,6 +695,19 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	}
 
 	/**
+	 * Returns the meta object for the attribute '{@link kLSA_Interface.PrognosisForkLSA#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see kLSA_Interface.PrognosisForkLSA#getId()
+	 * @see #getPrognosisForkLSA()
+	 * @generated
+	 */
+	public EAttribute getPrognosisForkLSA_Id() {
+		return (EAttribute)prognosisForkLSAEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
 	 * Returns the meta object for the attribute '{@link kLSA_Interface.PrognosisForkLSA#getTimestamp <em>Timestamp</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -553,7 +717,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 */
 	public EAttribute getPrognosisForkLSA_Timestamp() {
-		return (EAttribute)prognosisForkLSAEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)prognosisForkLSAEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -566,7 +730,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 */
 	public EReference getPrognosisForkLSA_Vehicle() {
-		return (EReference)prognosisForkLSAEClass.getEStructuralFeatures().get(1);
+		return (EReference)prognosisForkLSAEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -579,7 +743,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 */
 	public EReference getPrognosisForkLSA_Position() {
-		return (EReference)prognosisForkLSAEClass.getEStructuralFeatures().get(2);
+		return (EReference)prognosisForkLSAEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -592,7 +756,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 */
 	public EReference getPrognosisForkLSA_PrognosisArrivalAndPositions() {
-		return (EReference)prognosisForkLSAEClass.getEStructuralFeatures().get(3);
+		return (EReference)prognosisForkLSAEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -605,7 +769,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 */
 	public EReference getPrognosisForkLSA_Trajectory() {
-		return (EReference)prognosisForkLSAEClass.getEStructuralFeatures().get(4);
+		return (EReference)prognosisForkLSAEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -618,7 +782,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	 * @generated
 	 */
 	public EAttribute getPrognosisForkLSA_SelectedTimeWindow() {
-		return (EAttribute)prognosisForkLSAEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)prognosisForkLSAEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -813,6 +977,19 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	}
 
 	/**
+	 * Returns the meta object for the attribute '{@link kLSA_Interface.ReleaseTimeWindowForLSA#getPrognosisId <em>Prognosis Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Prognosis Id</em>'.
+	 * @see kLSA_Interface.ReleaseTimeWindowForLSA#getPrognosisId()
+	 * @see #getReleaseTimeWindowForLSA()
+	 * @generated
+	 */
+	public EAttribute getReleaseTimeWindowForLSA_PrognosisId() {
+		return (EAttribute)releaseTimeWindowForLSAEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
 	 * Returns the meta object for class '{@link kLSA_Interface.TimeSlotAndPosition <em>Time Slot And Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -877,6 +1054,121 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 	}
 
 	/**
+	 * Returns the meta object for class '{@link kLSA_Interface.SelectReleaseTimeWindow <em>Select Release Time Window</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Select Release Time Window</em>'.
+	 * @see kLSA_Interface.SelectReleaseTimeWindow
+	 * @generated
+	 */
+	public EClass getSelectReleaseTimeWindow() {
+		return selectReleaseTimeWindowEClass;
+	}
+
+	/**
+	 * Returns the meta object for the attribute '{@link kLSA_Interface.SelectReleaseTimeWindow#getTimestamp <em>Timestamp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Timestamp</em>'.
+	 * @see kLSA_Interface.SelectReleaseTimeWindow#getTimestamp()
+	 * @see #getSelectReleaseTimeWindow()
+	 * @generated
+	 */
+	public EAttribute getSelectReleaseTimeWindow_Timestamp() {
+		return (EAttribute)selectReleaseTimeWindowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * Returns the meta object for the attribute '{@link kLSA_Interface.SelectReleaseTimeWindow#getPrognosisId <em>Prognosis Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Prognosis Id</em>'.
+	 * @see kLSA_Interface.SelectReleaseTimeWindow#getPrognosisId()
+	 * @see #getSelectReleaseTimeWindow()
+	 * @generated
+	 */
+	public EAttribute getSelectReleaseTimeWindow_PrognosisId() {
+		return (EAttribute)selectReleaseTimeWindowEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * Returns the meta object for the attribute '{@link kLSA_Interface.SelectReleaseTimeWindow#getTimeWindowId <em>Time Window Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Time Window Id</em>'.
+	 * @see kLSA_Interface.SelectReleaseTimeWindow#getTimeWindowId()
+	 * @see #getSelectReleaseTimeWindow()
+	 * @generated
+	 */
+	public EAttribute getSelectReleaseTimeWindow_TimeWindowId() {
+		return (EAttribute)selectReleaseTimeWindowEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * Returns the meta object for class '{@link kLSA_Interface.ReleaseTimeWindowAcknowledgment <em>Release Time Window Acknowledgment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Release Time Window Acknowledgment</em>'.
+	 * @see kLSA_Interface.ReleaseTimeWindowAcknowledgment
+	 * @generated
+	 */
+	public EClass getReleaseTimeWindowAcknowledgment() {
+		return releaseTimeWindowAcknowledgmentEClass;
+	}
+
+	/**
+	 * Returns the meta object for the attribute '{@link kLSA_Interface.ReleaseTimeWindowAcknowledgment#getTimestamp <em>Timestamp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Timestamp</em>'.
+	 * @see kLSA_Interface.ReleaseTimeWindowAcknowledgment#getTimestamp()
+	 * @see #getReleaseTimeWindowAcknowledgment()
+	 * @generated
+	 */
+	public EAttribute getReleaseTimeWindowAcknowledgment_Timestamp() {
+		return (EAttribute)releaseTimeWindowAcknowledgmentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * Returns the meta object for the attribute '{@link kLSA_Interface.ReleaseTimeWindowAcknowledgment#getPrognosisId <em>Prognosis Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Prognosis Id</em>'.
+	 * @see kLSA_Interface.ReleaseTimeWindowAcknowledgment#getPrognosisId()
+	 * @see #getReleaseTimeWindowAcknowledgment()
+	 * @generated
+	 */
+	public EAttribute getReleaseTimeWindowAcknowledgment_PrognosisId() {
+		return (EAttribute)releaseTimeWindowAcknowledgmentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * Returns the meta object for the attribute '{@link kLSA_Interface.ReleaseTimeWindowAcknowledgment#getTimeWindowId <em>Time Window Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Time Window Id</em>'.
+	 * @see kLSA_Interface.ReleaseTimeWindowAcknowledgment#getTimeWindowId()
+	 * @see #getReleaseTimeWindowAcknowledgment()
+	 * @generated
+	 */
+	public EAttribute getReleaseTimeWindowAcknowledgment_TimeWindowId() {
+		return (EAttribute)releaseTimeWindowAcknowledgmentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * Returns the meta object for the attribute '{@link kLSA_Interface.ReleaseTimeWindowAcknowledgment#getCurrentReleaseProbability <em>Current Release Probability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Current Release Probability</em>'.
+	 * @see kLSA_Interface.ReleaseTimeWindowAcknowledgment#getCurrentReleaseProbability()
+	 * @see #getReleaseTimeWindowAcknowledgment()
+	 * @generated
+	 */
+	public EAttribute getReleaseTimeWindowAcknowledgment_CurrentReleaseProbability() {
+		return (EAttribute)releaseTimeWindowAcknowledgmentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -907,6 +1199,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 
 		// Create classes and their features
 		prognosisForkLSAEClass = createEClass(PROGNOSIS_FORK_LSA);
+		createEAttribute(prognosisForkLSAEClass, PROGNOSIS_FORK_LSA__ID);
 		createEAttribute(prognosisForkLSAEClass, PROGNOSIS_FORK_LSA__TIMESTAMP);
 		createEReference(prognosisForkLSAEClass, PROGNOSIS_FORK_LSA__VEHICLE);
 		createEReference(prognosisForkLSAEClass, PROGNOSIS_FORK_LSA__POSITION);
@@ -932,12 +1225,24 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 		createEAttribute(releaseTimeWindowForLSAEClass, RELEASE_TIME_WINDOW_FOR_LSA__TIMESTAMP);
 		createEReference(releaseTimeWindowForLSAEClass, RELEASE_TIME_WINDOW_FOR_LSA__VEHICLE);
 		createEReference(releaseTimeWindowForLSAEClass, RELEASE_TIME_WINDOW_FOR_LSA__TIME_WINDOWS);
+		createEAttribute(releaseTimeWindowForLSAEClass, RELEASE_TIME_WINDOW_FOR_LSA__PROGNOSIS_ID);
 
 		timeSlotAndPositionEClass = createEClass(TIME_SLOT_AND_POSITION);
 		createEAttribute(timeSlotAndPositionEClass, TIME_SLOT_AND_POSITION__ID);
 		createEReference(timeSlotAndPositionEClass, TIME_SLOT_AND_POSITION__MARKED_POSITION);
 		createEAttribute(timeSlotAndPositionEClass, TIME_SLOT_AND_POSITION__RELEASE_PROBABILITY);
 		createEReference(timeSlotAndPositionEClass, TIME_SLOT_AND_POSITION__TIME_SLOT);
+
+		selectReleaseTimeWindowEClass = createEClass(SELECT_RELEASE_TIME_WINDOW);
+		createEAttribute(selectReleaseTimeWindowEClass, SELECT_RELEASE_TIME_WINDOW__TIMESTAMP);
+		createEAttribute(selectReleaseTimeWindowEClass, SELECT_RELEASE_TIME_WINDOW__PROGNOSIS_ID);
+		createEAttribute(selectReleaseTimeWindowEClass, SELECT_RELEASE_TIME_WINDOW__TIME_WINDOW_ID);
+
+		releaseTimeWindowAcknowledgmentEClass = createEClass(RELEASE_TIME_WINDOW_ACKNOWLEDGMENT);
+		createEAttribute(releaseTimeWindowAcknowledgmentEClass, RELEASE_TIME_WINDOW_ACKNOWLEDGMENT__TIMESTAMP);
+		createEAttribute(releaseTimeWindowAcknowledgmentEClass, RELEASE_TIME_WINDOW_ACKNOWLEDGMENT__PROGNOSIS_ID);
+		createEAttribute(releaseTimeWindowAcknowledgmentEClass, RELEASE_TIME_WINDOW_ACKNOWLEDGMENT__TIME_WINDOW_ID);
+		createEAttribute(releaseTimeWindowAcknowledgmentEClass, RELEASE_TIME_WINDOW_ACKNOWLEDGMENT__CURRENT_RELEASE_PROBABILITY);
 	}
 
 	/**
@@ -976,6 +1281,7 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(prognosisForkLSAEClass, PrognosisForkLSA.class, "PrognosisForkLSA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPrognosisForkLSA_Id(), ecorePackage.getEString(), "id", null, 1, 1, PrognosisForkLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPrognosisForkLSA_Timestamp(), theUtilsPackage.getZonedDateTime(), "timestamp", null, 1, 1, PrognosisForkLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPrognosisForkLSA_Vehicle(), theVehiclePackage.getVehicle(), null, "vehicle", null, 1, 1, PrognosisForkLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPrognosisForkLSA_Position(), theUtilsPackage.getPosition(), null, "position", null, 1, 1, PrognosisForkLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1001,12 +1307,24 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 		initEAttribute(getReleaseTimeWindowForLSA_Timestamp(), theUtilsPackage.getZonedDateTime(), "timestamp", null, 1, 1, ReleaseTimeWindowForLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getReleaseTimeWindowForLSA_Vehicle(), theVehiclePackage.getVehicle(), null, "vehicle", null, 0, 1, ReleaseTimeWindowForLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getReleaseTimeWindowForLSA_TimeWindows(), this.getTimeSlotAndPosition(), null, "timeWindows", null, 1, -1, ReleaseTimeWindowForLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReleaseTimeWindowForLSA_PrognosisId(), ecorePackage.getEString(), "prognosisId", null, 1, 1, ReleaseTimeWindowForLSA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(timeSlotAndPositionEClass, TimeSlotAndPosition.class, "TimeSlotAndPosition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTimeSlotAndPosition_Id(), ecorePackage.getEString(), "id", null, 0, 1, TimeSlotAndPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTimeSlotAndPosition_Id(), ecorePackage.getEString(), "id", null, 1, 1, TimeSlotAndPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTimeSlotAndPosition_MarkedPosition(), this.getMarkedPosition(), null, "markedPosition", null, 1, 1, TimeSlotAndPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTimeSlotAndPosition_ReleaseProbability(), ecorePackage.getEDouble(), "releaseProbability", null, 1, 1, TimeSlotAndPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTimeSlotAndPosition_TimeSlot(), theFasExchangePackage.getTimeSlot(), null, "timeSlot", null, 1, 1, TimeSlotAndPosition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(selectReleaseTimeWindowEClass, SelectReleaseTimeWindow.class, "SelectReleaseTimeWindow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSelectReleaseTimeWindow_Timestamp(), theUtilsPackage.getZonedDateTime(), "timestamp", null, 1, 1, SelectReleaseTimeWindow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSelectReleaseTimeWindow_PrognosisId(), ecorePackage.getEString(), "prognosisId", null, 1, 1, SelectReleaseTimeWindow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSelectReleaseTimeWindow_TimeWindowId(), ecorePackage.getEString(), "timeWindowId", null, 1, 1, SelectReleaseTimeWindow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(releaseTimeWindowAcknowledgmentEClass, ReleaseTimeWindowAcknowledgment.class, "ReleaseTimeWindowAcknowledgment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getReleaseTimeWindowAcknowledgment_Timestamp(), theUtilsPackage.getZonedDateTime(), "timestamp", null, 1, 1, ReleaseTimeWindowAcknowledgment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReleaseTimeWindowAcknowledgment_PrognosisId(), ecorePackage.getEString(), "prognosisId", null, 1, 1, ReleaseTimeWindowAcknowledgment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReleaseTimeWindowAcknowledgment_TimeWindowId(), ecorePackage.getEString(), "timeWindowId", null, 1, 1, ReleaseTimeWindowAcknowledgment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReleaseTimeWindowAcknowledgment_CurrentReleaseProbability(), ecorePackage.getEDouble(), "currentReleaseProbability", null, 1, 1, ReleaseTimeWindowAcknowledgment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1035,6 +1353,14 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 		 * @generated
 		 */
 		public static final EClass PROGNOSIS_FORK_LSA = eINSTANCE.getPrognosisForkLSA();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute PROGNOSIS_FORK_LSA__ID = eINSTANCE.getPrognosisForkLSA_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
@@ -1213,6 +1539,14 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 		public static final EReference RELEASE_TIME_WINDOW_FOR_LSA__TIME_WINDOWS = eINSTANCE.getReleaseTimeWindowForLSA_TimeWindows();
 
 		/**
+		 * The meta object literal for the '<em><b>Prognosis Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute RELEASE_TIME_WINDOW_FOR_LSA__PROGNOSIS_ID = eINSTANCE.getReleaseTimeWindowForLSA_PrognosisId();
+
+		/**
 		 * The meta object literal for the '{@link kLSA_Interface.TimeSlotAndPosition <em>Time Slot And Position</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1253,6 +1587,82 @@ public class KLSA_InterfacePackage extends EPackageImpl {
 		 * @generated
 		 */
 		public static final EReference TIME_SLOT_AND_POSITION__TIME_SLOT = eINSTANCE.getTimeSlotAndPosition_TimeSlot();
+
+		/**
+		 * The meta object literal for the '{@link kLSA_Interface.SelectReleaseTimeWindow <em>Select Release Time Window</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see kLSA_Interface.SelectReleaseTimeWindow
+		 * @see kLSA_Interface.KLSA_InterfacePackage#getSelectReleaseTimeWindow()
+		 * @generated
+		 */
+		public static final EClass SELECT_RELEASE_TIME_WINDOW = eINSTANCE.getSelectReleaseTimeWindow();
+
+		/**
+		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute SELECT_RELEASE_TIME_WINDOW__TIMESTAMP = eINSTANCE.getSelectReleaseTimeWindow_Timestamp();
+
+		/**
+		 * The meta object literal for the '<em><b>Prognosis Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute SELECT_RELEASE_TIME_WINDOW__PROGNOSIS_ID = eINSTANCE.getSelectReleaseTimeWindow_PrognosisId();
+
+		/**
+		 * The meta object literal for the '<em><b>Time Window Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute SELECT_RELEASE_TIME_WINDOW__TIME_WINDOW_ID = eINSTANCE.getSelectReleaseTimeWindow_TimeWindowId();
+
+		/**
+		 * The meta object literal for the '{@link kLSA_Interface.ReleaseTimeWindowAcknowledgment <em>Release Time Window Acknowledgment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see kLSA_Interface.ReleaseTimeWindowAcknowledgment
+		 * @see kLSA_Interface.KLSA_InterfacePackage#getReleaseTimeWindowAcknowledgment()
+		 * @generated
+		 */
+		public static final EClass RELEASE_TIME_WINDOW_ACKNOWLEDGMENT = eINSTANCE.getReleaseTimeWindowAcknowledgment();
+
+		/**
+		 * The meta object literal for the '<em><b>Timestamp</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute RELEASE_TIME_WINDOW_ACKNOWLEDGMENT__TIMESTAMP = eINSTANCE.getReleaseTimeWindowAcknowledgment_Timestamp();
+
+		/**
+		 * The meta object literal for the '<em><b>Prognosis Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute RELEASE_TIME_WINDOW_ACKNOWLEDGMENT__PROGNOSIS_ID = eINSTANCE.getReleaseTimeWindowAcknowledgment_PrognosisId();
+
+		/**
+		 * The meta object literal for the '<em><b>Time Window Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute RELEASE_TIME_WINDOW_ACKNOWLEDGMENT__TIME_WINDOW_ID = eINSTANCE.getReleaseTimeWindowAcknowledgment_TimeWindowId();
+
+		/**
+		 * The meta object literal for the '<em><b>Current Release Probability</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute RELEASE_TIME_WINDOW_ACKNOWLEDGMENT__CURRENT_RELEASE_PROBABILITY = eINSTANCE.getReleaseTimeWindowAcknowledgment_CurrentReleaseProbability();
 
 	}
 

@@ -92,6 +92,14 @@ public class KLSA_InterfaceAdapterFactory extends AdapterFactoryImpl {
 				return createTimeSlotAndPositionAdapter();
 			}
 			@Override
+			public Adapter caseSelectReleaseTimeWindow(SelectReleaseTimeWindow object) {
+				return createSelectReleaseTimeWindowAdapter();
+			}
+			@Override
+			public Adapter caseReleaseTimeWindowAcknowledgment(ReleaseTimeWindowAcknowledgment object) {
+				return createReleaseTimeWindowAcknowledgmentAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -192,6 +200,34 @@ public class KLSA_InterfaceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTimeSlotAndPositionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link kLSA_Interface.SelectReleaseTimeWindow <em>Select Release Time Window</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see kLSA_Interface.SelectReleaseTimeWindow
+	 * @generated
+	 */
+	public Adapter createSelectReleaseTimeWindowAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link kLSA_Interface.ReleaseTimeWindowAcknowledgment <em>Release Time Window Acknowledgment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see kLSA_Interface.ReleaseTimeWindowAcknowledgment
+	 * @generated
+	 */
+	public Adapter createReleaseTimeWindowAcknowledgmentAdapter() {
 		return null;
 	}
 

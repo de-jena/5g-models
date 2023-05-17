@@ -77,6 +77,8 @@ public class KLSA_InterfaceFactory extends EFactoryImpl {
 			case KLSA_InterfacePackage.PRIORITY: return (EObject)createPriority();
 			case KLSA_InterfacePackage.RELEASE_TIME_WINDOW_FOR_LSA: return (EObject)createReleaseTimeWindowForLSA();
 			case KLSA_InterfacePackage.TIME_SLOT_AND_POSITION: return (EObject)createTimeSlotAndPosition();
+			case KLSA_InterfacePackage.SELECT_RELEASE_TIME_WINDOW: return (EObject)createSelectReleaseTimeWindow();
+			case KLSA_InterfacePackage.RELEASE_TIME_WINDOW_ACKNOWLEDGMENT: return (EObject)createReleaseTimeWindowAcknowledgment();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -140,6 +142,26 @@ public class KLSA_InterfaceFactory extends EFactoryImpl {
 	public TimeSlotAndPosition createTimeSlotAndPosition() {
 		TimeSlotAndPosition timeSlotAndPosition = new TimeSlotAndPosition();
 		return timeSlotAndPosition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SelectReleaseTimeWindow createSelectReleaseTimeWindow() {
+		SelectReleaseTimeWindow selectReleaseTimeWindow = new SelectReleaseTimeWindow();
+		return selectReleaseTimeWindow;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReleaseTimeWindowAcknowledgment createReleaseTimeWindowAcknowledgment() {
+		ReleaseTimeWindowAcknowledgment releaseTimeWindowAcknowledgment = new ReleaseTimeWindowAcknowledgment();
+		return releaseTimeWindowAcknowledgment;
 	}
 
 	/**

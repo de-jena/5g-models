@@ -6,6 +6,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Hauptklasse für Interface FAS -> kLSA&#xA;UNIXTimestamp der Erzeugung&#xA;Fahrzeugkennung&#xA;aktuelle Position&#xA;Prognose-Ankünfte&#xA;Trajektorie"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
         eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="vehicle" lowerBound="1"
@@ -58,12 +59,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="vehicle" eType="ecore:EClass ../vehicle/vehicle.ecore#//Vehicle"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="timeWindows" lowerBound="1"
         upperBound="-1" eType="#//TimeSlotAndPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prognosisId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TimeSlotAndPosition">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Hilfsklasse für ReleaseTimeWindowForLSA&#xA;releaseTime -> öffnen des Zeitfenster&#xA;closingTime -> schließen des Zeitfenster&#xA;markedPosition -> Positionsmarke (LSA)&#xA;releaseProbability -> Wahrscheinlichkeit der Freigabeerteilung, 0 (Unmöglich) bis 1 (Garantiert)"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="markedPosition" lowerBound="1"
         eType="#//MarkedPosition"/>
@@ -71,5 +74,23 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="timeSlot" lowerBound="1"
         eType="ecore:EClass ../FASExchange/fasExchange.ecore#//TimeSlot"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SelectReleaseTimeWindow">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prognosisId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeWindowId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReleaseTimeWindowAcknowledgment">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prognosisId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeWindowId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentReleaseProbability"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
 </ecore:EPackage>
