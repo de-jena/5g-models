@@ -35,4 +35,39 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="auxiliaryPower" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseFromLM">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
+        upperBound="-1" eType="#//ElectricalGridState"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectricalGridState">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Status des elktischen Netzes, bestehend aus einzelnen Abschnitten. Der Startzeitppunkt erlaubt die zeitliche Einordnung. Ein Status kann für mehrere Sekunden anhalten, was von der angegebenen duration. abhängt "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTimestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="durationSeconds" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sections" lowerBound="1"
+        upperBound="-1" eType="#//ElectricalGridSectionState"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectricalGridSectionState">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalAvailablePower" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalUsedPower" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trams" lowerBound="1" upperBound="-1"
+        eType="#//TramPowerMapping"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TramPowerMapping">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="powerReserve" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wenn negativ, sollte die von der Bahn in diesem Zeitabschnitt verbrauchte Energie um den gegebenen Betrag reduziert werden."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
 </ecore:EPackage>
