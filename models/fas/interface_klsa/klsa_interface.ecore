@@ -16,11 +16,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="prognosisArrivalAndPositions"
         lowerBound="1" upperBound="-1" eType="#//PrognosisArrivalAndPosition"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="trajectory" eType="ecore:EClass ../FASExchange/fasExchange.ecore#//Trajectory"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectedTimeWindow" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="ID des gewählten ReleaseTimeWindow, welches zuvor mittels ReleaseTimeWindowforLSA erhalten wurde. Leerstring (&quot;&quot;), wenn neue ReleaseTimeWindows angefordert werden sollen."/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrognosisArrivalAndPosition">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -92,5 +87,9 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentReleaseProbability"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleIdBefore" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleIdAfter" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>
