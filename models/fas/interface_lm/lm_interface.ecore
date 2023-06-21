@@ -53,6 +53,7 @@
         upperBound="-1" eType="#//ElectricalGridSectionState"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElectricalGridSectionState">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sectionId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalAvailablePower" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalUsedPower" lowerBound="1"
