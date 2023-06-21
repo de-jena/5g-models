@@ -9,6 +9,7 @@
   <foreignModel>klsa_interface.ecore</foreignModel>
   <genPackages prefix="KLSA_Interface" disposableProviderFactory="true" ecorePackage="klsa_interface.ecore#/">
     <genClasses image="false" ecoreClass="klsa_interface.ecore#//PrognosisForkLSA">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//PrognosisForkLSA/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//PrognosisForkLSA/timestamp"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference klsa_interface.ecore#//PrognosisForkLSA/vehicle"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference klsa_interface.ecore#//PrognosisForkLSA/position"/>
@@ -33,11 +34,26 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//ReleaseTimeWindowForLSA/timestamp"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference klsa_interface.ecore#//ReleaseTimeWindowForLSA/vehicle"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference klsa_interface.ecore#//ReleaseTimeWindowForLSA/timeWindows"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//ReleaseTimeWindowForLSA/prognosisId"/>
     </genClasses>
     <genClasses ecoreClass="klsa_interface.ecore#//TimeSlotAndPosition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//TimeSlotAndPosition/id"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference klsa_interface.ecore#//TimeSlotAndPosition/markedPosition"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//TimeSlotAndPosition/releaseProbability"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference klsa_interface.ecore#//TimeSlotAndPosition/timeSlot"/>
+    </genClasses>
+    <genClasses ecoreClass="klsa_interface.ecore#//SelectReleaseTimeWindow">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//SelectReleaseTimeWindow/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//SelectReleaseTimeWindow/prognosisId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//SelectReleaseTimeWindow/timeWindowId"/>
+    </genClasses>
+    <genClasses ecoreClass="klsa_interface.ecore#//ReleaseTimeWindowUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//ReleaseTimeWindowUpdate/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//ReleaseTimeWindowUpdate/prognosisId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//ReleaseTimeWindowUpdate/timeWindowId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//ReleaseTimeWindowUpdate/currentReleaseProbability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//ReleaseTimeWindowUpdate/vehicleIdBefore"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute klsa_interface.ecore#//ReleaseTimeWindowUpdate/vehicleIdAfter"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

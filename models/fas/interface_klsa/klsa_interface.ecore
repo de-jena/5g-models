@@ -78,7 +78,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeWindowId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReleaseTimeWindowAcknowledgment">
+  <eClassifiers xsi:type="ecore:EClass" name="ReleaseTimeWindowUpdate">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
         eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="prognosisId" lowerBound="1"
