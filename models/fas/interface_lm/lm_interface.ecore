@@ -40,6 +40,13 @@
         eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
         upperBound="-1" eType="#//ElectricalGridState"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consumptions" lowerBound="1"
+        upperBound="-1" eType="#//TramPowerConsumption"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TramPowerConsumption">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentPowerConsumption"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElectricalGridState">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

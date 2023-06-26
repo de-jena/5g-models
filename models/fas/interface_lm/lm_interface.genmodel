@@ -26,6 +26,11 @@
     <genClasses ecoreClass="lm_interface.ecore#//ResponseFromLM">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lm_interface.ecore#//ResponseFromLM/timestamp"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lm_interface.ecore#//ResponseFromLM/states"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lm_interface.ecore#//ResponseFromLM/consumptions"/>
+    </genClasses>
+    <genClasses ecoreClass="lm_interface.ecore#//TramPowerConsumption">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lm_interface.ecore#//TramPowerConsumption/vehicleId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lm_interface.ecore#//TramPowerConsumption/currentPowerConsumption"/>
     </genClasses>
     <genClasses ecoreClass="lm_interface.ecore#//ElectricalGridState">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lm_interface.ecore#//ElectricalGridState/startTimestamp"/>
