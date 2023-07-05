@@ -72,7 +72,7 @@
           "currentVelocity": {
             "type": "number"
           },
-          "prognosis": {
+          "arrivals": {
             "type": "array",
             "items": {
               "type": "object",
@@ -80,7 +80,7 @@
                 "estimatedArrivalTime": {
                   "type": "string"
                 },
-                "arrivalPositon": {
+                "arrivalPosition": {
                   "type": "object",
                   "properties": {
                     "id": {
@@ -98,7 +98,37 @@
               },
               "additionalProperties": false,
               "required": [
-                "arrivalPositon"
+                "estimatedArrivalTime",
+                "arrivalPosition",
+                "priority"
+              ]
+            }
+          },
+          "stopPlaces": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stopPosition": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "prognosedPlace": {
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "stopPosition",
+                "prognosedPlace"
               ]
             }
           }
@@ -108,7 +138,7 @@
           "vehicle",
           "currentPosition",
           "currentVelocity",
-          "prognosis"
+          "arrivals"
         ]
       }
     }

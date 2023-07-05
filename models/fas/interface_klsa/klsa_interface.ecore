@@ -18,14 +18,24 @@
         eType="ecore:EClass ../utils/utils.ecore#//Position"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentVelocity" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prognosis" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arrivals" lowerBound="1"
         upperBound="-1" eType="#//PrognosisArrivalAndPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stopPlaces" upperBound="-1"
+        eType="#//PrognosisStopPlace"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrognosisArrivalAndPosition">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estimatedArrivalTime" eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="arrivalPositon" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estimatedArrivalTime" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arrivalPosition" lowerBound="1"
         eType="#//MarkedPosition"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrognosisStopPlace">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stopPosition" lowerBound="1"
+        eType="#//MarkedPosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prognosedPlace" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MarkedPosition">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -43,7 +53,8 @@
         eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intersectionId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intersectionId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Identifies the intersection for which the prognosis shall be performed."/>
       </eAnnotations>
@@ -83,7 +94,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="ReleaseTimeVector">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" lowerBound="1"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="signalGroup" eType="#//SignalGroup"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signalGroup" lowerBound="1"
+        eType="#//SignalGroup"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SignalGroup">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
