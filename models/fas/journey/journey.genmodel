@@ -7,7 +7,8 @@
     complianceLevel="5.0" copyrightFields="false" publicConstructors="true" usedGenPackages="../utils/utils.genmodel#//utils ../vehicle/vehicle.genmodel#//vehicle"
     operationReflection="true" importOrganizing="true">
   <foreignModel>journey.ecore</foreignModel>
-  <genPackages prefix="Journey" disposableProviderFactory="true" ecorePackage="journey.ecore#/">
+  <genPackages prefix="Journey" basePackage="de.inavet.smarttrains.das.interfaces"
+      disposableProviderFactory="true" ecorePackage="journey.ecore#/">
     <genClasses ecoreClass="journey.ecore#//Journey">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute journey.ecore#//Journey/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute journey.ecore#//Journey/journeyId"/>

@@ -30,7 +30,7 @@
     <eLiterals name="COMPUTED_LOCATION" value="2"/>
     <eLiterals name="TEMPORARY_NO_LOCALISATION" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="FASStatus">
+  <eClassifiers xsi:type="ecore:EEnum" name="DASStatus">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Status des FAS-System zur Information beim Fahrer"/>
     </eAnnotations>

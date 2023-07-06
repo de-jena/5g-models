@@ -7,7 +7,8 @@
     suppressNotification="true" suppressUnsettable="true" complianceLevel="5.0" copyrightFields="false"
     publicConstructors="true" usedGenPackages="../utils/utils.genmodel#//utils" importOrganizing="true">
   <foreignModel>vehicle.ecore</foreignModel>
-  <genPackages prefix="Vehicle" disposableProviderFactory="true" ecorePackage="vehicle.ecore#/">
+  <genPackages prefix="Vehicle" basePackage="de.inavet.smarttrains.das.interfaces"
+      disposableProviderFactory="true" ecorePackage="vehicle.ecore#/">
     <genClasses ecoreClass="vehicle.ecore#//Vehicle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vehicle.ecore#//Vehicle/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vehicle.ecore#//Vehicle/vehicleId"/>

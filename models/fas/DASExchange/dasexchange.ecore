@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fasExchange" nsURI="http://inavet.de/datamodels/fasExchange"
-    nsPrefix="fasExchange">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dasexchange" nsURI="http://inavet.de/datamodels/dasexchange"
+    nsPrefix="dasexchange">
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
     <details key="fasExchange" value="#/"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="FASExchange">
+  <eClassifiers xsi:type="ecore:EClass" name="DASExchange">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="FAS-Austausch zwischen zentraler und mobiler Instanz&#xA;wird vermutlich noch angepasst bzw. erweitert&#xA;Root-Objekt"/>
     </eAnnotations>
@@ -16,7 +16,8 @@
         <details key="documentation" value="Datenbrokr-id"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="journeyId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="journeyId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="journey-id zur Zuordnung der Informationen für die Fahrt"/>
       </eAnnotations>
@@ -38,12 +39,14 @@
         <details key="documentation" value="aktuelle Empfehlung für die Journey"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gnssStatus" eType="ecore:EEnum ../utils/utils.ecore#//GNSSStatus">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gnssStatus" lowerBound="1"
+        eType="ecore:EEnum ../utils/utils.ecore#//GNSSStatus">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="aktueller GNSS-Status zur Übermittlung an die Mobilseite"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fasStatus" eType="ecore:EEnum ../utils/utils.ecore#//FASStatus">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fasStatus" lowerBound="1"
+        eType="ecore:EEnum ../utils/utils.ecore#//DASStatus">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="aktueller FAS-Status zur Übermittlung an die Mobilseite"/>
       </eAnnotations>
@@ -55,7 +58,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FASExchangeResponse">
+  <eClassifiers xsi:type="ecore:EClass" name="DASExchangeResponse">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Quittierung / Antwort der mobilen Seite auf FASExchange&#xA;Rootobjekt"/>
     </eAnnotations>

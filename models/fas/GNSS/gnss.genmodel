@@ -7,7 +7,8 @@
     complianceLevel="5.0" copyrightFields="false" publicConstructors="true" usedGenPackages="../journey/journey.genmodel#//journey ../utils/utils.genmodel#//utils ../vehicle/vehicle.genmodel#//vehicle"
     operationReflection="true" importOrganizing="true">
   <foreignModel>gnss.ecore</foreignModel>
-  <genPackages prefix="Gnss" disposableProviderFactory="true" ecorePackage="gnss.ecore#/">
+  <genPackages prefix="Gnss" basePackage="de.inavet.smarttrains.das.interfaces" disposableProviderFactory="true"
+      ecorePackage="gnss.ecore#/">
     <genClasses ecoreClass="gnss.ecore#//GNSS">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gnss.ecore#//GNSS/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gnss.ecore#//GNSS/timestamp"/>

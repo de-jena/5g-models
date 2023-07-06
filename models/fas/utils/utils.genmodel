@@ -7,7 +7,8 @@
     suppressNotification="true" complianceLevel="5.0" copyrightFields="false" publicConstructors="true"
     operationReflection="true" importOrganizing="true">
   <foreignModel>utils.ecore</foreignModel>
-  <genPackages prefix="Utils" disposableProviderFactory="true" ecorePackage="utils.ecore#/">
+  <genPackages prefix="Utils" basePackage="de.inavet.smarttrains.das.interfaces" disposableProviderFactory="true"
+      ecorePackage="utils.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="utils.ecore#//NMEAType">
       <genEnumLiterals ecoreEnumLiteral="utils.ecore#//NMEAType/GNRMC"/>
       <genEnumLiterals ecoreEnumLiteral="utils.ecore#//NMEAType/GPRMC"/>
@@ -20,15 +21,15 @@
       <genEnumLiterals ecoreEnumLiteral="utils.ecore#//GNSSStatus/COMPUTED_LOCATION"/>
       <genEnumLiterals ecoreEnumLiteral="utils.ecore#//GNSSStatus/TEMPORARY_NO_LOCALISATION"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="utils.ecore#//FASStatus">
-      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//FASStatus/NO_CONNECTION_TO_CENTRAL"/>
-      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//FASStatus/NO_INITIAL_DATA"/>
-      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//FASStatus/INITIALISED"/>
-      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//FASStatus/ACTIVE_RECOMMENDATION"/>
-      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//FASStatus/ACTIVE_DENM"/>
-      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//FASStatus/ACTIVE_VAM"/>
-      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//FASStatus/ERROR"/>
-      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//FASStatus/DEACTIVATED"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="utils.ecore#//DASStatus">
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/NO_CONNECTION_TO_CENTRAL"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/NO_INITIAL_DATA"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/INITIALISED"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/ACTIVE_RECOMMENDATION"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/ACTIVE_DENM"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/ACTIVE_VAM"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/ERROR"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/DEACTIVATED"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="utils.ecore#//RecommendationTypes">
       <genEnumLiterals ecoreEnumLiteral="utils.ecore#//RecommendationTypes/DISPATCH"/>

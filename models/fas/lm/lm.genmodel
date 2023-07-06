@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/datamodels-ecore/src" modelPluginID="datamodels-ecore"
+    modelName="Lm" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    usedGenPackages="../utils/utils.genmodel#//utils" operationReflection="true" importOrganizing="true">
+  <foreignModel>lm.ecore</foreignModel>
+  <genPackages prefix="Lm" basePackage="de.inavet.smarttrains.das.interfaces" disposableProviderFactory="true"
+      ecorePackage="lm.ecore#/">
+    <genClasses ecoreClass="lm.ecore#//PrognosisForLM">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lm.ecore#//PrognosisForLM/presentPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lm.ecore#//PrognosisForLM/timestamp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lm.ecore#//PrognosisForLM/presentElectricalLoad"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lm.ecore#//PrognosisForLM/prognosisForPositionAndElectricalLoad"/>
+    </genClasses>
+    <genClasses ecoreClass="lm.ecore#//PrognosisPositionAndElectricalLoad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lm.ecore#//PrognosisPositionAndElectricalLoad/timestampForPrognosis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lm.ecore#//PrognosisPositionAndElectricalLoad/prognosisPosition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference lm.ecore#//PrognosisPositionAndElectricalLoad/electricalLoadPrognosis"/>
+    </genClasses>
+    <genClasses ecoreClass="lm.ecore#//ElectricalLoad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lm.ecore#//ElectricalLoad/drivePower"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute lm.ecore#//ElectricalLoad/auxiliaryPower"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
