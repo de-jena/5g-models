@@ -1,0 +1,151 @@
+{
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string"
+    },
+    "updates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "vehicle": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "vehicleId": {
+                "type": "string"
+              },
+              "vehicleType": {
+                "type": "string",
+                "enum": [
+                  "tram",
+                  "bus",
+                  "emergencyVehicle",
+                  "car",
+                  "other"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "vehicleId",
+              "vehicleType"
+            ]
+          },
+          "currentPosition": {
+            "type": "object",
+            "properties": {
+              "positionOnTrack": {
+                "type": "object",
+                "properties": {
+                  "trackId": {
+                    "type": "string"
+                  },
+                  "relativePositionOnTrack": {
+                    "type": "number"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "trackId",
+                  "relativePositionOnTrack"
+                ]
+              },
+              "lat": {
+                "type": "number"
+              },
+              "lon": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "positionOnTrack",
+              "lat",
+              "lon"
+            ]
+          },
+          "currentVelocity": {
+            "type": "number"
+          },
+          "arrivals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "estimatedArrivalTime": {
+                  "type": "string"
+                },
+                "arrivalPosition": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "priority": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "estimatedArrivalTime",
+                "arrivalPosition",
+                "priority"
+              ]
+            }
+          },
+          "stopPlaces": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stopPosition": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "prognosedPlace": {
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "stopPosition",
+                "prognosedPlace"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "vehicle",
+          "currentPosition",
+          "currentVelocity",
+          "arrivals"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "timestamp",
+    "updates"
+  ]
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="lm" nsURI="http://inavet.de/datamodels/lm" nsPrefix="lm">
+  <eClassifiers xsi:type="ecore:EClass" name="PrognosisForLM">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hauptklasse für Interface FAS -> LM&#xA;presentPosition -> aktuelle Position&#xA;timestamp -> Zeitpunkt der Datenerstellung&#xA;presentElectricalLoad -> laut FAS-Berechnung notwendige Leistung für Antrieb und Nebenverbraucher&#xA;prognosisForPositionAndElectricalLoad ->Liste der Prognose-Positionen und Lastbedarfe"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="presentPosition" lowerBound="1"
+        eType="ecore:EClass ../utils/utils.ecore#//Position"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Unix timestamp"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="presentElectricalLoad"
+        lowerBound="1" eType="#//ElectricalLoad"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prognosisForPositionAndElectricalLoad"
+        lowerBound="1" upperBound="-1" eType="#//PrognosisPositionAndElectricalLoad"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrognosisPositionAndElectricalLoad">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hilfsklasse für PrognosisForLM&#xA;timestampForPrognosis -> Zeitstempel für die die Prognose gilt&#xA;prognosisPosition -> Prognose-Position basierend auf der optimierten Trajektorie&#xA;electricalLoadPrognosis -> Lastprognose basierend auf der optimierten Trajektorie"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestampForPrognosis"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prognosisPosition" lowerBound="1"
+        eType="ecore:EClass ../utils/utils.ecore#//Position"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="electricalLoadPrognosis"
+        lowerBound="1" eType="#//ElectricalLoad"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectricalLoad">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hilfsklasse für PrognosisForLM + PrognosisPositionAndElectricalLoad&#xA;drivePower -> Leistung für Antrieb&#xA;auxialaryPower -> Leistung für Nebenverbraucher"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="drivePower" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="auxiliaryPower" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+</ecore:EPackage>

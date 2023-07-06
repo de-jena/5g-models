@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_UxKqwBmjEe6rLqitb-GX0w" name="PeriodicUpdate">
+  <rootEClass href="http://inavet.de/datamodels/klsa_interface#//PeriodicUpdate"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_UxXfEBmjEe6rLqitb-GX0w" name="Control timestamp">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_UxXfERmjEe6rLqitb-GX0w">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://inavet.de/datamodels/klsa_interface#//PeriodicUpdate/timestamp"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_UxXfEhmjEe6rLqitb-GX0w" name="Control updates">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_UxXfExmjEe6rLqitb-GX0w">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://inavet.de/datamodels/klsa_interface#//PeriodicUpdate/updates"/>
+    </domainModelReference>
+  </children>
+  <ecorePaths>/datamodels-ecore/models/fas/interface_klsa/klsa_interface.ecore</ecorePaths>
+</org.eclipse.emf.ecp.view.model:View>

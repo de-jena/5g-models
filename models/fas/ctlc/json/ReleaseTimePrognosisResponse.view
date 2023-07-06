@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_HAhVsBQOEe6uIaMc7-UG1w" name="ReleaseTimePrognosisResponse">
+  <rootEClass href="http://inavet.de/datamodels/klsa_interface#//ReleaseTimePrognosisResponse"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_HAvYIBQOEe6uIaMc7-UG1w" name="Control timestamp">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_HAvYIRQOEe6uIaMc7-UG1w">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://inavet.de/datamodels/klsa_interface#//ReleaseTimePrognosisResponse/timestamp"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_HAvYIhQOEe6uIaMc7-UG1w" name="Control refRequestId">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_HAvYIxQOEe6uIaMc7-UG1w">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://inavet.de/datamodels/klsa_interface#//ReleaseTimePrognosisResponse/refRequestId"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_HAvYJBQOEe6uIaMc7-UG1w" name="Control releaseTimes">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_HAvYJRQOEe6uIaMc7-UG1w">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://inavet.de/datamodels/klsa_interface#//ReleaseTimePrognosisResponse/releaseTimes"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_HAvYJhQOEe6uIaMc7-UG1w" name="Control releaseTimesForScenarios">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_HAvYJxQOEe6uIaMc7-UG1w">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://inavet.de/datamodels/klsa_interface#//ReleaseTimePrognosisResponse/releaseTimesForScenarios"/>
+    </domainModelReference>
+  </children>
+  <ecorePaths>/datamodels-ecore/models/fas/interface_klsa/klsa_interface.ecore</ecorePaths>
+</org.eclipse.emf.ecp.view.model:View>
