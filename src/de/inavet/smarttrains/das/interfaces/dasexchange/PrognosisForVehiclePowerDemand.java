@@ -4,9 +4,15 @@ package de.inavet.smarttrains.das.interfaces.dasexchange;
 
 import de.inavet.smarttrains.das.interfaces.vehicle.Vehicle;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.BasicInternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,11 +34,78 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.inavet.smarttrains.das.interfaces.dasexchange.PrognosisForVehiclePowerDemand#getPowerDemandOverTimes <em>Power Demand Over Times</em>}</li>
  * </ul>
  *
- * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getPrognosisForVehiclePowerDemand()
- * @model
  * @generated
  */
-public interface PrognosisForVehiclePowerDemand extends EObject {
+public class PrognosisForVehiclePowerDemand extends MinimalEObjectImpl.Container {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getKeyVehicles() <em>Key Vehicles</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKeyVehicles()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Vehicle> keyVehicles;
+
+	/**
+	 * The cached value of the '{@link #getPowerDemandOverPositions() <em>Power Demand Over Positions</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPowerDemandOverPositions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PowerDemandOverPosition> powerDemandOverPositions;
+
+	/**
+	 * The cached value of the '{@link #getPowerDemandOverTimes() <em>Power Demand Over Times</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPowerDemandOverTimes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PowerDemandOverTime> powerDemandOverTimes;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PrognosisForVehiclePowerDemand() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return DasexchangePackage.Literals.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND;
+	}
+
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -42,21 +115,23 @@ public interface PrognosisForVehiclePowerDemand extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
-	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getPrognosisForVehiclePowerDemand_Id()
-	 * @model id="true" required="true"
 	 * @generated
 	 */
-	String getId();
+	public String getId() {
+		return id;
+	}
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.dasexchange.PrognosisForVehiclePowerDemand#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @param newId the new value of the '<em>Id</em>' attribute.
 	 * @see #getId()
 	 * @generated
 	 */
-	void setId(String value);
+	public void setId(String newId) {
+		id = newId;
+	}
 
 	/**
 	 * Returns the value of the '<em><b>Key Vehicles</b></em>' reference list.
@@ -67,11 +142,14 @@ public interface PrognosisForVehiclePowerDemand extends EObject {
 	 * Welche Fahrzeuge
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Key Vehicles</em>' reference list.
-	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getPrognosisForVehiclePowerDemand_KeyVehicles()
-	 * @model
 	 * @generated
 	 */
-	EList<Vehicle> getKeyVehicles();
+	public EList<Vehicle> getKeyVehicles() {
+		if (keyVehicles == null) {
+			keyVehicles = new BasicInternalEList<Vehicle>(Vehicle.class);
+		}
+		return keyVehicles;
+	}
 
 	/**
 	 * Returns the value of the '<em><b>Power Demand Over Positions</b></em>' reference list.
@@ -82,11 +160,14 @@ public interface PrognosisForVehiclePowerDemand extends EObject {
 	 * Welcher Leistungsbedarf besteht an welcher Position für das Fahrzeug
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Power Demand Over Positions</em>' reference list.
-	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getPrognosisForVehiclePowerDemand_PowerDemandOverPositions()
-	 * @model
 	 * @generated
 	 */
-	EList<PowerDemandOverPosition> getPowerDemandOverPositions();
+	public EList<PowerDemandOverPosition> getPowerDemandOverPositions() {
+		if (powerDemandOverPositions == null) {
+			powerDemandOverPositions = new BasicInternalEList<PowerDemandOverPosition>(PowerDemandOverPosition.class);
+		}
+		return powerDemandOverPositions;
+	}
 
 	/**
 	 * Returns the value of the '<em><b>Power Demand Over Times</b></em>' reference list.
@@ -97,10 +178,121 @@ public interface PrognosisForVehiclePowerDemand extends EObject {
 	 * Welcher Leistungsbedarf besteht zu welchen Zeitpunkt für das Fahrzeug
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Power Demand Over Times</em>' reference list.
-	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getPrognosisForVehiclePowerDemand_PowerDemandOverTimes()
-	 * @model
 	 * @generated
 	 */
-	EList<PowerDemandOverTime> getPowerDemandOverTimes();
+	public EList<PowerDemandOverTime> getPowerDemandOverTimes() {
+		if (powerDemandOverTimes == null) {
+			powerDemandOverTimes = new BasicInternalEList<PowerDemandOverTime>(PowerDemandOverTime.class);
+		}
+		return powerDemandOverTimes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__ID:
+				return getId();
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__KEY_VEHICLES:
+				return getKeyVehicles();
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__POWER_DEMAND_OVER_POSITIONS:
+				return getPowerDemandOverPositions();
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__POWER_DEMAND_OVER_TIMES:
+				return getPowerDemandOverTimes();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__ID:
+				setId((String)newValue);
+				return;
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__KEY_VEHICLES:
+				getKeyVehicles().clear();
+				getKeyVehicles().addAll((Collection<? extends Vehicle>)newValue);
+				return;
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__POWER_DEMAND_OVER_POSITIONS:
+				getPowerDemandOverPositions().clear();
+				getPowerDemandOverPositions().addAll((Collection<? extends PowerDemandOverPosition>)newValue);
+				return;
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__POWER_DEMAND_OVER_TIMES:
+				getPowerDemandOverTimes().clear();
+				getPowerDemandOverTimes().addAll((Collection<? extends PowerDemandOverTime>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__KEY_VEHICLES:
+				getKeyVehicles().clear();
+				return;
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__POWER_DEMAND_OVER_POSITIONS:
+				getPowerDemandOverPositions().clear();
+				return;
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__POWER_DEMAND_OVER_TIMES:
+				getPowerDemandOverTimes().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__KEY_VEHICLES:
+				return keyVehicles != null && !keyVehicles.isEmpty();
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__POWER_DEMAND_OVER_POSITIONS:
+				return powerDemandOverPositions != null && !powerDemandOverPositions.isEmpty();
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND__POWER_DEMAND_OVER_TIMES:
+				return powerDemandOverTimes != null && !powerDemandOverTimes.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(')');
+		return result.toString();
+	}
 
 } // PrognosisForVehiclePowerDemand

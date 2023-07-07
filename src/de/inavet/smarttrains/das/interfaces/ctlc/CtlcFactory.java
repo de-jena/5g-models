@@ -2,140 +2,230 @@
  */
 package de.inavet.smarttrains.das.interfaces.ctlc;
 
-import org.eclipse.emf.ecore.EFactory;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see de.inavet.smarttrains.das.interfaces.ctlc.CtlcPackage
  * @generated
  */
-public interface CtlcFactory extends EFactory {
+public class CtlcFactory extends EFactoryImpl {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	CtlcFactory eINSTANCE = de.inavet.smarttrains.das.interfaces.ctlc.impl.CtlcFactoryImpl.init();
+	public static final CtlcFactory eINSTANCE = init();
 
 	/**
-	 * Returns a new object of class '<em>Periodic Update</em>'.
+	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Periodic Update</em>'.
 	 * @generated
 	 */
-	PeriodicUpdate createPeriodicUpdate();
+	public static final CtlcFactory INSTANCE = de.inavet.smarttrains.das.interfaces.ctlc.CtlcFactory.eINSTANCE;
 
 	/**
-	 * Returns a new object of class '<em>Update For Vehicle</em>'.
+	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Update For Vehicle</em>'.
 	 * @generated
 	 */
-	UpdateForVehicle createUpdateForVehicle();
+	public static CtlcFactory init() {
+		try {
+			CtlcFactory theCtlcFactory = (CtlcFactory)EPackage.Registry.INSTANCE.getEFactory(CtlcPackage.eNS_URI);
+			if (theCtlcFactory != null) {
+				return theCtlcFactory;
+			}
+		}
+		catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new CtlcFactory();
+	}
 
 	/**
-	 * Returns a new object of class '<em>Prognosis Arrival And Position</em>'.
+	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prognosis Arrival And Position</em>'.
 	 * @generated
 	 */
-	PrognosisArrivalAndPosition createPrognosisArrivalAndPosition();
+	public CtlcFactory() {
+		super();
+	}
 
 	/**
-	 * Returns a new object of class '<em>Prognosis Stop Place</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prognosis Stop Place</em>'.
 	 * @generated
 	 */
-	PrognosisStopPlace createPrognosisStopPlace();
+	@Override
+	public EObject create(EClass eClass) {
+		switch (eClass.getClassifierID()) {
+			case CtlcPackage.PERIODIC_UPDATE: return (EObject)createPeriodicUpdate();
+			case CtlcPackage.UPDATE_FOR_VEHICLE: return (EObject)createUpdateForVehicle();
+			case CtlcPackage.PROGNOSIS_ARRIVAL_AND_POSITION: return (EObject)createPrognosisArrivalAndPosition();
+			case CtlcPackage.PROGNOSIS_STOP_PLACE: return (EObject)createPrognosisStopPlace();
+			case CtlcPackage.MARKED_POSITION: return (EObject)createMarkedPosition();
+			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST: return (EObject)createReleaseTimePrognosisRequest();
+			case CtlcPackage.SCENARIO: return (EObject)createScenario();
+			case CtlcPackage.PROGNOSIS_OVERRIDE: return (EObject)createPrognosisOverride();
+			case CtlcPackage.RELEASE_TIME_PROGNOSIS_RESPONSE: return (EObject)createReleaseTimePrognosisResponse();
+			case CtlcPackage.SCENARIO_PROGNOSIS: return (EObject)createScenarioPrognosis();
+			case CtlcPackage.RELEASE_TIME_VECTOR: return (EObject)createReleaseTimeVector();
+			case CtlcPackage.SIGNAL_GROUP: return (EObject)createSignalGroup();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
 
 	/**
-	 * Returns a new object of class '<em>Marked Position</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Marked Position</em>'.
 	 * @generated
 	 */
-	MarkedPosition createMarkedPosition();
+	public PeriodicUpdate createPeriodicUpdate() {
+		PeriodicUpdate periodicUpdate = new PeriodicUpdate();
+		return periodicUpdate;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Release Time Prognosis Request</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Release Time Prognosis Request</em>'.
 	 * @generated
 	 */
-	ReleaseTimePrognosisRequest createReleaseTimePrognosisRequest();
+	public UpdateForVehicle createUpdateForVehicle() {
+		UpdateForVehicle updateForVehicle = new UpdateForVehicle();
+		return updateForVehicle;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Scenario</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Scenario</em>'.
 	 * @generated
 	 */
-	Scenario createScenario();
+	public PrognosisArrivalAndPosition createPrognosisArrivalAndPosition() {
+		PrognosisArrivalAndPosition prognosisArrivalAndPosition = new PrognosisArrivalAndPosition();
+		return prognosisArrivalAndPosition;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Prognosis Override</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prognosis Override</em>'.
 	 * @generated
 	 */
-	PrognosisOverride createPrognosisOverride();
+	public PrognosisStopPlace createPrognosisStopPlace() {
+		PrognosisStopPlace prognosisStopPlace = new PrognosisStopPlace();
+		return prognosisStopPlace;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Release Time Prognosis Response</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Release Time Prognosis Response</em>'.
 	 * @generated
 	 */
-	ReleaseTimePrognosisResponse createReleaseTimePrognosisResponse();
+	public MarkedPosition createMarkedPosition() {
+		MarkedPosition markedPosition = new MarkedPosition();
+		return markedPosition;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Scenario Prognosis</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Scenario Prognosis</em>'.
 	 * @generated
 	 */
-	ScenarioPrognosis createScenarioPrognosis();
+	public ReleaseTimePrognosisRequest createReleaseTimePrognosisRequest() {
+		ReleaseTimePrognosisRequest releaseTimePrognosisRequest = new ReleaseTimePrognosisRequest();
+		return releaseTimePrognosisRequest;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Release Time Vector</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Release Time Vector</em>'.
 	 * @generated
 	 */
-	ReleaseTimeVector createReleaseTimeVector();
+	public Scenario createScenario() {
+		Scenario scenario = new Scenario();
+		return scenario;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Signal Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Signal Group</em>'.
 	 * @generated
 	 */
-	SignalGroup createSignalGroup();
+	public PrognosisOverride createPrognosisOverride() {
+		PrognosisOverride prognosisOverride = new PrognosisOverride();
+		return prognosisOverride;
+	}
 
 	/**
-	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	CtlcPackage getCtlcPackage();
+	public ReleaseTimePrognosisResponse createReleaseTimePrognosisResponse() {
+		ReleaseTimePrognosisResponse releaseTimePrognosisResponse = new ReleaseTimePrognosisResponse();
+		return releaseTimePrognosisResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ScenarioPrognosis createScenarioPrognosis() {
+		ScenarioPrognosis scenarioPrognosis = new ScenarioPrognosis();
+		return scenarioPrognosis;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReleaseTimeVector createReleaseTimeVector() {
+		ReleaseTimeVector releaseTimeVector = new ReleaseTimeVector();
+		return releaseTimeVector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SignalGroup createSignalGroup() {
+		SignalGroup signalGroup = new SignalGroup();
+		return signalGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CtlcPackage getCtlcPackage() {
+		return (CtlcPackage)getEPackage();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @deprecated
+	 * @generated
+	 */
+	@Deprecated
+	public static CtlcPackage getPackage() {
+		return CtlcPackage.eINSTANCE;
+	}
 
 } //CtlcFactory

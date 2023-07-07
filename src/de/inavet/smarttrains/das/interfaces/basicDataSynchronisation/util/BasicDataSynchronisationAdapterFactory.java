@@ -88,10 +88,6 @@ public class BasicDataSynchronisationAdapterFactory extends AdapterFactoryImpl {
 				return createCourseToRoutesAdapter();
 			}
 			@Override
-			public Adapter caseVehicleId(VehicleId object) {
-				return createVehicleIdAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -178,20 +174,6 @@ public class BasicDataSynchronisationAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCourseToRoutesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.inavet.smarttrains.das.interfaces.basicDataSynchronisation.VehicleId <em>Vehicle Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.inavet.smarttrains.das.interfaces.basicDataSynchronisation.VehicleId
-	 * @generated
-	 */
-	public Adapter createVehicleIdAdapter() {
 		return null;
 	}
 

@@ -4,7 +4,9 @@ package de.inavet.smarttrains.das.interfaces.dasexchange;
 
 import java.time.ZonedDateTime;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,11 +26,68 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.inavet.smarttrains.das.interfaces.dasexchange.TimeSlot#getEndOfTimeSlot <em>End Of Time Slot</em>}</li>
  * </ul>
  *
- * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getTimeSlot()
- * @model
  * @generated
  */
-public interface TimeSlot extends EObject {
+public class TimeSlot extends MinimalEObjectImpl.Container {
+	/**
+	 * The default value of the '{@link #getBeginOfTimeSlot() <em>Begin Of Time Slot</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBeginOfTimeSlot()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ZonedDateTime BEGIN_OF_TIME_SLOT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getBeginOfTimeSlot() <em>Begin Of Time Slot</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBeginOfTimeSlot()
+	 * @generated
+	 * @ordered
+	 */
+	protected ZonedDateTime beginOfTimeSlot = BEGIN_OF_TIME_SLOT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEndOfTimeSlot() <em>End Of Time Slot</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEndOfTimeSlot()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ZonedDateTime END_OF_TIME_SLOT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEndOfTimeSlot() <em>End Of Time Slot</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEndOfTimeSlot()
+	 * @generated
+	 * @ordered
+	 */
+	protected ZonedDateTime endOfTimeSlot = END_OF_TIME_SLOT_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TimeSlot() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return DasexchangePackage.Literals.TIME_SLOT;
+	}
+
 	/**
 	 * Returns the value of the '<em><b>Begin Of Time Slot</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -38,21 +97,23 @@ public interface TimeSlot extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Begin Of Time Slot</em>' attribute.
 	 * @see #setBeginOfTimeSlot(ZonedDateTime)
-	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getTimeSlot_BeginOfTimeSlot()
-	 * @model dataType="de.inavet.smarttrains.das.interfaces.utils.ZonedDateTime" required="true"
 	 * @generated
 	 */
-	ZonedDateTime getBeginOfTimeSlot();
+	public ZonedDateTime getBeginOfTimeSlot() {
+		return beginOfTimeSlot;
+	}
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.dasexchange.TimeSlot#getBeginOfTimeSlot <em>Begin Of Time Slot</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Begin Of Time Slot</em>' attribute.
+	 * @param newBeginOfTimeSlot the new value of the '<em>Begin Of Time Slot</em>' attribute.
 	 * @see #getBeginOfTimeSlot()
 	 * @generated
 	 */
-	void setBeginOfTimeSlot(ZonedDateTime value);
+	public void setBeginOfTimeSlot(ZonedDateTime newBeginOfTimeSlot) {
+		beginOfTimeSlot = newBeginOfTimeSlot;
+	}
 
 	/**
 	 * Returns the value of the '<em><b>End Of Time Slot</b></em>' attribute.
@@ -63,20 +124,108 @@ public interface TimeSlot extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>End Of Time Slot</em>' attribute.
 	 * @see #setEndOfTimeSlot(ZonedDateTime)
-	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getTimeSlot_EndOfTimeSlot()
-	 * @model dataType="de.inavet.smarttrains.das.interfaces.utils.ZonedDateTime" required="true"
 	 * @generated
 	 */
-	ZonedDateTime getEndOfTimeSlot();
+	public ZonedDateTime getEndOfTimeSlot() {
+		return endOfTimeSlot;
+	}
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.dasexchange.TimeSlot#getEndOfTimeSlot <em>End Of Time Slot</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>End Of Time Slot</em>' attribute.
+	 * @param newEndOfTimeSlot the new value of the '<em>End Of Time Slot</em>' attribute.
 	 * @see #getEndOfTimeSlot()
 	 * @generated
 	 */
-	void setEndOfTimeSlot(ZonedDateTime value);
+	public void setEndOfTimeSlot(ZonedDateTime newEndOfTimeSlot) {
+		endOfTimeSlot = newEndOfTimeSlot;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case DasexchangePackage.TIME_SLOT__BEGIN_OF_TIME_SLOT:
+				return getBeginOfTimeSlot();
+			case DasexchangePackage.TIME_SLOT__END_OF_TIME_SLOT:
+				return getEndOfTimeSlot();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case DasexchangePackage.TIME_SLOT__BEGIN_OF_TIME_SLOT:
+				setBeginOfTimeSlot((ZonedDateTime)newValue);
+				return;
+			case DasexchangePackage.TIME_SLOT__END_OF_TIME_SLOT:
+				setEndOfTimeSlot((ZonedDateTime)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case DasexchangePackage.TIME_SLOT__BEGIN_OF_TIME_SLOT:
+				setBeginOfTimeSlot(BEGIN_OF_TIME_SLOT_EDEFAULT);
+				return;
+			case DasexchangePackage.TIME_SLOT__END_OF_TIME_SLOT:
+				setEndOfTimeSlot(END_OF_TIME_SLOT_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case DasexchangePackage.TIME_SLOT__BEGIN_OF_TIME_SLOT:
+				return BEGIN_OF_TIME_SLOT_EDEFAULT == null ? beginOfTimeSlot != null : !BEGIN_OF_TIME_SLOT_EDEFAULT.equals(beginOfTimeSlot);
+			case DasexchangePackage.TIME_SLOT__END_OF_TIME_SLOT:
+				return END_OF_TIME_SLOT_EDEFAULT == null ? endOfTimeSlot != null : !END_OF_TIME_SLOT_EDEFAULT.equals(endOfTimeSlot);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (beginOfTimeSlot: ");
+		result.append(beginOfTimeSlot);
+		result.append(", endOfTimeSlot: ");
+		result.append(endOfTimeSlot);
+		result.append(')');
+		return result.toString();
+	}
 
 } // TimeSlot

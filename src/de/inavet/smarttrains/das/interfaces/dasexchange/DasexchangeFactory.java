@@ -2,176 +2,274 @@
  */
 package de.inavet.smarttrains.das.interfaces.dasexchange;
 
-import org.eclipse.emf.ecore.EFactory;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage
  * @generated
  */
-public interface DasexchangeFactory extends EFactory {
+public class DasexchangeFactory extends EFactoryImpl {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	DasexchangeFactory eINSTANCE = de.inavet.smarttrains.das.interfaces.dasexchange.impl.DasexchangeFactoryImpl.init();
+	public static final DasexchangeFactory eINSTANCE = init();
 
 	/**
-	 * Returns a new object of class '<em>DAS Exchange</em>'.
+	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DAS Exchange</em>'.
 	 * @generated
 	 */
-	DASExchange createDASExchange();
+	public static final DasexchangeFactory INSTANCE = de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangeFactory.eINSTANCE;
 
 	/**
-	 * Returns a new object of class '<em>DAS Exchange Response</em>'.
+	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>DAS Exchange Response</em>'.
 	 * @generated
 	 */
-	DASExchangeResponse createDASExchangeResponse();
+	public static DasexchangeFactory init() {
+		try {
+			DasexchangeFactory theDasexchangeFactory = (DasexchangeFactory)EPackage.Registry.INSTANCE.getEFactory(DasexchangePackage.eNS_URI);
+			if (theDasexchangeFactory != null) {
+				return theDasexchangeFactory;
+			}
+		}
+		catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new DasexchangeFactory();
+	}
 
 	/**
-	 * Returns a new object of class '<em>Recommendation</em>'.
+	 * Creates an instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Recommendation</em>'.
 	 * @generated
 	 */
-	Recommendation createRecommendation();
+	public DasexchangeFactory() {
+		super();
+	}
 
 	/**
-	 * Returns a new object of class '<em>Recommendation Response From Mobile</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Recommendation Response From Mobile</em>'.
 	 * @generated
 	 */
-	RecommendationResponseFromMobile createRecommendationResponseFromMobile();
+	@Override
+	public EObject create(EClass eClass) {
+		switch (eClass.getClassifierID()) {
+			case DasexchangePackage.DAS_EXCHANGE: return (EObject)createDASExchange();
+			case DasexchangePackage.DAS_EXCHANGE_RESPONSE: return (EObject)createDASExchangeResponse();
+			case DasexchangePackage.RECOMMENDATION: return (EObject)createRecommendation();
+			case DasexchangePackage.RECOMMENDATION_RESPONSE_FROM_MOBILE: return (EObject)createRecommendationResponseFromMobile();
+			case DasexchangePackage.TIME_SLOT_ON_JOURNEY: return (EObject)createTimeSlotOnJourney();
+			case DasexchangePackage.TIME_SLOT: return (EObject)createTimeSlot();
+			case DasexchangePackage.PROGNOSIS_TIME_SLOT_FROMK_LSA: return (EObject)createPrognosisTimeSlotFromkLSA();
+			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND: return (EObject)createPrognosisForVehiclePowerDemand();
+			case DasexchangePackage.POWER_DEMAND_OVER_POSITION: return (EObject)createPowerDemandOverPosition();
+			case DasexchangePackage.POWER_DEMAND_OVER_TIME: return (EObject)createPowerDemandOverTime();
+			case DasexchangePackage.SPEED_OVER_POSITION: return (EObject)createSpeedOverPosition();
+			case DasexchangePackage.SPEED_OVER_TIME: return (EObject)createSpeedOverTime();
+			case DasexchangePackage.POSITION_OVER_TIME: return (EObject)createPositionOverTime();
+			case DasexchangePackage.PROGNOSIS_TIME_SLOT_FOR_JOURNEY: return (EObject)createPrognosisTimeSlotForJourney();
+			case DasexchangePackage.TRAJECTORY: return (EObject)createTrajectory();
+			case DasexchangePackage.TRAJECTORY_LEFT_FROM_MOBILE: return (EObject)createTrajectoryLeftFromMobile();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
 
 	/**
-	 * Returns a new object of class '<em>Time Slot On Journey</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Time Slot On Journey</em>'.
 	 * @generated
 	 */
-	TimeSlotOnJourney createTimeSlotOnJourney();
+	public DASExchange createDASExchange() {
+		DASExchange dasExchange = new DASExchange();
+		return dasExchange;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Time Slot</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Time Slot</em>'.
 	 * @generated
 	 */
-	TimeSlot createTimeSlot();
+	public DASExchangeResponse createDASExchangeResponse() {
+		DASExchangeResponse dasExchangeResponse = new DASExchangeResponse();
+		return dasExchangeResponse;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Prognosis Time Slot Fromk LSA</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prognosis Time Slot Fromk LSA</em>'.
 	 * @generated
 	 */
-	PrognosisTimeSlotFromkLSA createPrognosisTimeSlotFromkLSA();
+	public Recommendation createRecommendation() {
+		Recommendation recommendation = new Recommendation();
+		return recommendation;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Prognosis For Vehicle Power Demand</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prognosis For Vehicle Power Demand</em>'.
 	 * @generated
 	 */
-	PrognosisForVehiclePowerDemand createPrognosisForVehiclePowerDemand();
+	public RecommendationResponseFromMobile createRecommendationResponseFromMobile() {
+		RecommendationResponseFromMobile recommendationResponseFromMobile = new RecommendationResponseFromMobile();
+		return recommendationResponseFromMobile;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Power Demand Over Position</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Power Demand Over Position</em>'.
 	 * @generated
 	 */
-	PowerDemandOverPosition createPowerDemandOverPosition();
+	public TimeSlotOnJourney createTimeSlotOnJourney() {
+		TimeSlotOnJourney timeSlotOnJourney = new TimeSlotOnJourney();
+		return timeSlotOnJourney;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Power Demand Over Time</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Power Demand Over Time</em>'.
 	 * @generated
 	 */
-	PowerDemandOverTime createPowerDemandOverTime();
+	public TimeSlot createTimeSlot() {
+		TimeSlot timeSlot = new TimeSlot();
+		return timeSlot;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Speed Over Position</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Speed Over Position</em>'.
 	 * @generated
 	 */
-	SpeedOverPosition createSpeedOverPosition();
+	public PrognosisTimeSlotFromkLSA createPrognosisTimeSlotFromkLSA() {
+		PrognosisTimeSlotFromkLSA prognosisTimeSlotFromkLSA = new PrognosisTimeSlotFromkLSA();
+		return prognosisTimeSlotFromkLSA;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Speed Over Time</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Speed Over Time</em>'.
 	 * @generated
 	 */
-	SpeedOverTime createSpeedOverTime();
+	public PrognosisForVehiclePowerDemand createPrognosisForVehiclePowerDemand() {
+		PrognosisForVehiclePowerDemand prognosisForVehiclePowerDemand = new PrognosisForVehiclePowerDemand();
+		return prognosisForVehiclePowerDemand;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Position Over Time</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Position Over Time</em>'.
 	 * @generated
 	 */
-	PositionOverTime createPositionOverTime();
+	public PowerDemandOverPosition createPowerDemandOverPosition() {
+		PowerDemandOverPosition powerDemandOverPosition = new PowerDemandOverPosition();
+		return powerDemandOverPosition;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Prognosis Time Slot For Journey</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prognosis Time Slot For Journey</em>'.
 	 * @generated
 	 */
-	PrognosisTimeSlotForJourney createPrognosisTimeSlotForJourney();
+	public PowerDemandOverTime createPowerDemandOverTime() {
+		PowerDemandOverTime powerDemandOverTime = new PowerDemandOverTime();
+		return powerDemandOverTime;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Trajectory</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Trajectory</em>'.
 	 * @generated
 	 */
-	Trajectory createTrajectory();
+	public SpeedOverPosition createSpeedOverPosition() {
+		SpeedOverPosition speedOverPosition = new SpeedOverPosition();
+		return speedOverPosition;
+	}
 
 	/**
-	 * Returns a new object of class '<em>Trajectory Left From Mobile</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Trajectory Left From Mobile</em>'.
 	 * @generated
 	 */
-	TrajectoryLeftFromMobile createTrajectoryLeftFromMobile();
+	public SpeedOverTime createSpeedOverTime() {
+		SpeedOverTime speedOverTime = new SpeedOverTime();
+		return speedOverTime;
+	}
 
 	/**
-	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	DasexchangePackage getDasexchangePackage();
+	public PositionOverTime createPositionOverTime() {
+		PositionOverTime positionOverTime = new PositionOverTime();
+		return positionOverTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PrognosisTimeSlotForJourney createPrognosisTimeSlotForJourney() {
+		PrognosisTimeSlotForJourney prognosisTimeSlotForJourney = new PrognosisTimeSlotForJourney();
+		return prognosisTimeSlotForJourney;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Trajectory createTrajectory() {
+		Trajectory trajectory = new Trajectory();
+		return trajectory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TrajectoryLeftFromMobile createTrajectoryLeftFromMobile() {
+		TrajectoryLeftFromMobile trajectoryLeftFromMobile = new TrajectoryLeftFromMobile();
+		return trajectoryLeftFromMobile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DasexchangePackage getDasexchangePackage() {
+		return (DasexchangePackage)getEPackage();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @deprecated
+	 * @generated
+	 */
+	@Deprecated
+	public static DasexchangePackage getPackage() {
+		return DasexchangePackage.eINSTANCE;
+	}
 
 } //DasexchangeFactory
