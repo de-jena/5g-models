@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * Ortungsstatus der mobilen Anwendung
  * <!-- end-model-doc -->
  * @see de.inavet.smarttrains.das.interfaces.utils.UtilsPackage#getGNSSStatus()
+ * @model
  * @generated
  */
 public enum GNSSStatus implements Enumerator {
@@ -65,6 +66,7 @@ public enum GNSSStatus implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #ACTIVE_LOCALISATION
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -75,6 +77,7 @@ public enum GNSSStatus implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #NO_LOCALISATION
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -85,6 +88,7 @@ public enum GNSSStatus implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #COMPUTED_LOCATION
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -95,6 +99,7 @@ public enum GNSSStatus implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #TEMPORARY_NO_LOCALISATION
+	 * @model
 	 * @generated
 	 * @ordered
 	 */

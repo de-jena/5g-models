@@ -92,22 +92,6 @@ public class DasexchangeAdapterFactory extends AdapterFactoryImpl {
 				return createTimeSlotAdapter();
 			}
 			@Override
-			public Adapter casePrognosisTimeSlotFromkLSA(PrognosisTimeSlotFromkLSA object) {
-				return createPrognosisTimeSlotFromkLSAAdapter();
-			}
-			@Override
-			public Adapter casePrognosisForVehiclePowerDemand(PrognosisForVehiclePowerDemand object) {
-				return createPrognosisForVehiclePowerDemandAdapter();
-			}
-			@Override
-			public Adapter casePowerDemandOverPosition(PowerDemandOverPosition object) {
-				return createPowerDemandOverPositionAdapter();
-			}
-			@Override
-			public Adapter casePowerDemandOverTime(PowerDemandOverTime object) {
-				return createPowerDemandOverTimeAdapter();
-			}
-			@Override
 			public Adapter caseSpeedOverPosition(SpeedOverPosition object) {
 				return createSpeedOverPositionAdapter();
 			}
@@ -126,10 +110,6 @@ public class DasexchangeAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTrajectory(Trajectory object) {
 				return createTrajectoryAdapter();
-			}
-			@Override
-			public Adapter caseTrajectoryLeftFromMobile(TrajectoryLeftFromMobile object) {
-				return createTrajectoryLeftFromMobileAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -236,62 +216,6 @@ public class DasexchangeAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.inavet.smarttrains.das.interfaces.dasexchange.PrognosisTimeSlotFromkLSA <em>Prognosis Time Slot Fromk LSA</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.PrognosisTimeSlotFromkLSA
-	 * @generated
-	 */
-	public Adapter createPrognosisTimeSlotFromkLSAAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.inavet.smarttrains.das.interfaces.dasexchange.PrognosisForVehiclePowerDemand <em>Prognosis For Vehicle Power Demand</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.PrognosisForVehiclePowerDemand
-	 * @generated
-	 */
-	public Adapter createPrognosisForVehiclePowerDemandAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.inavet.smarttrains.das.interfaces.dasexchange.PowerDemandOverPosition <em>Power Demand Over Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.PowerDemandOverPosition
-	 * @generated
-	 */
-	public Adapter createPowerDemandOverPositionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.inavet.smarttrains.das.interfaces.dasexchange.PowerDemandOverTime <em>Power Demand Over Time</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.PowerDemandOverTime
-	 * @generated
-	 */
-	public Adapter createPowerDemandOverTimeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.inavet.smarttrains.das.interfaces.dasexchange.SpeedOverPosition <em>Speed Over Position</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -358,20 +282,6 @@ public class DasexchangeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTrajectoryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.inavet.smarttrains.das.interfaces.dasexchange.TrajectoryLeftFromMobile <em>Trajectory Left From Mobile</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.TrajectoryLeftFromMobile
-	 * @generated
-	 */
-	public Adapter createTrajectoryLeftFromMobileAdapter() {
 		return null;
 	}
 

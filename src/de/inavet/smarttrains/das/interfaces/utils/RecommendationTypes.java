@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * derzeit angedachte Empfehlungen
  * <!-- end-model-doc -->
  * @see de.inavet.smarttrains.das.interfaces.utils.UtilsPackage#getRecommendationTypes()
+ * @model
  * @generated
  */
 public enum RecommendationTypes implements Enumerator {
@@ -115,6 +116,7 @@ public enum RecommendationTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #DISPATCH
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -125,6 +127,7 @@ public enum RecommendationTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #DEPARTURE
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -135,6 +138,7 @@ public enum RecommendationTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #LSA_COUNTDOWN
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -145,6 +149,7 @@ public enum RecommendationTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #CRUISE
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -155,6 +160,7 @@ public enum RecommendationTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BREAK
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -165,6 +171,7 @@ public enum RecommendationTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #WAIT
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -175,6 +182,7 @@ public enum RecommendationTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #ACCELERATE
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -185,6 +193,7 @@ public enum RecommendationTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #NO_INFORMATION
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -195,6 +204,7 @@ public enum RecommendationTypes implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #COASTING
+	 * @model
 	 * @generated
 	 * @ordered
 	 */

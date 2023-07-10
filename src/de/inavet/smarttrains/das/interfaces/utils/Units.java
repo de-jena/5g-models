@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * Hilfsklasse
  * <!-- end-model-doc -->
  * @see de.inavet.smarttrains.das.interfaces.utils.UtilsPackage#getUnits()
+ * @model
  * @generated
  */
 public enum Units implements Enumerator {
@@ -86,6 +87,7 @@ public enum Units implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #METER_PRO_SEKUNDE
+	 * @model name="Meter_Pro_Sekunde" literal="m/s"
 	 * @generated
 	 * @ordered
 	 */
@@ -96,6 +98,7 @@ public enum Units implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #WATT
+	 * @model name="Watt" literal="W"
 	 * @generated
 	 * @ordered
 	 */
@@ -106,6 +109,7 @@ public enum Units implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #SEKUNDE
+	 * @model name="Sekunde" literal="s"
 	 * @generated
 	 * @ordered
 	 */
@@ -116,6 +120,7 @@ public enum Units implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #METER
+	 * @model name="Meter" literal="m"
 	 * @generated
 	 * @ordered
 	 */
@@ -126,6 +131,7 @@ public enum Units implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #WATT_STUNDEN
+	 * @model name="Watt_Stunden" literal="Wh"
 	 * @generated
 	 * @ordered
 	 */
@@ -136,6 +142,7 @@ public enum Units implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #PROZENT
+	 * @model name="Prozent"
 	 * @generated
 	 * @ordered
 	 */

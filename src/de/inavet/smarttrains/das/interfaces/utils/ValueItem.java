@@ -2,9 +2,7 @@
  */
 package de.inavet.smarttrains.das.interfaces.utils;
 
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,131 +24,32 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link de.inavet.smarttrains.das.interfaces.utils.ValueItem#getValueUnit <em>Value Unit</em>}</li>
  * </ul>
  *
+ * @see de.inavet.smarttrains.das.interfaces.utils.UtilsPackage#getValueItem()
+ * @model
  * @generated
  */
-public class ValueItem extends MinimalEObjectImpl.Container {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double VALUE_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected double value = VALUE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getValueName() <em>Value Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValueName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String VALUE_NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getValueName() <em>Value Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValueName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String valueName = VALUE_NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getValueUnit() <em>Value Unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValueUnit()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Units VALUE_UNIT_EDEFAULT = Units.METER_PRO_SEKUNDE;
-
-	/**
-	 * The cached value of the '{@link #getValueUnit() <em>Value Unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValueUnit()
-	 * @generated
-	 * @ordered
-	 */
-	protected Units valueUnit = VALUE_UNIT_EDEFAULT;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ValueItem() {
-		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return UtilsPackage.Literals.VALUE_ITEM;
-	}
-
+public interface ValueItem extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
+	 * @see de.inavet.smarttrains.das.interfaces.utils.UtilsPackage#getValueItem_Id()
+	 * @model required="true"
 	 * @generated
 	 */
-	public String getId() {
-		return id;
-	}
+	String getId();
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.utils.ValueItem#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param newId the new value of the '<em>Id</em>' attribute.
+	 * @param value the new value of the '<em>Id</em>' attribute.
 	 * @see #getId()
 	 * @generated
 	 */
-	public void setId(String newId) {
-		id = newId;
-	}
+	void setId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
@@ -158,23 +57,21 @@ public class ValueItem extends MinimalEObjectImpl.Container {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(double)
+	 * @see de.inavet.smarttrains.das.interfaces.utils.UtilsPackage#getValueItem_Value()
+	 * @model required="true"
 	 * @generated
 	 */
-	public double getValue() {
-		return value;
-	}
+	double getValue();
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.utils.ValueItem#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param newValue the new value of the '<em>Value</em>' attribute.
+	 * @param value the new value of the '<em>Value</em>' attribute.
 	 * @see #getValue()
 	 * @generated
 	 */
-	public void setValue(double newValue) {
-		value = newValue;
-	}
+	void setValue(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Value Name</b></em>' attribute.
@@ -182,23 +79,21 @@ public class ValueItem extends MinimalEObjectImpl.Container {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value Name</em>' attribute.
 	 * @see #setValueName(String)
+	 * @see de.inavet.smarttrains.das.interfaces.utils.UtilsPackage#getValueItem_ValueName()
+	 * @model required="true"
 	 * @generated
 	 */
-	public String getValueName() {
-		return valueName;
-	}
+	String getValueName();
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.utils.ValueItem#getValueName <em>Value Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param newValueName the new value of the '<em>Value Name</em>' attribute.
+	 * @param value the new value of the '<em>Value Name</em>' attribute.
 	 * @see #getValueName()
 	 * @generated
 	 */
-	public void setValueName(String newValueName) {
-		valueName = newValueName;
-	}
+	void setValueName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Value Unit</b></em>' attribute.
@@ -208,133 +103,21 @@ public class ValueItem extends MinimalEObjectImpl.Container {
 	 * @return the value of the '<em>Value Unit</em>' attribute.
 	 * @see de.inavet.smarttrains.das.interfaces.utils.Units
 	 * @see #setValueUnit(Units)
+	 * @see de.inavet.smarttrains.das.interfaces.utils.UtilsPackage#getValueItem_ValueUnit()
+	 * @model required="true"
 	 * @generated
 	 */
-	public Units getValueUnit() {
-		return valueUnit;
-	}
+	Units getValueUnit();
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.utils.ValueItem#getValueUnit <em>Value Unit</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param newValueUnit the new value of the '<em>Value Unit</em>' attribute.
+	 * @param value the new value of the '<em>Value Unit</em>' attribute.
 	 * @see de.inavet.smarttrains.das.interfaces.utils.Units
 	 * @see #getValueUnit()
 	 * @generated
 	 */
-	public void setValueUnit(Units newValueUnit) {
-		valueUnit = newValueUnit == null ? VALUE_UNIT_EDEFAULT : newValueUnit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case UtilsPackage.VALUE_ITEM__ID:
-				return getId();
-			case UtilsPackage.VALUE_ITEM__VALUE:
-				return getValue();
-			case UtilsPackage.VALUE_ITEM__VALUE_NAME:
-				return getValueName();
-			case UtilsPackage.VALUE_ITEM__VALUE_UNIT:
-				return getValueUnit();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case UtilsPackage.VALUE_ITEM__ID:
-				setId((String)newValue);
-				return;
-			case UtilsPackage.VALUE_ITEM__VALUE:
-				setValue((Double)newValue);
-				return;
-			case UtilsPackage.VALUE_ITEM__VALUE_NAME:
-				setValueName((String)newValue);
-				return;
-			case UtilsPackage.VALUE_ITEM__VALUE_UNIT:
-				setValueUnit((Units)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case UtilsPackage.VALUE_ITEM__ID:
-				setId(ID_EDEFAULT);
-				return;
-			case UtilsPackage.VALUE_ITEM__VALUE:
-				setValue(VALUE_EDEFAULT);
-				return;
-			case UtilsPackage.VALUE_ITEM__VALUE_NAME:
-				setValueName(VALUE_NAME_EDEFAULT);
-				return;
-			case UtilsPackage.VALUE_ITEM__VALUE_UNIT:
-				setValueUnit(VALUE_UNIT_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case UtilsPackage.VALUE_ITEM__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case UtilsPackage.VALUE_ITEM__VALUE:
-				return value != VALUE_EDEFAULT;
-			case UtilsPackage.VALUE_ITEM__VALUE_NAME:
-				return VALUE_NAME_EDEFAULT == null ? valueName != null : !VALUE_NAME_EDEFAULT.equals(valueName);
-			case UtilsPackage.VALUE_ITEM__VALUE_UNIT:
-				return valueUnit != VALUE_UNIT_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(", value: ");
-		result.append(value);
-		result.append(", valueName: ");
-		result.append(valueName);
-		result.append(", valueUnit: ");
-		result.append(valueUnit);
-		result.append(')');
-		return result.toString();
-	}
+	void setValueUnit(Units value);
 
 } // ValueItem

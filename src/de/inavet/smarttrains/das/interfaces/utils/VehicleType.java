@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see de.inavet.smarttrains.das.interfaces.utils.UtilsPackage#getVehicleType()
+ * @model
  * @generated
  */
 public enum VehicleType implements Enumerator {
@@ -72,6 +73,7 @@ public enum VehicleType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #TRAM
+	 * @model name="tram"
 	 * @generated
 	 * @ordered
 	 */
@@ -82,6 +84,7 @@ public enum VehicleType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BUS
+	 * @model name="bus"
 	 * @generated
 	 * @ordered
 	 */
@@ -92,6 +95,7 @@ public enum VehicleType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #EMERGENCY_VEHICLE
+	 * @model name="emergencyVehicle"
 	 * @generated
 	 * @ordered
 	 */
@@ -102,6 +106,7 @@ public enum VehicleType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #CAR
+	 * @model name="car"
 	 * @generated
 	 * @ordered
 	 */
@@ -112,6 +117,7 @@ public enum VehicleType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #OTHER
+	 * @model name="other"
 	 * @generated
 	 * @ordered
 	 */

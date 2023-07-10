@@ -68,6 +68,18 @@ public class UtilsAdapterFactory extends AdapterFactoryImpl {
 	protected UtilsSwitch<Adapter> modelSwitch =
 		new UtilsSwitch<Adapter>() {
 			@Override
+			public Adapter caseJourney(Journey object) {
+				return createJourneyAdapter();
+			}
+			@Override
+			public Adapter caseJourneyResponseFromDatabroker(JourneyResponseFromDatabroker object) {
+				return createJourneyResponseFromDatabrokerAdapter();
+			}
+			@Override
+			public Adapter caseGNSS(GNSS object) {
+				return createGNSSAdapter();
+			}
+			@Override
 			public Adapter casePosition(Position object) {
 				return createPositionAdapter();
 			}
@@ -78,6 +90,10 @@ public class UtilsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseValueItem(ValueItem object) {
 				return createValueItemAdapter();
+			}
+			@Override
+			public Adapter caseVehicle(Vehicle object) {
+				return createVehicleAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -98,6 +114,48 @@ public class UtilsAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.inavet.smarttrains.das.interfaces.utils.Journey <em>Journey</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.inavet.smarttrains.das.interfaces.utils.Journey
+	 * @generated
+	 */
+	public Adapter createJourneyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.inavet.smarttrains.das.interfaces.utils.JourneyResponseFromDatabroker <em>Journey Response From Databroker</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.inavet.smarttrains.das.interfaces.utils.JourneyResponseFromDatabroker
+	 * @generated
+	 */
+	public Adapter createJourneyResponseFromDatabrokerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.inavet.smarttrains.das.interfaces.utils.GNSS <em>GNSS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.inavet.smarttrains.das.interfaces.utils.GNSS
+	 * @generated
+	 */
+	public Adapter createGNSSAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link de.inavet.smarttrains.das.interfaces.utils.Position <em>Position</em>}'.
@@ -138,6 +196,20 @@ public class UtilsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createValueItemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.inavet.smarttrains.das.interfaces.utils.Vehicle <em>Vehicle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.inavet.smarttrains.das.interfaces.utils.Vehicle
+	 * @generated
+	 */
+	public Adapter createVehicleAdapter() {
 		return null;
 	}
 

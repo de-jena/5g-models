@@ -102,30 +102,6 @@ public class DasexchangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DasexchangePackage.PROGNOSIS_TIME_SLOT_FROMK_LSA: {
-				PrognosisTimeSlotFromkLSA prognosisTimeSlotFromkLSA = (PrognosisTimeSlotFromkLSA)theEObject;
-				T result = casePrognosisTimeSlotFromkLSA(prognosisTimeSlotFromkLSA);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case DasexchangePackage.PROGNOSIS_FOR_VEHICLE_POWER_DEMAND: {
-				PrognosisForVehiclePowerDemand prognosisForVehiclePowerDemand = (PrognosisForVehiclePowerDemand)theEObject;
-				T result = casePrognosisForVehiclePowerDemand(prognosisForVehiclePowerDemand);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case DasexchangePackage.POWER_DEMAND_OVER_POSITION: {
-				PowerDemandOverPosition powerDemandOverPosition = (PowerDemandOverPosition)theEObject;
-				T result = casePowerDemandOverPosition(powerDemandOverPosition);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case DasexchangePackage.POWER_DEMAND_OVER_TIME: {
-				PowerDemandOverTime powerDemandOverTime = (PowerDemandOverTime)theEObject;
-				T result = casePowerDemandOverTime(powerDemandOverTime);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case DasexchangePackage.SPEED_OVER_POSITION: {
 				SpeedOverPosition speedOverPosition = (SpeedOverPosition)theEObject;
 				T result = caseSpeedOverPosition(speedOverPosition);
@@ -153,12 +129,6 @@ public class DasexchangeSwitch<T> extends Switch<T> {
 			case DasexchangePackage.TRAJECTORY: {
 				Trajectory trajectory = (Trajectory)theEObject;
 				T result = caseTrajectory(trajectory);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case DasexchangePackage.TRAJECTORY_LEFT_FROM_MOBILE: {
-				TrajectoryLeftFromMobile trajectoryLeftFromMobile = (TrajectoryLeftFromMobile)theEObject;
-				T result = caseTrajectoryLeftFromMobile(trajectoryLeftFromMobile);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -257,66 +227,6 @@ public class DasexchangeSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Prognosis Time Slot Fromk LSA</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Prognosis Time Slot Fromk LSA</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePrognosisTimeSlotFromkLSA(PrognosisTimeSlotFromkLSA object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Prognosis For Vehicle Power Demand</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Prognosis For Vehicle Power Demand</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePrognosisForVehiclePowerDemand(PrognosisForVehiclePowerDemand object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Power Demand Over Position</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Power Demand Over Position</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePowerDemandOverPosition(PowerDemandOverPosition object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Power Demand Over Time</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Power Demand Over Time</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePowerDemandOverTime(PowerDemandOverTime object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Speed Over Position</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -388,21 +298,6 @@ public class DasexchangeSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTrajectory(Trajectory object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Trajectory Left From Mobile</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Trajectory Left From Mobile</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTrajectoryLeftFromMobile(TrajectoryLeftFromMobile object) {
 		return null;
 	}
 

@@ -90,7 +90,11 @@
                       "type": "string"
                     }
                   },
-                  "additionalProperties": false
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "name"
+                  ]
                 },
                 "priority": {
                   "type": "number"

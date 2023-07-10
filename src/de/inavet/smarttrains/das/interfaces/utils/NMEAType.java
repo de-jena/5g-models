@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * NMEA-Filter
  * <!-- end-model-doc -->
  * @see de.inavet.smarttrains.das.interfaces.utils.UtilsPackage#getNMEAType()
+ * @model
  * @generated
  */
 public enum NMEAType implements Enumerator {
@@ -65,6 +66,7 @@ public enum NMEAType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #GNRMC
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -75,6 +77,7 @@ public enum NMEAType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #GPRMC
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -85,6 +88,7 @@ public enum NMEAType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #GPGGA
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -95,6 +99,7 @@ public enum NMEAType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #GNGGA
+	 * @model
 	 * @generated
 	 * @ordered
 	 */

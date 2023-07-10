@@ -66,6 +66,24 @@ public class UtilsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case UtilsPackage.JOURNEY: {
+				Journey journey = (Journey)theEObject;
+				T result = caseJourney(journey);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UtilsPackage.JOURNEY_RESPONSE_FROM_DATABROKER: {
+				JourneyResponseFromDatabroker journeyResponseFromDatabroker = (JourneyResponseFromDatabroker)theEObject;
+				T result = caseJourneyResponseFromDatabroker(journeyResponseFromDatabroker);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UtilsPackage.GNSS: {
+				GNSS gnss = (GNSS)theEObject;
+				T result = caseGNSS(gnss);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case UtilsPackage.POSITION: {
 				Position position = (Position)theEObject;
 				T result = casePosition(position);
@@ -84,8 +102,59 @@ public class UtilsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case UtilsPackage.VEHICLE: {
+				Vehicle vehicle = (Vehicle)theEObject;
+				T result = caseVehicle(vehicle);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Journey</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Journey</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJourney(Journey object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Journey Response From Databroker</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Journey Response From Databroker</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJourneyResponseFromDatabroker(JourneyResponseFromDatabroker object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GNSS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GNSS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGNSS(GNSS object) {
+		return null;
 	}
 
 	/**
@@ -130,6 +199,21 @@ public class UtilsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseValueItem(ValueItem object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Vehicle</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Vehicle</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVehicle(Vehicle object) {
 		return null;
 	}
 

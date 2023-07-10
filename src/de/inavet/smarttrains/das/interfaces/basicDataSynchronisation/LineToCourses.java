@@ -2,15 +2,9 @@
  */
 package de.inavet.smarttrains.das.interfaces.basicDataSynchronisation;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.BasicInternalEList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,58 +23,11 @@ import org.eclipse.emf.ecore.util.BasicInternalEList;
  *   <li>{@link de.inavet.smarttrains.das.interfaces.basicDataSynchronisation.LineToCourses#getCourses <em>Courses</em>}</li>
  * </ul>
  *
+ * @see de.inavet.smarttrains.das.interfaces.basicDataSynchronisation.BasicDataSynchronisationPackage#getLineToCourses()
+ * @model
  * @generated
  */
-public class LineToCourses extends MinimalEObjectImpl.Container {
-	/**
-	 * The default value of the '{@link #getLine() <em>Line</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLine()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int LINE_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getLine() <em>Line</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLine()
-	 * @generated
-	 * @ordered
-	 */
-	protected int line = LINE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getCourses() <em>Courses</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCourses()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CourseToRoutes> courses;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LineToCourses() {
-		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return BasicDataSynchronisationPackage.Literals.LINE_TO_COURSES;
-	}
-
+public interface LineToCourses extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Line</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -90,126 +37,35 @@ public class LineToCourses extends MinimalEObjectImpl.Container {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Line</em>' attribute.
 	 * @see #setLine(int)
+	 * @see de.inavet.smarttrains.das.interfaces.basicDataSynchronisation.BasicDataSynchronisationPackage#getLineToCourses_Line()
+	 * @model required="true"
 	 * @generated
 	 */
-	public int getLine() {
-		return line;
-	}
+	int getLine();
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.basicDataSynchronisation.LineToCourses#getLine <em>Line</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param newLine the new value of the '<em>Line</em>' attribute.
+	 * @param value the new value of the '<em>Line</em>' attribute.
 	 * @see #getLine()
 	 * @generated
 	 */
-	public void setLine(int newLine) {
-		line = newLine;
-	}
+	void setLine(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Courses</b></em>' reference list.
+	 * Returns the value of the '<em><b>Courses</b></em>' containment reference list.
 	 * The list contents are of type {@link de.inavet.smarttrains.das.interfaces.basicDataSynchronisation.CourseToRoutes}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Die möglichen Kursauswahlmöglichkeiten der Linie
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Courses</em>' reference list.
+	 * @return the value of the '<em>Courses</em>' containment reference list.
+	 * @see de.inavet.smarttrains.das.interfaces.basicDataSynchronisation.BasicDataSynchronisationPackage#getLineToCourses_Courses()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	public EList<CourseToRoutes> getCourses() {
-		if (courses == null) {
-			courses = new BasicInternalEList<CourseToRoutes>(CourseToRoutes.class);
-		}
-		return courses;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case BasicDataSynchronisationPackage.LINE_TO_COURSES__LINE:
-				return getLine();
-			case BasicDataSynchronisationPackage.LINE_TO_COURSES__COURSES:
-				return getCourses();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case BasicDataSynchronisationPackage.LINE_TO_COURSES__LINE:
-				setLine((Integer)newValue);
-				return;
-			case BasicDataSynchronisationPackage.LINE_TO_COURSES__COURSES:
-				getCourses().clear();
-				getCourses().addAll((Collection<? extends CourseToRoutes>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case BasicDataSynchronisationPackage.LINE_TO_COURSES__LINE:
-				setLine(LINE_EDEFAULT);
-				return;
-			case BasicDataSynchronisationPackage.LINE_TO_COURSES__COURSES:
-				getCourses().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case BasicDataSynchronisationPackage.LINE_TO_COURSES__LINE:
-				return line != LINE_EDEFAULT;
-			case BasicDataSynchronisationPackage.LINE_TO_COURSES__COURSES:
-				return courses != null && !courses.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (line: ");
-		result.append(line);
-		result.append(')');
-		return result.toString();
-	}
+	EList<CourseToRoutes> getCourses();
 
 } // LineToCourses

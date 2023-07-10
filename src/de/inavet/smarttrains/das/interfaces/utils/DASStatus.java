@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * Status des FAS-System zur Information beim Fahrer
  * <!-- end-model-doc -->
  * @see de.inavet.smarttrains.das.interfaces.utils.UtilsPackage#getDASStatus()
+ * @model
  * @generated
  */
 public enum DASStatus implements Enumerator {
@@ -105,6 +106,7 @@ public enum DASStatus implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #NO_CONNECTION_TO_CENTRAL
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -115,6 +117,7 @@ public enum DASStatus implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #NO_INITIAL_DATA
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -125,6 +128,7 @@ public enum DASStatus implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #INITIALISED
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -135,6 +139,7 @@ public enum DASStatus implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #ACTIVE_RECOMMENDATION
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -145,6 +150,7 @@ public enum DASStatus implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #ACTIVE_DENM
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -155,6 +161,7 @@ public enum DASStatus implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #ACTIVE_VAM
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -165,6 +172,7 @@ public enum DASStatus implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #ERROR
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
@@ -175,6 +183,7 @@ public enum DASStatus implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #DEACTIVATED
+	 * @model
 	 * @generated
 	 * @ordered
 	 */

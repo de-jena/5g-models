@@ -4,9 +4,7 @@ package de.inavet.smarttrains.das.interfaces.dasexchange;
 
 import java.time.ZonedDateTime;
 
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,112 +22,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link de.inavet.smarttrains.das.interfaces.dasexchange.DASExchangeResponse#getId <em>Id</em>}</li>
  *   <li>{@link de.inavet.smarttrains.das.interfaces.dasexchange.DASExchangeResponse#getTimestamp <em>Timestamp</em>}</li>
- *   <li>{@link de.inavet.smarttrains.das.interfaces.dasexchange.DASExchangeResponse#getFasExchangeIdToResponse <em>Fas Exchange Id To Response</em>}</li>
+ *   <li>{@link de.inavet.smarttrains.das.interfaces.dasexchange.DASExchangeResponse#getDasExchangeIdToResponse <em>Das Exchange Id To Response</em>}</li>
  *   <li>{@link de.inavet.smarttrains.das.interfaces.dasexchange.DASExchangeResponse#getJourneyId <em>Journey Id</em>}</li>
  * </ul>
  *
+ * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getDASExchangeResponse()
+ * @model
  * @generated
  */
-public class DASExchangeResponse extends MinimalEObjectImpl.Container {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final ZonedDateTime TIMESTAMP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected ZonedDateTime timestamp = TIMESTAMP_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFasExchangeIdToResponse() <em>Fas Exchange Id To Response</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFasExchangeIdToResponse()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FAS_EXCHANGE_ID_TO_RESPONSE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getFasExchangeIdToResponse() <em>Fas Exchange Id To Response</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFasExchangeIdToResponse()
-	 * @generated
-	 * @ordered
-	 */
-	protected String fasExchangeIdToResponse = FAS_EXCHANGE_ID_TO_RESPONSE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getJourneyId() <em>Journey Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getJourneyId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String JOURNEY_ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getJourneyId() <em>Journey Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getJourneyId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String journeyId = JOURNEY_ID_EDEFAULT;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DASExchangeResponse() {
-		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return DasexchangePackage.Literals.DAS_EXCHANGE_RESPONSE;
-	}
-
+public interface DASExchangeResponse extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -139,23 +40,21 @@ public class DASExchangeResponse extends MinimalEObjectImpl.Container {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
+	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getDASExchangeResponse_Id()
+	 * @model id="true" required="true"
 	 * @generated
 	 */
-	public String getId() {
-		return id;
-	}
+	String getId();
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.dasexchange.DASExchangeResponse#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param newId the new value of the '<em>Id</em>' attribute.
+	 * @param value the new value of the '<em>Id</em>' attribute.
 	 * @see #getId()
 	 * @generated
 	 */
-	public void setId(String newId) {
-		id = newId;
-	}
+	void setId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Timestamp</b></em>' attribute.
@@ -166,50 +65,46 @@ public class DASExchangeResponse extends MinimalEObjectImpl.Container {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Timestamp</em>' attribute.
 	 * @see #setTimestamp(ZonedDateTime)
+	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getDASExchangeResponse_Timestamp()
+	 * @model dataType="de.inavet.smarttrains.das.interfaces.utils.ZonedDateTime" required="true"
 	 * @generated
 	 */
-	public ZonedDateTime getTimestamp() {
-		return timestamp;
-	}
+	ZonedDateTime getTimestamp();
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.dasexchange.DASExchangeResponse#getTimestamp <em>Timestamp</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param newTimestamp the new value of the '<em>Timestamp</em>' attribute.
+	 * @param value the new value of the '<em>Timestamp</em>' attribute.
 	 * @see #getTimestamp()
 	 * @generated
 	 */
-	public void setTimestamp(ZonedDateTime newTimestamp) {
-		timestamp = newTimestamp;
-	}
+	void setTimestamp(ZonedDateTime value);
 
 	/**
-	 * Returns the value of the '<em><b>Fas Exchange Id To Response</b></em>' attribute.
+	 * Returns the value of the '<em><b>Das Exchange Id To Response</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Antwort-Id
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Fas Exchange Id To Response</em>' attribute.
-	 * @see #setFasExchangeIdToResponse(String)
+	 * @return the value of the '<em>Das Exchange Id To Response</em>' attribute.
+	 * @see #setDasExchangeIdToResponse(String)
+	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getDASExchangeResponse_DasExchangeIdToResponse()
+	 * @model required="true"
 	 * @generated
 	 */
-	public String getFasExchangeIdToResponse() {
-		return fasExchangeIdToResponse;
-	}
+	String getDasExchangeIdToResponse();
 
 	/**
-	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.dasexchange.DASExchangeResponse#getFasExchangeIdToResponse <em>Fas Exchange Id To Response</em>}' attribute.
+	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.dasexchange.DASExchangeResponse#getDasExchangeIdToResponse <em>Das Exchange Id To Response</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param newFasExchangeIdToResponse the new value of the '<em>Fas Exchange Id To Response</em>' attribute.
-	 * @see #getFasExchangeIdToResponse()
+	 * @param value the new value of the '<em>Das Exchange Id To Response</em>' attribute.
+	 * @see #getDasExchangeIdToResponse()
 	 * @generated
 	 */
-	public void setFasExchangeIdToResponse(String newFasExchangeIdToResponse) {
-		fasExchangeIdToResponse = newFasExchangeIdToResponse;
-	}
+	void setDasExchangeIdToResponse(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Journey Id</b></em>' attribute.
@@ -220,132 +115,20 @@ public class DASExchangeResponse extends MinimalEObjectImpl.Container {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Journey Id</em>' attribute.
 	 * @see #setJourneyId(String)
+	 * @see de.inavet.smarttrains.das.interfaces.dasexchange.DasexchangePackage#getDASExchangeResponse_JourneyId()
+	 * @model required="true"
 	 * @generated
 	 */
-	public String getJourneyId() {
-		return journeyId;
-	}
+	String getJourneyId();
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.dasexchange.DASExchangeResponse#getJourneyId <em>Journey Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param newJourneyId the new value of the '<em>Journey Id</em>' attribute.
+	 * @param value the new value of the '<em>Journey Id</em>' attribute.
 	 * @see #getJourneyId()
 	 * @generated
 	 */
-	public void setJourneyId(String newJourneyId) {
-		journeyId = newJourneyId;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__ID:
-				return getId();
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__TIMESTAMP:
-				return getTimestamp();
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__FAS_EXCHANGE_ID_TO_RESPONSE:
-				return getFasExchangeIdToResponse();
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__JOURNEY_ID:
-				return getJourneyId();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__ID:
-				setId((String)newValue);
-				return;
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__TIMESTAMP:
-				setTimestamp((ZonedDateTime)newValue);
-				return;
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__FAS_EXCHANGE_ID_TO_RESPONSE:
-				setFasExchangeIdToResponse((String)newValue);
-				return;
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__JOURNEY_ID:
-				setJourneyId((String)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__ID:
-				setId(ID_EDEFAULT);
-				return;
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__TIMESTAMP:
-				setTimestamp(TIMESTAMP_EDEFAULT);
-				return;
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__FAS_EXCHANGE_ID_TO_RESPONSE:
-				setFasExchangeIdToResponse(FAS_EXCHANGE_ID_TO_RESPONSE_EDEFAULT);
-				return;
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__JOURNEY_ID:
-				setJourneyId(JOURNEY_ID_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__TIMESTAMP:
-				return TIMESTAMP_EDEFAULT == null ? timestamp != null : !TIMESTAMP_EDEFAULT.equals(timestamp);
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__FAS_EXCHANGE_ID_TO_RESPONSE:
-				return FAS_EXCHANGE_ID_TO_RESPONSE_EDEFAULT == null ? fasExchangeIdToResponse != null : !FAS_EXCHANGE_ID_TO_RESPONSE_EDEFAULT.equals(fasExchangeIdToResponse);
-			case DasexchangePackage.DAS_EXCHANGE_RESPONSE__JOURNEY_ID:
-				return JOURNEY_ID_EDEFAULT == null ? journeyId != null : !JOURNEY_ID_EDEFAULT.equals(journeyId);
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(", timestamp: ");
-		result.append(timestamp);
-		result.append(", fasExchangeIdToResponse: ");
-		result.append(fasExchangeIdToResponse);
-		result.append(", journeyId: ");
-		result.append(journeyId);
-		result.append(')');
-		return result.toString();
-	}
+	void setJourneyId(String value);
 
 } // DASExchangeResponse

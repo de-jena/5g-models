@@ -4,15 +4,9 @@ package de.inavet.smarttrains.das.interfaces.ctlc;
 
 import java.time.ZonedDateTime;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.BasicInternalEList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,121 +29,32 @@ import org.eclipse.emf.ecore.util.BasicInternalEList;
  *   <li>{@link de.inavet.smarttrains.das.interfaces.ctlc.ReleaseTimePrognosisRequest#getScenarios <em>Scenarios</em>}</li>
  * </ul>
  *
+ * @see de.inavet.smarttrains.das.interfaces.ctlc.CtlcPackage#getReleaseTimePrognosisRequest()
+ * @model
  * @generated
  */
-public class ReleaseTimePrognosisRequest extends MinimalEObjectImpl.Container {
-	/**
-	 * The default value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final ZonedDateTime TIMESTAMP_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTimestamp() <em>Timestamp</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimestamp()
-	 * @generated
-	 * @ordered
-	 */
-	protected ZonedDateTime timestamp = TIMESTAMP_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getRequestId() <em>Request Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequestId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String REQUEST_ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getRequestId() <em>Request Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequestId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String requestId = REQUEST_ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIntersectionId() <em>Intersection Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIntersectionId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String INTERSECTION_ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getIntersectionId() <em>Intersection Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIntersectionId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String intersectionId = INTERSECTION_ID_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getScenarios() <em>Scenarios</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScenarios()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Scenario> scenarios;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ReleaseTimePrognosisRequest() {
-		super();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EClass eStaticClass() {
-		return CtlcPackage.Literals.RELEASE_TIME_PROGNOSIS_REQUEST;
-	}
-
+public interface ReleaseTimePrognosisRequest extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Timestamp</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Timestamp</em>' attribute.
 	 * @see #setTimestamp(ZonedDateTime)
+	 * @see de.inavet.smarttrains.das.interfaces.ctlc.CtlcPackage#getReleaseTimePrognosisRequest_Timestamp()
+	 * @model dataType="de.inavet.smarttrains.das.interfaces.utils.ZonedDateTime" required="true"
 	 * @generated
 	 */
-	public ZonedDateTime getTimestamp() {
-		return timestamp;
-	}
+	ZonedDateTime getTimestamp();
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.ctlc.ReleaseTimePrognosisRequest#getTimestamp <em>Timestamp</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param newTimestamp the new value of the '<em>Timestamp</em>' attribute.
+	 * @param value the new value of the '<em>Timestamp</em>' attribute.
 	 * @see #getTimestamp()
 	 * @generated
 	 */
-	public void setTimestamp(ZonedDateTime newTimestamp) {
-		timestamp = newTimestamp;
-	}
+	void setTimestamp(ZonedDateTime value);
 
 	/**
 	 * Returns the value of the '<em><b>Request Id</b></em>' attribute.
@@ -157,23 +62,21 @@ public class ReleaseTimePrognosisRequest extends MinimalEObjectImpl.Container {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Request Id</em>' attribute.
 	 * @see #setRequestId(String)
+	 * @see de.inavet.smarttrains.das.interfaces.ctlc.CtlcPackage#getReleaseTimePrognosisRequest_RequestId()
+	 * @model required="true"
 	 * @generated
 	 */
-	public String getRequestId() {
-		return requestId;
-	}
+	String getRequestId();
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.ctlc.ReleaseTimePrognosisRequest#getRequestId <em>Request Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param newRequestId the new value of the '<em>Request Id</em>' attribute.
+	 * @param value the new value of the '<em>Request Id</em>' attribute.
 	 * @see #getRequestId()
 	 * @generated
 	 */
-	public void setRequestId(String newRequestId) {
-		requestId = newRequestId;
-	}
+	void setRequestId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Intersection Id</b></em>' attribute.
@@ -184,147 +87,32 @@ public class ReleaseTimePrognosisRequest extends MinimalEObjectImpl.Container {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Intersection Id</em>' attribute.
 	 * @see #setIntersectionId(String)
+	 * @see de.inavet.smarttrains.das.interfaces.ctlc.CtlcPackage#getReleaseTimePrognosisRequest_IntersectionId()
+	 * @model required="true"
 	 * @generated
 	 */
-	public String getIntersectionId() {
-		return intersectionId;
-	}
+	String getIntersectionId();
 
 	/**
 	 * Sets the value of the '{@link de.inavet.smarttrains.das.interfaces.ctlc.ReleaseTimePrognosisRequest#getIntersectionId <em>Intersection Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param newIntersectionId the new value of the '<em>Intersection Id</em>' attribute.
+	 * @param value the new value of the '<em>Intersection Id</em>' attribute.
 	 * @see #getIntersectionId()
 	 * @generated
 	 */
-	public void setIntersectionId(String newIntersectionId) {
-		intersectionId = newIntersectionId;
-	}
+	void setIntersectionId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Scenarios</b></em>' reference list.
+	 * Returns the value of the '<em><b>Scenarios</b></em>' containment reference list.
 	 * The list contents are of type {@link de.inavet.smarttrains.das.interfaces.ctlc.Scenario}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scenarios</em>' reference list.
+	 * @return the value of the '<em>Scenarios</em>' containment reference list.
+	 * @see de.inavet.smarttrains.das.interfaces.ctlc.CtlcPackage#getReleaseTimePrognosisRequest_Scenarios()
+	 * @model containment="true"
 	 * @generated
 	 */
-	public EList<Scenario> getScenarios() {
-		if (scenarios == null) {
-			scenarios = new BasicInternalEList<Scenario>(Scenario.class);
-		}
-		return scenarios;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__TIMESTAMP:
-				return getTimestamp();
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__REQUEST_ID:
-				return getRequestId();
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__INTERSECTION_ID:
-				return getIntersectionId();
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__SCENARIOS:
-				return getScenarios();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__TIMESTAMP:
-				setTimestamp((ZonedDateTime)newValue);
-				return;
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__REQUEST_ID:
-				setRequestId((String)newValue);
-				return;
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__INTERSECTION_ID:
-				setIntersectionId((String)newValue);
-				return;
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__SCENARIOS:
-				getScenarios().clear();
-				getScenarios().addAll((Collection<? extends Scenario>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__TIMESTAMP:
-				setTimestamp(TIMESTAMP_EDEFAULT);
-				return;
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__REQUEST_ID:
-				setRequestId(REQUEST_ID_EDEFAULT);
-				return;
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__INTERSECTION_ID:
-				setIntersectionId(INTERSECTION_ID_EDEFAULT);
-				return;
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__SCENARIOS:
-				getScenarios().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__TIMESTAMP:
-				return TIMESTAMP_EDEFAULT == null ? timestamp != null : !TIMESTAMP_EDEFAULT.equals(timestamp);
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__REQUEST_ID:
-				return REQUEST_ID_EDEFAULT == null ? requestId != null : !REQUEST_ID_EDEFAULT.equals(requestId);
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__INTERSECTION_ID:
-				return INTERSECTION_ID_EDEFAULT == null ? intersectionId != null : !INTERSECTION_ID_EDEFAULT.equals(intersectionId);
-			case CtlcPackage.RELEASE_TIME_PROGNOSIS_REQUEST__SCENARIOS:
-				return scenarios != null && !scenarios.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (timestamp: ");
-		result.append(timestamp);
-		result.append(", requestId: ");
-		result.append(requestId);
-		result.append(", intersectionId: ");
-		result.append(intersectionId);
-		result.append(')');
-		return result.toString();
-	}
+	EList<Scenario> getScenarios();
 
 } // ReleaseTimePrognosisRequest
