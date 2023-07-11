@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="basicDataSynchronisation" nsURI="http://inavet.de/datamodels"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="basicDataSynchronisation" nsURI="http://inavet.de/datamodels/basicDataSynchronisation/v1"
     nsPrefix="basicDataSynchronisation">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation" value="Grunddatensynchronisierung vom Smartphone / mobilen Endgerät und der Zentrale"/>
@@ -43,7 +43,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="deviceIdOfRegistrationToResponse"
-        lowerBound="1" eType="#//DeviceRegistration" eKeys="#//DeviceRegistration/deviceId">
+        lowerBound="1" eType="#//DeviceRegistration" containment="true" eKeys="#//DeviceRegistration/deviceId">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Device-Registrierungsid"/>
       </eAnnotations>
@@ -55,7 +55,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="basicData" lowerBound="1"
-        eType="#//BasicData">
+        eType="#//BasicData" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Grunddaten"/>
       </eAnnotations>
@@ -65,13 +65,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Grunddatenklasse, enthält eine Liste der möglichen Fahrzeugnummern, sowie einer Abstraktion des Fahrplans, zur Auswahl bei der Fahrzeuganmeldung&#xA;Hilfsklasse"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicleIds" eType="#//VehicleId">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleIds" lowerBound="1"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Liste der Fahrzeugnummern (JNV-Fahrzeugnummern) zur Anmeldungsüberprüfung"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="linesToCourses" lowerBound="1"
-        upperBound="-1" eType="#//LineToCourses">
+        upperBound="-1" eType="#//LineToCourses" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Fahrplan-Abstraktion: Enthält ein Objekt mit den möglichen Linien, deren zugeordnete Kurse sowie dem Kursen zugeordneten Routen, Ebenso benutzt zur Anmeldungsüberprüfung"/>
       </eAnnotations>
@@ -87,7 +88,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="courses" lowerBound="1"
-        upperBound="-1" eType="#//CourseToRoutes">
+        upperBound="-1" eType="#//CourseToRoutes" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Die möglichen Kursauswahlmöglichkeiten der Linie"/>
       </eAnnotations>
@@ -109,12 +110,5 @@
         <details key="documentation" value="Die möglichen Routenauswahlmöglichkeiten zum Kurs"/>
       </eAnnotations>
     </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VehicleId">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Hilfsklasse: Fahrzeugnummer bei der JNV"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleId" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

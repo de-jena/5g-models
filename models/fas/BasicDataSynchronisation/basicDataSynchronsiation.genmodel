@@ -14,24 +14,21 @@
     </genClasses>
     <genClasses ecoreClass="basicDataSynchronsiation.ecore#//SynchroniseBasicDataResponse">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicDataSynchronsiation.ecore#//SynchroniseBasicDataResponse/id"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basicDataSynchronsiation.ecore#//SynchroniseBasicDataResponse/deviceIdOfRegistrationToResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basicDataSynchronsiation.ecore#//SynchroniseBasicDataResponse/deviceIdOfRegistrationToResponse"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicDataSynchronsiation.ecore#//SynchroniseBasicDataResponse/timestamp"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basicDataSynchronsiation.ecore#//SynchroniseBasicDataResponse/basicData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basicDataSynchronsiation.ecore#//SynchroniseBasicDataResponse/basicData"/>
     </genClasses>
     <genClasses ecoreClass="basicDataSynchronsiation.ecore#//BasicData">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basicDataSynchronsiation.ecore#//BasicData/vehicleIds"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basicDataSynchronsiation.ecore#//BasicData/linesToCourses"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicDataSynchronsiation.ecore#//BasicData/vehicleIds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basicDataSynchronsiation.ecore#//BasicData/linesToCourses"/>
     </genClasses>
     <genClasses ecoreClass="basicDataSynchronsiation.ecore#//LineToCourses">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicDataSynchronsiation.ecore#//LineToCourses/line"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basicDataSynchronsiation.ecore#//LineToCourses/courses"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basicDataSynchronsiation.ecore#//LineToCourses/courses"/>
     </genClasses>
     <genClasses ecoreClass="basicDataSynchronsiation.ecore#//CourseToRoutes">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicDataSynchronsiation.ecore#//CourseToRoutes/course"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicDataSynchronsiation.ecore#//CourseToRoutes/routes"/>
-    </genClasses>
-    <genClasses ecoreClass="basicDataSynchronsiation.ecore#//VehicleId">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicDataSynchronsiation.ecore#//VehicleId/vehicleId"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
