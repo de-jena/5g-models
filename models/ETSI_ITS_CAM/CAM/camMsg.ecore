@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="camMsg" nsURI="http://tud/etsi/cits/msg" nsPrefix="camMsg">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+    <details key="camMsg" value="#/"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicVehicleContainerHighFrequency"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicVehicleContainerLowFrequency"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CAM">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cam" eType="#//CoopAwareness"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CamParameter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="basicContainer" eType="#//BasicContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="highFrequencyContainer"
+        eType="#//HighFrequencyContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lowFrequencyContainer"
+        eType="#//LowFrequencyContainer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CoopAwareness">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generationDeltaTime" eType="#//GenerationDeltaTime"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="camParameters" eType="#//CamParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DangerousGoodsContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EmergencyContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HighFrequencyContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="basicVehicleContainerHighFrequency"
+        eType="#//BasicVehicleContainerHighFrequency"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LowFrequencyContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="basicVehicleContainerLowFrequency"
+        eType="#//BasicVehicleContainerLowFrequency"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PublicTransportContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RescueContainer,"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoadWorksContainerBasic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SafetyCarContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SpecialTransportContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SpecialVehicleContainer"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="GenerationDeltaTime" instanceClassName="int">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="65536"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

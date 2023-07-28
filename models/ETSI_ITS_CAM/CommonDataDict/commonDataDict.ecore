@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="commonDataDict" nsURI="http://tud/cits/commonDataDict" nsPrefix="commonDataDict">
+  <eClassifiers xsi:type="ecore:EClass" name="Altitude">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altitudeValue" eType="#//AltitudeValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altitudeConfidence" eType="#//AltitudeConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeltaReferencePosition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltaLatitude" eType="#//DeltaLatitude"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltaLongitude" eType="#//DeltaLongitude"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltaAltitude" eType="#//DeltaAltitude"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Heading">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headingValue" eType="#//HeadingValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headingConfidence" eType="#//HeadingConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ItsPduHeader">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocolVersion" eType="#//ProtocolVersion"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="messageID" eType="#//MessageID"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationID" eType="#//StationID"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LateralAcceleration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lateralAccelerationValue"
+        eType="#//LateralAccelerationValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LongitudinalAcceleration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitudinalAccelerationValue"
+        eType="#//LongitudinalAccelerationValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitudinalAccelerationConfidence"
+        eType="#//AccelerationConfidence"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lateralAccelerationConfidence"
+        eType="#//AccelerationConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PathHistory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sequence" upperBound="40"
+        eType="#//PathPoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PathPoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pathPosition" eType="#//DeltaReferencePosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pathDeltaTime" eType="#//PathDeltaTime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PosConfidenceEllipse">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semiMajorConfidence" eType="#//SemiAxisLength"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semiMinorConfidence" eType="#//SemiAxisLength"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semiMajorOrientation" eType="#//HeadingValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferencePosition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" eType="#//Latitude"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" eType="#//Longitude"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positionConfidenceEllipse"
+        eType="#//PosConfidenceEllipse"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="altitude" eType="#//Altitude"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Speed">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speedValue" eType="#//SpeedValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speedConfidence" eType="#//SpeedConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VehicleLength">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleLengthValue" eType="#//VehicleLengthValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleLengthConfidenceIndication"
+        eType="#//VehicleLengthConfidenceIndication"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="AccelerationConfidence" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxValue" value="100"/>
+      <details key="outOfRange" value="101"/>
+      <details key="unavailable" value="102"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="AltitudeValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-100000"/>
+      <details key="maxValue" value="800000"/>
+      <details key="unavailable" value="800001"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="AltitudeConfidence" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="alt-000-01" value="0"/>
+      <details key="alt-000-02" value="1"/>
+      <details key="alt-000-05" value="2"/>
+      <details key="alt-000-10" value="3"/>
+      <details key="alt-000-20" value="4"/>
+      <details key="alt-000-50" value="5"/>
+      <details key="alt-001-00" value="6"/>
+      <details key="alt-002-00" value="7"/>
+      <details key="alt-005-00" value="8"/>
+      <details key="alt-010-00" value="9"/>
+      <details key="alt-020-00" value="10"/>
+      <details key="alt-050-00" value="11"/>
+      <details key="alt-100-00" value="12"/>
+      <details key="alt-200-00" value="13"/>
+      <details key="outOfRange" value="14"/>
+      <details key="unavailable" value="15"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ExteriorLights" instanceTypeName="String">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="&quot;00000000&quot;"/>
+      <details key="maxVal" value="&quot;11111111&quot;"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DeltaAltitude" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-12700"/>
+      <details key="maxVal" value="12799"/>
+      <details key="unavailable" value="12800"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DeltaLatitude" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-131071"/>
+      <details key="maxVal" value="131071"/>
+      <details key="unavailable" value="131072"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DeltaLongitude" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-131071"/>
+      <details key="maxVal" value="131071"/>
+      <details key="unavailable" value="131072"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DriveDirection" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="forward" value="0"/>
+      <details key="backward" value="1"/>
+      <details key="unavailable" value="2"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="HeadingValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="125"/>
+      <details key="outOfRange" value="126"/>
+      <details key="unavailable" value="127"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="HeadingConfidence" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="125"/>
+      <details key="outOfRange" value="126"/>
+      <details key="unavailable" value="127"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="LateralAccelerationValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-160"/>
+      <details key="maxVal" value="159"/>
+      <details key="outOfRange" value="160"/>
+      <details key="unavailable" value="161"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Latitude" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-900000000"/>
+      <details key="maxVal" value="900000000"/>
+      <details key="unavailable" value="900000001"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Longitude" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-1800000000"/>
+      <details key="maxVal" value="1800000000"/>
+      <details key="unavailable" value="1800000001"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="LongitudinalAccelerationValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-160"/>
+      <details key="maxVal" value="159"/>
+      <details key="outOfRange" value="160"/>
+      <details key="unavailable" value="161"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="MessageID" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="denm" value="1"/>
+      <details key="cam" value="2"/>
+      <details key="poi" value="3"/>
+      <details key="spatem" value="4"/>
+      <details key="mapem" value="5"/>
+      <details key="ivim" value="6"/>
+      <details key="ev-rsr" value="7"/>
+      <details key=" tistpgtransaction" value="8"/>
+      <details key="srem" value="9"/>
+      <details key="ssem" value="10"/>
+      <details key="evcsn" value="11"/>
+      <details key="saem" value="12"/>
+      <details key="rtcmem" value="13"/>
+      <details key="maxVal" value="255"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="PathDeltaTime" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="65535"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ProtocolVersion" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="255"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="SemiAxisLength" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="4093"/>
+      <details key="outOfRange" value="4094"/>
+      <details key="unavailable" value="4095"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="SpeedValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="16381"/>
+      <details key="outOfRange" value="16382"/>
+      <details key="unavailable" value="16383"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="SpeedConfidence" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="125"/>
+      <details key="outOfRange" value="126"/>
+      <details key="unavailable" value="127"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="StationID" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="4294967295"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="TimestampIts" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="utsStartOf2004" value="0"/>
+      <details key="maxVal" value="4398046511103"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="VehicleLengthValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="1021"/>
+      <details key="outOfRange" value="1022"/>
+      <details key="unavailable" value="1023"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="VehicleLengthConfidenceIndication"
+      instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="noTrailerPresent" value="0"/>
+      <details key="TrailerPresentWithKnownLength" value="1"/>
+      <details key="TrailerPresentWithUnknownLength" value="2"/>
+      <details key="TrailerPresenceIsUnknown" value="3"/>
+      <details key="unavailable" value="4"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="VehicleRole" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="default" value="0"/>
+      <details key="publicTransport" value="1"/>
+      <details key="specialTransport" value="2"/>
+      <details key="dangerousGoods" value="3"/>
+      <details key="roadWork" value="4"/>
+      <details key="rescue" value="5"/>
+      <details key="emergency" value="6"/>
+      <details key="safetyCar" value="7"/>
+      <details key="agriculture" value="8"/>
+      <details key="commercial" value="9"/>
+      <details key="millitary" value="10"/>
+      <details key="roadOperator" value="11"/>
+      <details key="taxi" value="12"/>
+      <details key="reserved1" value="13"/>
+      <details key="reserved2" value="14"/>
+      <details key="reserved3" value="15"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="VehicleWidth" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="60"/>
+      <details key="outOfRange" value="61"/>
+      <details key="unavailable" value="62"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>
