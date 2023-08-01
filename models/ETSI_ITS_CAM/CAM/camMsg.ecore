@@ -5,11 +5,29 @@
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
     <details key="camMsg" value="#/"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="BasicContainer"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BasicVehicleContainerHighFrequency"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BasicVehicleContainerLowFrequency"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationType" eType="ecore:EEnum ../CommonDataDict/commonDataDict.ecore#//StationType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencePosition" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//ReferencePosition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicVehicleContainerHighFrequency">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="heading" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//Heading"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="speed" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//Speed"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driveDirection" eType="ecore:EEnum ../CommonDataDict/commonDataDict.ecore#//DriveDirection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicleLength" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//VehicleLength"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleWidth" eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//VehicleWidth"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="longitudinalAcceleration"
+        eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//LongitudinalAcceleration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="curvature" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//Curvature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="yawRate" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//YawRate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicVehicleContainerLowFrequency">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleRole" eType="ecore:EEnum ../CommonDataDict/commonDataDict.ecore#//VehicleRole"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exteriorLights" eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//ExteriorLights"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pathHistory" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//PathHistory"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CAM">
     <eStructuralFeatures xsi:type="ecore:EReference" name="cam" eType="#//CoopAwareness"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="header" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//ItsPduHeader"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CamParameter">
     <eStructuralFeatures xsi:type="ecore:EReference" name="basicContainer" eType="#//BasicContainer"/>

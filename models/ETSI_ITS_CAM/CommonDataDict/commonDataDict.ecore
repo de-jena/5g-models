@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="commonDataDict" nsURI="http://tud/cits/commonDataDict" nsPrefix="commonDataDict">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Altitude">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="altitudeValue" eType="#//AltitudeValue"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="altitudeConfidence" eType="#//AltitudeConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Curvature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="curvatureValue" eType="#//CurvatureValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="curvatureConfidence" eType="#//CurvatureConfidence"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DeltaReferencePosition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltaLatitude" eType="#//DeltaLatitude"/>
@@ -75,24 +82,22 @@
       <details key="unavailable" value="800001"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="AltitudeConfidence" instanceClassName="int">
+  <eClassifiers xsi:type="ecore:EEnum" name="CurvatureConfidence" instanceClassName="int">
+    <eLiterals name="onePerMeter-0-00002"/>
+    <eLiterals name="onePerMeter-0-0001" value="1"/>
+    <eLiterals name="onePerMeter-0-0005" value="2"/>
+    <eLiterals name="onePerMeter-0-002" value="3"/>
+    <eLiterals name="onePerMeter-0-01" value="4"/>
+    <eLiterals name="onePerMeter-0-1" value="5"/>
+    <eLiterals name="outOfRange" value="6"/>
+    <eLiterals name="unavailable" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="CurvatureValue" instanceClassName="int">
     <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="alt-000-01" value="0"/>
-      <details key="alt-000-02" value="1"/>
-      <details key="alt-000-05" value="2"/>
-      <details key="alt-000-10" value="3"/>
-      <details key="alt-000-20" value="4"/>
-      <details key="alt-000-50" value="5"/>
-      <details key="alt-001-00" value="6"/>
-      <details key="alt-002-00" value="7"/>
-      <details key="alt-005-00" value="8"/>
-      <details key="alt-010-00" value="9"/>
-      <details key="alt-020-00" value="10"/>
-      <details key="alt-050-00" value="11"/>
-      <details key="alt-100-00" value="12"/>
-      <details key="alt-200-00" value="13"/>
-      <details key="outOfRange" value="14"/>
-      <details key="unavailable" value="15"/>
+      <details key="minVal" value="-1023"/>
+      <details key="maxVal" value="1022"/>
+      <details key="unavailable" value="1023"/>
+      <details key="straight" value="0"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="ExteriorLights" instanceTypeName="String">
@@ -120,13 +125,6 @@
       <details key="minVal" value="-131071"/>
       <details key="maxVal" value="131071"/>
       <details key="unavailable" value="131072"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="DriveDirection" instanceClassName="int">
-    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="forward" value="0"/>
-      <details key="backward" value="1"/>
-      <details key="unavailable" value="2"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="HeadingValue" instanceClassName="int">
@@ -249,36 +247,6 @@
       <details key="unavailable" value="1023"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="VehicleLengthConfidenceIndication"
-      instanceClassName="int">
-    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="noTrailerPresent" value="0"/>
-      <details key="TrailerPresentWithKnownLength" value="1"/>
-      <details key="TrailerPresentWithUnknownLength" value="2"/>
-      <details key="TrailerPresenceIsUnknown" value="3"/>
-      <details key="unavailable" value="4"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="VehicleRole" instanceClassName="int">
-    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="default" value="0"/>
-      <details key="publicTransport" value="1"/>
-      <details key="specialTransport" value="2"/>
-      <details key="dangerousGoods" value="3"/>
-      <details key="roadWork" value="4"/>
-      <details key="rescue" value="5"/>
-      <details key="emergency" value="6"/>
-      <details key="safetyCar" value="7"/>
-      <details key="agriculture" value="8"/>
-      <details key="commercial" value="9"/>
-      <details key="millitary" value="10"/>
-      <details key="roadOperator" value="11"/>
-      <details key="taxi" value="12"/>
-      <details key="reserved1" value="13"/>
-      <details key="reserved2" value="14"/>
-      <details key="reserved3" value="15"/>
-    </eAnnotations>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="VehicleWidth" instanceClassName="int">
     <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="minVal" value="1"/>
@@ -286,5 +254,93 @@
       <details key="outOfRange" value="61"/>
       <details key="unavailable" value="62"/>
     </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DriveDirection" instanceClassName="int">
+    <eLiterals name="forward"/>
+    <eLiterals name="backward" value="1"/>
+    <eLiterals name="unavailable" value="2" literal="unavailable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VehicleRole">
+    <eLiterals name="default"/>
+    <eLiterals name="publicTransport" value="1"/>
+    <eLiterals name="specialTransport" value="2"/>
+    <eLiterals name="dangerousGoods" value="3"/>
+    <eLiterals name="roadWork" value="4"/>
+    <eLiterals name="rescue" value="5" literal="rescue"/>
+    <eLiterals name="emergency" value="6"/>
+    <eLiterals name="safetyCar" value="7"/>
+    <eLiterals name="agriculture" value="8"/>
+    <eLiterals name="commercial" value="9"/>
+    <eLiterals name="millitary" value="10"/>
+    <eLiterals name="roadOperator" value="11"/>
+    <eLiterals name="taxi" value="12"/>
+    <eLiterals name="reserved1" value="13"/>
+    <eLiterals name="reserved2" value="14"/>
+    <eLiterals name="reserved3" value="15"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VehicleLengthConfidenceIndication" instanceClassName="int">
+    <eLiterals name="noTrailerPresent"/>
+    <eLiterals name="TrailerPresentWithKnownLength" value="1"/>
+    <eLiterals name="TrailerPresentWithUnknownLength" value="2"/>
+    <eLiterals name="TrailerPresenceIsUnknown" value="3"/>
+    <eLiterals name="unavailable" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AltitudeConfidence" instanceClassName="int">
+    <eLiterals name="alt-000-01"/>
+    <eLiterals name="alt-000-02" value="1"/>
+    <eLiterals name="alt-000-05" value="2"/>
+    <eLiterals name="alt-000-10" value="3"/>
+    <eLiterals name="alt-000-20" value="4"/>
+    <eLiterals name="alt-000-50" value="5"/>
+    <eLiterals name="alt-001-00" value="6"/>
+    <eLiterals name="alt-002-00" value="7"/>
+    <eLiterals name="alt-005-00" value="8"/>
+    <eLiterals name="alt-010-00" value="9"/>
+    <eLiterals name="alt-020-00" value="10"/>
+    <eLiterals name="alt-050-00" value="11"/>
+    <eLiterals name="alt-100-00" value="12"/>
+    <eLiterals name="alt-200-00" value="13"/>
+    <eLiterals name="outOfRange" value="14"/>
+    <eLiterals name="unavailable" value="15"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="StationType" instanceClassName="int">
+    <eLiterals name="unknown"/>
+    <eLiterals name="pedestrian" value="1"/>
+    <eLiterals name="cyclist" value="2"/>
+    <eLiterals name="moped" value="3"/>
+    <eLiterals name="motorcycle" value="4"/>
+    <eLiterals name="passengerCar" value="5"/>
+    <eLiterals name="bus" value="6"/>
+    <eLiterals name="lightTruck" value="7"/>
+    <eLiterals name="heavyTruck" value="8"/>
+    <eLiterals name="trailer" value="9"/>
+    <eLiterals name="specialVehicles" value="10"/>
+    <eLiterals name="tram" value="11"/>
+    <eLiterals name="roadSideUnit" value="15"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CurvatureCalculationMode" instanceClassName="int">
+    <eLiterals name="yawRateUsed"/>
+    <eLiterals name="yawRateNotUsed" value="1"/>
+    <eLiterals name="unavailable" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YawRate"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="YawRateValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-32766"/>
+      <details key="maxVal" value="32766"/>
+      <details key="unavailable" value="32767"/>
+      <details key="straight" value="0"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YawRateConfidence" instanceClassName="int">
+    <eLiterals name="degSec-000-01"/>
+    <eLiterals name="degSec-000-05" value="1"/>
+    <eLiterals name="degSec-000-10" value="2"/>
+    <eLiterals name="degSec-001-00" value="3"/>
+    <eLiterals name="degSec-005-00" value="4"/>
+    <eLiterals name="degSec-010-00" value="5"/>
+    <eLiterals name="degSec-100-00" value="6"/>
+    <eLiterals name="outOfRange" value="7"/>
+    <eLiterals name="unavailable" value="8"/>
   </eClassifiers>
 </ecore:EPackage>
