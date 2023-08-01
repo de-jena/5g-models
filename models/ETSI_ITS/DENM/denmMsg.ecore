@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="denmMsg" nsURI="http://tud/etsi/its/decentralizedEnvironmentalNotification"
+    nsPrefix="denmMsg">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+    <details key="denmMsg" value="#/"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="DENM">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="header" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//ItsPduHeader"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="denm" eType="#//DecentralizedEnvironmentalNotificationMessage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DecentralizedEnvironmentalNotificationMessage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="management" eType="#//ManagementContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="situation" eType="#//SituationContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//LocationContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alacarte" eType="#//AlacarteContainer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ManagementContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="detectionTime" eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//TimestampIts"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceTime" eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//TimestampIts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventPosition" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//ReferencePosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationType" eType="ecore:EEnum ../CommonDataDict/commonDataDict.ecore#//StationType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SituationContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LocationContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AlacarteContainer"/>
+</ecore:EPackage>

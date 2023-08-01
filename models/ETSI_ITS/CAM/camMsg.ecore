@@ -1,10 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="camMsg" nsURI="http://tud/etsi/cits/msg" nsPrefix="camMsg">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="camMsg" nsURI="http://tud/etsi/its/cooperativeAwareness" nsPrefix="camMsg">
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
     <details key="camMsg" value="#/"/>
   </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="CAM">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="CAM message with header and payload."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="header" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//ItsPduHeader">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="ITS PDU header of the CAM. This DF includes DEs for the CAM&#xA;protocolVersion, the CAM message type identifier messageID and the station&#xA;identifier stationID of the originating ITS-S.&#xA;The DE protocolVersion is used to select the appropriate protocol decoder at&#xA;the receiving ITS-S.&#xA;This DE messageID should be harmonized with other V2X message identifier&#xA;definitions"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cam" eType="#//CoopAwareness"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CoopAwareness">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="CAM payload. It shall include the time stamp of the CAM and the containers&#xA;basicContainer and highFrequency Container. The selection of the&#xA;highFrequency Container depends on the ITS station type. CAM payload may&#xA;include the additional containers lowFrequencyContainer and&#xA;specialVehicleContainer. The selection of the additional containers depends on&#xA;the ITS station type and other criteria, e.g. vehicle role."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generationDeltaTime" eType="#//GenerationDeltaTime"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="camParameters" eType="#//CamParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CamParameter">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The sequence of CAM mandatory and optional containers.&#xA;Other containers may be added in the future. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="basicContainer" eType="#//BasicContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="highFrequencyContainer"
+        eType="#//HighFrequencyContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lowFrequencyContainer"
+        eType="#//LowFrequencyContainer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HighFrequencyContainer">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The mandatory high frequency container of CAM."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="basicVehicleContainerHighFrequency"
+        eType="#//BasicVehicleContainerHighFrequency"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LowFrequencyContainer">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The low frequency container of CAM."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="basicVehicleContainerLowFrequency"
+        eType="#//BasicVehicleContainerLowFrequency"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BasicContainer">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The mandatory basic container of CAM. "/>
@@ -32,48 +74,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleRole" eType="ecore:EEnum ../CommonDataDict/commonDataDict.ecore#//VehicleRole"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="exteriorLights" eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//ExteriorLights"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pathHistory" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//PathHistory"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CAM">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="CAM message with header and payload."/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cam" eType="#//CoopAwareness"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="header" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//ItsPduHeader">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="ITS PDU header of the CAM. This DF includes DEs for the CAM&#xA;protocolVersion, the CAM message type identifier messageID and the station&#xA;identifier stationID of the originating ITS-S.&#xA;The DE protocolVersion is used to select the appropriate protocol decoder at&#xA;the receiving ITS-S.&#xA;This DE messageID should be harmonized with other V2X message identifier&#xA;definitions"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CamParameter">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="The sequence of CAM mandatory and optional containers.&#xA;Other containers may be added in the future. "/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="basicContainer" eType="#//BasicContainer"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="highFrequencyContainer"
-        eType="#//HighFrequencyContainer"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lowFrequencyContainer"
-        eType="#//LowFrequencyContainer"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CoopAwareness">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="CAM payload. It shall include the time stamp of the CAM and the containers&#xA;basicContainer and highFrequency Container. The selection of the&#xA;highFrequency Container depends on the ITS station type. CAM payload may&#xA;include the additional containers lowFrequencyContainer and&#xA;specialVehicleContainer. The selection of the additional containers depends on&#xA;the ITS station type and other criteria, e.g. vehicle role."/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generationDeltaTime" eType="#//GenerationDeltaTime"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="camParameters" eType="#//CamParameter"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HighFrequencyContainer">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="The mandatory high frequency container of CAM."/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="basicVehicleContainerHighFrequency"
-        eType="#//BasicVehicleContainerHighFrequency"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LowFrequencyContainer">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="The low frequency container of CAM."/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="basicVehicleContainerLowFrequency"
-        eType="#//BasicVehicleContainerLowFrequency"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="GenerationDeltaTime" instanceClassName="int">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
