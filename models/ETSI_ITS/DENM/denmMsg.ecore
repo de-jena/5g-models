@@ -21,8 +21,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceTime" eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//TimestampIts"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="eventPosition" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//ReferencePosition"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationType" eType="ecore:EEnum ../CommonDataDict/commonDataDict.ecore#//StationType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validityDuration" eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//ValidityDuration"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SituationContainer"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LocationContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SituationContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="informationQuality" eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//InformationQuality"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventType" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//CauseCode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkedCauseCode" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//CauseCode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LocationContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="roadType" eType="ecore:EEnum ../CommonDataDict/commonDataDict.ecore#//RoadType"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AlacarteContainer"/>
 </ecore:EPackage>
