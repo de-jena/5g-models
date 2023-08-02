@@ -488,6 +488,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Absolute accuracy of a reported altitude value of a geographical point for a predefined&#xA;confidence level (e.g. 95 %). The required confidence level is defined by the&#xA;corresponding standards applying the usage of this DE.&#xA;The value shall be set to:&#xA;&#x9;• 0 if the altitude accuracy is equal to or less than 0,01 metre&#xA;&#x9;• 1 if the altitude accuracy is equal to or less than 0,02 metre&#xA;&#x9;• 2 if the altitude accuracy is equal to or less than 0,05 metre&#xA;&#x9;• 3 if the altitude accuracy is equal to or less than 0,1 metre&#xA;&#x9;• 4 if the altitude accuracy is equal to or less than 0,2 metre&#xA;&#x9;• 5 if the altitude accuracy is equal to or less than 0,5 metre&#xA;&#x9;• 6 if the altitude accuracy is equal to or less than 1 metre&#xA;&#x9;• 7 if the altitude accuracy is equal to or less than 2 metres&#xA;&#x9;• 8 if the altitude accuracy is equal to or less than 5 metres&#xA;&#x9;• 9 if the altitude accuracy is equal to or less than 10 metres&#xA;&#x9;• 10 if the altitude accuracy is equal to or less than 20 metres&#xA;&#x9;• 11 if the altitude accuracy is equal to or less than 50 metres&#xA;&#x9;• 12 if the altitude accuracy is equal to or less than 100 metres&#xA;&#x9;• 13 if the altitude accuracy is equal to or less than 200 metres&#xA;&#x9;• 14 if the altitude accuracy is out of range, i.e. greater than 200 metres&#xA;&#x9;• 15 if the altitude accuracy information is unavailable&#xA;&#xA;ETSI identifier: 8"/>
     </eAnnotations>
+    <eLiterals name="unavailable" value="15"/>
     <eLiterals name="alt-000-01"/>
     <eLiterals name="alt-000-02" value="1"/>
     <eLiterals name="alt-000-05" value="2"/>
@@ -503,7 +504,6 @@
     <eLiterals name="alt-100-00" value="12"/>
     <eLiterals name="alt-200-00" value="13"/>
     <eLiterals name="outOfRange" value="14"/>
-    <eLiterals name="unavailable" value="15"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CauseCodeType" instanceClassName="int">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -537,14 +537,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CurvatureCalculationMode" instanceClassName="int">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel"/>
+    <eLiterals name="unavailable" value="2"/>
     <eLiterals name="yawRateUsed"/>
     <eLiterals name="yawRateNotUsed" value="1"/>
-    <eLiterals name="unavailable" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CurvatureConfidence" instanceClassName="int">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="It describes whether the yaw rate is used to calculate the curvature for a reported curvature value.&#xA;When the information of curvature calculation mode is unknown, the value shall be set to 2. &#xA;&#xA;ETSI identifier: 13"/>
     </eAnnotations>
+    <eLiterals name="unavailable" value="7"/>
     <eLiterals name="onePerMeter-0-00002"/>
     <eLiterals name="onePerMeter-0-0001" value="1"/>
     <eLiterals name="onePerMeter-0-0005" value="2"/>
@@ -552,15 +553,14 @@
     <eLiterals name="onePerMeter-0-01" value="4"/>
     <eLiterals name="onePerMeter-0-1" value="5"/>
     <eLiterals name="outOfRange" value="6"/>
-    <eLiterals name="unavailable" value="7"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DriveDirection" instanceClassName="int">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="It denotes whether a vehicle is driving forward or backward. When the information is&#xA;unavailable, the value shall be set to 2.&#xA;&#xA;ETSI identifier: 22"/>
     </eAnnotations>
+    <eLiterals name="unavailable" value="2" literal="unavailable"/>
     <eLiterals name="forward"/>
     <eLiterals name="backward" value="1"/>
-    <eLiterals name="unavailable" value="2" literal="unavailable"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelevanceDistance" instanceClassName="int">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -624,11 +624,11 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="To indicate whether the presence of a trailer is detectable or whether its length is&#xA;included in a reported vehicle length value.&#xA;&#xA;When the information is not known, the value shall be set to unavailable(4).&#xA;&#xA;ETSI identifier: 91"/>
     </eAnnotations>
+    <eLiterals name="unavailable" value="4"/>
     <eLiterals name="noTrailerPresent"/>
     <eLiterals name="TrailerPresentWithKnownLength" value="1"/>
     <eLiterals name="TrailerPresentWithUnknownLength" value="2"/>
     <eLiterals name="TrailerPresenceIsUnknown" value="3"/>
-    <eLiterals name="unavailable" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="VehicleRole" instanceClassName="int">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -652,6 +652,7 @@
     <eLiterals name="reserved3" value="15"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="YawRateConfidence" instanceClassName="int">
+    <eLiterals name="unavailable" value="8"/>
     <eLiterals name="degSec-000-01"/>
     <eLiterals name="degSec-000-05" value="1"/>
     <eLiterals name="degSec-000-10" value="2"/>
@@ -660,6 +661,5 @@
     <eLiterals name="degSec-010-00" value="5"/>
     <eLiterals name="degSec-100-00" value="6"/>
     <eLiterals name="outOfRange" value="7"/>
-    <eLiterals name="unavailable" value="8"/>
   </eClassifiers>
 </ecore:EPackage>
