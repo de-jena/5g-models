@@ -7,29 +7,68 @@
     <details key="denmMsg" value="#/"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="DENM">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="header" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//ItsPduHeader"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="denm" eType="#//DecentralizedEnvironmentalNotificationMessage"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="DENM message with header and payload."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="header" lowerBound="1"
+        eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//ItsPduHeader"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="denm" lowerBound="1" eType="#//DecentralizedEnvironmentalNotificationMessage"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DecentralizedEnvironmentalNotificationMessage">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="management" eType="#//ManagementContainer"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="DENM payload. It includes the mandatory container &quot;management container&quot; and&#xA;optional containers &quot;situation container&quot;, &quot;location container&quot; and &quot;alacarte container&quot;."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="management" lowerBound="1"
+        eType="#//ManagementContainer"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="situation" eType="#//SituationContainer"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//LocationContainer"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="alacarte" eType="#//AlacarteContainer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ManagementContainer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="detectionTime" eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//TimestampIts"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceTime" eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//TimestampIts"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="eventPosition" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//ReferencePosition"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationType" eType="ecore:EEnum ../CommonDataDict/commonDataDict.ecore#//StationType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validityDuration" eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//ValidityDuration"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Management container of a DENM as described in clause 7.1.3. It contains&#xA;information required for the DENM protocol processing."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actionID" lowerBound="1"
+        eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//ActionID"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="detectionTime" lowerBound="1"
+        eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//TimestampIts"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceTime" lowerBound="1"
+        eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//TimestampIts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventPosition" lowerBound="1"
+        eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//ReferencePosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="relevanceDistance" eType="ecore:EEnum ../CommonDataDict/commonDataDict.ecore#//RelevanceDistance"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="relevanceTrafficDirection"
+        eType="ecore:EEnum ../CommonDataDict/commonDataDict.ecore#//RelevanceTrafficDirection"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validityDuration" lowerBound="1"
+        eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//ValidityDuration"
+        defaultValueLiteral="default"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationType" lowerBound="1"
+        eType="ecore:EEnum ../CommonDataDict/commonDataDict.ecore#//StationType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SituationContainer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="informationQuality" eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//InformationQuality"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="eventType" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//CauseCode"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Situation container of a DENM as described in clause 7.1.4. It contains&#xA;information of the event type and event detection quality"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="informationQuality" lowerBound="1"
+        eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//InformationQuality"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventType" lowerBound="1"
+        eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//CauseCode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="linkedCauseCode" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//CauseCode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventHistory" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//EventHistory"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LocationContainer">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Location container of a DENM as described in clause 7.1.5. It contains&#xA;information of the location referencing. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventSpeed" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//Speed"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventPositionHeading" eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//Heading"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="traces" lowerBound="1"
+        eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//Traces"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="roadType" eType="ecore:EEnum ../CommonDataDict/commonDataDict.ecore#//RoadType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AlacarteContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AlacarteContainer">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A la carte container of a DENM as described in clause 7.1.6. It contains use&#xA;case specific information that has not been provided in other DENM containers. "/>
+    </eAnnotations>
+  </eClassifiers>
 </ecore:EPackage>
