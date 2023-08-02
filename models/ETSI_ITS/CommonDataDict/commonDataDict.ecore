@@ -40,6 +40,20 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltaLongitude" eType="#//DeltaLongitude"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltaAltitude" eType="#//DeltaAltitude"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventHistory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The DF consists of a list of event points which represents the dimension of a plain&#xA;event in a predefined order. In case that the plain event is detected by a vehicle&#xA;ITS-S, the DF consists of a list of event detection points along the path that the&#xA;detecting ITS-S has travelled over some past time and/or distance. Each event point&#xA;shall be presented as defined in clause A.111 EventPoint.&#xA;&#xA;ETSI identifier: 110"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventPoint" lowerBound="1"
+        upperBound="23" eType="#//EventPoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventPoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventPosition" lowerBound="1"
+        eType="#//DeltaReferencePosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventDeltaTime" eType="#//PathDeltaTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="informationQuality" lowerBound="1"
+        eType="#//InformationQuality"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Heading">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Heading in a WGS84 co-ordinates system.&#xA;The DF shall include the following information:&#xA;• headingValue: a heading value. It shall be presented as defined in clause A.35 HeadingValue,&#xA;• headingConfidence: the accuracy of the reported heading value with a predefined confidence level. It shall be presented as defined in clause A.34 HeadingConfidence. &#xA;&#xA;ETSI identifier: 112"/>
