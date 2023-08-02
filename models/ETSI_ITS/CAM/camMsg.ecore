@@ -22,7 +22,7 @@
       <details key="documentation" value="CAM payload. It shall include the time stamp of the CAM and the containers&#xA;basicContainer and highFrequency Container. The selection of the&#xA;highFrequency Container depends on the ITS station type. CAM payload may&#xA;include the additional containers lowFrequencyContainer and&#xA;specialVehicleContainer. The selection of the additional containers depends on&#xA;the ITS station type and other criteria, e.g. vehicle role."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="generationDeltaTime" lowerBound="1"
-        eType="#//GenerationDeltaTime"/>
+        eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//GenerationDeltaTime"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="camParameters" lowerBound="1"
         eType="#//CamParameter"/>
   </eClassifiers>
@@ -89,14 +89,5 @@
         eType="ecore:EDataType ../CommonDataDict/commonDataDict.ecore#//ExteriorLights"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pathHistory" lowerBound="1"
         eType="ecore:EClass ../CommonDataDict/commonDataDict.ecore#//PathHistory"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="GenerationDeltaTime" instanceClassName="int">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Time corresponding to the time of the reference position in the CAM, considered&#xA;as time of the CAM generation.&#xA;The value of the DE shall be wrapped to 65 536. This value shall be set as the&#xA;remainder of the corresponding value of TimestampIts divided by 65 536 as&#xA;below:&#xA;generationDeltaTime = TimestampIts mod 65 536&#xA;TimestampIts represents an integer value in milliseconds since&#xA;2004-01-01T00:00:00:000Z as defined in ETSI TS 102 894-2 [2]"/>
-    </eAnnotations>
-    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="minVal" value="0"/>
-      <details key="maxVal" value="65536"/>
-    </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>
