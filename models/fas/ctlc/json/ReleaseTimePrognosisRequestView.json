@@ -1,0 +1,25 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "label": "timestamp",
+      "scope": "#/properties/timestamp"
+    },
+    {
+      "type": "Control",
+      "label": "requestId",
+      "scope": "#/properties/requestId"
+    },
+    {
+      "type": "Control",
+      "label": "intersectionId",
+      "scope": "#/properties/intersectionId"
+    },
+    {
+      "type": "Control",
+      "label": "scenarios",
+      "scope": "#/properties/scenarios"
+    }
+  ]
+}

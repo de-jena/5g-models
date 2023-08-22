@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/datamodels-ecore/src" modelPluginID="datamodels-ecore"
+    modelName="Utils" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>utils.ecore</foreignModel>
+  <genPackages prefix="Utils" basePackage="de.inavet.smarttrains.das.interfaces" disposableProviderFactory="true"
+      ecorePackage="utils.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="utils.ecore#//NMEAType">
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//NMEAType/GNRMC"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//NMEAType/GPRMC"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//NMEAType/GPGGA"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//NMEAType/GNGGA"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="utils.ecore#//GNSSStatus">
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//GNSSStatus/ACTIVE_LOCALISATION"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//GNSSStatus/NO_LOCALISATION"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//GNSSStatus/COMPUTED_LOCATION"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//GNSSStatus/TEMPORARY_NO_LOCALISATION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="utils.ecore#//DASStatus">
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/NO_CONNECTION_TO_CENTRAL"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/NO_INITIAL_DATA"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/INITIALISED"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/ACTIVE_RECOMMENDATION"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/ACTIVE_DENM"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/ACTIVE_VAM"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/ERROR"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//DASStatus/DEACTIVATED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="utils.ecore#//RecommendationTypes">
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//RecommendationTypes/DISPATCH"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//RecommendationTypes/DEPARTURE"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//RecommendationTypes/LSA_COUNTDOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//RecommendationTypes/CRUISE"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//RecommendationTypes/BREAK"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//RecommendationTypes/WAIT"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//RecommendationTypes/ACCELERATE"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//RecommendationTypes/NO_INFORMATION"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//RecommendationTypes/COASTING"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="utils.ecore#//Units">
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//Units/Meter_Pro_Sekunde"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//Units/Watt"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//Units/Sekunde"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//Units/Meter"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//Units/Watt_Stunden"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//Units/Prozent"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="utils.ecore#//VehicleType">
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//VehicleType/tram"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//VehicleType/bus"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//VehicleType/emergencyVehicle"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//VehicleType/car"/>
+      <genEnumLiterals ecoreEnumLiteral="utils.ecore#//VehicleType/other"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="utils.ecore#//ZonedDateTime"/>
+    <genClasses ecoreClass="utils.ecore#//Journey">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//Journey/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//Journey/journeyId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//Journey/line"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//Journey/course"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//Journey/route"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//Journey/timestamp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference utils.ecore#//Journey/vehicle"/>
+    </genClasses>
+    <genClasses ecoreClass="utils.ecore#//JourneyResponseFromDatabroker">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//JourneyResponseFromDatabroker/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//JourneyResponseFromDatabroker/idOfJourneyToResponse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//JourneyResponseFromDatabroker/journeySuccesfulInitialised"/>
+    </genClasses>
+    <genClasses ecoreClass="utils.ecore#//GNSS">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//GNSS/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//GNSS/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//GNSS/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//GNSS/nmeastring"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference utils.ecore#//GNSS/journey"/>
+    </genClasses>
+    <genClasses ecoreClass="utils.ecore#//Position">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference utils.ecore#//Position/positionOnTrack"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//Position/lat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//Position/lon"/>
+    </genClasses>
+    <genClasses ecoreClass="utils.ecore#//PositionOnTrack">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//PositionOnTrack/trackId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//PositionOnTrack/relativePositionOnTrack"/>
+    </genClasses>
+    <genClasses ecoreClass="utils.ecore#//ValueItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//ValueItem/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//ValueItem/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//ValueItem/valueName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//ValueItem/valueUnit"/>
+    </genClasses>
+    <genClasses ecoreClass="utils.ecore#//Vehicle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//Vehicle/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//Vehicle/vehicleId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute utils.ecore#//Vehicle/vehicleType"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
