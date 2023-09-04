@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="commonDataDict" nsURI="http://tud/cits/commonDataDict/2.1.1"
+    nsPrefix="commonDataDict">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="AccelerationComponent">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DF represents an acceleration component along with a confidence value.&#xA;It shall include the following components:&#xA;&#xA;&#x9;+ value of type AccelerationValue; &#xA;the value of the acceleration component which can be estimated as the mean of the current distribution.&#xA;&#x9;+ confidence of type AccelerationConfidence; &#xA;the confidence value associated to the provided value."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="#//AccelerationValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="confidence" lowerBound="1"
+        eType="#//AccelerationConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionId">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DF represents an identifier used to describe a protocol action taken by an ITS-S.&#xA;It shall include the following components:&#xA;&#x9;+ originatingStationId of type StationId: &#xA;Id of the ITS-S that takes the action.&#xA;&#x9;+ sequenceNumber of type SequenceNumber: &#xA;a sequence number."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="originatingStationID" lowerBound="1"
+        eType="#//StationID"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sequenceNumber" lowerBound="1"
+        eType="#//SequenceNumber"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionID">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Identifier used to describe a protocol action taken by an ITS-S. For example, it&#xA;describes an action taken by an ITS-S to trigger a new DENM as defined in ETSI&#xA;EN 302 637-3 [i.3] after detecting an event.&#xA;The DF shall include the following data:&#xA;&#x9;• originatingStationID: ID of the ITS-S that takes the action. It shall be presented as defined in clause A.77 StationID,&#xA;&#x9;• sequenceNumber: a sequence number. It shall be presented as defined in clause A.68 SequenceNumber.&#xA;&#xA;ETSI identifier: 102"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="originatingStationID" lowerBound="1"
+        eType="#//StationID"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sequenceNumber" lowerBound="1"
+        eType="#//SequenceNumber"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Altitude">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Altitude and accuracy of an altitude in a WGS84 co-ordinate system.&#xA;The DF shall include the following information:&#xA;• altitudeValue: altitude of a geographical point. It shall be presented as specified in clause A.9 AltitudeValue,&#xA;• altitudeConfidence: accuracy of the reported altitudeValue within a specific confidence level. It shall be presented as specified in clause A.8.&#xA;&#xA;ETSI identifier: 103"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altitudeValue" lowerBound="1"
+        eType="#//AltitudeValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altitudeConfidence" lowerBound="1"
+        eType="#//AltitudeConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AltitudeWithConfidence">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Altitude and accuracy of an altitude in a WGS84 co-ordinate system.&#xA;The DF shall include the following information:&#xA;&#x9;• altitudeValue: altitude of a geographical point. It shall be presented as specified in clause A.9 AltitudeValue,&#xA;&#x9;• altitudeConfidence: accuracy of the reported altitudeValue within a specific confidence level. It shall be presented as specified in clause A.8.&#xA;"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altitudeValue" lowerBound="1"
+        eType="#//AltitudeValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altitudeConfidence" lowerBound="1"
+        eType="#//AltitudeConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CauseCode">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Encoded value of a traffic event type.&#xA;The DF shall include the following information:&#xA;&#x9;• causeCode: the type of a direct cause of a detected event. It shall be presented as defined in clause A.10 CauseCodeType,&#xA;&#x9;• subCauseCode: sub type of the direct cause. It shall be presented as defined in clause A.81 SubCauseCodeType.&#xA;&#xA;The values of causeCodeType and subCauseCode are defined in clause 7.1.4 of ETSI&#xA;EN 302 637-3 [i.3].&#xA;&#xA;ETSI identifier: 104"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="causeCode" lowerBound="1"
+        eType="#//CauseCodeType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subCauseCode" lowerBound="1"
+        eType="#//SubCauseCodeType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CauseCodeV2">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DF is an alternative representation of the cause code value of a traffic event.&#xA;&#xA;It shall include the following components:&#xA;&#xA;&#xA;&#x9;+ ccAndScc of type CauseCodeChoice: &#xA;the main cause of a detected event. Each entry is of a different type and represents the sub cause code.&#xA;&#xA;&#xA;&#xA;The semantics of the entire DF are completely defined by the component causeCode. The interpretation of the subCauseCode may&#xA;provide additional information that is not strictly necessary to understand the causeCode itself, and is therefore optional."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ccAndScc" eType="#//CauseCodeChoice"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CauseCodeChoice">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reserved0" eType="#//SubCauseCodeType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="collisionRisk97" eType="#//CollisionRiskSubCauseCode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signalViolation98" eType="#//SignalViolationSubCauseCode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dangerousSituation99" eType="#//DangerousSituationSubCauseCode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Curvature">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="It describes the curvature of the vehicle trajectory and the accuracy. The curvature&#xA;detected by a vehicle represents the curvature of actual vehicle trajectory.&#xA;The DF shall include the following information:&#xA;• curvatureValue: detected curvature of the vehicle trajectory. It shall be presented as defined in clause A.15 CurvatureValue,&#xA;• curvatureConfidence: accuracy of the reported curvature value with a predefined confidence level. It shall be presented as defined in clause A.14 CurvatureConfidence. &#xA;&#xA;ETSI identifier: 107"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="curvatureValue" lowerBound="1"
+        eType="#//CurvatureValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="curvatureConfidence" lowerBound="1"
+        eType="#//CurvatureConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeltaReferencePosition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="It defines a geographical point position as offset position to a reference geographical&#xA;point. The DF shall include the following information:&#xA;• deltaLatitude: a delta latitude offset with regards to the latitude value of the reference position. It shall be presented as defined in clause A.20 DeltaLatitude,&#xA;• deltaLongitude: a delta longitude offset with regards to the longitude value of the reference position. It shall be presented as defined in clause A.21 DeltaLongitude,&#xA;• deltaAltitude: a delta altitude offset with regards to the altitude value of the reference position, It shall be presented as defined in clause A.19 DeltaAltitude. &#xA;&#xA;ETSI identifier: 109"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltaLatitude" lowerBound="1"
+        eType="#//DeltaLatitude"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltaLongitude" lowerBound="1"
+        eType="#//DeltaLongitude"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltaAltitude" lowerBound="1"
+        eType="#//DeltaAltitude"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventHistory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The DF consists of a list of event points which represents the dimension of a plain&#xA;event in a predefined order. In case that the plain event is detected by a vehicle&#xA;ITS-S, the DF consists of a list of event detection points along the path that the&#xA;detecting ITS-S has travelled over some past time and/or distance. Each event point&#xA;shall be presented as defined in clause A.111 EventPoint.&#xA;&#xA;ETSI identifier: 110"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventPoint" lowerBound="1"
+        upperBound="23" eType="#//EventPoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventPoint">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The DF shall include the following information:&#xA;• eventPosition: offset position of a detected event point with regards to the previous detected event point. It shall be presented as defined in clause A.109 DeltaReferencePosition,&#xA;• eventDeltaTime: time travelled by the detecting ITS-S since the previous detected event point. It shall be presented as defined in clause A.47 PathDeltaTime, this field is optional. It shall be present if the information is available,&#xA;• informationQuality: information quality of the detection for this event point. It shall be presented as defined in clause A.39 InformationQuality.&#xA;&#xA;ETSI identifier: 111"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventPosition" lowerBound="1"
+        eType="#//DeltaReferencePosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventDeltaTime" eType="#//PathDeltaTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="informationQuality" lowerBound="1"
+        eType="#//InformationQuality"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventZone">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The DF shall contain a list of EventPoint, where all EventPoint either contain the COMPONENT eventDeltaTime&#xA;or do not contain the COMPONENT eventDeltaTime.&#xA;&#xA;The eventPosition of each EventPoint is defined with respect to the previous EventPoint in the list.&#xA;&#xA;Except for the first EventPoint which is defined with respect to a position outside of the context of this DF."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventPoint" lowerBound="1"
+        upperBound="23" eType="#//EventPoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Heading">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Heading in a WGS84 co-ordinates system.&#xA;The DF shall include the following information:&#xA;• headingValue: a heading value. It shall be presented as defined in clause A.35 HeadingValue,&#xA;• headingConfidence: the accuracy of the reported heading value with a predefined confidence level. It shall be presented as defined in clause A.34 HeadingConfidence. &#xA;&#xA;ETSI identifier: 112"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headingValue" lowerBound="1"
+        eType="#//HeadingValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headingConfidence" lowerBound="1"
+        eType="#//HeadingConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ItsPduHeader">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Common message header for application and facilities layer messages. It is included at&#xA;the beginning of an ITS message as the message header.&#xA;The DF shall include the following information:&#xA;• protocolVersion: version of the ITS message,&#xA;• messageID: Type of the ITS message. Following message type values are assigned in the present document:&#xA;&#x9;− denm(1): Decentralized Environmental Notification Message (DENM) as specified in ETSI EN 302 637-3 [i.3],&#xA;&#x9;− cam(2): Cooperative Awareness Message (CAM) as specified in ETSI EN 302 637-2 [i.2],&#xA;&#x9;− poi(3): Point of Interest message as specified in ETSI TS 101 556-1 [i.11],&#xA;&#x9;− spatem(4): Signal Phase And Timing (SPAT) message as specified in SAE J2735 [i.12] and in ETSI TS 103 301 [i.17],&#xA;&#x9;− mapem(5): MAP message as specified in SAE J2735 [i.12] and in ETSI TS 103 301 [i.17],&#xA;&#x9;− ivim(6): In Vehicle Information (IVI) message as defined in ISO TS 19321 [i.13],&#xA;&#x9;− ev-rsr(7): Electric vehicle recharging spot reservation message, as defined in ETSI TS 101 556-3 [i.14],&#xA;&#x9;− tistpgtransaction(8): messages for Tyre Information System (TIS) and&#xA;&#x9;− Tyre Pressure Gauge (TPG) interoperability, as specified in ETSI TS 101 556-2 i.15,&#xA;&#x9;− srem(9): Traffic light Signal Request Message as specified in ETSI TS 103 301 [i.17],&#xA;&#x9;− ssem(10): Traffic Light Signal Request Status Message as specified in ETSI TS 103 301 [i.17].&#xA;&#x9;− evcsn(11): Electrical Vehicle Charging Spot Notification message as specified in ETSI TS 101 556-1 [i.11],&#xA;&#x9;− saem(12): Services Announcement Extended Message as specified in ETSI TS 102 890-1 i.19,&#xA;&#x9;− rtcmem(13): Radio Technical Commission for Maritime Services (RTCM) Message as specified in ETSI TS 103 301 [i.17],&#xA;&#x9;− value 14-255: reserved for future usage,&#xA;&#xA;ETSI identifier: 114"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocolVersion" lowerBound="1"
+        eType="#//ProtocolVersion"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="messageID" lowerBound="1"
+        eType="#//MessageID"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationID" lowerBound="1"
+        eType="#//StationID"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LateralAcceleration">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="It indicates the vehicle acceleration at lateral direction and the accuracy of the lateral&#xA;acceleration.&#xA;The DF shall include:&#xA;• lateralAccelerationValue: lateral acceleration value at a point in time. It shall be presented as specified in clause A.42 LateralAccelerationValue,&#xA;• lateralAccelerationConfidence: accuracy of the reported lateral acceleration value with a predefined confidence level. It shall be presented as defined in clause A.1 AccelerationConfidence.&#xA;&#xA;ETSI identifier: 115"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lateralAccelerationValue"
+        lowerBound="1" eType="#//LateralAccelerationValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lateralAccelerationConfidence"
+        lowerBound="1" eType="#//AccelerationConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LongitudinalAcceleration">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="It indicates the vehicle acceleration at longitudinal direction and the accuracy of the&#xA;longitudinal acceleration.&#xA;The DF shall include:&#xA;• longitudinalAccelerationValue: longitudinal acceleration value at a point in time. It shall be presented as specified in clause A.45 LongitudinalAccelerationValue,&#xA;• longitudinalAccelerationConfidence: accuracy of the reported longitudinal acceleration value with a predefined confidence level. It shall be presented as defined in clause A.1 AccelerationConfidence.&#xA;&#xA;ETSI identifier: 116"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitudinalAccelerationValue"
+        lowerBound="1" eType="#//LongitudinalAccelerationValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitudinalAccelerationConfidence"
+        lowerBound="1" eType="#//AccelerationConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Path">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DF represents a path with a set of path points.&#xA;It shall contain up to 40 PathPoint.&#xA;The first PathPoint presents an offset delta position with regards to an external reference position.&#xA;&#xA;Each other PathPoint presents an offset delta position and optionally an offset travel time with regards to the previous PathPoint."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pathPoint" upperBound="40"
+        eType="#//PathPoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PathHistory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="DF that defines a path with a set of path points. It may contain up to 40 path points.&#xA;Each path point shall be presented as defined in clause A.118 PathPoint. &#xA;&#xA;ETSI identifier: 117"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pathPoint" upperBound="40"
+        eType="#//PathPoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PathPoint">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="DF that defines a waypoint position within a path.&#xA;The DF shall include the following information:&#xA;• pathPosition: the waypoint position defined as an offset position with regards to a pre-defined reference position. It shall be presented as specified in clause A.109 DeltaReferencePosition,&#xA;• pathDeltaTime: the travel time separated from a waypoint to the predefined reference position. It shall be presented as specified in clause A.47 PathDeltaTime. This field is OPTIONAL. It shall be present if the information is available. &#xA;&#xA;ETSI identifier: 118"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pathPosition" lowerBound="1"
+        eType="#//DeltaReferencePosition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pathDeltaTime" eType="#//PathDeltaTime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PathPredicted">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DF represents a predicted path with a set of path points. It shall contain up to 15 PathPointPredicted.&#xA;The first PathPoint presents an offset delta position with regards to an external reference position.&#xA;Each other PathPoint presents an offset delta position and optionally an offset travel time with regards to the previous PathPointPredicted."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pathPointPredicted" lowerBound="1"
+        upperBound="16" eType="#//PathPointPredicted"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PathPointPredicted">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DF  defines a predicted offset waypoint position within a path.&#xA;It shall include the following components:&#xA;&#x9;+ deltaLatitude of type DeltaLatitude: an offset latitude with regards to a pre-defined reference position.&#xA;&#x9;+ deltaLongitude of type DeltaLongitude: an offset longitude with regards to a pre-defined reference position.&#xA;&#x9;+ horizontalPositionConfidence of type PosConfidenceEllipse  OPTIONAL: the confidence value associated to the horizontal geographical position.&#xA;&#x9;+ deltaAltitude of type DeltaAltitude  DEFAULT unavailable: an offset altitude with regards to a pre-defined reference position.&#xA;&#x9;+ altitudeConfidence of type AltitudeConfidence  DEFAULT unavailable: the confidence value associated to the altitude value of the geographical position.&#xA;&#x9;+ pathDeltaTime of type DeltaTimeTenthOfSecond: The  travel time separated from the waypoint to the predefined reference position."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltaLatitude" lowerBound="1"
+        eType="#//DeltaLatitude"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltaLongitude" lowerBound="1"
+        eType="#//DeltaLongitude"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="horizontalPositionConfidence"
+        eType="#//PosConfidenceEllipse"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltaAltitude" lowerBound="1"
+        eType="#//DeltaAltitude"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altitudeConfidence" lowerBound="1"
+        eType="#//AltitudeConfidence"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pathDeltaTime" lowerBound="1"
+        eType="#//DeltaTimeTenthOfSecond"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PosConfidenceEllipse">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="DF that provides the horizontal position accuracy in a shape of ellipse with a&#xA;predefined confidence level (e.g. 95 %). The centre of the ellipse shape corresponds&#xA;to the reference position point for which the position accuracy is evaluated.&#xA;The DF shall include the following information:&#xA;• semiMajorConfidence: half of length of the major axis, i.e. distance between the centre point and major axis point of the position accuracy ellipse. It shall be presented as specified in clause A.67 SemiAxisLength,&#xA;• semiMinorConfidence: half of length of the minor axis, i.e. distance between the centre point and minor axis point of the position accuracy ellipse. It shall be presented as specified in clause A.67 SemiAxisLength,&#xA;• semiMajorOrientation: orientation direction of the ellipse major axis of the position accuracy ellipse with regards to the WGS84 north. It shall be presented as specified in clause A.35 HeadingValue. &#xA;&#xA;ETSI identifier: 119"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semiMajorConfidence" lowerBound="1"
+        eType="#//SemiAxisLength"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semiMinorConfidence" lowerBound="1"
+        eType="#//SemiAxisLength"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semiMajorOrientation" lowerBound="1"
+        eType="#//HeadingValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PosisitionConfidenceEllipse">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DF indicates the horizontal position confidence ellipse which represents the estimated accuracy with a&#xA;confidence level of 95 %.&#xA;The centre of the ellipse shape corresponds to the reference&#xA;position point for which the position accuracy is evaluated.&#xA;&#xA;It shall include the following components:&#xA;• semiMajorAxisLength of type SemiAxisLength: half of length of the major axis, i.e. distance between the centre point and major axis point of the position accuracy ellipse.&#xA;• semiMinorAxisLength of type SemiAxisLength: half of length of the minor axis, i.e. distance between the centre point and minor axis point of the position accuracy ellipse.&#xA;• semiMajorAxisOrientation of type Wgs84AngleValue: orientation direction of the ellipse major axis of the position accuracy ellipse with regards to the WGS84 north.The specific WGS84 coordinate system is specified by the corresponding standards applying this DE.&#xA;&#xA;ETSI identifier:"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semiMajorAxisLength" lowerBound="1"
+        eType="#//SemiAxisLength"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semiMinorAxisLength" lowerBound="1"
+        eType="#//SemiAxisLength"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="semiMajorAxisOrientation"
+        lowerBound="1" eType="#//Wgs84AngleValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferencePosition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The geographical position of a position or of an ITS-S. It represents a geographical&#xA;point position.&#xA;The DF shall include the following information:&#xA;• latitude: latitude of the geographical point; it shall be presented as specified in clause A.41 Latitude,&#xA;• longitude: longitude of the geographical point; it shall be presented as specified in clause A.44 Longitude,&#xA;• positionConfidenceEllipse: accuracy of the geographical position; it shall be presented as specified in clause A.119 PosConfidenceEllipse,&#xA;• altitude: altitude and altitude accuracy of the geographical point; it shall be presented as specified in clause A.103 Altitude. &#xA;&#xA;ETSI identifier: 124"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" lowerBound="1"
+        eType="#//Latitude"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" lowerBound="1"
+        eType="#//Longitude"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positionConfidenceEllipse"
+        lowerBound="1" eType="#//PosConfidenceEllipse"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="altitude" lowerBound="1"
+        eType="#//Altitude"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferencePositionWithConfidence">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A position within a geographic coordinate system together with a confidence ellipse.&#xA;The DF shall include the following information:&#xA;&#x9;• latitude: latitude of the geographical point;&#xA;&#x9;• longitude: longitude of the geographical point;&#xA;&#x9;• positionConfidenceEllipse of type PositionConfidenceEllipse: the confidence ellipse associated to the geographical position&#xA;&#x9;• altitude: altitude and altitude accuracy of the geographical point&#xA;&#xA;"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" lowerBound="1"
+        eType="#//Latitude"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" lowerBound="1"
+        eType="#//Longitude"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positionConfidenceEllipse"
+        lowerBound="1" eType="#//PosisitionConfidenceEllipse"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="altitude" lowerBound="1"
+        eType="#//Altitude"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SequenceOfTrajectoryInterceptionIndication">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The DF shall contain a list of DF TrajectoryInterceptionIndication."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trajectoryInterceptionIndication"
+        lowerBound="1" upperBound="8" eType="#//TrajectoryInterceptionIndication"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Speed">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="It describes the speed and corresponding accuracy of the speed information for a&#xA;moving object (e.g. vehicle).&#xA;The DF shall include the following information:&#xA;• speedValue: speed value. It shall be presented as defined in clause A.74 SpeedValue,&#xA;• speedConfidence: accuracy of the reported speed value. It shall be presented as defined in clause A.72 SpeedConfidence.&#xA;&#xA;ETSI identifier: 126"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speedValue" lowerBound="1"
+        eType="#//SpeedValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speedConfidence" lowerBound="1"
+        eType="#//SpeedConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Traces">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="One or more paths, each path is described using a list of waypoints in a predefined&#xA;order. A path shall be presented as defined in clause A.117 PathHistory.&#xA;This DF may be used to describe location referencing information.&#xA;&#xA;ETSI identifier: 128"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pathHistory" lowerBound="1"
+        upperBound="7" eType="#//PathHistory"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrajectoryInterceptionIndication">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DF  provides the trajectory  interception  indication  of  ego-VRU  ITS-S  with another ITS-Ss.&#xA;&#xA;It shall include the following components:&#xA;&#xA;&#xA;&#xA;&#x9;+ subjectStation of type StationId  OPTIONAL; &#xA;indicates the subject station.&#xA;&#x9;+ &#xA;&#xA;&#xA;trajectoryInterceptionProbability of type TrajectoryInterceptionProbability; &#xA;indicates the propbability of the interception of the subject station trajectory &#xA;with the trajectory of the station indicated in the component subjectStation.&#xA;&#x9;+ &#xA;&#xA;&#xA;trajectoryInterceptionConfidence of type TrajectoryInterceptionConfidence  OPTIONAL; &#xA;indicates the confidence of interception of the subject station trajectory&#xA;with the trajectory of the station indicated in the component subjectStation."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subjectStation" eType="#//StationID"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trajectoryInterceptionProbability"
+        lowerBound="1" eType="#//TrajectoryInterceptionProbability"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trajectoryInterceptionConfidence"
+        eType="#//TrajectoryInterceptionConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VehicleLength">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Length of vehicle and accuracy indication information.&#xA;The DF shall include the following information:&#xA;• vehicleLengthValue: length of vehicle. It shall be presented as defined in clause A.92 VehicleLengthValue,&#xA;• vehicleLengthConfidenceIndication: indication of reported length value confidence. It shall be presented as defined in clause A.91 VehicleLengthConfidenceIndication.&#xA;&#xA;ETSI identifier: 131"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleLengthValue" lowerBound="1"
+        eType="#//VehicleLengthValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleLengthConfidenceIndication"
+        lowerBound="1" eType="#//VehicleLengthConfidenceIndication"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VehicleLengthV2">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DF represents the length of vehicle and accuracy indication information.&#xA;The DF shall include the following information:&#xA;&#x9;• vehicleLengthValue: length of vehicle. It shall be presented as defined in clause A.92 VehicleLengthValue,&#xA;&#x9;• trailerPresenceInformation of type TrailerPresenceInformation; &#xA;information about the trailer presence.&#xA;&#xA;ETSI identifier: "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleLengthValue" lowerBound="1"
+        eType="#//VehicleLengthValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trailerPresenceInformation"
+        lowerBound="1" eType="#//TrailerPresenceInformation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Wgs84Angle">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DF represents an angular component along with a confidence value in the WGS84 coordinate system.&#xA;&#xA;The specific WGS84 coordinate system is specified by the corresponding standards applying this DE.&#xA;&#xA;It shall include the following components:&#xA;&#x9;+ value of type Wgs84AngleValue: &#xA;the angle value, which can be estimated as the mean of the current distribution.&#xA;&#xA;&#xA;&#x9;+ confidence of type Wgs84AngleConfidence: &#xA;the confidence value associated to the angle value.&#xA;"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="#//Wgs84AngleValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="confidence" lowerBound="1"
+        eType="#//Wgs84AngleConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="YawRate">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Yaw rate of vehicle at a point in time.&#xA;The DF shall include the following information:&#xA;• yawRateValue: yaw rate value at a point in time. It shall be presented as defined in clause A.101 YawRateValue,&#xA;• vehicleLengthConfidenceIndication: accuracy of reported yaw rate value. It shall be presented as defined in clause A.100 YawRateConfidence.&#xA;&#xA;ETSI identifier: 132"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="yawRateValue" lowerBound="1"
+        eType="#//YawRateValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="yawRateConfidence" lowerBound="1"
+        eType="#//YawRateConfidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="AccelerationConfidence" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The absolute accuracy of a reported vehicle acceleration value with a predefined&#xA;confidence level (e.g. 95 %). The required confidence level is defined by the&#xA;corresponding standards applying the DE.&#xA;The value shall be set to:&#xA;&#x9;• 1 if the acceleration accuracy is equal to or less than 0,1 m/s2.&#xA;&#x9;• n (n > 1 and n &lt; 100) if the acceleration accuracy is equal to or less than n × 0,1 m/s2.&#xA;&#x9;• 100 if the acceleration accuracy is equal to or less than 10 m/s2.&#xA;&#x9;• 101 if the acceleration accuracy is out of range i.e. greater than 10 m/s2.&#xA;&#x9;• 102 if the data is unavailable. &#xA;&#xA;Unit: 0,1 m/s^2&#xA;&#xA;ETSI identifier: 1"/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxValue" value="100"/>
+      <details key="outOfRange" value="101"/>
+      <details key="unavailable" value="102"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="AccelerationValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="negativeOutOfRange" value="-160"/>
+      <details key="minVal" value="-159"/>
+      <details key="maxVal" value="159"/>
+      <details key="positivOutOfRange" value="160"/>
+      <details key="unavailable" value="161"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE represents the value of an acceleration component in a defined coordinate system.&#xA;The value shall be set to:&#xA;&#x9;+ -160 for acceleration values equal to or less than -16 m/s2,&#xA;&#x9;+ n (n > -160 and n ≤ 0) to indicate negative acceleration equal to or less than n x 0,1 m/s2, and greater than (n-1) x 0,1 m/s2,&#xA;&#x9;+ n (n > 0 and n &lt; 160) to indicate positive acceleration equal to or less than n x 0,1 m/s2, and greater than (n-1) x 0,1 m/s2,&#xA;&#x9;+ 160 for acceleration values greater than 15,9 m/s2,&#xA;&#x9;+ 161 when the data is unavailable.&#xA;&#xA;Unit: 0,1 meter / second^2"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="AltitudeValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-100000"/>
+      <details key="maxValue" value="800000"/>
+      <details key="unavailable" value="800001"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Altitude in a WGS84 co-ordinate system. When the information is not available, the&#xA;DE shall be set to 800 001. For altitude equal or greater than 8 000 m, the DE shall&#xA;be set to 800 000. For altitude equal or less than -1 000 m, the DE shall be set&#xA;to -100 000.&#xA;&#xA;Unit: 0,01 meter&#xA;&#xA;ETSI identifier: 9"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="CurvatureValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-1023"/>
+      <details key="maxVal" value="1022"/>
+      <details key="unavailable" value="1023"/>
+      <details key="straight" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="It describes vehicle turning curve with the following information:&#xA;Value=1/Radius*10000&#xA;wherein radius is the vehicle turning curve radius.&#xA;&#xA;Positive values indicate a turning curve to the left hand side of the driver. It&#xA;corresponds to the vehicle coordinate system as defined in ISO 8855 [2]. The value&#xA;shall be set to 0 when the vehicle is moving straight. The value shall be set to 1023, if&#xA;the information is not available.&#xA;&#xA;For calculated values smaller than -1023, the DE shall be set to -1023. For calculated&#xA;values bigger than 1022, the DE shall be set to 1022.&#xA;&#xA;Unit: 1 over 10 000 meters&#xA;&#xA;ETSI identifier: 15"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DeltaAltitude" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-12700"/>
+      <details key="maxVal" value="12799"/>
+      <details key="unavailable" value="12800"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="It defines an offset altitude with regards to a referred altitude value. It may be used to&#xA;describe a geographical point with regards to a specific reference geographical&#xA;position.&#xA;&#xA;Positive values are used for providing altitude offset above the reference position. For&#xA;values equal or greater than 127,99 metres, the value shall be 12 799. Negative&#xA;values are used for providing altitude offset below the reference position. When the&#xA;information is unavailable, the value shall be set to 12 800. &#xA;&#xA;Unit: 0,01 meter&#xA;&#xA;ETSI identifier: 19"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DeltaLatitude" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-131071"/>
+      <details key="maxVal" value="131071"/>
+      <details key="unavailable" value="131072"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="It defines offset latitude with regards to a referred latitude value. It may be used to&#xA;describe a geographical point with regards to a specific reference geographical&#xA;position.&#xA;&#xA;Positive values are used for providing offset towards the north from the reference&#xA;position. Negative values are used for providing offset towards the south from the&#xA;reference position. When the information is unavailable, the value shall be set to&#xA;131 072. &#xA;&#xA;Unit: 0,1 microdegree&#xA;&#xA;ETSI identifier: 20"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DeltaLongitude" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-131071"/>
+      <details key="maxVal" value="131071"/>
+      <details key="unavailable" value="131072"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="It defines an offset longitude with regards to a referred longitude value. It may be&#xA;used to describe a geographical point with regards to a specific reference&#xA;geographical position.&#xA;&#xA;Positive values are used for providing offset towards the east from the reference&#xA;position. Negative values are used for providing offset towards the west from the&#xA;reference position. When the information is unavailable, the value shall be set to&#xA;131 072. &#xA;&#xA;Unit: 0,1 microdegree&#xA;&#xA;ETSI identifier: 21"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DeltaTimeMilliSecondPositive" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE represents a difference in time with respect to a reference time.&#xA;&#xA;The value shall be set to:&#xA;&#xA;&#x9;+ &#xA;&#xA;&#xA;n (n > 0 and n &lt; 10001) to indicate a time value equal to or less than n x 0,001 s, and greater than (n-1) x 0,001 s,&#xA;&#xA;&#xA;&#xA;Example: a time interval between two consecutive message transmissions.&#xA;&#xA;Unit: milliseconds&#xA;&#xA;ETSI identifier:"/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="10000"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DeltaTimeTenthOfSecond" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE represents a difference in time with respect to a reference time.&#xA;The value shall be set to:&#xA;&#x9;+ 0 for a difference in time of 0 seconds.&#xA;&#x9;+ n (n > 0 and n &lt; 128) to indicate a time value equal to or less than n x 0,1 s, and greater than (n-1) x 0,1 s,&#xA;&#xA;Unit: 0,1 seconds"/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="126"/>
+      <details key="unavailable" value="127"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DeltaTimeSecond" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE represents a  difference in time with respect to a reference time.&#xA;The value shall be set to:&#xA;&#x9;+ 0 for a difference in time of 0 seconds.&#xA;&#x9;+ n (n > 0 and n ≤ 86400) to indicate a time value equal to or less than n x 1 s, and greater than (n-1) x 1 s,&#xA;&#xA;Unit: 1 second"/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="86400"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DeltaTimeTenSeconds" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE represents a difference in time with respect to a reference time.&#xA;&#xA;The value shall be set to:&#xA;&#xA;&#xA;&#xA;&#x9;+ 0 for a difference in time of 0 seconds.&#xA;&#xA;&#xA;&#x9;+ n (n > 0 and n ≤ 128) to indicate a time value equal to or less than n x 10 s, and greater than (n-1) x 10 s,&#xA;&#xA;Unit: 10 seconds"/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="127"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ExteriorLights" instanceTypeName="String">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="&quot;00000000&quot;"/>
+      <details key="maxVal" value="&quot;11111111&quot;"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE describes the status of the exterior light switches of a vehicle.&#xA;&#xA;The value of each bit indicates the state of the switch, which commands the corresponding light. The bit corresponding to a specific light is set to 1&#xA;when the corresponding switch is turned on, either manually by the driver or automatically by a vehicle system.&#xA;The bit value does not indicate if the corresponding lamps are alight or not.&#xA;&#xA;If a vehicle is not equipped with a certain light or if the light switch status information is not available, the corresponding bit shall be set to 0.&#xA;&#xA;The fogLightOn only indicates the status of the tail fog lamp switch.&#xA;&#xA;As the bit value indicates only the state of the switch, the turn signal and hazard signal bit values shall not alternate with the blinking interval.&#xA;&#xA;For hazard indicator, the leftTurnSignalOn (2) and rightTurnSignalOn (3) shall be set to 1.&#xA;&#xA;ETSI identifier: 28"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="GenerationDeltaTime" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE represents a timestamp based on TimestampIts modulo 65 536.&#xA;This means that generationDeltaTime = TimestampIts mod 65 536.&#xA;&#xA;Unit: milliseconds&#xA;&#xA;ETSI identifier: "/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="65535"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="HeadingConfidence" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="125"/>
+      <details key="outOfRange" value="126"/>
+      <details key="unavailable" value="127"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The absolute accuracy of a reported heading value for a predefined confidence level&#xA;(e.g. 95 %). The required confidence level is defined by the corresponding standards&#xA;applying the DE.&#xA;&#xA;The value shall be set to:&#xA;&#x9;• 1 if the heading accuracy is equal to or less than 0,1 degree,&#xA;&#x9;• n (n > 1 and n &lt; 125) if the heading accuracy is equal to or less than n × 0,1 degree,&#xA;&#x9;• 125 if the heading accuracy is equal to or less than 12,5 degrees,&#xA;&#x9;• 126 if the heading accuracy is out of range, i.e. greater than 12,5 degrees,&#xA;&#x9;• 127 if the heading accuracy information is not available.&#xA;&#xA;Unit: 0,1 degree&#xA;&#xA;ETSI identifier: 34"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="HeadingValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="125"/>
+      <details key="outOfRange" value="126"/>
+      <details key="unavailable" value="127"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Orientation of a heading with regards to the WGS84 north.&#xA;When the information is not available, the DE shall be set to 3 601. &#xA;&#xA;Unit: 0,1 degree&#xA;&#xA;ETSI identifier: 35"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="InformationQuality" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Quality level of provided information.&#xA;&#xA;ETSI identifier: 39"/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="lowest" value="1"/>
+      <details key="highest" value="7"/>
+      <details key="unavailable" value="0"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="LanePosition" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE indicates a transversal position on the carriageway at a specific longitudinal position, in resolution of lanes of the carriageway.&#xA;For right-hand traffic roads, the value shall be set to:&#xA;&#xA;&#xA;&#xA;&#x9;+ -1 if the position is off, i.e. besides the road,&#xA;&#x9;+ &#xA;&#xA;0 if the position is on the inner hard shoulder, i.e. the hard should adjacent to the leftmost lane,&#xA;&#xA;&#x9;+ &#xA;n (n > 0 and n &lt; 14), if the position is on the n-th driving lane counted from the leftmost lane to the rightmost lane of a specific traffic direction,&#xA;&#x9;+ &#xA;&#xA;14 if the position is on the outer hard shoulder, i.e. the hard should adjacent to rightmost lane (if present)."/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="offTheRoad" value="-1"/>
+      <details key="innerHardShoulder" value="0"/>
+      <details key="outerHardShoulder" value="14"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="LateralAccelerationValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-160"/>
+      <details key="maxVal" value="159"/>
+      <details key="outOfRange" value="160"/>
+      <details key="unavailable" value="161"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Vehicle acceleration at lateral direction in the centre of the mass of the empty vehicle.&#xA;It corresponds to the vehicle coordinate system as specified in ISO 8855 [2]. Negative&#xA;value indicates that the vehicle is accelerating towards the right side with regards to&#xA;the vehicle orientation. For values equal to or greater than 16 m/s2 towards the right,&#xA;the value shall be set to -160. Positive values indicate the acceleration to the left hand&#xA;side with regards to the vehicle orientation. For values equal to or greater than&#xA;16 m/s2 towards the left, the value shall be set to 160. When the information is not&#xA;available, the value shall be set to 161.&#xA;&#xA;Unit: 0,1 meter / second^2&#xA;&#xA;ETSI identifier: 42"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Latitude" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-900000000"/>
+      <details key="maxVal" value="900000000"/>
+      <details key="unavailable" value="900000001"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Absolute geographical latitude in a WGS84 coordinate system, providing a range of&#xA;90 degrees in north or in south hemisphere.&#xA;Positive values are used for latitude in north of the Equator, negative values are used&#xA;for latitude in south of the Equator. When the information is unavailable, the value&#xA;shall be set to 900 000 001. &#xA;&#xA;Unit: 0,1 microdegree&#xA;&#xA;ETSI identifier: 41"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Longitude" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-1800000000"/>
+      <details key="maxVal" value="1800000000"/>
+      <details key="unavailable" value="1800000001"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Absolute geographical longitude in a WGS84 co-ordinate system, providing a range of&#xA;180 degrees to the east or to the west of the prime meridian.&#xA;Negative values are used for longitudes to the west, positive values are used for&#xA;longitudes to the east. When the information is unavailable, the value shall be set to&#xA;1 800 000 001. &#xA;&#xA;Unit: 0,1 microdegree&#xA;&#xA;ETSI identifier: 44"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="LongitudinalAccelerationValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-160"/>
+      <details key="maxVal" value="159"/>
+      <details key="outOfRange" value="160"/>
+      <details key="unavailable" value="161"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Vehicle acceleration at longitudinal direction in the centre of the mass of the empty&#xA;vehicle. It corresponds to the vehicle coordinate system as specified in ISO 8855 [2].&#xA;Negative values indicate that the vehicle is braking. For values equal to or greater&#xA;than 16 m/s2, the value shall be set to -160. Positive values indicate that the vehicle is&#xA;accelerating. For acceleration equal to or greater than 16 m/s2 the value shall be set&#xA;to 160. When the data is unavailable, the value shall be set to 161. This acceleration&#xA;is along the tangent plane of the road surface and does not include gravity&#xA;components. &#xA;&#xA;Unit: 0,1 meter / second^2&#xA;&#xA;ETSI identifier: 45"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="MessageID" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="denm" value="1"/>
+      <details key="cam" value="2"/>
+      <details key="poi" value="3"/>
+      <details key="spatem" value="4"/>
+      <details key="mapem" value="5"/>
+      <details key="ivim" value="6"/>
+      <details key="ev-rsr" value="7"/>
+      <details key=" tistpgtransaction" value="8"/>
+      <details key="srem" value="9"/>
+      <details key="ssem" value="10"/>
+      <details key="evcsn" value="11"/>
+      <details key="saem" value="12"/>
+      <details key="rtcmem" value="13"/>
+      <details key="cpm" value="14"/>
+      <details key="imzm" value="15"/>
+      <details key="vam" value="16"/>
+      <details key="dsm" value="17"/>
+      <details key="pcim" value="18"/>
+      <details key="pcvm" value="19"/>
+      <details key="mcm" value="20"/>
+      <details key="pam" value="21"/>
+      <details key="maxVal" value="255"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value=" Type of the ITS message. Following message type values are&#xA;assigned in the present document:&#xA;− denm(1): Decentralized Environmental Notification Message (DENM) as specified in ETSI EN 302 637-3 [i.3],&#xA;− cam(2): Cooperative Awareness Message (CAM) as specified in ETSI EN 302 637-2 [i.2],&#xA;− poi(3): Point of Interest message as specified in ETSI TS 101 556-1 [i.11],&#xA;− spatem(4): Signal Phase And Timing (SPAT) message as specified in SAE J2735 [i.12] and in ETSI TS 103 301 [i.17],&#xA;− mapem(5): MAP message as specified in SAE J2735 [i.12] and in ETSI TS 103 301 [i.17],&#xA;− ivim(6): In Vehicle Information (IVI) message as defined in ISO TS 19321 [i.13],&#xA;− ev-rsr(7): Electric vehicle recharging spot reservation message, as defined in ETSI TS 101 556-3 [i.14],&#xA;− tistpgtransaction(8): messages for Tyre Information System (TIS) and&#xA;− Tyre Pressure Gauge (TPG) interoperability, as specified in ETSI TS 101 556-2 i.15,&#xA;− srem(9): Traffic light Signal Request Message as specified in ETSI TS 103 301 [i.17],&#xA;− ssem(10): Traffic Light Signal Request Status Message as specified in ETSI TS 103 301 [i.17].&#xA;− evcsn(11): Electrical Vehicle Charging Spot Notification message as specified in ETSI TS 101 556-1 [i.11],&#xA;− saem(12): Services Announcement Extended Message as specified in ETSI TS 102 890-1 i.19,&#xA;− rtcmem(13): Radio Technical Commission for Maritime Services (RTCM) Message as specified in ETSI TS 103 301 [i.17],&#xA;− 14 - cpm - reserved for Collective Perception Message (CPM),&#xA;&#xA;− 15 - imzm - for Interference Management Zone Message (IMZM) as specified in ETSI TS 103 724 [13],&#xA;&#xA;− 16 - vam - for Vulnerable Road User Awareness Message as specified in ETSI TS 130 300-3 [12],&#xA;&#xA;− 17 - dsm - reserved for Diagnosis, logging and Status Message,&#xA;&#xA;− 18 - pcim - reserved for Parking Control Infrastructure Message,&#xA;&#xA;− 19 - pcvm - reserved for Parking Control Vehicle Message,&#xA;&#xA;− 20 - mcm - reserved for Manoeuvre Coordination Message,&#xA;&#xA;− 21 - pam - reserved for Parking Availability Message,&#xA;− value 22-255: reserved for future usage,"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="PathDeltaTime" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="65535"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE defines the recorded or estimated travel time separated between a position&#xA;and a predefined reference position. It may be used to describe the historical path&#xA;travelled by an ITS-S in mobility (e.g. vehicle ITS-S) as specified in ETSI&#xA;EN 302 637-2 [i.2]. &#xA;&#xA;Unit: 0,01 second&#xA;&#xA;ETSI identifier: 47"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ProtocolVersion" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="255"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value=" Version of the ITS message."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="SemiAxisLength" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="4093"/>
+      <details key="outOfRange" value="4094"/>
+      <details key="unavailable" value="4095"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Absolute position accuracy in one of the axis direction as defined in a shape of ellipse&#xA;with a predefined confidence level (e.g. 95 %). The required confidence level is&#xA;defined by the corresponding standards applying the DE.&#xA;The value shall be set to:&#xA;&#x9;• 1 if the accuracy is equal to or less than 1 cm,&#xA;&#x9;• n (n > 1 and n &lt; 4 093) if the accuracy is equal to or less than n cm,&#xA;&#x9;• 4 093 if the accuracy is equal to or less than 4 093 cm,&#xA;&#x9;• 4 094 if the accuracy is out of range, i.e. greater than 4 093 cm,&#xA;&#x9;• 4 095 if the accuracy information is unavailable. &#xA;&#xA;Unit: 1 centimeter&#xA;&#xA;ETSI identifier: 67"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="SequenceNumber" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="65535"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Sequence number.&#xA;The DE is used in ActionID as defined in clause A.102.&#xA;&#xA;ETSI identifier: 68"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="SpeedValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="16381"/>
+      <details key="outOfRange" value="16382"/>
+      <details key="unavailable" value="16383"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A speed value. For values equal to or greater than 163,82 m/s, the value shall be set&#xA;to 16 382. When the information is not available, the value shall be set to 16 383. &#xA;&#xA;Unit: 0,01 meter per second&#xA;&#xA;ETSI identifier: 74"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="SpeedConfidence" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="125"/>
+      <details key="outOfRange" value="126"/>
+      <details key="unavailable" value="127"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The absolute accuracy of a speed value information for a predefined confidence level.&#xA;The required confidence level is defined by the station applying this DE.&#xA;The value shall be set to:&#xA;&#x9;• 1 if the speed accuracy is equal to or less than 1 cm/s.&#xA;&#x9;• n (n > 1 and n &lt; 125) if the speed accuracy is equal to or less than n cm/s.&#xA;&#x9;• 125 if the speed accuracy is equal to or less than 125 cm/s.&#xA;&#x9;• 126 if the speed accuracy is out of range, i.e. greater than 125 cm/s.&#xA;&#x9;• 127 if the speed accuracy information is not available. &#xA;&#xA;Unit: centimeter per second&#xA;&#xA;ETSI identifier: 72"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="StationId" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="4294967295"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE represents the identifier of an ITS-S.&#xA;The ITS-S ID may be a pseudonym.&#xA;It may change over space and/or over time."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="StationID" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="4294967295"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Identifier for an ITS-Station (ITS-S).&#xA;The ITS-S ID may be a pseudonym. It may change over space and/or over time.&#xA;&#xA;ETSI identifier: 77"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="SubCauseCodeType" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Type of sub cause of a detected event as defined in ETSI EN 302 637-3 [i.3].&#xA;For DENM usage, the value as given in clause 7.1.4 of ETSI EN 302 637-3 [i.3]&#xA;apply.&#xA;The DE is used in CauseCode DF as defined in clause A.104.&#xA;&#xA;NOTE 1: The sub cause code value assignment varies based on value of&#xA;causeCode as defined in clause A.10.&#xA;&#xA;NOTE 2: Complete list of all possible sub cause code values as given in ETSI EN&#xA;302 637-3 [i.3] is provided in the present document for information. For&#xA;example, see clause A.3 for sub cause code of accident event.&#xA;&#xA;ETSI identifier: 81"/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="255"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="TimestampIts" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="utsStartOf2004" value="0"/>
+      <details key="maxVal" value="4398046511103"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Number of milliseconds since 2004-01-01T00:00:00.000Z, as specified in ISO 8601 [i.10].&#xA;&#xA;EXAMPLE: The value for TimestampIts for 2007-01-01T00:00:00.000Z is&#xA;94 694 401 000 milliseconds, which includes one leap second&#xA;insertion since 2004-01-01T00:00:00.000Z.&#xA;&#xA;Unit: milliseconds&#xA;&#xA;ETSI identifier: 82"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="TrajectoryInterceptionProbability"
+      instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This  DE  defines  the  probability  that the ego trajectory  intercepts  with any  other object's  trajectory  on the  road.&#xA;&#xA;The value shall be set to:&#xA;&#xA;&#xA;&#x9;- &#xA;&#xA;n (n ≥ 0 and n ≤ 50) to indicate the actual probability,&#xA;&#xA;&#x9;- the values between 51 and 62 are reserved,&#xA;&#x9;- &#xA;&#xA;63: to indicate that the information is unavailable.&#xA;&#xA;Unit: 2%"/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="50"/>
+      <details key="unavailable" value="63"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="TransmissionInterval" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Time interval between two consecutive message transmissions.&#xA;&#xA;Unit: milliseconds&#xA;&#xA;ETSI identifier: 86"/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="10000"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ValidityDuration" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Duration of a traffic event validity. &#xA;1 = one second after detection&#xA;&#xA;Unit: second&#xA;&#xA;ETSI identifier: 88"/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="0"/>
+      <details key="maxVal" value="86400"/>
+      <details key="default" value="600"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="VehicleLengthValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="1021"/>
+      <details key="outOfRange" value="1022"/>
+      <details key="unavailable" value="1023"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Length of a vehicle. The value shall be set to 1 022 if the vehicle length is equal to or greater than 102,2 metres.&#xA;The value shall be set to 1 023 if the information in unavailable.&#xA;&#xA;Unit: 0,1 meter&#xA;&#xA;ETSI identifier: 92"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="VehicleWidth" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="60"/>
+      <details key="outOfRange" value="61"/>
+      <details key="unavailable" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Width of a vehicle, including side mirrors. For a vehicle width equal to or greater than&#xA;6,1 metres, the value shall be set to 61. The value shall be set to 62 if the information&#xA;is unavailable&#xA;&#xA;Unit: 0,1 meter&#xA;&#xA;ETSI identifier: 95"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Wgs84AngleConfidence" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="1"/>
+      <details key="maxVal" value="125"/>
+      <details key="outOfRange" value="126"/>
+      <details key="unavailable" value="127"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE indicates the angle confidence value which represents the estimated accuracy of an angle value with a default confidence level of 95 %.&#xA;&#xA;If required, the confidence level can be defined by the corresponding standards applying this DE.&#xA;&#xA;The value shall be set to:&#xA;&#x9;+ n (n ≥ 1 and n &lt; 126) if the confidence value is equal to or less than n x 0,1 degrees and more than (n-1) x 0,1 degrees,&#xA;&#x9;+ 126 if the confidence value is out of range, i.e. greater than 12,5 degrees,&#xA;&#x9;+ 127 if the confidence value is not available.&#xA;&#xA;Unit: 0,1 degrees"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Wgs84AngleValue" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE represents an angle value in degrees described in the WGS84 reference system with respect to the WGS84 north.&#xA;&#xA;The specific WGS84 coordinate system is specified by the corresponding standards applying this DE.&#xA;&#xA;When the information is not available, the DE shall be set to 3 601. The value 3600 shall not be used.&#xA;&#xA;Unit: 0,1 degrees"/>
+    </eAnnotations>
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="wgs84North" value="0"/>
+      <details key="wgs84East" value="900"/>
+      <details key="wgs84South" value="1800"/>
+      <details key="wgs84West" value="2700"/>
+      <details key="doNotUse" value="3600"/>
+      <details key="unavailable" value="3601"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="YawRateValue" instanceClassName="int">
+    <eAnnotations source="https://org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="minVal" value="-32766"/>
+      <details key="maxVal" value="32766"/>
+      <details key="unavailable" value="32767"/>
+      <details key="straight" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="It denotes the vehicle rotation around z-axis of coordinate system centred on the&#xA;centre of mass of the empty-loaded vehicle. It corresponds to the vehicle coordinate&#xA;system as specified in ISO 8855 [2]. The leading sign denotes the direction of&#xA;rotation. Positive values indicate that the rotation is anti-clockwise (i.e. to the left).&#xA;The value shall be set to 32 766 if the yaw rate is equal to or greater than 327,66&#xA;degrees/second to the left. Negative values indicate that the rotation is clockwise&#xA;(i.e. to the right). The value shall be set to -32 766 if the yaw rate is equal to or&#xA;greater than 327,66 degrees/second to the right. The value shall be set to 32 767 if&#xA;the information is not available.&#xA;&#xA;The yaw rate value shall be a raw data value, i.e. not filtered, smoothed or otherwise&#xA;modified. The reading instant should be the same as for the vehicle acceleration.&#xA;&#xA;Unit: 0,01 degree per second&#xA;&#xA;ETSI identifier: 101"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AltitudeConfidence" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Absolute accuracy of a reported altitude value of a geographical point for a predefined&#xA;confidence level (e.g. 95 %). The required confidence level is defined by the&#xA;corresponding standards applying the usage of this DE.&#xA;The value shall be set to:&#xA;&#x9;• 0 if the altitude accuracy is equal to or less than 0,01 metre&#xA;&#x9;• 1 if the altitude accuracy is equal to or less than 0,02 metre&#xA;&#x9;• 2 if the altitude accuracy is equal to or less than 0,05 metre&#xA;&#x9;• 3 if the altitude accuracy is equal to or less than 0,1 metre&#xA;&#x9;• 4 if the altitude accuracy is equal to or less than 0,2 metre&#xA;&#x9;• 5 if the altitude accuracy is equal to or less than 0,5 metre&#xA;&#x9;• 6 if the altitude accuracy is equal to or less than 1 metre&#xA;&#x9;• 7 if the altitude accuracy is equal to or less than 2 metres&#xA;&#x9;• 8 if the altitude accuracy is equal to or less than 5 metres&#xA;&#x9;• 9 if the altitude accuracy is equal to or less than 10 metres&#xA;&#x9;• 10 if the altitude accuracy is equal to or less than 20 metres&#xA;&#x9;• 11 if the altitude accuracy is equal to or less than 50 metres&#xA;&#x9;• 12 if the altitude accuracy is equal to or less than 100 metres&#xA;&#x9;• 13 if the altitude accuracy is equal to or less than 200 metres&#xA;&#x9;• 14 if the altitude accuracy is out of range, i.e. greater than 200 metres&#xA;&#x9;• 15 if the altitude accuracy information is unavailable&#xA;&#xA;ETSI identifier: 8"/>
+    </eAnnotations>
+    <eLiterals name="unavailable" value="15"/>
+    <eLiterals name="alt_000_01"/>
+    <eLiterals name="alt_000_02" value="1"/>
+    <eLiterals name="alt_000_05" value="2"/>
+    <eLiterals name="alt_000_10" value="3"/>
+    <eLiterals name="alt_000_20" value="4"/>
+    <eLiterals name="alt_000_50" value="5"/>
+    <eLiterals name="alt_001_00" value="6"/>
+    <eLiterals name="alt_002_00" value="7"/>
+    <eLiterals name="alt_005_00" value="8"/>
+    <eLiterals name="alt_010_00" value="9"/>
+    <eLiterals name="alt_020_00" value="10"/>
+    <eLiterals name="alt_050_00" value="11"/>
+    <eLiterals name="alt_100_00" value="12"/>
+    <eLiterals name="alt_200_00" value="13"/>
+    <eLiterals name="outOfRange" value="14"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CauseCodeType" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Value of the direct cause code of a detected event as defined in ETSI&#xA;EN 302 637-3 [i.3]. The value is assigned according to the clause 7.1.4 of ETSI&#xA;EN 302 637-3 [i.3].&#xA;The cause codes are described as following:&#xA;&#x9;• reserved (0): the value is reserved for future use,&#xA;&#x9;• trafficCondition (1): the type of event is an abnormal traffic condition,&#xA;&#x9;• accident (2): the type of event is a road accident,&#xA;&#x9;• roadworks (3): the type of event is roadwork,&#xA;&#x9;• value 4: reserved for future usage,&#xA;&#x9;• impassability (5): the type of event is unmanaged road blocking, referring to any blocking of a road, partial or total, which has not been adequately secured and signposted,&#xA;&#x9;• adverseWeatherCondition-Adhesion (6): the type of event is low adhesion,&#xA;&#x9;• aquaplaning (7): danger of aquaplaning on the road,&#xA;&#x9;• value 8: reserved for future usage,&#xA;&#x9;• hazardousLocation-SurfaceCondition (9): the type of event is abnormal road surface condition,&#xA;&#x9;• hazardousLocation-ObstacleOnTheRoad (10): the type of event is obstacle on the road,&#xA;&#x9;• hazardousLocation-AnimalOnTheRoad (11): the type of event is animal on the road,&#xA;&#x9;• humanPresenceOnTheRoad (12): the type of event is human presence on the road,&#xA;&#x9;• value 13: reserved for future usage,&#xA;&#x9;• wrongWayDriving (14): the type of the event is vehicle driving in wrong way,&#xA;&#x9;• rescueAndRecoveryWorkInProgress (15): the type of event is rescue and recovery work for accident or for a road hazard in progress,&#xA;&#x9;• value 16: reserved for future usage,&#xA;&#x9;• adverseWeatherCondition-ExtremeWeatherCondition (17): the type of event is extreme weather condition,&#xA;&#x9;• adverseWeatherCondition-Visibility (18): the type of event is low visibility,&#xA;&#x9;• adverseWeatherCondition-Precipitation (19): the type of event is precipitation,&#xA;&#x9;• value 20-25: reserved for future usage,&#xA;&#x9;• slowVehicle (26): the type of event is slow vehicle driving on the road,&#xA;&#x9;• dangerousEndOfQueue (27): the type of event is dangerous end of vehicle queue,&#xA;&#x9;• Value 28-90: reserved for future usage,&#xA;&#x9;• vehicleBreakdown (91): the type of event is break down vehicle on the road,&#xA;&#x9;• postCrash (92): the type of event is a detected crash,&#xA;&#x9;• humanProblem (93): the type of event is human health problem in vehicles involved in traffic,&#xA;&#x9;• stationaryVehicle (94): the type of event is stationary vehicle,&#xA;&#x9;• emergencyVehicleApproaching (95): the type of event is approaching vehicle operating emergency mission,&#xA;&#x9;• hazardousLocation-DangerousCurve (96): the type of event is dangerous curve,&#xA;&#x9;• collisionRisk (97): the type of event is a collision risk,&#xA;&#x9;• signalViolation (98): the type of event is signal violation,&#xA;&#x9;• dangerousSituation (99): the type of event is dangerous situation in which autonomous safety system in vehicle is activated,&#xA;&#x9;• value 100-255: reserved for future usage. &#xA;&#xA;ETSI identifier: 10"/>
+    </eAnnotations>
+    <eLiterals name="reserved"/>
+    <eLiterals name="trafficCondition" value="1"/>
+    <eLiterals name="accident" value="2"/>
+    <eLiterals name="roadworks" value="3"/>
+    <eLiterals name="impassability" value="5"/>
+    <eLiterals name="adverseWeatherCondition_Adhesion" value="6"/>
+    <eLiterals name="aquaplannning" value="7"/>
+    <eLiterals name="hazardousLocation_SurfaceCondition" value="9"/>
+    <eLiterals name="hazardousLocation_ObstacleOnTheRoad" value="10"/>
+    <eLiterals name="hazardousLocation_AnimalOnTheRoad" value="11"/>
+    <eLiterals name="humanPresenceOnTheRoad" value="12"/>
+    <eLiterals name="wrongWayDriving" value="14"/>
+    <eLiterals name="rescueAndRecoveryWorkInProgress" value="15"/>
+    <eLiterals name="adverseWeatherCondition_ExtremeWeatherCondition" value="17"/>
+    <eLiterals name="adverseWeatherCondition_Visibility" value="18"/>
+    <eLiterals name="adverseWeatherCondition_Precipitation" value="19"/>
+    <eLiterals name="violence" value="20"/>
+    <eLiterals name="slowVehicle" value="26"/>
+    <eLiterals name="dangerousEndOfQueue" value="27"/>
+    <eLiterals name="publicTransportVehicleApproaching" value="28"/>
+    <eLiterals name="vehicleBreakdown" value="91"/>
+    <eLiterals name="postCrash" value="92"/>
+    <eLiterals name="humanProblem" value="93"/>
+    <eLiterals name="stationaryVehicle" value="94"/>
+    <eLiterals name="emergencyVehicleApproaching" value="95"/>
+    <eLiterals name="hazardousLocation_DangerousCurve" value="96"/>
+    <eLiterals name="collisionRisk" value="97"/>
+    <eLiterals name="signalViolation" value="98"/>
+    <eLiterals name="dangerousSituation" value="99"/>
+    <eLiterals name="railwayLevelCrossing" value="100"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CollisionRiskSubCauseCode" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Encoded value of the sub cause codes of the event type &quot;collisionRisk&quot; as specified&#xA;in clause A.10. Definition of the sub event cause is defined and the value is assigned&#xA;according to clause 7.1.4 of ETSI EN 302 637-3 [i.3].&#xA;The sub causes are described as following:&#xA;&#x9;• unavailable(0): in case information on the type of collision risk is unavailable,&#xA;&#x9;• longitudinalCollisionRisk(1): in case the type of detected collision risk is longitudinal collision risk, e.g. forward collision or face to face collision,&#xA;&#x9;• crossingCollisionRisk(2): in case the type of detected collision risk is crossing collision risk,&#xA;&#x9;• lateralCollisionRisk(3): in case the type of detected collision risk is lateral collision risk,&#xA;&#x9;• vulnerableRoadUser(4): in case the type of detected collision risk involves vulnerable road users e.g. pedestrians or bicycles,&#xA;&#x9;• value 5-255: reserved for future usage.&#xA;&#xA;ETSI identifier: 12"/>
+    </eAnnotations>
+    <eLiterals name="unavailable"/>
+    <eLiterals name="longitudinalCollisionRisk" value="1"/>
+    <eLiterals name="crossingCollisionRisk" value="2"/>
+    <eLiterals name="lateralCollisionRisk" value="3"/>
+    <eLiterals name="vulnerableRoadUser" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CurvatureCalculationMode" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel"/>
+    <eLiterals name="unavailable" value="2"/>
+    <eLiterals name="yawRateUsed"/>
+    <eLiterals name="yawRateNotUsed" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CurvatureConfidence" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="It describes whether the yaw rate is used to calculate the curvature for a reported curvature value.&#xA;When the information of curvature calculation mode is unknown, the value shall be set to 2. &#xA;&#xA;ETSI identifier: 13"/>
+    </eAnnotations>
+    <eLiterals name="unavailable" value="7"/>
+    <eLiterals name="onePerMeter_0_00002"/>
+    <eLiterals name="onePerMeter_0_0001" value="1"/>
+    <eLiterals name="onePerMeter_0_0005" value="2"/>
+    <eLiterals name="onePerMeter_0_002" value="3"/>
+    <eLiterals name="onePerMeter_0_01" value="4"/>
+    <eLiterals name="onePerMeter_0_1" value="5"/>
+    <eLiterals name="outOfRange" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DangerousSituationSubCauseCode" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE represents the value of the sub cause codes of the CauseCode dangerousSituation&#xA;&#xA;The value shall be set to:&#xA;&#xA;&#xA;&#x9;+ 0 - unavailable: in case information on the type of dangerous situation is unavailable,&#xA;&#xA;&#xA;&#x9;+ 1 - emergencyElectronicBrakeEngaged: in case emergency electronic brake is engaged,&#xA;&#xA;&#xA;&#x9;+ 2 - preCrashSystemEngaged: in case pre-crash system is engaged,&#xA;&#xA;&#xA;&#x9;+ 3 - espEngaged: in case Electronic Stability Program (ESP) system is engaged,&#xA;&#xA;&#xA;&#x9;+ 4 - absEngaged: in case Anti-lock Braking System (ABS) is engaged,&#xA;&#xA;&#xA;&#x9;+ 5 - aebEngaged: in case Autonomous Emergency Braking (AEB) system is engaged,&#xA;&#xA;&#xA;&#x9;+ 6 - brakeWarningEngaged: in case brake warning is engaged,&#xA;&#xA;&#xA;&#x9;+ 7 - collisionRiskWarningEngaged: in case collision risk warning is engaged,&#xA;&#xA;&#xA;&#x9;+ 8-255: reserved for future usage."/>
+    </eAnnotations>
+    <eLiterals name="unavailable"/>
+    <eLiterals name="emergencyElectronicBrakeEngaged" value="1"/>
+    <eLiterals name="preCrashSystemEngaged" value="2"/>
+    <eLiterals name="espEngaged" value="3"/>
+    <eLiterals name="absEngaged" value="4"/>
+    <eLiterals name="aebEngaged" value="5"/>
+    <eLiterals name="brakeWarningEngaged" value="6"/>
+    <eLiterals name="collisionRiskWarningEngaged" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DriveDirection" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="It denotes whether a vehicle is driving forward or backward. When the information is&#xA;unavailable, the value shall be set to 2.&#xA;&#xA;ETSI identifier: 22"/>
+    </eAnnotations>
+    <eLiterals name="unavailable" value="2" literal="unavailable"/>
+    <eLiterals name="forward"/>
+    <eLiterals name="backward" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PositioningSolutionType" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE indicates the positioning technology being used to estimate a geographical position.&#xA;&#xA;The value shall be set to:&#xA;&#xA;&#x9;+ &#xA;0 noPositioningSolution: no positioning solution used,&#xA;&#xA;&#xA;&#x9;+ 1 sGNSS: Global Navigation Satellite System used,&#xA;&#xA;&#xA;&#xA;&#x9;+ 2 dGNSS: Differential GNSS used,&#xA;&#xA;&#xA;&#x9;+ 3 sGNSSplusDR: GNSS and dead reckoning used,&#xA;&#xA;&#xA;&#x9;+ 4 dGNSSplusDR: Differential GNSS and dead reckoning used,&#xA;&#xA;&#xA;&#x9;+ 5 dR: dead reckoning used,&#xA;&#xA;&#xA;&#x9;+ 6 manuallyByOperator: position set manually by a human operator."/>
+    </eAnnotations>
+    <eLiterals name="noPositioningSolution"/>
+    <eLiterals name="sGNSS" value="1"/>
+    <eLiterals name="dGNSS" value="2"/>
+    <eLiterals name="sGNSSplusDR" value="3"/>
+    <eLiterals name="dGNSSplusDR" value="4"/>
+    <eLiterals name="dR" value="5"/>
+    <eLiterals name="manuallyByOperator" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RelevanceDistance" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="DE describing a distance of relevance for information indicated in a message, for&#xA;example, it may be used to describe the distance of relevance of an event indicated in&#xA;a DENM as defined in ETSI EN 302 637-3 [i.3].&#xA;&#xA;ETSI identifier: 61"/>
+    </eAnnotations>
+    <eLiterals name="lessThan50m"/>
+    <eLiterals name="lessThan100m" value="1"/>
+    <eLiterals name="lessThan200m" value="2"/>
+    <eLiterals name="lessThan500m" value="3"/>
+    <eLiterals name="lessThan1000m" value="4"/>
+    <eLiterals name="lessThan5km" value="5"/>
+    <eLiterals name="lessThan10km" value="6"/>
+    <eLiterals name="over10km" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RelevanceTrafficDirection" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="DE describing a traffic direction that is relevant to information indicated in a message.&#xA;For example, it may be used to describe traffic direction which is relevant to an event&#xA;indicated by a DENM as defined in ETSI EN 302 637-3 [i.3], The terms &quot;upstream&quot;,&#xA;&quot;downstream&quot; and &quot;oppositeTraffic&quot; are relative to the event position.&#xA;&#xA;NOTE: Upstream traffic corresponds to the incoming traffic towards the event&#xA;position, and downstream traffic to the departing traffic away from the&#xA;event position&#xA;&#xA;ETSI identifier: 62"/>
+    </eAnnotations>
+    <eLiterals name="allTrafficDirections"/>
+    <eLiterals name="upstreamTraffic" value="1"/>
+    <eLiterals name="downstreamTraffic" value="2"/>
+    <eLiterals name="oppositeTraffic" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RoadType" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Type of a road segment.&#xA;&#xA;ETSI identifier: 65"/>
+    </eAnnotations>
+    <eLiterals name="urban_NoStructuralSeparationToOppositeLanes"/>
+    <eLiterals name="urban_WithStructuralSeparationToOppositeLanes" value="1"/>
+    <eLiterals name="nonUrban_NoStructuralSeparationToOppositeLanes" value="2"/>
+    <eLiterals name="nonUrban_WithStructuralSeparationToOppositeLanes" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SignalViolationSubCauseCode" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Encoded value of the sub cause codes of the event type &quot;signalViolation&quot; as specified&#xA;in clause A.10. Definition of the sub event cause is defined and the value is assigned&#xA;according to clause 7.1.4 of ETSI EN 302 637-3 [i.3].&#xA;The sub causes are described as following:&#xA;&#x9;• unavailable(0): in case further detailed information on signal violation event is unavailable,&#xA;&#x9;• stopSignViolation(1): in case a stop sign violation is detected,&#xA;&#x9;• trafficLightViolation(2): in case a traffic light violation is detected,&#xA;&#x9;• turningRegulationViolation(3): in case a turning regulation violation is detected,&#xA;&#x9;• value 4-255: reserved for future usage. &#xA;&#xA;ETSI identifier: 69"/>
+    </eAnnotations>
+    <eLiterals name="unavailable"/>
+    <eLiterals name="stopSignViolation" value="1"/>
+    <eLiterals name="trafficLightViolation" value="2"/>
+    <eLiterals name="turningRegulationViolation" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="StandardLength3b" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The DE represents length as a measure of distance between points.&#xA;&#xA;The value shall be set to:&#xA;&#xA;&#x9;+ &#xA;0 lessThan50m   - for distances below 50 m,&#xA;&#xA;&#x9;+ 1 lessThan100m  - for distances below 100 m,&#xA;&#x9;+ 2 lessThan200m  - for distances below 200 m,&#xA;&#xA;&#x9;+ 3 lessThan500m  - for distances below 300 m,&#xA;&#xA;&#x9;+ 4 lessThan1000m - for distances below 1 000 m,&#xA;&#xA;&#x9;+ 5 lessThan5km   - for distances below 5 000 m,&#xA;&#xA;&#x9;+ 6 lessThan10km  - for distances below 10 000 m,&#xA;&#x9;+ &#xA;7 over10km      - for distances over 10 000 m."/>
+    </eAnnotations>
+    <eLiterals name="lessThan50m"/>
+    <eLiterals name="lessThan100m" value="1"/>
+    <eLiterals name="lessThan200m" value="2"/>
+    <eLiterals name="lessThan500m" value="3"/>
+    <eLiterals name="lessThan1000m" value="4"/>
+    <eLiterals name="lessThan5km" value="5"/>
+    <eLiterals name="lessThan10km" value="6"/>
+    <eLiterals name="over10km" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="StationType" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The type of technical context the ITS-S is integrated in. The station type depends on the&#xA;integration environment of ITS-S into vehicle, mobile devices or at infrastructure.&#xA;The value shall be set to:&#xA;&#x9;• unknown(0): information about the ITS-S context is not provided,&#xA;&#x9;• pedestrian(1): ITS-S carried by human being traveling on foot, incl. possible use of roller skates or skateboards,&#xA;&#x9;• cyclist(2): ITS-S mounted on non-motorized unicycles, bicycles , tricycles, quadracycles,&#xA;&#x9;• moped(3): ITS-S mounted on light motor vehicles with less than four wheels as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class L1, L2,&#xA;&#x9;• motorcycles(4): ITS-S mounted on motor vehicles with less than four wheels as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class L3, L4, L5, L6, L7,&#xA;&#x9;• passengerCar(5): ITS-S mounted on small passenger vehicles as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class M1,&#xA;&#x9;• bus(6): ITS-S mounted on large passenger vehicles as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class M2, M3,&#xA;&#x9;• lightTruck(7): ITS-S mounted on light Goods Vehicles as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class N1,&#xA;&#x9;• heavyTruck(8): ITS-S mounted on Heavy Goods Vehicles as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class N2 and N3,&#xA;&#x9;• trailer(9): ITS-S mounted on an unpowered vehicle that is intended to be towed by a powered vehicle as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class O, NOTE: Only to be used when not towed.&#xA;&#x9;• specialVehicles(10): ITS-S mounted on vehicles which have special purposes other than the above (e.g. moving road works vehicle),&#xA;&#x9;• tram(11): ITS-S mounted on a vehicle which runs on tracks along public streets,&#xA;&#x9;• roadSideUnit(15): ITS-S mounted on an infrastructure typically positioned outside of the drivable roadway (e.g. on a gantry, on a pole, on a stationary road works trailer); the infrastructure is static during the entire operation period of the ITS-S (e.g. no stop and go activity),&#xA;&#x9;• value 16-255: reserved for future usage. &#xA;&#xA;ETSI identifier: 78"/>
+    </eAnnotations>
+    <eLiterals name="unknown"/>
+    <eLiterals name="pedestrian" value="1"/>
+    <eLiterals name="cyclist" value="2"/>
+    <eLiterals name="moped" value="3"/>
+    <eLiterals name="motorcycle" value="4"/>
+    <eLiterals name="passengerCar" value="5"/>
+    <eLiterals name="bus" value="6"/>
+    <eLiterals name="lightTruck" value="7"/>
+    <eLiterals name="heavyTruck" value="8"/>
+    <eLiterals name="trailer" value="9"/>
+    <eLiterals name="specialVehicles" value="10"/>
+    <eLiterals name="tram" value="11"/>
+    <eLiterals name="lightVruVehicle" value="12"/>
+    <eLiterals name="animal" value="13"/>
+    <eLiterals name="roadSideUnit" value="15"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TrafficDirection" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="DE describing a traffic direction that is relevant to information indicated in a message.&#xA;For example, it may be used to describe traffic direction which is relevant to an event&#xA;indicated by a DENM as defined in ETSI EN 302 637-3 [i.3], The terms &quot;upstream&quot;,&#xA;&quot;downstream&quot; and &quot;oppositeTraffic&quot; are relative to the event position.&#xA;&#xA;NOTE: Upstream traffic corresponds to the incoming traffic towards the event&#xA;position, and downstream traffic to the departing traffic away from the&#xA;event position&#xA;&#xA;ETSI identifier: 62"/>
+    </eAnnotations>
+    <eLiterals name="allTrafficDirections"/>
+    <eLiterals name="upstreamTraffic" value="1"/>
+    <eLiterals name="downstreamTraffic" value="2"/>
+    <eLiterals name="oppositeTraffic" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TrafficParticipantType" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The type of technical context the ITS-S is integrated in. The station type depends on the&#xA;integration environment of ITS-S into vehicle, mobile devices or at infrastructure.&#xA;The value shall be set to:&#xA;&#x9;• unknown(0): information about the ITS-S context is not provided,&#xA;&#x9;• pedestrian(1): ITS-S carried by human being traveling on foot, incl. possible use of roller skates or skateboards,&#xA;&#x9;• cyclist(2): ITS-S mounted on non-motorized unicycles, bicycles , tricycles, quadracycles,&#xA;&#x9;• moped(3): ITS-S mounted on light motor vehicles with less than four wheels as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class L1, L2,&#xA;&#x9;• motorcycles(4): ITS-S mounted on motor vehicles with less than four wheels as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class L3, L4, L5, L6, L7,&#xA;&#x9;• passengerCar(5): ITS-S mounted on small passenger vehicles as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class M1,&#xA;&#x9;• bus(6): ITS-S mounted on large passenger vehicles as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class M2, M3,&#xA;&#x9;• lightTruck(7): ITS-S mounted on light Goods Vehicles as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class N1,&#xA;&#x9;• heavyTruck(8): ITS-S mounted on Heavy Goods Vehicles as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class N2 and N3,&#xA;&#x9;• trailer(9): ITS-S mounted on an unpowered vehicle that is intended to be towed by a powered vehicle as defined in UNECE/TRANS/WP.29/78/Rev.4 [i.18] class O, NOTE: Only to be used when not towed.&#xA;&#x9;• specialVehicles(10): ITS-S mounted on vehicles which have special purposes other than the above (e.g. moving road works vehicle),&#xA;&#x9;• tram(11): ITS-S mounted on a vehicle which runs on tracks along public streets,&#xA;&#x9;• roadSideUnit(15): ITS-S mounted on an infrastructure typically positioned outside of the drivable roadway (e.g. on a gantry, on a pole, on a stationary road works trailer); the infrastructure is static during the entire operation period of the ITS-S (e.g. no stop and go activity),&#xA;&#x9;• value 16-255: reserved for future usage. &#xA;&#xA;ETSI identifier: 78"/>
+    </eAnnotations>
+    <eLiterals name="unknown"/>
+    <eLiterals name="pedestrian" value="1"/>
+    <eLiterals name="cyclist" value="2"/>
+    <eLiterals name="moped" value="3"/>
+    <eLiterals name="motorcycle" value="4"/>
+    <eLiterals name="passengerCar" value="5"/>
+    <eLiterals name="bus" value="6"/>
+    <eLiterals name="lightTruck" value="7"/>
+    <eLiterals name="heavyTruck" value="8"/>
+    <eLiterals name="trailer" value="9"/>
+    <eLiterals name="specialVehicles" value="10"/>
+    <eLiterals name="tram" value="11"/>
+    <eLiterals name="lightVruVehicle" value="12"/>
+    <eLiterals name="animal" value="13"/>
+    <eLiterals name="roadSideUnit" value="15"/>
+    <eLiterals name="agricultural" value="14"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TrailerPresenceInformation" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="To indicate whether the presence of a trailer is detectable or whether its length is&#xA;included in a reported vehicle length value.&#xA;&#xA;When the information is not known, the value shall be set to unavailable(4).&#xA;&#xA;ETSI identifier: 91"/>
+    </eAnnotations>
+    <eLiterals name="unavailable" value="4"/>
+    <eLiterals name="noTrailerPresent"/>
+    <eLiterals name="TrailerPresentWithKnownLength" value="1"/>
+    <eLiterals name="TrailerPresentWithUnknownLength" value="2"/>
+    <eLiterals name="TrailerPresenceIsUnknown" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TrajectoryInterceptionConfidence" instanceTypeName="nt">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE  defines  the  confidence level of the trajectoryInterceptionProbability.&#xA;&#xA;The value shall be set to:&#xA;&#x9;+ &#xA;&#xA;&#xA;0 - to indicate confidence level less than 50 %,&#xA;&#x9;+ &#xA;&#xA;1 - to indicate confidence level greater than or equal to 50 % and less than 70 %,&#xA;&#x9;+ &#xA;&#xA;2 - to indicate confidence level greater than or equal to 70 % and less than 90 %,&#xA;&#x9;+ &#xA;&#xA;3 - to indicate confidence level greater than or equal to 90%."/>
+    </eAnnotations>
+    <eLiterals name="lessthan50percent"/>
+    <eLiterals name="between50and70Percent" value="1"/>
+    <eLiterals name="between70and90Percent" value="2"/>
+    <eLiterals name="above90Percent" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TurningDirection" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This DE provides the turning direction.&#xA;&#xA;The value shall be set to:&#xA;&#x9;+ &#xA;&#xA;&#xA;left  for turning to te left.&#xA;&#x9;+ &#xA;&#xA;right for turing to the right."/>
+    </eAnnotations>
+    <eLiterals name="left"/>
+    <eLiterals name="right" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VehicleLengthConfidenceIndication" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="To indicate whether the presence of a trailer is detectable or whether its length is&#xA;included in a reported vehicle length value.&#xA;&#xA;When the information is not known, the value shall be set to unavailable(4).&#xA;&#xA;ETSI identifier: 91"/>
+    </eAnnotations>
+    <eLiterals name="unavailable" value="4"/>
+    <eLiterals name="noTrailerPresent"/>
+    <eLiterals name="TrailerPresentWithKnownLength" value="1"/>
+    <eLiterals name="TrailerPresentWithUnknownLength" value="2"/>
+    <eLiterals name="TrailerPresenceIsUnknown" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VehicleRole" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Role played by a vehicle at a point in time. The DE shall be set to:&#xA;&#x9;• default(0): default vehicle role as indicated by the vehicle type,&#xA;&#x9;• publicTransport(1): vehicle is used to operate public transport service,&#xA;&#x9;• specialTransport(2): vehicle is used for special transport purpose, e.g. oversized trucks,&#xA;&#x9;• dangerousGoods(3): vehicle is used for dangerous goods transportation,&#xA;&#x9;• roadWork(4): vehicle is used to realize roadwork or road maintenance mission,&#xA;&#x9;• rescue(5): vehicle is used for rescue purpose in case of an accident, e.g. as a towing service,&#xA;&#x9;• emergency(6): vehicle is used for emergency mission, e.g. ambulance, fire brigade,&#xA;&#x9;• safetyCar(7): vehicle is used for public safety, e.g. patrol,&#xA;&#x9;• agriculture(8): vehicle is used for agriculture, e.g. farm tractor as defined in CEN/TS 16157-3 [3], annex A, table A.137,&#xA;&#x9;• commercial(9): vehicle is used for transportation of commercial goods as defined in CEN/TS 16157-3 [3], annex A, table A.137,&#xA;&#x9;• military(10): vehicle is used for military purpose as defined in CEN/TS 16157-3 [3], annex A, table A.137,&#xA;&#x9;• roadOperator(11): vehicle is used in road operator missions as defined in CEN/TS 16157-3 [3], annex A, table A.137,&#xA;&#x9;• taxi(12): vehicle is used to provide an authorized taxi service as defined in CEN/TS 16157-3 [3], annex A, table A.137,&#xA;&#x9;• reserved(13): reserved for future usage,&#xA;&#x9;• reserved(14): reserved for future usage,&#xA;&#x9;• reserved(15): reserved for future usage. &#xA;&#xA;ETSI identifier: 94"/>
+    </eAnnotations>
+    <eLiterals name="default"/>
+    <eLiterals name="publicTransport" value="1"/>
+    <eLiterals name="specialTransport" value="2"/>
+    <eLiterals name="dangerousGoods" value="3"/>
+    <eLiterals name="roadWork" value="4"/>
+    <eLiterals name="rescue" value="5" literal="rescue"/>
+    <eLiterals name="emergency" value="6"/>
+    <eLiterals name="safetyCar" value="7"/>
+    <eLiterals name="agriculture" value="8"/>
+    <eLiterals name="commercial" value="9"/>
+    <eLiterals name="millitary" value="10"/>
+    <eLiterals name="roadOperator" value="11"/>
+    <eLiterals name="taxi" value="12"/>
+    <eLiterals name="reserved1" value="13"/>
+    <eLiterals name="reserved2" value="14"/>
+    <eLiterals name="reserved3" value="15"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YawRateConfidence" instanceClassName="int">
+    <eLiterals name="unavailable" value="8"/>
+    <eLiterals name="degSec_000_01"/>
+    <eLiterals name="degSec_000_05" value="1"/>
+    <eLiterals name="degSec_000_10" value="2"/>
+    <eLiterals name="degSec_001_00" value="3"/>
+    <eLiterals name="degSec_005_00" value="4"/>
+    <eLiterals name="degSec_010_00" value="5"/>
+    <eLiterals name="degSec_100_00" value="6"/>
+    <eLiterals name="outOfRange" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Termination" instanceClassName="int">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel"/>
+    <eLiterals name="isCancellation"/>
+    <eLiterals name="isNegation" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>
