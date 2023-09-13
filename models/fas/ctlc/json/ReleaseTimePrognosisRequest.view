@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_hwuoUB8QEe6MfabN5JTHYQ" name="ReleaseTimePrognosisRequest">
+  <rootEClass href="http://inavet.de/datamodels/ctlc/v1#//ReleaseTimePrognosisRequest"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hw1WAB8QEe6MfabN5JTHYQ" name="Control timestamp">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_hw1WAR8QEe6MfabN5JTHYQ">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://inavet.de/datamodels/ctlc/v1#//ReleaseTimePrognosisRequest/timestamp"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hw1WAh8QEe6MfabN5JTHYQ" name="Control requestId">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_hw1WAx8QEe6MfabN5JTHYQ">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://inavet.de/datamodels/ctlc/v1#//ReleaseTimePrognosisRequest/requestId"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hw1WBB8QEe6MfabN5JTHYQ" name="Control intersectionId">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_hw1WBR8QEe6MfabN5JTHYQ">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://inavet.de/datamodels/ctlc/v1#//ReleaseTimePrognosisRequest/intersectionId"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_hw1WBh8QEe6MfabN5JTHYQ" name="Control scenarios">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_hw1WBx8QEe6MfabN5JTHYQ">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://inavet.de/datamodels/ctlc/v1#//ReleaseTimePrognosisRequest/scenarios"/>
+    </domainModelReference>
+  </children>
+  <ecorePaths>/datamodels-ecore/models/fas/ctlc/ctlc.ecore</ecorePaths>
+</org.eclipse.emf.ecp.view.model:View>

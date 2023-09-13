@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="enum_static" nsURI="urn://hsmw/enum_static" nsPrefix="enum_static">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EEnum" name="State">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="electrical 'health state'"/>
+    </eAnnotations>
+    <eLiterals name="unknown"/>
+    <eLiterals name="ok" value="1"/>
+    <eLiterals name="overloaded" value="2"/>
+    <eLiterals name="critical" value="3"/>
+  </eClassifiers>
+</ecore:EPackage>

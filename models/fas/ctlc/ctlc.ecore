@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ctlc" nsURI="http://inavet.de/datamodels/ctlc/v1" nsPrefix="ctlc">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="cTLC - Cooperative Traffic Light Control (Kooperative Lichtsignalanlage)"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="PeriodicUpdate">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="State updates for the prognosis algorithm, which are sent periodically (every 1 sec)."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="updates" lowerBound="1"
+        upperBound="-1" eType="#//UpdateForVehicle" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UpdateForVehicle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicle" lowerBound="1"
+        eType="ecore:EClass ../utils/utils.ecore#//Vehicle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentPosition" lowerBound="1"
+        eType="ecore:EClass ../utils/utils.ecore#//Position" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentVelocity" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arrivals" lowerBound="1"
+        upperBound="-1" eType="#//PrognosisArrivalAndPosition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stopPlaces" upperBound="-1"
+        eType="#//PrognosisStopPlace" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrognosisArrivalAndPosition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estimatedArrivalTime" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arrivalPosition" lowerBound="1"
+        eType="#//MarkedPosition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrognosisStopPlace">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stopPosition" lowerBound="1"
+        eType="#//MarkedPosition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prognosedPlace" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MarkedPosition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Helper class for infrastructure mapping.&#xA;Position mark represent an element of the infrastructure (stop line, station, switch, ...).&#xA;Necessity of name needs to be evaluated again, ID might be satisfactory by itself when it matches those of the infrastructure."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReleaseTimePrognosisRequest">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Explicit request to the prognosis functionality to return release time probabilities for all tram related signals of an intersection.&#xA;Optionally, the request may contain prognosis scenarios, which contains of arrival time prognoses that differ from those sent by the periodic state update.&#xA;In this case, the prognosis functionailty should create a release time prognoses for each of the scenarios in addition to the default prognosis based on the already known state."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="intersectionId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Identifies the intersection for which the prognosis shall be performed."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scenarios" upperBound="-1"
+        eType="#//Scenario" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Scenario">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scenarioId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="overrides" lowerBound="1"
+        upperBound="-1" eType="#//PrognosisOverride" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrognosisOverride">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicle" lowerBound="1"
+        eType="ecore:EClass ../utils/utils.ecore#//Vehicle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prognosis" lowerBound="1"
+        eType="#//PrognosisArrivalAndPosition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReleaseTimePrognosisResponse">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Response from the prognosis functionality to an earlier sent request."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType ../utils/utils.ecore#//ZonedDateTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refRequestId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="releaseTimes" lowerBound="1"
+        upperBound="-1" eType="#//ReleaseTimeVector" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="releaseTimesForScenarios"
+        upperBound="-1" eType="#//ScenarioPrognosis" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ScenarioPrognosis">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refScenarioId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="releaseTimes" lowerBound="1"
+        upperBound="-1" eType="#//ReleaseTimeVector" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReleaseTimeVector">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" lowerBound="1"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signalGroup" lowerBound="1"
+        eType="#//SignalGroup" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SignalGroup">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Placeholder for identification of signal groups. Exact identifcation attribute follows when more complete RailML files are available."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signalGroupId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/datamodels-ecore/src" modelPluginID="datamodels-ecore"
+    modelName="Ctlc" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    usedGenPackages="../utils/utils.genmodel#//utils" operationReflection="true" importOrganizing="true">
+  <foreignModel>ctlc.ecore</foreignModel>
+  <genPackages prefix="Ctlc" basePackage="de.inavet.smarttrains.das.interfaces" disposableProviderFactory="true"
+      ecorePackage="ctlc.ecore#/">
+    <genClasses ecoreClass="ctlc.ecore#//PeriodicUpdate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//PeriodicUpdate/timestamp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//PeriodicUpdate/updates"/>
+    </genClasses>
+    <genClasses ecoreClass="ctlc.ecore#//UpdateForVehicle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//UpdateForVehicle/vehicle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//UpdateForVehicle/currentPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//UpdateForVehicle/currentVelocity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//UpdateForVehicle/arrivals"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//UpdateForVehicle/stopPlaces"/>
+    </genClasses>
+    <genClasses ecoreClass="ctlc.ecore#//PrognosisArrivalAndPosition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//PrognosisArrivalAndPosition/estimatedArrivalTime"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//PrognosisArrivalAndPosition/arrivalPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//PrognosisArrivalAndPosition/priority"/>
+    </genClasses>
+    <genClasses ecoreClass="ctlc.ecore#//PrognosisStopPlace">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//PrognosisStopPlace/stopPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//PrognosisStopPlace/prognosedPlace"/>
+    </genClasses>
+    <genClasses ecoreClass="ctlc.ecore#//MarkedPosition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//MarkedPosition/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//MarkedPosition/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ctlc.ecore#//ReleaseTimePrognosisRequest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//ReleaseTimePrognosisRequest/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//ReleaseTimePrognosisRequest/requestId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//ReleaseTimePrognosisRequest/intersectionId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//ReleaseTimePrognosisRequest/scenarios"/>
+    </genClasses>
+    <genClasses ecoreClass="ctlc.ecore#//Scenario">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//Scenario/scenarioId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//Scenario/overrides"/>
+    </genClasses>
+    <genClasses ecoreClass="ctlc.ecore#//PrognosisOverride">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//PrognosisOverride/vehicle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//PrognosisOverride/prognosis"/>
+    </genClasses>
+    <genClasses ecoreClass="ctlc.ecore#//ReleaseTimePrognosisResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//ReleaseTimePrognosisResponse/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//ReleaseTimePrognosisResponse/refRequestId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//ReleaseTimePrognosisResponse/releaseTimes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//ReleaseTimePrognosisResponse/releaseTimesForScenarios"/>
+    </genClasses>
+    <genClasses ecoreClass="ctlc.ecore#//ScenarioPrognosis">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//ScenarioPrognosis/refScenarioId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//ScenarioPrognosis/releaseTimes"/>
+    </genClasses>
+    <genClasses ecoreClass="ctlc.ecore#//ReleaseTimeVector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//ReleaseTimeVector/values"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ctlc.ecore#//ReleaseTimeVector/signalGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="ctlc.ecore#//SignalGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ctlc.ecore#//SignalGroup/signalGroupId"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

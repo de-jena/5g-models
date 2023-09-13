@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="utils" nsURI="http://inavet.de/datamodels" nsPrefix="utils">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="utils" nsURI="http://inavet.de/datamodels/utils/v1" nsPrefix="utils">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation" value="enthält Hilfsklassen + Enums"/>
   </eAnnotations>
@@ -28,9 +28,9 @@
     <eLiterals name="ACTIVE_LOCALISATION"/>
     <eLiterals name="NO_LOCALISATION" value="1"/>
     <eLiterals name="COMPUTED_LOCATION" value="2"/>
-    <eLiterals name="TEMPORARY_NO_LOCALISATION" value="4"/>
+    <eLiterals name="TEMPORARY_NO_LOCALISATION" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="FASStatus">
+  <eClassifiers xsi:type="ecore:EEnum" name="DASStatus">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Status des FAS-System zur Information beim Fahrer"/>
     </eAnnotations>
@@ -57,12 +57,110 @@
     <eLiterals name="NO_INFORMATION" value="7"/>
     <eLiterals name="COASTING" value="8"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Journey">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Journey-Klasse. Dient der Identifizierung der Fahrt. Wird vom Smartphone / der mobilen Anwendung zum Datenbroker gesendet und dort vom zentralen FAS-System abgeholt&#xA;Root-Objekt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Datenbroker-Id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="journeyId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="line" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Liniennummer"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="course" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Kursnummer"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="route" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Routennummer"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="#//ZonedDateTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zeitstempel der Journey-Aktivierung auf dem Endgerät"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicle" lowerBound="1"
+        eType="#//Vehicle" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Fahrzeuginformation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JourneyResponseFromDatabroker">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Antwort des zentralen Systems auf die erhaltene Journey. Dient der Sicherstellung, dass zentrale System die Daten erhalten hat und arbeiten kann.&#xA;Root-Objekt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Datenbroker-Id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idOfJourneyToResponse"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zuordnung der Response zur Journey"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="journeySuccesfulInitialised"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Attribut, ob erfolgreich initialisiert wurde"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GNSS">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="GNSS-Datum vom Smartphone / der mobilen Anwendung zum Datenbroker&#xA;wird mind. sekündlich vom der Smartphone / der mobilen Anwendung zum Datenbroker gesendet&#xA;Root-Klasse"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Datenbroker-id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="#//ZonedDateTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zeitstempel der Datum-Erzeugung"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//NMEAType"
+        defaultValueLiteral="GPRMC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="nmea-type zur späteren Filterung auf dem Datenbroker"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nmeastring" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="der eigentliche nmea-String der Anwendung"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="journey" lowerBound="1"
+        eType="#//Journey" containment="true" eKeys="#//Journey/id">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="journey bzw. journey-id zur Zuweisung des nmea-strings zur entsprechenden Fahrt"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Position">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Geo-Lokalisation mit Relativ-Position&#xA;Hilfsklasse"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="positionOnTrack" lowerBound="1"
-        eType="#//PositionOnTrack"/>
+        eType="#//PositionOnTrack" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lat" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lon" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
@@ -86,6 +184,25 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueUnit" lowerBound="1"
         eType="#//Units"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vehicle">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Fahrzeugidentifikationsklasse"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Datenbroker-Id"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="reale Fahrzeugnummer bei der JNV (Id-Nr.)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vehicleType" lowerBound="1"
+        eType="#//VehicleType"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Units">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="relevante Einheiten für Value-Objekte&#xA;Hilfsklasse"/>
@@ -96,5 +213,12 @@
     <eLiterals name="Meter" literal="m"/>
     <eLiterals name="Watt_Stunden" literal="Wh"/>
     <eLiterals name="Prozent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VehicleType">
+    <eLiterals name="tram"/>
+    <eLiterals name="bus" value="1"/>
+    <eLiterals name="emergencyVehicle" value="2"/>
+    <eLiterals name="car" value="3"/>
+    <eLiterals name="other" value="4"/>
   </eClassifiers>
 </ecore:EPackage>
